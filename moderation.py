@@ -8,7 +8,7 @@ from typing import Any
 
 import requests
 
-from telegram_publisher import MAX_CAPTION_LENGTH, publish_to_telegram
+from telegram_publisher import MAX_CAPTION_LENGTH, is_image_reachable
 
 logger = logging.getLogger(__name__)
 
@@ -71,7 +71,7 @@ def _send_moderation_preview(
     reply_markup: dict[str, Any],
     timeout: int,
 ) -> bool:
-    if image_url and len(text) <= MAX_CAPTION_LENGTH:
+    if image_url and len(text) <= MAX_CAPTION_LENGTH and is_image_reachable(image_url, timeout):
         url = TELEGRAM_API.format(token=bot_token, method="sendPhoto")
         payload = {
             "chat_id": chat_id,

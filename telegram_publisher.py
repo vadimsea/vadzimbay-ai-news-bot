@@ -24,7 +24,7 @@ def publish_to_telegram(
         logger.error("Telegram credentials are missing")
         return False
 
-    if image_url and _image_is_reachable(image_url, timeout):
+    if image_url and is_image_reachable(image_url, timeout):
         if len(text) > MAX_CAPTION_LENGTH:
             logger.error("Post is too long for Telegram photo caption: %s chars", len(text))
             return False
@@ -67,7 +67,7 @@ def _post(url: str, payload: dict[str, Any], timeout: int) -> bool:
     return False
 
 
-def _image_is_reachable(image_url: str, timeout: int) -> bool:
+def is_image_reachable(image_url: str, timeout: int) -> bool:
     try:
         response = requests.head(image_url, allow_redirects=True, timeout=timeout)
         content_type = response.headers.get("content-type", "")
@@ -80,4 +80,3 @@ def _image_is_reachable(image_url: str, timeout: int) -> bool:
     except requests.RequestException:
         logger.warning("Image is not reachable: %s", image_url)
         return False
-

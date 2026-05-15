@@ -16,7 +16,7 @@ from ranker import choose_best_news
 from scheduler import run_daily
 from sources import get_sources
 from storage import PublishedStorage
-from telegram_publisher import publish_to_telegram
+from telegram_publisher import is_image_reachable, publish_to_telegram
 from translator import adapt_news_to_russian
 
 
@@ -58,12 +58,26 @@ def run_once() -> bool:
         logger.info("No suitable news found. Nothing will be published.")
         return False
 
+    if selected.get("image_url") and not is_image_reachable(
+        selected["image_url"],
+        settings.request_timeout_seconds,
+    ):
+        logger.info("RSS image is not usable, trying to extract image from article page")
+        selected["image_url"] = ""
+
     if not selected.get("image_url"):
         selected["image_url"] = extract_article_image_url(selected["url"])
         if selected.get("image_url"):
             logger.info("Article image found on source page: %s", selected["image_url"])
         else:
             logger.info("No article image found for selected news")
+
+    if not selected.get("image_url") or not is_image_reachable(
+        selected["image_url"],
+        settings.request_timeout_seconds,
+    ):
+        logger.info("Selected news has no valid image. Nothing will be published.")
+        return False
 
     post_text = adapt_news_to_russian(
         selected,
