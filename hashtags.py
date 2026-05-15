@@ -16,6 +16,7 @@ TAG_RULES: list[tuple[str, tuple[str, ...]]] = [
     ("#ВебДизайн", ("web design", "website design", "webdesign", "веб-дизайн", "веб дизайн", "дизайн сайтов")),
     ("#UXUI", ("ux", "ui", "ux/ui", "user experience", "interface", "интерфейс")),
     ("#Маркетинг", ("marketing", "маркетинг", "martech", "adtech", "advertising", "реклама", "seo", "crm")),
+    ("#Вайбкодинг", ("vibe coding", "vibecoding", "вайбкодинг", "вайб-кодинг", "ai coding", "coding agent", "cursor", "windsurf", "claude code", "lovable", "bolt.new")),
     ("#Наука", ("research", "researchers", "study", "исследователи", "исследование")),
     ("#OpenAI", ("openai", "chatgpt")),
     ("#Google", ("google", "deepmind", "gemini")),

@@ -38,12 +38,17 @@ BROAD_INTEREST_TERMS = {
     "consumer", "product", "app", "assistant", "agent", "automation",
     "web design", "ui design", "ux design", "design trends", "figma", "no-code",
     "marketing ai", "ai marketing", "martech", "adtech", "advertising", "seo",
+    "vibe coding", "vibecoding", "ai coding", "coding agent", "code agent",
+    "ai programming", "prompt-to-code", "agentic coding", "cursor", "windsurf",
+    "lovable", "bolt.new", "replit agent", "claude code",
     "робот", "робототехника", "гуманоид", "бытовой робот", "модель ии", "нейросеть",
     "генерация видео", "генерация изображений", "голос", "музыка", "медицина",
     "образование", "дизайн", "бизнес", "гаджет", "устройство", "стартап",
     "инвестиции", "продукт", "приложение", "ассистент", "автоматизация", "прорыв",
     "веб-дизайн", "веб дизайн", "дизайн сайтов", "ux", "ui", "тренды дизайна",
     "figma", "маркетинг", "ии в маркетинге", "martech", "реклама", "seo",
+    "вайбкодинг", "вайб-кодинг", "ии для кода", "ии-программирование",
+    "кодинг-агент", "генерация кода", "программирование с ии",
 }
 
 NICHE_DEVELOPER_TERMS = {

@@ -13,6 +13,7 @@ EMOJI_RULES: list[tuple[str, tuple[str, ...]]] = [
     ("📱", ("gadget", "device", "smartphone", "wearable", "гаджет", "устройство", "смартфон")),
     ("🎨", ("web design", "ui", "ux", "figma", "design", "веб-дизайн", "дизайн", "интерфейс")),
     ("📈", ("marketing", "martech", "advertising", "seo", "crm", "маркетинг", "реклама")),
+    ("⌨️", ("vibe coding", "vibecoding", "вайбкодинг", "вайб-кодинг", "ai coding", "coding agent", "cursor", "windsurf", "claude code")),
     ("🔬", ("research", "study", "scientists", "исследование", "исследователи", "ученые")),
     ("🔐", ("security", "cyber", "vulnerability", "кибербезопас", "уязвимость")),
     ("💡", ("startup", "funding", "investment", "стартап", "инвестиции")),
