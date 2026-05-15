@@ -112,8 +112,8 @@ def score_news(news: dict[str, Any], topic_count: int = 1) -> tuple[float, list[
 
     language = str(news.get("language") or "").lower()
     if language in {"en", "de", "zh", "he"}:
-        score += 8
-        reasons.append(f"foreign_language=+8:{language}")
+        score += 14
+        reasons.append(f"foreign_language=+14:{language}")
     elif language == "ru":
         score += 1
         reasons.append("russian_language=+1")
@@ -154,6 +154,7 @@ def choose_best_news(
     storage: PublishedStorage,
     blocked_sources: BlockedSources | None = None,
     max_age_hours: int = 48,
+    source_cooldown_recent_posts: int = 2,
     llm_selector=None,
 ) -> tuple[dict[str, Any] | None, dict[str, Any]]:
     stats: dict[str, Any] = {
@@ -162,6 +163,7 @@ def choose_best_news(
         "old": 0,
         "duplicates": 0,
         "blocked_sources": 0,
+        "source_cooldown": 0,
         "irrelevant": 0,
         "low_news_value": 0,
         "political": 0,
@@ -170,6 +172,7 @@ def choose_best_news(
     }
     candidates: list[tuple[float, dict[str, Any], list[str]]] = []
     topic_counts = _build_topic_counts(news_items)
+    recent_sources = _recent_published_sources(storage, source_cooldown_recent_posts)
 
     seen_urls: set[str] = set()
     for news in news_items:
@@ -183,6 +186,9 @@ def choose_best_news(
         seen_urls.add(url)
         if blocked_sources and is_news_from_blocked_source(news, blocked_sources):
             stats["blocked_sources"] += 1
+            continue
+        if _source_name(news) in recent_sources:
+            stats["source_cooldown"] += 1
             continue
         if not is_recent_news(news, max_age_hours=max_age_hours):
             stats["old"] += 1
@@ -232,6 +238,22 @@ def _build_topic_counts(news_items: list[dict[str, Any]]) -> dict[str, int]:
     for key, sources in seen_source_by_topic.items():
         counts[key] = len(sources)
     return counts
+
+
+def _recent_published_sources(storage: PublishedStorage, limit: int) -> set[str]:
+    if limit <= 0:
+        return set()
+    sources: set[str] = set()
+    for item in storage.load_published()[-limit:]:
+        metadata = item.get("metadata") or {}
+        source_name = str(metadata.get("source_name") or "").strip().lower()
+        if source_name:
+            sources.add(source_name)
+    return sources
+
+
+def _source_name(news: dict[str, Any]) -> str:
+    return str(news.get("source_name") or "").strip().lower()
 
 
 def _topic_key(news: dict[str, Any]) -> str:

@@ -66,6 +66,7 @@ jobs:
           EVENING_WINDOW=17:00-20:30
           TIMEZONE=Europe/Minsk
           MAX_NEWS_AGE_HOURS=48
+          SOURCE_COOLDOWN_RECENT_POSTS=2
           DRY_RUN=false
           MODERATION_ENABLED=true
           MODERATION_CHAT_ID=${{ secrets.MODERATION_CHAT_ID }}

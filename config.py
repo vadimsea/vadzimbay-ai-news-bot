@@ -28,6 +28,7 @@ class Settings:
     evening_window: str
     timezone: str
     max_news_age_hours: int
+    source_cooldown_recent_posts: int
     dry_run: bool
     moderation_enabled: bool
     moderation_chat_id: str
@@ -53,6 +54,7 @@ def load_settings() -> Settings:
         evening_window=os.getenv("EVENING_WINDOW", "17:00-21:30").strip(),
         timezone=os.getenv("TIMEZONE", "Europe/Minsk").strip(),
         max_news_age_hours=int(os.getenv("MAX_NEWS_AGE_HOURS", "48")),
+        source_cooldown_recent_posts=int(os.getenv("SOURCE_COOLDOWN_RECENT_POSTS", "2")),
         dry_run=_as_bool(os.getenv("DRY_RUN"), default=True),
         moderation_enabled=_as_bool(os.getenv("MODERATION_ENABLED"), default=False),
         moderation_chat_id=os.getenv("MODERATION_CHAT_ID", "").strip(),

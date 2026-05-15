@@ -63,6 +63,7 @@ def run_once() -> bool:
         storage=storage,
         blocked_sources=blocked_sources,
         max_age_hours=settings.max_news_age_hours,
+        source_cooldown_recent_posts=settings.source_cooldown_recent_posts,
         llm_selector=llm_selector,
     )
     _log_stats(stats, len(sources), len(blocked_source_entries))
@@ -180,6 +181,7 @@ def _log_stats(stats: dict, source_count: int, blocked_source_count: int) -> Non
     logger.info("Rejected as old: %s", stats.get("old", 0))
     logger.info("Rejected as duplicates: %s", stats.get("duplicates", 0))
     logger.info("Rejected by blocked source list: %s", stats.get("blocked_sources", 0))
+    logger.info("Rejected by source cooldown: %s", stats.get("source_cooldown", 0))
     logger.info("Rejected as irrelevant: %s", stats.get("irrelevant", 0))
     logger.info("Rejected as low news value: %s", stats.get("low_news_value", 0))
     logger.info("Rejected as politics/war/geopolitics: %s", stats.get("political", 0))
