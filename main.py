@@ -12,6 +12,7 @@ from filters import contains_political_text
 from hashtags import append_hashtags
 from moderation import request_moderation
 from post_style import apply_title_emoji
+from promo import get_weekly_promo_text
 from ranker import choose_best_news
 from scheduler import run_daily
 from sources import get_sources
@@ -135,6 +136,27 @@ def run_once() -> bool:
     return published
 
 
+def run_promo_once() -> bool:
+    settings = load_settings()
+    text = get_weekly_promo_text()
+
+    if settings.dry_run:
+        print("\n=== DRY RUN: WEEKLY PROMO ===")
+        print(text)
+        return True
+
+    published = publish_to_telegram(
+        bot_token=settings.telegram_bot_token,
+        channel_id=settings.telegram_channel_id,
+        text=text,
+        image_url=None,
+        timeout=settings.request_timeout_seconds,
+    )
+    if published:
+        logger.info("Weekly promo publication succeeded")
+    return published
+
+
 def _log_stats(stats: dict, source_count: int, blocked_source_count: int) -> None:
     logger.info("Sources processed: %s", source_count)
     logger.info("Sources skipped by blocked list: %s", blocked_source_count)
@@ -165,8 +187,13 @@ def _print_dry_run(selected: dict, reason: str, post_text: str) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Vadzimbay Telegram tech news bot")
     parser.add_argument("--once", action="store_true", help="Run one news cycle now")
+    parser.add_argument("--promo", action="store_true", help="Publish weekly services promo")
     parser.add_argument("--schedule", action="store_true", help="Run forever with daily schedule")
     args = parser.parse_args()
+
+    if args.promo:
+        run_promo_once()
+        return
 
     if args.schedule:
         settings = load_settings()

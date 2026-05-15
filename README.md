@@ -228,6 +228,22 @@ python main.py --once
 
 - `OPENAI_MODEL`, например `gpt-4.1-mini`
 
+### Еженедельная реклама услуг
+
+Для рекламы услуг есть отдельный workflow:
+
+```text
+.github/workflows/vadzimbay-promo.yml
+```
+
+Он публикует рекламный пост каждую среду в `12:00` по Минску:
+
+```bash
+python main.py --promo
+```
+
+Текст объявления лежит в `promo.py`.
+
 ## 11. OpenAI API
 
 Без `OPENAI_API_KEY` используется простой fallback-шаблон. Для нормальной живой адаптации на русский добавьте ключ:

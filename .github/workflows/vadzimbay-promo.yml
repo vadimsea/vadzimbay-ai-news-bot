@@ -1,0 +1,57 @@
+name: Vadzimbay Weekly Promo
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Wednesday 12:00 Minsk time. Minsk is UTC+3.
+    - cron: "0 9 * * 3"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vadzimbay-weekly-promo
+  cancel-in-progress: false
+
+jobs:
+  publish-promo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create .env
+        shell: bash
+        run: |
+          cat > .env <<'EOF'
+          TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID=${{ secrets.TELEGRAM_CHANNEL_ID }}
+          OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
+          POST_TIME=10:00
+          MORNING_WINDOW=09:00-11:50
+          EVENING_WINDOW=17:00-20:30
+          TIMEZONE=Europe/Minsk
+          MAX_NEWS_AGE_HOURS=48
+          DRY_RUN=false
+          MODERATION_ENABLED=false
+          MODERATION_CHAT_ID=${{ secrets.MODERATION_CHAT_ID }}
+          MODERATION_TIMEOUT_MINUTES=120
+          PUBLISHED_FILE=published.json
+          BLOCKED_SOURCES_FILE=blocked_sources.json
+          REQUEST_TIMEOUT_SECONDS=15
+          OPENAI_MODEL=${{ vars.OPENAI_MODEL || 'gpt-4.1-mini' }}
+          EOF
+
+      - name: Publish weekly promo
+        run: python main.py --promo
