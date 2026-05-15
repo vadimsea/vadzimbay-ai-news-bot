@@ -10,6 +10,7 @@ from config import load_settings
 from fetcher import extract_article_image_url, fetch_all_news
 from filters import contains_political_text
 from hashtags import append_hashtags
+from llm_ranker import select_best_news_with_llm
 from moderation import request_moderation
 from post_style import apply_title_emoji
 from promo import get_weekly_promo_text
@@ -47,11 +48,22 @@ def run_once() -> bool:
     news_items = fetch_all_news(sources)
     logger.info("Found %s news items", len(news_items))
 
+    def llm_selector(candidates):
+        return select_best_news_with_llm(
+            candidates=candidates,
+            llm_provider=settings.llm_provider,
+            groq_api_key=settings.groq_api_key,
+            groq_model=settings.groq_model,
+            openai_api_key=settings.openai_api_key,
+            openai_model=settings.openai_model,
+        )
+
     selected, stats = choose_best_news(
         news_items=news_items,
         storage=storage,
         blocked_sources=blocked_sources,
         max_age_hours=settings.max_news_age_hours,
+        llm_selector=llm_selector,
     )
     _log_stats(stats, len(sources), len(blocked_source_entries))
 

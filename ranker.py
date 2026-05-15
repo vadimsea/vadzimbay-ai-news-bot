@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 import logging
+import re
 from typing import Any
 
 from blocked_sources import BlockedSources, is_news_from_blocked_source
@@ -61,7 +62,15 @@ NICHE_DEVELOPER_TERMS = {
 
 BORING_TITLE_PATTERNS = {
     "releases sdk", "open-source sdk", "cli and kanban", "benchmark", "technical report",
-    "выпустила sdk", "выпустил sdk", "открытый sdk", "бенчмарк",
+    "developer preview", "patch notes", "release notes", "minor update",
+    "выпустила sdk", "выпустил sdk", "открытый sdk", "бенчмарк", "заметки к релизу",
+    "минорное обновление",
+}
+
+LOW_BROAD_VALUE_TERMS = {
+    "internal tool", "enterprise-only", "api endpoint", "migration guide", "deprecated",
+    "breaking changes", "syntax", "configuration", "command line flag",
+    "внутренний инструмент", "руководство по миграции", "устаревший", "конфигурация",
 }
 
 
@@ -75,7 +84,7 @@ def _published_dt(news: dict[str, Any]) -> datetime:
     return dt
 
 
-def score_news(news: dict[str, Any]) -> tuple[float, list[str]]:
+def score_news(news: dict[str, Any], topic_count: int = 1) -> tuple[float, list[str]]:
     text = f"{news.get('title', '')} {news.get('summary', '')}".lower()
     score = float(news.get("trust_score") or 0.5) * 10
     reasons: list[str] = [f"trust={news.get('trust_score', 0.5)}"]
@@ -126,6 +135,17 @@ def score_news(news: dict[str, Any]) -> tuple[float, list[str]]:
         score -= 12
         reasons.append("boring_title=-12")
 
+    low_value_matches = sum(1 for term in LOW_BROAD_VALUE_TERMS if term in text)
+    if low_value_matches:
+        penalty = min(12, low_value_matches * 4)
+        score -= penalty
+        reasons.append(f"low_broad_value=-{penalty}")
+
+    if topic_count > 1:
+        boost = min(10, (topic_count - 1) * 4)
+        score += boost
+        reasons.append(f"multi_source=+{boost}:{topic_count}")
+
     return score, reasons
 
 
@@ -134,6 +154,7 @@ def choose_best_news(
     storage: PublishedStorage,
     blocked_sources: BlockedSources | None = None,
     max_age_hours: int = 48,
+    llm_selector=None,
 ) -> tuple[dict[str, Any] | None, dict[str, Any]]:
     stats: dict[str, Any] = {
         "total": len(news_items),
@@ -148,6 +169,7 @@ def choose_best_news(
         "selected_reason": "",
     }
     candidates: list[tuple[float, dict[str, Any], list[str]]] = []
+    topic_counts = _build_topic_counts(news_items)
 
     seen_urls: set[str] = set()
     for news in news_items:
@@ -175,7 +197,8 @@ def choose_best_news(
             stats["low_news_value"] += 1
             continue
 
-        score, reasons = score_news(news)
+        topic_key = _topic_key(news)
+        score, reasons = score_news(news, topic_count=topic_counts.get(topic_key, 1))
         candidates.append((score, news, reasons))
 
     stats["candidates"] = len(candidates)
@@ -183,7 +206,42 @@ def choose_best_news(
         return None, stats
 
     candidates.sort(key=lambda item: item[0], reverse=True)
+
+    if llm_selector:
+        llm_news, llm_reason = llm_selector([item[1] for item in candidates[:20]])
+        if llm_news:
+            stats["selected_reason"] = f"llm_selected; {llm_reason}"
+            logger.info("LLM selected news: %s (%s)", llm_news.get("title"), stats["selected_reason"])
+            return llm_news, stats
+
     score, selected, reasons = candidates[0]
     stats["selected_reason"] = f"score={score:.1f}; " + ", ".join(reasons)
     logger.info("Selected news: %s (%s)", selected.get("title"), stats["selected_reason"])
     return selected, stats
+
+
+def _build_topic_counts(news_items: list[dict[str, Any]]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    seen_source_by_topic: dict[str, set[str]] = {}
+    for news in news_items:
+        key = _topic_key(news)
+        if not key:
+            continue
+        source = str(news.get("source_name") or news.get("url") or "")
+        seen_source_by_topic.setdefault(key, set()).add(source)
+    for key, sources in seen_source_by_topic.items():
+        counts[key] = len(sources)
+    return counts
+
+
+def _topic_key(news: dict[str, Any]) -> str:
+    title = str(news.get("title") or "").lower()
+    title = re.sub(r"https?://\S+", " ", title)
+    title = re.sub(r"[^a-zа-яё0-9\s]+", " ", title)
+    stop_words = {
+        "the", "and", "for", "with", "from", "that", "this", "into", "over", "new",
+        "как", "что", "это", "для", "или", "при", "над", "под", "новый", "новая",
+        "der", "die", "das", "und", "mit", "ein", "eine", "neue", "neuer",
+    }
+    words = [word for word in title.split() if len(word) > 2 and word not in stop_words]
+    return " ".join(words[:8])

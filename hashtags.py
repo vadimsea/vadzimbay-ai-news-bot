@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from typing import Any
 
 
@@ -35,7 +36,7 @@ def build_hashtags(news: dict[str, Any], max_tags: int = MAX_HASHTAGS) -> list[s
     tags: list[str] = []
 
     for tag, keywords in TAG_RULES:
-        if any(keyword in text for keyword in keywords):
+        if any(_keyword_matches(text, keyword) for keyword in keywords):
             tags.append(tag)
         if len(tags) >= max_tags:
             return tags
@@ -57,3 +58,10 @@ def append_hashtags(text: str, news: dict[str, Any], max_length: int = 1024) -> 
             return candidate
         tags.pop()
     return text
+
+
+def _keyword_matches(text: str, keyword: str) -> bool:
+    keyword = keyword.lower()
+    if keyword in {"ai", "ии", "ki", "ui", "ux", "seo", "crm"}:
+        return re.search(r"(?<![\wа-яё])" + re.escape(keyword) + r"(?![\wа-яё])", text) is not None
+    return keyword in text
