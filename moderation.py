@@ -85,6 +85,7 @@ def _send_moderation_preview(
     payload = {
         "chat_id": chat_id,
         "text": text,
+        "parse_mode": "HTML",
         "disable_web_page_preview": False,
         "reply_markup": reply_markup,
     }

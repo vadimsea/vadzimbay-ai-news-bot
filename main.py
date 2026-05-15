@@ -19,6 +19,7 @@ from scheduler import run_daily
 from sources import get_sources
 from storage import PublishedStorage
 from telegram_publisher import is_image_reachable, publish_to_telegram
+from telegram_formatting import format_post_html
 from translator import adapt_news_to_russian
 
 
@@ -114,6 +115,7 @@ def run_once() -> bool:
         return False
     post_text = apply_title_emoji(post_text, selected)
     post_text = append_hashtags(post_text, selected)
+    post_text = format_post_html(post_text)
 
     if settings.dry_run:
         _print_dry_run(selected, stats.get("selected_reason", ""), post_text)

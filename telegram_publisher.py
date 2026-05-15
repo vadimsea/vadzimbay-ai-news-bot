@@ -56,6 +56,7 @@ def _send_message(bot_token: str, channel_id: str, text: str, timeout: int) -> b
     payload: dict[str, Any] = {
         "chat_id": channel_id,
         "text": text[:MAX_MESSAGE_LENGTH],
+        "parse_mode": "HTML",
         "disable_web_page_preview": False,
     }
     return _post(url, payload, timeout)
@@ -74,6 +75,7 @@ def _send_photo_by_url(
         "chat_id": channel_id,
         "photo": image_url,
         "caption": caption,
+        "parse_mode": "HTML",
     }
     if reply_markup:
         payload["reply_markup"] = reply_markup
@@ -94,7 +96,7 @@ def _send_photo_by_upload(
 
     filename, content, content_type = image
     url = TELEGRAM_API.format(token=bot_token, method="sendPhoto")
-    data: dict[str, Any] = {"chat_id": channel_id, "caption": caption}
+    data: dict[str, Any] = {"chat_id": channel_id, "caption": caption, "parse_mode": "HTML"}
     if reply_markup:
         data["reply_markup"] = json.dumps(reply_markup, ensure_ascii=False)
     files = {"photo": (filename, content, content_type)}
