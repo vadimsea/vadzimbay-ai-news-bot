@@ -16,5 +16,14 @@
       "source_name": "3DNews",
       "published_at": "2026-05-15T12:59:00+00:00"
     }
+  },
+  {
+    "url": "https://3dnews.ru/1141778",
+    "published_at": "2026-05-15T15:47:00.766464+00:00",
+    "metadata": {
+      "title": "xAI Маска выпустила ИИ-агента Grok Build — конкурента Claude Code для генерации программного кода",
+      "source_name": "3DNews",
+      "published_at": "2026-05-15T09:14:00+00:00"
+    }
   }
 ]
