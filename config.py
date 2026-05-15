@@ -27,6 +27,9 @@ class Settings:
     timezone: str
     max_news_age_hours: int
     dry_run: bool
+    moderation_enabled: bool
+    moderation_chat_id: str
+    moderation_timeout_minutes: int
     published_file: Path
     blocked_sources_file: Path
     request_timeout_seconds: int
@@ -46,6 +49,9 @@ def load_settings() -> Settings:
         timezone=os.getenv("TIMEZONE", "Europe/Minsk").strip(),
         max_news_age_hours=int(os.getenv("MAX_NEWS_AGE_HOURS", "48")),
         dry_run=_as_bool(os.getenv("DRY_RUN"), default=True),
+        moderation_enabled=_as_bool(os.getenv("MODERATION_ENABLED"), default=False),
+        moderation_chat_id=os.getenv("MODERATION_CHAT_ID", "").strip(),
+        moderation_timeout_minutes=int(os.getenv("MODERATION_TIMEOUT_MINUTES", "120")),
         published_file=BASE_DIR / os.getenv("PUBLISHED_FILE", "published.json"),
         blocked_sources_file=BASE_DIR / os.getenv("BLOCKED_SOURCES_FILE", "blocked_sources.json"),
         request_timeout_seconds=int(os.getenv("REQUEST_TIMEOUT_SECONDS", "15")),

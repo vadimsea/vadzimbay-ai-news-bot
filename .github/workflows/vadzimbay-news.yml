@@ -18,7 +18,7 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 330
+    timeout-minutes: 360
 
     steps:
       - name: Checkout
@@ -37,8 +37,8 @@ jobs:
             # 09:00-11:50 Minsk
             delay=$(( RANDOM % 10201 ))
           else
-            # 17:00-21:30 Minsk
-            delay=$(( RANDOM % 16201 ))
+            # 17:00-20:30 Minsk
+            delay=$(( RANDOM % 12601 ))
           fi
           echo "Sleeping for $delay seconds before publishing"
           sleep "$delay"
@@ -61,10 +61,13 @@ jobs:
           OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
           POST_TIME=10:00
           MORNING_WINDOW=09:00-11:50
-          EVENING_WINDOW=17:00-21:30
+          EVENING_WINDOW=17:00-20:30
           TIMEZONE=Europe/Minsk
           MAX_NEWS_AGE_HOURS=48
           DRY_RUN=false
+          MODERATION_ENABLED=true
+          MODERATION_CHAT_ID=${{ secrets.MODERATION_CHAT_ID }}
+          MODERATION_TIMEOUT_MINUTES=120
           PUBLISHED_FILE=published.json
           BLOCKED_SOURCES_FILE=blocked_sources.json
           REQUEST_TIMEOUT_SECONDS=15

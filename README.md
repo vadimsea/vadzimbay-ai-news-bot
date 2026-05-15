@@ -59,13 +59,18 @@ TELEGRAM_CHANNEL_ID=@your_channel
 OPENAI_API_KEY=
 POST_TIME=10:00
 MORNING_WINDOW=09:00-11:50
-EVENING_WINDOW=17:00-21:30
+EVENING_WINDOW=17:00-20:30
 TIMEZONE=Europe/Minsk
 MAX_NEWS_AGE_HOURS=48
 DRY_RUN=true
+MODERATION_ENABLED=true
+MODERATION_CHAT_ID=@vadzimbelarus
+MODERATION_TIMEOUT_MINUTES=120
 ```
 
 `DRY_RUN=true` означает, что бот ничего не публикует, а печатает выбранную новость и итоговый пост в консоль.
+
+`MODERATION_ENABLED=true` означает, что перед публикацией бот отправит превью в `MODERATION_CHAT_ID` с кнопками подтверждения и отклонения.
 
 ## 5. Установить зависимости
 
@@ -132,7 +137,7 @@ python main.py --schedule
 При запуске через `--schedule` бот планирует две публикации в день в случайное время:
 
 - `MORNING_WINDOW=09:00-11:50` — до обеда;
-- `EVENING_WINDOW=17:00-21:30` — после 17:00;
+- `EVENING_WINDOW=17:00-20:30` — после 17:00;
 - `TIMEZONE=Europe/Minsk` — часовой пояс Минска.
 
 Каждый день после полуночи время публикаций пересчитывается заново.
@@ -200,7 +205,7 @@ sudo systemctl enable --now vadzimbay-news.timer
 Он запускается два раза в день:
 
 - утром в окне `09:00-11:50` по Минску;
-- вечером в окне `17:00-21:30` по Минску.
+- вечером в окне `17:00-20:30` по Минску.
 
 Внутри каждого окна workflow делает случайную задержку, затем запускает:
 
@@ -215,6 +220,7 @@ python main.py --once
 - `TELEGRAM_BOT_TOKEN`
 - `TELEGRAM_CHANNEL_ID`
 - `OPENAI_API_KEY`
+- `MODERATION_CHAT_ID`
 
 Путь: `Settings` → `Secrets and variables` → `Actions` → `New repository secret`.
 

@@ -1,5 +1,55 @@
 {
-  "domains": [],
-  "source_names": [],
-  "keywords": []
+  "domains": [
+    "tut.by",
+    "zerkalo.io",
+    "belsat.eu",
+    "belsat.pl",
+    "nashaniva.com",
+    "nn.by",
+    "reform.by",
+    "reform.news",
+    "euroradio.fm",
+    "svaboda.org",
+    "charter97.org",
+    "hrodna.life",
+    "mediazona.by",
+    "kyky.org",
+    "malanka.media",
+    "motolko.help",
+    "flagshtok.info",
+    "gazetaby.com",
+    "salidarnast.info",
+    "udf.by",
+    "naviny.online",
+    "thinktanks.by",
+    "baj.by"
+  ],
+  "source_names": [
+    "TUT.BY",
+    "Zerkalo",
+    "Belsat",
+    "Наша Ніва",
+    "Наша Нива",
+    "Reform.news",
+    "Euroradio",
+    "Радыё Свабода",
+    "Хартия 97",
+    "Malanka",
+    "Mediazona Belarus"
+  ],
+  "keywords": [
+    "belsat",
+    "zerkalo",
+    "tut.by",
+    "nasha niva",
+    "наша ніва",
+    "наша нива",
+    "charter97",
+    "хартия 97",
+    "euroradio",
+    "радыё свабода",
+    "radio svaboda",
+    "malanka",
+    "motolko"
+  ]
 }

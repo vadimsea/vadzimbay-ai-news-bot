@@ -96,6 +96,14 @@ def score_news(news: dict[str, Any]) -> tuple[float, list[str]]:
         score += 6
         reasons.append(f"category={news.get('category')}")
 
+    language = str(news.get("language") or "").lower()
+    if language in {"en", "de", "zh", "he"}:
+        score += 8
+        reasons.append(f"foreign_language=+8:{language}")
+    elif language == "ru":
+        score += 1
+        reasons.append("russian_language=+1")
+
     broad_matches = sum(1 for term in BROAD_INTEREST_TERMS if term in text)
     if broad_matches:
         boost = min(14, broad_matches * 3)

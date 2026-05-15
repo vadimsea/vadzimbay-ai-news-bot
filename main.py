@@ -10,6 +10,7 @@ from config import load_settings
 from fetcher import extract_article_image_url, fetch_all_news
 from filters import contains_political_text
 from hashtags import append_hashtags
+from moderation import request_moderation
 from post_style import apply_title_emoji
 from ranker import choose_best_news
 from scheduler import run_daily
@@ -86,6 +87,20 @@ def run_once() -> bool:
     if settings.dry_run:
         _print_dry_run(selected, stats.get("selected_reason", ""), post_text)
         return True
+
+    if settings.moderation_enabled:
+        moderation = request_moderation(
+            bot_token=settings.telegram_bot_token,
+            moderation_chat_id=settings.moderation_chat_id,
+            text=post_text,
+            news=selected,
+            image_url=selected.get("image_url"),
+            timeout_minutes=settings.moderation_timeout_minutes,
+            request_timeout=settings.request_timeout_seconds,
+        )
+        logger.info("Moderation result: %s", moderation.reason)
+        if not moderation.approved:
+            return False
 
     published = publish_to_telegram(
         bot_token=settings.telegram_bot_token,
