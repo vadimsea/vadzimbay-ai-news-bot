@@ -1,0 +1,95 @@
+name: Vadzimbay Telegram News Bot
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Minsk is UTC+3. Morning window starts at 09:00 Minsk.
+    - cron: "0 6 * * *"
+    # Minsk is UTC+3. Evening window starts at 17:00 Minsk.
+    - cron: "0 14 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vadzimbay-news-bot
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Random delay inside publishing window
+        shell: bash
+        run: |
+          set -euo pipefail
+          hour_utc="$(date -u +%H)"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            delay=0
+          elif [ "$hour_utc" = "06" ]; then
+            # 09:00-11:50 Minsk
+            delay=$(( RANDOM % 10201 ))
+          else
+            # 17:00-21:30 Minsk
+            delay=$(( RANDOM % 16201 ))
+          fi
+          echo "Sleeping for $delay seconds before publishing"
+          sleep "$delay"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create .env
+        shell: bash
+        run: |
+          cat > .env <<'EOF'
+          TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID=${{ secrets.TELEGRAM_CHANNEL_ID }}
+          OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
+          POST_TIME=10:00
+          MORNING_WINDOW=09:00-11:50
+          EVENING_WINDOW=17:00-21:30
+          TIMEZONE=Europe/Minsk
+          MAX_NEWS_AGE_HOURS=48
+          DRY_RUN=false
+          PUBLISHED_FILE=published.json
+          BLOCKED_SOURCES_FILE=blocked_sources.json
+          REQUEST_TIMEOUT_SECONDS=15
+          OPENAI_MODEL=${{ vars.OPENAI_MODEL || 'gpt-4.1-mini' }}
+          EOF
+
+      - name: Run bot once
+        run: python main.py --once
+
+      - name: Commit published state
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -f published.json ]; then
+            echo "No published.json changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f published.json
+          if git diff --cached --quiet; then
+            echo "No published.json changes to commit"
+            exit 0
+          fi
+          git commit -m "Update published news state"
+          git pull --rebase
+          git push
