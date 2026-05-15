@@ -84,6 +84,9 @@ def run_once() -> bool:
         selected,
         openai_api_key=settings.openai_api_key,
         model=settings.openai_model,
+        llm_provider=settings.llm_provider,
+        groq_api_key=settings.groq_api_key,
+        groq_model=settings.groq_model,
     )
     if not post_text:
         logger.info("Selected news was rejected during adaptation. Nothing will be published.")

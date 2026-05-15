@@ -3,6 +3,7 @@ from __future__ import annotations
 import logging
 from typing import Any
 
+from groq import Groq
 from openai import OpenAI
 
 from filters import contains_political_text, is_political_news
@@ -32,15 +33,114 @@ SYSTEM_PROMPT = """Ты редактор Telegram-канала о техноло
 """
 
 
-def adapt_news_to_russian(news: dict[str, Any], openai_api_key: str | None, model: str) -> str | None:
+def adapt_news_to_russian(
+    news: dict[str, Any],
+    openai_api_key: str | None,
+    model: str,
+    llm_provider: str = "openai",
+    groq_api_key: str | None = None,
+    groq_model: str = "llama-3.3-70b-versatile",
+) -> str | None:
     if is_political_news(news):
         logger.warning("Translator rejected political source news: %s", news.get("url"))
         return None
+
+    if llm_provider == "groq" and groq_api_key:
+        text = _adapt_with_groq(news, groq_api_key, groq_model)
+        if text:
+            return text
+        logger.warning("Groq adaptation failed, falling back to OpenAI")
 
     if openai_api_key:
         return _adapt_with_openai(news, openai_api_key, model)
 
     return _fallback_post(news)
+
+
+def _adapt_with_groq(news: dict[str, Any], groq_api_key: str, model: str) -> str | None:
+    client = Groq(api_key=groq_api_key)
+    user_prompt = f"""Исходные данные новости:
+Title: {news.get("title", "")}
+Summary: {news.get("summary", "")}
+Language: {news.get("language", "")}
+Source: {news.get("source_name", "")}
+URL: {news.get("url", "")}
+
+Сделай Telegram-пост строго по формату. Не используй кликбейт и фразы вроде "меняет правила игры", если это не нейтральная формулировка из исходных данных.
+Весь пост должен быть короче 950 символов вместе с URL источника, чтобы поместиться в подпись к фото Telegram.
+Пиши живо, но спокойно: без канцелярита, без рекламного тона, без скучного пересказа пресс-релиза.
+Блок "Почему это важно:" должен быть отдельной строкой.
+Последняя строка должна быть: Источник: {news.get("url", "")}
+"""
+
+    try:
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": user_prompt},
+            ],
+            temperature=0.35,
+            max_tokens=700,
+        )
+    except Exception:
+        logger.exception("Groq adaptation failed")
+        return None
+
+    text = (response.choices[0].message.content or "").strip()
+    if not text or "POLITICAL_CONTENT_REJECTED" in text:
+        return None
+    if contains_political_text(text):
+        logger.warning("Groq text rejected by political filter: %s", news.get("url"))
+        return None
+    text = _ensure_source_line(text, news)
+    if len(text) > MAX_TELEGRAM_PHOTO_CAPTION_LENGTH:
+        text = _shorten_with_groq(client, text, news, model)
+        if not text:
+            return None
+    return text
+
+
+def _shorten_with_groq(client: Groq, text: str, news: dict[str, Any], model: str) -> str | None:
+    source_line = f"Источник: {news.get('url', '')}"
+    target_total = min(880, MAX_TELEGRAM_PHOTO_CAPTION_LENGTH - 40)
+    target_body = max(420, target_total - len(source_line) - 4)
+    prompt = f"""Сократи этот Telegram-пост так, чтобы весь результат был максимум {target_total} символов.
+Текст до строки источника должен быть максимум {target_body} символов.
+Нельзя добавлять новые факты. Нельзя менять смысл. Нельзя убирать строку источника.
+Сохрани формат:
+Заголовок
+
+1 короткий абзац
+
+Почему это важно:
+1 короткое предложение.
+
+Источник: {news.get("url", "")}
+
+Текст:
+{text}
+"""
+    try:
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": "Ты аккуратно сокращаешь Telegram-посты о технологиях."},
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0.2,
+            max_tokens=500,
+        )
+    except Exception:
+        logger.exception("Groq shortening failed")
+        return None
+
+    shortened = _ensure_source_line((response.choices[0].message.content or "").strip(), news)
+    if not shortened or contains_political_text(shortened):
+        return None
+    if len(shortened) > MAX_TELEGRAM_PHOTO_CAPTION_LENGTH:
+        shortened = _force_caption_limit(shortened, news)
+    return shortened if len(shortened) <= MAX_TELEGRAM_PHOTO_CAPTION_LENGTH else None
 
 
 def _adapt_with_openai(news: dict[str, Any], openai_api_key: str, model: str) -> str | None:
