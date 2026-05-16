@@ -3,10 +3,9 @@ name: Vadzimbay Telegram News Bot
 on:
   workflow_dispatch:
   schedule:
-    # Minsk is UTC+3. Morning window starts at 09:00 Minsk.
-    - cron: "0 6 * * *"
-    # Minsk is UTC+3. Evening window starts at 17:00 Minsk.
-    - cron: "0 14 * * *"
+    # Poll every 15 minutes. schedule_gate.py picks one random-ish time
+    # inside the Minsk morning/evening windows and prevents duplicates.
+    - cron: "*/15 * * * *"
 
 permissions:
   contents: write
@@ -26,33 +25,30 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Random delay inside publishing window
+      - name: Schedule gate
+        id: gate
         shell: bash
         run: |
-          set -euo pipefail
-          hour_utc="$(date -u +%H)"
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            delay=0
-          elif [ "$hour_utc" = "06" ]; then
-            # 09:00-11:50 Minsk
-            delay=$(( RANDOM % 10201 ))
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+            echo "reason=manual run" >> "$GITHUB_OUTPUT"
           else
-            # 17:00-20:30 Minsk
-            delay=$(( RANDOM % 12601 ))
+            python schedule_gate.py
           fi
-          echo "Sleeping for $delay seconds before publishing"
-          sleep "$delay"
 
       - name: Set up Python
+        if: steps.gate.outputs.should_run == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: "pip"
 
       - name: Install dependencies
+        if: steps.gate.outputs.should_run == 'true'
         run: pip install -r requirements.txt
 
       - name: Create .env
+        if: steps.gate.outputs.should_run == 'true'
         shell: bash
         run: |
           cat > .env <<'EOF'
@@ -79,6 +75,7 @@ jobs:
           EOF
 
       - name: Run bot once
+        if: steps.gate.outputs.should_run == 'true'
         run: python main.py --once
 
       - name: Commit published state
@@ -86,13 +83,13 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if [ ! -f published.json ]; then
-            echo "No published.json changes to commit"
-            exit 0
-          fi
+          touch published.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -f published.json
+          if [ -f schedule_state.json ]; then
+            git add -f schedule_state.json
+          fi
           if git diff --cached --quiet; then
             echo "No published.json changes to commit"
             exit 0
