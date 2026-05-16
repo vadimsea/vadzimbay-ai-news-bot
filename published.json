@@ -128,5 +128,41 @@
       "language": "en"
     },
     "updated_at": "2026-05-16T16:13:37.581061+00:00"
+  },
+  {
+    "url": "https://www.marktechpost.com/2026/05/16/nvidia-introduces-sana-wm-a-2-6b-parameter-open-source-world-model-that-generates-minute-scale-720p-video-on-a-single-gpu/",
+    "published_at": "2026-05-16T16:17:41.785996+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "NVIDIA Introduces SANA-WM: A 2.6B-Parameter Open-Source World Model That Generates Minute-Scale 720p Video on a Single GPU",
+      "source_name": "MarkTechPost",
+      "published_at": "2026-05-16T07:52:42+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-16T16:17:41.785996+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/05/15/osaurus-brings-both-local-and-cloud-ai-models-to-your-mac/",
+    "published_at": "2026-05-16T16:16:02.648155+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Osaurus brings both local and cloud AI models to your Mac",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-05-15T12:19:48+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-16T16:17:41.786437+00:00"
+  },
+  {
+    "url": "https://habr.com/ru/articles/1035812/?utm_campaign=1035812&utm_source=habrahabr&utm_medium=rss",
+    "published_at": "2026-05-16T16:16:02.648526+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Harness вокруг LLM: что я понял за год ежедневной работы",
+      "source_name": "Habr AI",
+      "published_at": "2026-05-16T05:13:38+00:00",
+      "language": "ru"
+    },
+    "updated_at": "2026-05-16T16:17:41.786937+00:00"
   }
 ]
