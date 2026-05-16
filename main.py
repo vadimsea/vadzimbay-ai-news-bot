@@ -4,22 +4,23 @@ import argparse
 import logging
 from pprint import pformat
 import sys
+from typing import Any
 
 from blocked_sources import filter_allowed_sources, load_blocked_sources
-from config import load_settings
+from config import Settings, load_settings
 from fetcher import extract_article_image_url, fetch_all_news
 from filters import contains_political_text
 from hashtags import append_hashtags
 from llm_ranker import select_best_news_with_llm
-from moderation import request_moderation
+from moderation import ModerationItem, request_moderation_batch
 from post_style import apply_title_emoji
 from promo import get_weekly_promo_text
-from ranker import choose_best_news
+from ranker import choose_top_news
 from scheduler import run_daily
 from sources import get_sources
 from storage import PublishedStorage
-from telegram_publisher import is_image_reachable, publish_to_telegram
 from telegram_formatting import format_post_html
+from telegram_publisher import is_image_reachable, publish_to_telegram
 from translator import adapt_news_to_russian
 
 
@@ -59,104 +60,126 @@ def run_once() -> bool:
             openai_model=settings.openai_model,
         )
 
-    selected, stats = choose_best_news(
+    selected_items, stats = choose_top_news(
         news_items=news_items,
         storage=storage,
         blocked_sources=blocked_sources,
         max_age_hours=settings.max_news_age_hours,
         source_cooldown_recent_posts=settings.source_cooldown_recent_posts,
+        selection_count=max(settings.moderation_choices * 3, settings.moderation_choices),
         llm_selector=llm_selector,
     )
     _log_stats(stats, len(sources), len(blocked_source_entries))
 
-    if not selected:
+    if not selected_items:
         logger.info("No suitable news found. Nothing will be published.")
         return False
 
-    if selected.get("image_url") and not is_image_reachable(
-        selected["image_url"],
-        settings.request_timeout_seconds,
-    ):
-        logger.info("RSS image is not usable, trying to extract image from article page")
-        selected["image_url"] = ""
-
-    if not selected.get("image_url"):
-        selected["image_url"] = extract_article_image_url(selected["url"])
-        if selected.get("image_url"):
-            logger.info("Article image found on source page: %s", selected["image_url"])
-        else:
-            logger.info("No article image found for selected news")
-
-    if not selected.get("image_url") or not is_image_reachable(
-        selected["image_url"],
-        settings.request_timeout_seconds,
-    ):
-        logger.info("Selected news has no valid image. Nothing will be published.")
+    prepared_items = _prepare_posts(selected_items, settings, limit=settings.moderation_choices)
+    if not prepared_items:
+        logger.info("No selected news could be prepared with valid image and safe text.")
         return False
-
-    post_text = adapt_news_to_russian(
-        selected,
-        openai_api_key=settings.openai_api_key,
-        model=settings.openai_model,
-        llm_provider=settings.llm_provider,
-        groq_api_key=settings.groq_api_key,
-        groq_model=settings.groq_model,
-    )
-    if not post_text:
-        logger.info("Selected news was rejected during adaptation. Nothing will be published.")
-        return False
-
-    if contains_political_text(post_text):
-        logger.warning("Final post rejected by political filter. Nothing will be published.")
-        return False
-
-    if f"Источник: {selected['url']}" not in post_text:
-        logger.warning("Final post has no source URL. Nothing will be published.")
-        return False
-    post_text = apply_title_emoji(post_text, selected)
-    post_text = append_hashtags(post_text, selected)
-    post_text = format_post_html(post_text)
 
     if settings.dry_run:
-        _print_dry_run(selected, stats.get("selected_reason", ""), post_text)
+        _print_dry_run_batch(prepared_items, stats.get("selected_reasons", []))
         return True
 
     if settings.moderation_enabled:
-        storage.mark_as_offered(
-            selected["url"],
-            _selected_metadata(selected),
-        )
-        moderation = request_moderation(
+        for item in prepared_items:
+            storage.mark_as_offered(item.news["url"], _selected_metadata(item.news))
+        moderation_results = request_moderation_batch(
             bot_token=settings.telegram_bot_token,
             moderation_chat_id=settings.moderation_chat_id,
-            text=post_text,
-            news=selected,
-            image_url=selected.get("image_url"),
+            items=prepared_items,
             timeout_minutes=settings.moderation_timeout_minutes,
             request_timeout=settings.request_timeout_seconds,
         )
-        logger.info("Moderation result: %s", moderation.reason)
+    else:
+        moderation_results = [
+            type("Result", (), {"approved": True, "reason": "moderation disabled"})()
+            for _ in prepared_items
+        ]
+
+    any_published = False
+    for item, moderation in zip(prepared_items, moderation_results):
+        logger.info("Moderation result for %s: %s", item.news.get("title"), moderation.reason)
         if not moderation.approved:
             if moderation.reason == "rejected":
-                storage.mark_as_rejected(
-                    selected["url"],
-                    _selected_metadata(selected),
-                )
-            return False
+                storage.mark_as_rejected(item.news["url"], _selected_metadata(item.news))
+            continue
 
-    published = publish_to_telegram(
-        bot_token=settings.telegram_bot_token,
-        channel_id=settings.telegram_channel_id,
-        text=post_text,
-        image_url=selected.get("image_url"),
-        timeout=settings.request_timeout_seconds,
-    )
-    if published:
-        storage.mark_as_published(
-            selected["url"],
-            _selected_metadata(selected),
+        published = publish_to_telegram(
+            bot_token=settings.telegram_bot_token,
+            channel_id=settings.telegram_channel_id,
+            text=item.text,
+            image_url=item.image_url,
+            timeout=settings.request_timeout_seconds,
         )
-    return published
+        if published:
+            any_published = True
+            storage.mark_as_published(item.news["url"], _selected_metadata(item.news))
+    return any_published
+
+
+def _prepare_posts(news_items: list[dict[str, Any]], settings: Settings, limit: int) -> list[ModerationItem]:
+    prepared: list[ModerationItem] = []
+    for selected in news_items:
+        if len(prepared) >= limit:
+            break
+
+        selected = dict(selected)
+        if selected.get("image_url") and not is_image_reachable(
+            selected["image_url"],
+            settings.request_timeout_seconds,
+        ):
+            logger.info("RSS image is not usable, trying to extract image from article page")
+            selected["image_url"] = ""
+
+        if not selected.get("image_url"):
+            selected["image_url"] = extract_article_image_url(selected["url"])
+            if selected.get("image_url"):
+                logger.info("Article image found on source page: %s", selected["image_url"])
+            else:
+                logger.info("No article image found for selected news")
+
+        if not selected.get("image_url") or not is_image_reachable(
+            selected["image_url"],
+            settings.request_timeout_seconds,
+        ):
+            logger.info("Selected news has no valid image, skipping: %s", selected.get("title"))
+            continue
+
+        post_text = adapt_news_to_russian(
+            selected,
+            openai_api_key=settings.openai_api_key,
+            model=settings.openai_model,
+            llm_provider=settings.llm_provider,
+            groq_api_key=settings.groq_api_key,
+            groq_model=settings.groq_model,
+        )
+        if not post_text:
+            logger.info("Selected news was rejected during adaptation: %s", selected.get("url"))
+            continue
+
+        if contains_political_text(post_text):
+            logger.warning("Final post rejected by political filter: %s", selected.get("url"))
+            continue
+
+        if f"Источник: {selected['url']}" not in post_text:
+            logger.warning("Final post has no source URL: %s", selected.get("url"))
+            continue
+
+        post_text = apply_title_emoji(post_text, selected)
+        post_text = append_hashtags(post_text, selected)
+        post_text = format_post_html(post_text)
+        prepared.append(
+            ModerationItem(
+                text=post_text,
+                news=selected,
+                image_url=selected.get("image_url"),
+            )
+        )
+    return prepared
 
 
 def _selected_metadata(selected: dict) -> dict:
@@ -215,6 +238,13 @@ def _print_dry_run(selected: dict, reason: str, post_text: str) -> None:
     print(selected.get("url"))
     print("\n=== IMAGE_URL ===")
     print(selected.get("image_url") or "")
+
+
+def _print_dry_run_batch(items: list[ModerationItem], reasons: list[str]) -> None:
+    for index, item in enumerate(items, start=1):
+        reason = reasons[index - 1] if index - 1 < len(reasons) else ""
+        print(f"\n=== DRY RUN: OPTION {index} ===")
+        _print_dry_run(item.news, reason, item.text)
 
 
 def main() -> None:

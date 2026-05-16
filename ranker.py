@@ -200,6 +200,27 @@ def choose_best_news(
     source_cooldown_recent_posts: int = 2,
     llm_selector=None,
 ) -> tuple[dict[str, Any] | None, dict[str, Any]]:
+    selected_items, stats = choose_top_news(
+        news_items=news_items,
+        storage=storage,
+        blocked_sources=blocked_sources,
+        max_age_hours=max_age_hours,
+        source_cooldown_recent_posts=source_cooldown_recent_posts,
+        selection_count=1,
+        llm_selector=llm_selector,
+    )
+    return (selected_items[0] if selected_items else None), stats
+
+
+def choose_top_news(
+    news_items: list[dict[str, Any]],
+    storage: PublishedStorage,
+    blocked_sources: BlockedSources | None = None,
+    max_age_hours: int = 48,
+    source_cooldown_recent_posts: int = 2,
+    selection_count: int = 3,
+    llm_selector=None,
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     stats: dict[str, Any] = {
         "total": len(news_items),
         "missing_required_fields": 0,
@@ -212,6 +233,7 @@ def choose_best_news(
         "political": 0,
         "candidates": 0,
         "selected_reason": "",
+        "selected_reasons": [],
     }
     candidates: list[tuple[float, dict[str, Any], list[str]]] = []
     topic_counts = _build_topic_counts(news_items)
@@ -252,21 +274,47 @@ def choose_best_news(
 
     stats["candidates"] = len(candidates)
     if not candidates:
-        return None, stats
+        return [], stats
 
     candidates.sort(key=lambda item: item[0], reverse=True)
+    selected_items: list[dict[str, Any]] = []
+    selected_reasons: list[str] = []
+    used_sources: set[str] = set()
 
     if llm_selector:
         llm_news, llm_reason = llm_selector([item[1] for item in candidates[:20]])
         if llm_news:
-            stats["selected_reason"] = f"llm_selected; {llm_reason}"
-            logger.info("LLM selected news: %s (%s)", llm_news.get("title"), stats["selected_reason"])
-            return llm_news, stats
+            selected_items.append(llm_news)
+            used_sources.add(_source_name(llm_news))
+            selected_reasons.append(f"llm_selected; {llm_reason}")
+            logger.info("LLM selected news: %s (%s)", llm_news.get("title"), selected_reasons[-1])
 
-    score, selected, reasons = candidates[0]
-    stats["selected_reason"] = f"score={score:.1f}; " + ", ".join(reasons)
-    logger.info("Selected news: %s (%s)", selected.get("title"), stats["selected_reason"])
-    return selected, stats
+    for score, news, reasons in candidates:
+        if len(selected_items) >= selection_count:
+            break
+        if any(_normalize_url(item.get("url", "")) == _normalize_url(news.get("url", "")) for item in selected_items):
+            continue
+        source_name = _source_name(news)
+        if source_name and source_name in used_sources and len(candidates) > selection_count:
+            continue
+        selected_items.append(news)
+        used_sources.add(source_name)
+        selected_reasons.append(f"score={score:.1f}; " + ", ".join(reasons))
+
+    if len(selected_items) < selection_count:
+        for score, news, reasons in candidates:
+            if len(selected_items) >= selection_count:
+                break
+            if any(_normalize_url(item.get("url", "")) == _normalize_url(news.get("url", "")) for item in selected_items):
+                continue
+            selected_items.append(news)
+            selected_reasons.append(f"score={score:.1f}; " + ", ".join(reasons))
+
+    stats["selected_reasons"] = selected_reasons
+    stats["selected_reason"] = selected_reasons[0] if selected_reasons else ""
+    for news, reason in zip(selected_items, selected_reasons):
+        logger.info("Selected news option: %s (%s)", news.get("title"), reason)
+    return selected_items, stats
 
 
 def _build_topic_counts(news_items: list[dict[str, Any]]) -> dict[str, int]:
@@ -297,6 +345,10 @@ def _recent_published_sources(storage: PublishedStorage, limit: int) -> set[str]
 
 def _source_name(news: dict[str, Any]) -> str:
     return str(news.get("source_name") or "").strip().lower()
+
+
+def _normalize_url(url: Any) -> str:
+    return str(url or "").strip().rstrip("/")
 
 
 def _topic_key(news: dict[str, Any]) -> str:
