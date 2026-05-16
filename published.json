@@ -56,5 +56,41 @@
       "published_at": "2026-05-15T13:58:14+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "https://www.theverge.com/news/931884/youtube-likeness-detection-ai-deepfake-expansion-all-adults",
+    "published_at": "2026-05-16T15:58:02.886188+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "YouTube is expanding its AI deepfake detection tool to all adult users",
+      "source_name": "The Verge AI",
+      "published_at": "2026-05-15T22:25:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-16T15:58:57.482210+00:00"
+  },
+  {
+    "url": "https://habr.com/ru/articles/1035898/?utm_campaign=1035898&utm_source=habrahabr&utm_medium=rss",
+    "published_at": "2026-05-16T15:58:02.886526+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "AI-native компания: почему пора перестать делать продукты",
+      "source_name": "Habr AI",
+      "published_at": "2026-05-16T12:00:14+00:00",
+      "language": "ru"
+    },
+    "updated_at": "2026-05-16T15:58:57.482706+00:00"
+  },
+  {
+    "url": "https://smashingmagazine.com/2026/05/data-backed-truths-user-experience-roi/",
+    "published_at": "2026-05-16T15:58:02.886798+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Ten Data-Backed Truths Of User Experience ROI",
+      "source_name": "Smashing Magazine",
+      "published_at": "2026-05-15T10:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-16T15:58:57.483098+00:00"
   }
 ]
