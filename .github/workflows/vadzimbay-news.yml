@@ -3,9 +3,12 @@ name: Vadzimbay Telegram News Bot
 on:
   workflow_dispatch:
   schedule:
-    # Poll every 15 minutes. schedule_gate.py picks one random-ish time
-    # inside the Minsk morning/evening windows and prevents duplicates.
-    - cron: "*/15 * * * *"
+    # Minsk is UTC+3. Poll every 15 minutes inside the publishing windows.
+    # schedule_gate.py picks one deterministic random-ish time and prevents duplicates.
+    # Morning window: 09:00-11:50 Minsk -> 06:00-08:50 UTC.
+    - cron: "0,15,30,45 6-8 * * *"
+    # Evening window: 17:00-20:30 Minsk -> 14:00-17:30 UTC.
+    - cron: "0,15,30,45 14-17 * * *"
 
 permissions:
   contents: write
