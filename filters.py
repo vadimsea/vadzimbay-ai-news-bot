@@ -67,6 +67,7 @@ POLITICAL_STOP_WORDS = {
     "surveillance", "intelligence agency", "propaganda", "geopolitical", "conflict",
     "weapon", "weapons", "missile", "battlefield", "pentagon", "nato", "white house",
     "congress", "senate", "court", "lawsuit", "export controls", "national security",
+    "donald trump", "trump", "joe biden", "biden", "putin", "zelensky",
     "marxist", "marxism", "socialist", "socialism", "communist", "communism",
     "ideology", "ideological", "political views",
     "президент", "правительство", "выборы", "голосование", "парламент", "министр",

@@ -88,15 +88,36 @@ NICHE_DEVELOPER_TERMS = {
 
 BORING_TITLE_PATTERNS = {
     "releases sdk", "open-source sdk", "cli and kanban", "benchmark", "technical report",
-    "developer preview", "patch notes", "release notes", "minor update",
+    "developer preview", "patch notes", "release notes", "minor update", "data-backed truths",
+    "truths of user experience", "roi", "case study", "what i learned", "how i", "how to",
+    "guide", "tutorial", "weekly", "roundup", "video friday", "dashboard rolls out",
+    "offline conversion imports", "citations dashboard", "personal finance", "bank accounts",
     "выпустила sdk", "выпустил sdk", "открытый sdk", "бенчмарк", "заметки к релизу",
     "минорное обновление",
 }
 
 LOW_BROAD_VALUE_TERMS = {
     "internal tool", "enterprise-only", "api endpoint", "migration guide", "deprecated",
-    "breaking changes", "syntax", "configuration", "command line flag",
+    "breaking changes", "syntax", "configuration", "command line flag", "citations dashboard",
+    "offline conversion", "dashboard shows", "data-backed facts", "measurable business cost",
+    "personal finance", "bank-to-app", "bank accounts", "tips", "best practices",
     "внутренний инструмент", "руководство по миграции", "устаревший", "конфигурация",
+}
+
+WOW_SIGNAL_TERMS = {
+    "launches", "launched", "releases", "released", "unveils", "introduces", "announces",
+    "new model", "frontier model", "reasoning model", "multimodal model", "video model",
+    "image model", "voice model", "coding agent", "ai agent", "agentic", "vibe coding",
+    "claude code", "cursor", "windsurf", "lovable", "bolt.new", "replit agent",
+    "figma ai", "design tool", "marketing ai", "automation", "breakthrough", "raises",
+    "funding", "open source", "open-source", "beats", "outperforms", "faster than",
+}
+
+EDITORIAL_REJECT_TERMS = {
+    "data-backed truths", "truths of user experience", "roi", "case study", "how to",
+    "guide", "tutorial", "tips", "best practices", "roundup", "weekly", "video friday",
+    "dashboard rolls out", "citations dashboard", "offline conversion imports",
+    "personal finance", "bank accounts", "bank-to-app", "what i learned",
 }
 
 
@@ -268,6 +289,9 @@ def choose_top_news(
         if not _is_priority_channel_news(news):
             stats["off_topic_priority"] += 1
             continue
+        if not _has_editorial_value(news):
+            stats["low_news_value"] += 1
+            continue
         if is_low_news_value_material(news) or not has_news_event_signal(news):
             stats["low_news_value"] += 1
             continue
@@ -283,7 +307,7 @@ def choose_top_news(
     candidates.sort(key=lambda item: item[0], reverse=True)
     selected_items: list[dict[str, Any]] = []
     selected_reasons: list[str] = []
-    used_sources: set[str] = set()
+    source_counts: dict[str, int] = {}
 
     if llm_selector:
         foreign_candidates = [
@@ -295,21 +319,38 @@ def choose_top_news(
         llm_news, llm_reason = llm_selector(llm_pool)
         if llm_news:
             selected_items.append(llm_news)
-            used_sources.add(_source_name(llm_news))
+            source_counts[_source_name(llm_news)] = 1
             selected_reasons.append(f"llm_selected; {llm_reason}")
             logger.info("LLM selected news: %s (%s)", llm_news.get("title"), selected_reasons[-1])
 
+    foreign_available = sum(
+        1
+        for _, news, _ in candidates
+        if _is_foreign(news)
+        and not any(_normalize_url(item.get("url", "")) == _normalize_url(news.get("url", "")) for item in selected_items)
+    )
     for score, news, reasons in candidates:
         if len(selected_items) >= selection_count:
             break
         if any(_normalize_url(item.get("url", "")) == _normalize_url(news.get("url", "")) for item in selected_items):
             continue
-        source_name = _source_name(news)
-        if source_name and source_name in used_sources and len(candidates) > selection_count:
+        if not _is_foreign(news) and foreign_available >= selection_count - len(selected_items):
             continue
+        source_name = _source_name(news)
         selected_items.append(news)
-        used_sources.add(source_name)
+        source_counts[source_name] = source_counts.get(source_name, 0) + 1
         selected_reasons.append(f"score={score:.1f}; " + ", ".join(reasons))
+
+    if len(selected_items) < selection_count:
+        for score, news, reasons in candidates:
+            if len(selected_items) >= selection_count:
+                break
+            if any(_normalize_url(item.get("url", "")) == _normalize_url(news.get("url", "")) for item in selected_items):
+                continue
+            if not _is_foreign(news):
+                continue
+            selected_items.append(news)
+            selected_reasons.append(f"score={score:.1f}; " + ", ".join(reasons))
 
     if len(selected_items) < selection_count:
         for score, news, reasons in candidates:
@@ -346,6 +387,8 @@ def _recent_published_sources(storage: PublishedStorage, limit: int) -> set[str]
         return set()
     sources: set[str] = set()
     for item in storage.load_published()[-limit:]:
+        if item.get("status", "published") != "published":
+            continue
         metadata = item.get("metadata") or {}
         source_name = str(metadata.get("source_name") or "").strip().lower()
         if source_name:
@@ -355,6 +398,10 @@ def _recent_published_sources(storage: PublishedStorage, limit: int) -> set[str]
 
 def _source_name(news: dict[str, Any]) -> str:
     return str(news.get("source_name") or "").strip().lower()
+
+
+def _is_foreign(news: dict[str, Any]) -> bool:
+    return str(news.get("language") or "").lower() in {"en", "de", "zh", "he"}
 
 
 def _normalize_url(url: Any) -> str:
@@ -400,6 +447,40 @@ def _is_priority_channel_news(news: dict[str, Any]) -> bool:
     if category == "robotics":
         return _has_any(title, ai_terms | vibe_coding_terms)
     return _has_any(text, ai_terms | vibe_coding_terms | web_design_terms | marketing_terms)
+
+
+def _has_editorial_value(news: dict[str, Any]) -> bool:
+    category = str(news.get("category") or "").lower()
+    title = str(news.get("title") or "").lower()
+    text = f"{news.get('title', '')} {news.get('summary', '')}".lower()
+
+    if any(term in title for term in EDITORIAL_REJECT_TERMS):
+        return False
+
+    if category in {"web_design", "frontend", "marketing"} and not _has_any(text, WOW_SIGNAL_TERMS):
+        return False
+
+    if category == "technology" and not _has_any(text, WOW_SIGNAL_TERMS):
+        return False
+
+    has_major_ai_brand = any(
+        brand in text
+        for brand in (
+            "openai", "chatgpt", "anthropic", "claude", "google deepmind",
+            "gemini", "xai", "grok", "mistral", "meta ai", "llama", "cursor",
+            "windsurf", "figma", "nvidia",
+        )
+    )
+    has_wow_signal = _has_any(text, WOW_SIGNAL_TERMS)
+    has_work_value = _has_any(
+        text,
+        {
+            "coding agent", "code assistant", "marketing automation", "design tool",
+            "figma", "frontend", "conversion", "content marketing", "workflow",
+            "agent", "automation", "model", "launches", "released", "unveils",
+        },
+    )
+    return has_major_ai_brand or has_wow_signal or has_work_value
 
 
 def _has_any(text: str, terms: set[str]) -> bool:
