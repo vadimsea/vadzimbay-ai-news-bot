@@ -222,6 +222,7 @@ def _log_stats(stats: dict, source_count: int, blocked_source_count: int) -> Non
     logger.info("Rejected by blocked source list: %s", stats.get("blocked_sources", 0))
     logger.info("Rejected by source cooldown: %s", stats.get("source_cooldown", 0))
     logger.info("Rejected as irrelevant: %s", stats.get("irrelevant", 0))
+    logger.info("Rejected outside channel priority topics: %s", stats.get("off_topic_priority", 0))
     logger.info("Rejected as low news value: %s", stats.get("low_news_value", 0))
     logger.info("Rejected as politics/war/geopolitics: %s", stats.get("political", 0))
     logger.info("Candidates after filters: %s", stats.get("candidates", 0))

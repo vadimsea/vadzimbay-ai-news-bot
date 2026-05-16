@@ -229,6 +229,7 @@ def choose_top_news(
         "blocked_sources": 0,
         "source_cooldown": 0,
         "irrelevant": 0,
+        "off_topic_priority": 0,
         "low_news_value": 0,
         "political": 0,
         "candidates": 0,
@@ -264,6 +265,9 @@ def choose_top_news(
         if not is_relevant_tech_news(news):
             stats["irrelevant"] += 1
             continue
+        if not _is_priority_channel_news(news):
+            stats["off_topic_priority"] += 1
+            continue
         if is_low_news_value_material(news) or not has_news_event_signal(news):
             stats["low_news_value"] += 1
             continue
@@ -282,7 +286,13 @@ def choose_top_news(
     used_sources: set[str] = set()
 
     if llm_selector:
-        llm_news, llm_reason = llm_selector([item[1] for item in candidates[:20]])
+        foreign_candidates = [
+            item[1]
+            for item in candidates
+            if str(item[1].get("language") or "").lower() in {"en", "de", "zh", "he"}
+        ][:20]
+        llm_pool = foreign_candidates if len(foreign_candidates) >= 3 else [item[1] for item in candidates[:20]]
+        llm_news, llm_reason = llm_selector(llm_pool)
         if llm_news:
             selected_items.append(llm_news)
             used_sources.add(_source_name(llm_news))
@@ -349,6 +359,58 @@ def _source_name(news: dict[str, Any]) -> str:
 
 def _normalize_url(url: Any) -> str:
     return str(url or "").strip().rstrip("/")
+
+
+def _is_priority_channel_news(news: dict[str, Any]) -> bool:
+    category = str(news.get("category") or "").lower()
+    title = str(news.get("title") or "").lower()
+    text = f"{news.get('title', '')} {news.get('summary', '')} {news.get('source_name', '')}".lower()
+
+    ai_terms = {
+        "ai", "artificial intelligence", "generative ai", "genai", "llm", "large language model",
+        "chatgpt", "openai", "deepmind", "gemini", "anthropic", "claude", "mistral", "xai",
+        "grok", "meta ai", "llama", "neural", "machine learning", "foundation model",
+        "image generation", "video generation", "voice model", "multimodal", "agentic",
+        "copilot", "nvidia ai",
+        "ии", "искусственный интеллект", "нейросеть", "нейросети", "нейромодель",
+    }
+    vibe_coding_terms = {
+        "vibe coding", "vibecoding", "ai coding", "coding agent", "code agent", "claude code",
+        "cursor", "windsurf", "lovable", "bolt.new", "replit agent", "prompt-to-code",
+        "agentic coding", "ai developer", "ai programming",
+        "вайбкодинг", "вайб-кодинг", "ии для кода", "кодинг-агент",
+    }
+    web_design_terms = {
+        "web design", "website design", "webdesign", "ui design", "ux design", "ux/ui",
+        "design trends", "figma", "frontend", "front-end", "web development", "react",
+        "next.js", "css", "creative tool", "design system", "accessibility",
+        "веб-дизайн", "веб дизайн", "дизайн сайтов", "фронтенд", "интерфейс",
+    }
+    marketing_terms = {
+        "ai marketing", "marketing ai", "martech", "adtech", "advertising ai",
+        "seo", "content marketing", "conversion", "analytics", "growth marketing",
+        "crm", "marketing automation", "campaign",
+        "маркетинг", "реклама", "конверсия", "аналитика",
+    }
+
+    if category in {"ai", "marketing_ai", "web_design", "frontend"}:
+        return True
+    if category == "marketing":
+        return _has_any(text, marketing_terms | ai_terms)
+    if category == "robotics":
+        return _has_any(title, ai_terms | vibe_coding_terms)
+    return _has_any(text, ai_terms | vibe_coding_terms | web_design_terms | marketing_terms)
+
+
+def _has_any(text: str, terms: set[str]) -> bool:
+    for term in terms:
+        if term in {"ai", "ии", "ui", "ux", "seo", "css"}:
+            if re.search(r"(?<![\wа-яё])" + re.escape(term) + r"(?![\wа-яё])", text):
+                return True
+            continue
+        if term in text:
+            return True
+    return False
 
 
 def _topic_key(news: dict[str, Any]) -> str:
