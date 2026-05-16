@@ -13,6 +13,7 @@ import requests
 from sources import NewsSource
 
 logger = logging.getLogger(__name__)
+MAX_ITEMS_PER_SOURCE = 80
 REQUEST_HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; VadzimbayNewsBot/1.0; +https://t.me/vadzimby_live)"
 }
@@ -146,7 +147,7 @@ def fetch_news_from_source(source: NewsSource) -> list[dict[str, Any]]:
         logger.warning("RSS parser warning for %s: %s", source.name, parsed.bozo_exception)
 
     news: list[dict[str, Any]] = []
-    for entry in parsed.entries:
+    for entry in parsed.entries[:MAX_ITEMS_PER_SOURCE]:
         normalized = _normalize_entry(entry, source)
         if normalized:
             news.append(normalized)

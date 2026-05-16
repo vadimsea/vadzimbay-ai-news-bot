@@ -38,7 +38,10 @@ BROAD_INTEREST_TERMS = {
     "device", "wearable", "breakthrough", "researchers", "startup", "funding",
     "consumer", "product", "app", "assistant", "agent", "automation",
     "web design", "ui design", "ux design", "design trends", "figma", "no-code",
+    "frontend", "front-end", "web development", "javascript", "typescript", "react",
+    "next.js", "vue", "svelte", "css", "accessibility", "performance",
     "marketing ai", "ai marketing", "martech", "adtech", "advertising", "seo",
+    "content marketing", "conversion", "analytics", "growth",
     "vibe coding", "vibecoding", "ai coding", "coding agent", "code agent",
     "ai programming", "prompt-to-code", "agentic coding", "cursor", "windsurf",
     "lovable", "bolt.new", "replit agent", "claude code",
@@ -47,9 +50,32 @@ BROAD_INTEREST_TERMS = {
     "образование", "дизайн", "бизнес", "гаджет", "устройство", "стартап",
     "инвестиции", "продукт", "приложение", "ассистент", "автоматизация", "прорыв",
     "веб-дизайн", "веб дизайн", "дизайн сайтов", "ux", "ui", "тренды дизайна",
-    "figma", "маркетинг", "ии в маркетинге", "martech", "реклама", "seo",
+    "figma", "фронтенд", "веб-разработка", "react", "next.js", "css",
+    "маркетинг", "ии в маркетинге", "martech", "реклама", "seo",
+    "контент-маркетинг", "конверсия", "аналитика",
     "вайбкодинг", "вайб-кодинг", "ии для кода", "ии-программирование",
     "кодинг-агент", "генерация кода", "программирование с ии",
+}
+
+AUTHORITATIVE_US_EU_SOURCES = {
+    "techcrunch ai", "the verge ai", "mit technology review", "ars technica",
+    "venturebeat ai", "wired", "the decoder", "ieee spectrum robotics",
+    "sciencedaily robotics", "google deepmind blog", "openai blog",
+    "anthropic news", "nvidia blog", "smashing magazine", "css-tricks",
+    "a list apart", "search engine land", "marketing ai institute",
+    "heise online", "golem.de", "t3n", "omr", "computerbase",
+}
+
+AI_CORE_TERMS = {
+    "ai", "artificial intelligence", "llm", "neural", "model", "agent",
+    "openai", "deepmind", "anthropic", "mistral", "xai", "nvidia",
+    "ии", "искусственный интеллект", "нейросеть", "модель", "агент",
+}
+
+WEB_MARKETING_TERMS = {
+    "web design", "frontend", "front-end", "ui", "ux", "figma", "react",
+    "next.js", "css", "marketing", "seo", "martech", "advertising",
+    "веб-дизайн", "фронтенд", "маркетинг", "реклама", "конверсия",
 }
 
 NICHE_DEVELOPER_TERMS = {
@@ -123,6 +149,23 @@ def score_news(news: dict[str, Any], topic_count: int = 1) -> tuple[float, list[
         boost = min(14, broad_matches * 3)
         score += boost
         reasons.append(f"broad_interest=+{boost}")
+
+    source_name = str(news.get("source_name") or "").lower()
+    if source_name in AUTHORITATIVE_US_EU_SOURCES:
+        score += 12
+        reasons.append("authoritative_us_eu=+12")
+
+    category = str(news.get("category") or "").lower()
+    has_ai_signal = category in {"ai", "robotics", "marketing_ai"} or any(term in text for term in AI_CORE_TERMS)
+    has_web_marketing_signal = category in {"web_design", "frontend", "marketing", "marketing_ai"} or any(
+        term in text for term in WEB_MARKETING_TERMS
+    )
+    if has_ai_signal:
+        score += 8
+        reasons.append("ai_core=+8")
+    if has_web_marketing_signal:
+        score += 7
+        reasons.append("web_marketing_frontend=+7")
 
     niche_matches = sum(1 for term in NICHE_DEVELOPER_TERMS if term in text)
     if niche_matches:

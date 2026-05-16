@@ -16,6 +16,7 @@ TAG_RULES: list[tuple[str, tuple[str, ...]]] = [
     ("#Автоматизация", ("automation", "agent", "workflow", "автоматизация", "агент")),
     ("#ВебДизайн", ("web design", "website design", "webdesign", "веб-дизайн", "веб дизайн", "дизайн сайтов")),
     ("#UXUI", ("ux", "ui", "ux/ui", "user experience", "interface", "интерфейс")),
+    ("#Frontend", ("frontend", "front-end", "web development", "javascript", "typescript", "react", "next.js", "vue", "svelte", "css", "фронтенд", "веб-разработка")),
     ("#Маркетинг", ("marketing", "маркетинг", "martech", "adtech", "advertising", "реклама", "seo", "crm")),
     ("#Вайбкодинг", ("vibe coding", "vibecoding", "вайбкодинг", "вайб-кодинг", "ai coding", "coding agent", "cursor", "windsurf", "claude code", "lovable", "bolt.new")),
     ("#Наука", ("research", "researchers", "study", "исследователи", "исследование")),
@@ -62,6 +63,6 @@ def append_hashtags(text: str, news: dict[str, Any], max_length: int = 1024) -> 
 
 def _keyword_matches(text: str, keyword: str) -> bool:
     keyword = keyword.lower()
-    if keyword in {"ai", "ии", "ki", "ui", "ux", "seo", "crm"}:
+    if keyword in {"ai", "ии", "ki", "ui", "ux", "seo", "crm", "frontend", "front-end"}:
         return re.search(r"(?<![\wа-яё])" + re.escape(keyword) + r"(?![\wа-яё])", text) is not None
     return keyword in text
