@@ -92,5 +92,41 @@
       "language": "en"
     },
     "updated_at": "2026-05-16T15:58:57.483098+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/new-benchmark-shows-claude-mythos-and-gpt-5-5-can-develop-real-browser-exploits-autonomously/",
+    "published_at": "2026-05-16T16:11:35.908327+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "New benchmark shows Claude Mythos and GPT-5.5 can develop real browser exploits autonomously",
+      "source_name": "The Decoder",
+      "published_at": "2026-05-16T13:08:05+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-16T16:13:37.580156+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/researchers-train-ai-model-that-hits-near-full-performance-with-just-12-5-percent-of-its-experts/",
+    "published_at": "2026-05-16T16:11:35.908708+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Researchers train AI model that hits near-full performance with just 12.5 percent of its experts",
+      "source_name": "The Decoder",
+      "published_at": "2026-05-16T07:55:11+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-16T16:13:37.580639+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/for-1-3-million-a-month-openclaw-founder-peter-steinberger-runs-100-ai-agents-that-code-review-prs-and-find-bugs/",
+    "published_at": "2026-05-16T16:11:35.909008+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "For $1.3 million a month, OpenClaw founder Peter Steinberger runs 100 AI agents that code, review PRs, and find bugs",
+      "source_name": "The Decoder",
+      "published_at": "2026-05-16T09:55:19+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-16T16:13:37.581061+00:00"
   }
 ]
