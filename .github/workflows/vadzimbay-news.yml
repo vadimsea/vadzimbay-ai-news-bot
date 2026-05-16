@@ -2,6 +2,11 @@ name: Vadzimbay Telegram News Bot
 
 on:
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Force publishing cycle now, bypass schedule gate"
+        required: false
+        default: "false"
   schedule:
     # Minsk is UTC+3. Poll every 15 minutes inside the publishing windows.
     # schedule_gate.py picks one deterministic random-ish time and prevents duplicates.
@@ -33,8 +38,12 @@ jobs:
         shell: bash
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "should_run=true" >> "$GITHUB_OUTPUT"
-            echo "reason=manual run" >> "$GITHUB_OUTPUT"
+            if [ "${{ inputs.force }}" = "true" ]; then
+              echo "should_run=true" >> "$GITHUB_OUTPUT"
+              echo "reason=manual forced run" >> "$GITHUB_OUTPUT"
+            else
+              python schedule_gate.py
+            fi
           else
             python schedule_gate.py
           fi
