@@ -24,6 +24,12 @@ class PublishedStorage:
         return any(_normalize_url(item.get("url", "")) == normalized for item in self.load_published())
 
     def mark_as_published(self, url: str, metadata: dict[str, Any] | None = None) -> None:
+        self._mark(url, metadata, status="published")
+
+    def mark_as_rejected(self, url: str, metadata: dict[str, Any] | None = None) -> None:
+        self._mark(url, metadata, status="rejected")
+
+    def _mark(self, url: str, metadata: dict[str, Any] | None, status: str) -> None:
         items = self.load_published()
         if self.is_published(url):
             return
@@ -31,6 +37,7 @@ class PublishedStorage:
             {
                 "url": url,
                 "published_at": datetime.now(timezone.utc).isoformat(),
+                "status": status,
                 "metadata": metadata or {},
             }
         )

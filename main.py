@@ -133,6 +133,11 @@ def run_once() -> bool:
         )
         logger.info("Moderation result: %s", moderation.reason)
         if not moderation.approved:
+            if moderation.reason == "rejected":
+                storage.mark_as_rejected(
+                    selected["url"],
+                    _selected_metadata(selected),
+                )
             return False
 
     published = publish_to_telegram(
@@ -145,13 +150,18 @@ def run_once() -> bool:
     if published:
         storage.mark_as_published(
             selected["url"],
-            {
-                "title": selected.get("title"),
-                "source_name": selected.get("source_name"),
-                "published_at": selected.get("published_at"),
-            },
+            _selected_metadata(selected),
         )
     return published
+
+
+def _selected_metadata(selected: dict) -> dict:
+    return {
+        "title": selected.get("title"),
+        "source_name": selected.get("source_name"),
+        "published_at": selected.get("published_at"),
+        "language": selected.get("language"),
+    }
 
 
 def run_promo_once() -> bool:
