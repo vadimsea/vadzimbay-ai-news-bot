@@ -26,17 +26,30 @@ class PublishedStorage:
     def mark_as_published(self, url: str, metadata: dict[str, Any] | None = None) -> None:
         self._mark(url, metadata, status="published")
 
+    def mark_as_offered(self, url: str, metadata: dict[str, Any] | None = None) -> None:
+        self._mark(url, metadata, status="offered")
+
     def mark_as_rejected(self, url: str, metadata: dict[str, Any] | None = None) -> None:
         self._mark(url, metadata, status="rejected")
 
     def _mark(self, url: str, metadata: dict[str, Any] | None, status: str) -> None:
         items = self.load_published()
-        if self.is_published(url):
+        now = datetime.now(timezone.utc).isoformat()
+        normalized = _normalize_url(url)
+        for item in items:
+            if _normalize_url(item.get("url", "")) != normalized:
+                continue
+            item["status"] = status
+            item["updated_at"] = now
+            if status == "published":
+                item["published_at"] = now
+            item["metadata"] = {**item.get("metadata", {}), **(metadata or {})}
+            self.path.write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
             return
         items.append(
             {
                 "url": url,
-                "published_at": datetime.now(timezone.utc).isoformat(),
+                "published_at": now,
                 "status": status,
                 "metadata": metadata or {},
             }

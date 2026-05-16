@@ -122,6 +122,10 @@ def run_once() -> bool:
         return True
 
     if settings.moderation_enabled:
+        storage.mark_as_offered(
+            selected["url"],
+            _selected_metadata(selected),
+        )
         moderation = request_moderation(
             bot_token=settings.telegram_bot_token,
             moderation_chat_id=settings.moderation_chat_id,
