@@ -164,5 +164,41 @@
       "language": "ru"
     },
     "updated_at": "2026-05-16T16:17:41.786937+00:00"
+  },
+  {
+    "url": "https://habr.com/ru/articles/1035712/?utm_campaign=1035712&utm_source=habrahabr&utm_medium=rss",
+    "published_at": "2026-05-17T08:24:50.320081+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Я заставил LLM писать Rust полгода. Вот что они стабильно ломают",
+      "source_name": "Habr AI",
+      "published_at": "2026-05-15T21:13:02+00:00",
+      "language": "ru"
+    },
+    "updated_at": "2026-05-17T08:33:13.784648+00:00"
+  },
+  {
+    "url": "https://habr.com/ru/articles/1035810/?utm_campaign=1035810&utm_source=habrahabr&utm_medium=rss",
+    "published_at": "2026-05-17T08:24:50.320547+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Как запихнуть килограмм LLM в телеграм-бота и не сойти с ума",
+      "source_name": "Habr AI",
+      "published_at": "2026-05-16T04:21:07+00:00",
+      "language": "ru"
+    },
+    "updated_at": "2026-05-17T08:33:13.785556+00:00"
+  },
+  {
+    "url": "https://habr.com/ru/articles/1035776/?utm_campaign=1035776&utm_source=habrahabr&utm_medium=rss",
+    "published_at": "2026-05-17T08:24:50.320898+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Axera AX650N: архитектура Edge ML SoC под CNN, LLM и VLM",
+      "source_name": "Habr AI",
+      "published_at": "2026-05-15T18:40:16+00:00",
+      "language": "ru"
+    },
+    "updated_at": "2026-05-17T08:33:13.786201+00:00"
   }
 ]
