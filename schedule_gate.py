@@ -73,8 +73,11 @@ def _target_minute(date_key: str, window: Window) -> int:
     start = window.start.hour * 60 + window.start.minute
     end = window.end.hour * 60 + window.end.minute
     digest = hashlib.sha256(f"{date_key}:{window.name}".encode("utf-8")).hexdigest()
-    offset = int(digest[:8], 16) % max(1, end - start + 1)
-    return start + offset
+    polling_step_minutes = int(os.getenv("SCHEDULE_POLLING_STEP_MINUTES", "15"))
+    ticks = list(range(start, end + 1, max(1, polling_step_minutes)))
+    if not ticks:
+        return start
+    return ticks[int(digest[:8], 16) % len(ticks)]
 
 
 def _load_state() -> dict[str, str]:
