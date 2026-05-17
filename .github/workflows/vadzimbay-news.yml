@@ -81,6 +81,7 @@ jobs:
           MODERATION_CHAT_ID=${{ secrets.MODERATION_CHAT_ID }}
           MODERATION_TIMEOUT_MINUTES=120
           MODERATION_CHOICES=3
+          OFFERED_TTL_MINUTES=10
           PUBLISHED_FILE=published.json
           BLOCKED_SOURCES_FILE=blocked_sources.json
           REQUEST_TIMEOUT_SECONDS=15

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 import json
+import os
 from pathlib import Path
 from typing import Any
 
@@ -21,7 +22,15 @@ class PublishedStorage:
 
     def is_published(self, url: str) -> bool:
         normalized = _normalize_url(url)
-        return any(_normalize_url(item.get("url", "")) == normalized for item in self.load_published())
+        for item in self.load_published():
+            if _normalize_url(item.get("url", "")) != normalized:
+                continue
+            status = item.get("status", "published")
+            if status in {"published", "rejected"}:
+                return True
+            if status == "offered" and _is_fresh_offer(item):
+                return True
+        return False
 
     def mark_as_published(self, url: str, metadata: dict[str, Any] | None = None) -> None:
         self._mark(url, metadata, status="published")
@@ -59,3 +68,20 @@ class PublishedStorage:
 
 def _normalize_url(url: str) -> str:
     return url.strip().rstrip("/")
+
+
+def _is_fresh_offer(item: dict[str, Any]) -> bool:
+    ttl_minutes = int(os.getenv("OFFERED_TTL_MINUTES", "10"))
+    if ttl_minutes <= 0:
+        return False
+    raw = item.get("updated_at") or item.get("published_at")
+    if not raw:
+        return False
+    try:
+        offered_at = datetime.fromisoformat(str(raw).replace("Z", "+00:00"))
+    except ValueError:
+        return False
+    if offered_at.tzinfo is None:
+        offered_at = offered_at.replace(tzinfo=timezone.utc)
+    age_seconds = (datetime.now(timezone.utc) - offered_at).total_seconds()
+    return age_seconds < ttl_minutes * 60
