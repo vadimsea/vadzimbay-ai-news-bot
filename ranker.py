@@ -118,6 +118,8 @@ EDITORIAL_REJECT_TERMS = {
     "guide", "tutorial", "tips", "best practices", "roundup", "weekly", "video friday",
     "dashboard rolls out", "citations dashboard", "offline conversion imports",
     "personal finance", "bank accounts", "bank-to-app", "what i learned",
+    "the undo problem", "why now is the time", "demonstrate why", "can't be trusted",
+    "cannot be trusted", "pitfalls", "promises and pitfalls", "opinion", "essay",
 }
 
 BROAD_AUDIENCE_VALUE_TERMS = {
@@ -145,6 +147,22 @@ LOW_AUDIENCE_FIT_TERMS = {
     "spacecraft", "space flight", "lunar", "mars", "processor", "chip",
     "semiconductor manufacturing", "battery chemistry", "quantum", "protein",
     "molecule", "physics", "astronomy", "robotics research",
+}
+
+CONCRETE_EVENT_TERMS = {
+    "launch", "launches", "launched", "release", "releases", "released",
+    "introduces", "introduced", "unveils", "unveiled", "announces", "announced",
+    "rolls out", "debuts", "raises", "funding", "acquires", "partners with",
+    "open-sources", "open sources", "ships", "new model", "new ai model",
+    "new tool", "new app", "new platform", "new feature", "beta", "preview",
+}
+
+PRODUCT_TOOL_TERMS = {
+    "ai agent", "agent", "coding agent", "code assistant", "developer tool",
+    "website builder", "app builder", "design tool", "creative tool", "video agent",
+    "ai director", "marketing automation", "seo", "content", "campaign",
+    "analytics", "conversion", "no-code", "automation", "figma", "cursor",
+    "windsurf", "claude code", "lovable", "bolt.new", "replit agent",
 }
 
 
@@ -322,6 +340,9 @@ def choose_top_news(
             stats["off_topic_priority"] += 1
             continue
         if not _has_editorial_value(news):
+            stats["low_news_value"] += 1
+            continue
+        if not _is_concrete_product_or_release(news):
             stats["low_news_value"] += 1
             continue
         if not _has_broad_audience_value(news):
@@ -534,6 +555,43 @@ def _has_editorial_value(news: dict[str, Any]) -> bool:
         },
     )
     return has_major_ai_brand or has_wow_signal or has_work_value
+
+
+def _is_concrete_product_or_release(news: dict[str, Any]) -> bool:
+    source = _source_name(news)
+    title = str(news.get("title") or "").lower()
+    text = f"{news.get('title', '')} {news.get('summary', '')}".lower()
+
+    if any(term in title for term in EDITORIAL_REJECT_TERMS):
+        return False
+
+    if source == "product hunt":
+        return _has_any(text, PRODUCT_TOOL_TERMS) and not _has_any(
+            text,
+            {"crypto", "polymarket", "personal finance", "bank", "screen share", "game boy"},
+        )
+
+    has_event = _has_any(text, CONCRETE_EVENT_TERMS)
+    has_product = _has_any(text, PRODUCT_TOOL_TERMS)
+    has_major_release_brand = _has_any(
+        text,
+        {
+            "openai", "chatgpt", "anthropic", "claude", "google deepmind", "gemini",
+            "xai", "grok", "mistral", "meta ai", "llama", "runway", "nvidia",
+            "cursor", "windsurf", "figma", "adobe", "canva",
+        },
+    )
+
+    if has_event and (has_product or has_major_release_brand):
+        return True
+
+    return has_event and _has_any(
+        text,
+        {
+            "ai model", "video model", "image model", "voice model", "multimodal",
+            "agentic", "automation", "marketing", "web design", "frontend",
+        },
+    )
 
 
 def _has_broad_audience_value(news: dict[str, Any]) -> bool:
