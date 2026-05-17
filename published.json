@@ -236,5 +236,38 @@
       "language": "en"
     },
     "updated_at": "2026-05-17T08:48:10.403715+00:00"
+  },
+  {
+    "url": "https://www.marktechpost.com/2026/05/17/vercel-labs-introduces-zero-a-systems-programming-language-designed-so-ai-agents-can-read-repair-and-ship-native-programs/",
+    "published_at": "2026-05-17T16:16:01.559809+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Vercel Labs Introduces Zero, a Systems Programming Language Designed So AI Agents Can Read, Repair, and Ship Native Programs",
+      "source_name": "MarkTechPost",
+      "published_at": "2026-05-17T08:11:49+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.searchenginejournal.com/google-agent-the-webs-new-visitor-just-got-an-identity/571508/",
+    "published_at": "2026-05-17T16:16:01.560325+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google-Agent: The Web’s New Visitor Just Got An Identity via @sejournal, @slobodanmanic",
+      "source_name": "Search Engine Journal",
+      "published_at": "2026-05-17T12:00:45+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://habr.com/ru/companies/ru_mts/articles/1035364/?utm_campaign=1035364&utm_source=habrahabr&utm_medium=rss",
+    "published_at": "2026-05-17T16:16:01.560757+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Агенты, которые играют в игры: как MMORPG обучают ИИ кооперации, предательству и дипломатии",
+      "source_name": "Habr AI",
+      "published_at": "2026-05-17T08:38:22+00:00",
+      "language": "ru"
+    }
   }
 ]
