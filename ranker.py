@@ -120,6 +120,33 @@ EDITORIAL_REJECT_TERMS = {
     "personal finance", "bank accounts", "bank-to-app", "what i learned",
 }
 
+BROAD_AUDIENCE_VALUE_TERMS = {
+    "chatgpt", "claude", "claude code", "gemini", "grok", "openai", "anthropic",
+    "google deepmind", "mistral", "meta ai", "llama", "cursor", "windsurf",
+    "lovable", "bolt.new", "replit agent", "figma", "canva", "adobe", "runway",
+    "coding agent", "code assistant", "ai agent", "agentic coding", "vibe coding",
+    "ai coding", "developer tool", "marketing automation", "content marketing",
+    "seo", "advertising", "campaign", "conversion", "analytics", "design tool",
+    "web design", "frontend", "website", "website builder", "landing page",
+    "app builder", "no-code", "automation", "assistant", "product",
+    "video generation", "video agent", "ai director", "filmmaker",
+    "filmmakers", "creative tool", "launches", "released",
+    "unveils", "rolls out", "raises", "funding",
+}
+
+NARROW_RESEARCH_OR_DEV_TERMS = {
+    "benchmark", "technical report", "paper", "dataset", "arxiv", "parameter",
+    "parameters", "gpu", "experts", "moe", "inference", "latency", "eval",
+    "browser exploit", "vulnerability", "sdk", "api endpoint", "runtime",
+    "connector", "plugin", "changelog", "release notes", "developer preview",
+}
+
+LOW_AUDIENCE_FIT_TERMS = {
+    "spacecraft", "space flight", "lunar", "mars", "processor", "chip",
+    "semiconductor manufacturing", "battery chemistry", "quantum", "protein",
+    "molecule", "physics", "astronomy", "robotics research",
+}
+
 
 def _published_dt(news: dict[str, Any]) -> datetime:
     try:
@@ -260,6 +287,11 @@ def choose_top_news(
     candidates: list[tuple[float, dict[str, Any], list[str]]] = []
     topic_counts = _build_topic_counts(news_items)
     recent_sources = _recent_published_sources(storage, source_cooldown_recent_posts)
+    recent_rejected_sources = _recent_sources_by_status(
+        storage,
+        max(source_cooldown_recent_posts * 2, 6),
+        {"rejected"},
+    )
 
     seen_urls: set[str] = set()
     for news in news_items:
@@ -292,12 +324,18 @@ def choose_top_news(
         if not _has_editorial_value(news):
             stats["low_news_value"] += 1
             continue
+        if not _has_broad_audience_value(news):
+            stats["low_news_value"] += 1
+            continue
         if is_low_news_value_material(news) or not has_news_event_signal(news):
             stats["low_news_value"] += 1
             continue
 
         topic_key = _topic_key(news)
         score, reasons = score_news(news, topic_count=topic_counts.get(topic_key, 1))
+        if _source_name(news) in recent_rejected_sources:
+            score -= 10
+            reasons.append("recent_rejected_source=-10")
         candidates.append((score, news, reasons))
 
     stats["candidates"] = len(candidates)
@@ -315,7 +353,7 @@ def choose_top_news(
             for item in candidates
             if str(item[1].get("language") or "").lower() in {"en", "de", "zh", "he"}
         ][:20]
-        llm_pool = foreign_candidates if len(foreign_candidates) >= 3 else [item[1] for item in candidates[:20]]
+        llm_pool = foreign_candidates if foreign_candidates else [item[1] for item in candidates[:20]]
         llm_news, llm_reason = llm_selector(llm_pool)
         if llm_news:
             selected_items.append(llm_news)
@@ -337,6 +375,8 @@ def choose_top_news(
         if not _is_foreign(news) and foreign_available >= selection_count - len(selected_items):
             continue
         source_name = _source_name(news)
+        if source_counts.get(source_name, 0) >= 1:
+            continue
         selected_items.append(news)
         source_counts[source_name] = source_counts.get(source_name, 0) + 1
         selected_reasons.append(f"score={score:.1f}; " + ", ".join(reasons))
@@ -347,9 +387,13 @@ def choose_top_news(
                 break
             if any(_normalize_url(item.get("url", "")) == _normalize_url(news.get("url", "")) for item in selected_items):
                 continue
+            source_name = _source_name(news)
+            if source_counts.get(source_name, 0) >= 1:
+                continue
             if not _is_foreign(news):
                 continue
             selected_items.append(news)
+            source_counts[source_name] = source_counts.get(source_name, 0) + 1
             selected_reasons.append(f"score={score:.1f}; " + ", ".join(reasons))
 
     if len(selected_items) < selection_count:
@@ -358,7 +402,11 @@ def choose_top_news(
                 break
             if any(_normalize_url(item.get("url", "")) == _normalize_url(news.get("url", "")) for item in selected_items):
                 continue
+            source_name = _source_name(news)
+            if source_counts.get(source_name, 0) >= 1:
+                continue
             selected_items.append(news)
+            source_counts[source_name] = source_counts.get(source_name, 0) + 1
             selected_reasons.append(f"score={score:.1f}; " + ", ".join(reasons))
 
     stats["selected_reasons"] = selected_reasons
@@ -383,11 +431,15 @@ def _build_topic_counts(news_items: list[dict[str, Any]]) -> dict[str, int]:
 
 
 def _recent_published_sources(storage: PublishedStorage, limit: int) -> set[str]:
+    return _recent_sources_by_status(storage, limit, {"published"})
+
+
+def _recent_sources_by_status(storage: PublishedStorage, limit: int, statuses: set[str]) -> set[str]:
     if limit <= 0:
         return set()
     sources: set[str] = set()
     for item in storage.load_published()[-limit:]:
-        if item.get("status", "published") != "published":
+        if item.get("status", "published") not in statuses:
             continue
         metadata = item.get("metadata") or {}
         source_name = str(metadata.get("source_name") or "").strip().lower()
@@ -475,12 +527,47 @@ def _has_editorial_value(news: dict[str, Any]) -> bool:
     has_work_value = _has_any(
         text,
         {
-            "coding agent", "code assistant", "marketing automation", "design tool",
-            "figma", "frontend", "conversion", "content marketing", "workflow",
-            "agent", "automation", "model", "launches", "released", "unveils",
+    "coding agent", "code assistant", "marketing automation", "design tool",
+    "figma", "frontend", "conversion", "content marketing", "workflow",
+            "agent", "automation", "model", "builder", "website builder",
+            "launches", "released", "unveils",
         },
     )
     return has_major_ai_brand or has_wow_signal or has_work_value
+
+
+def _has_broad_audience_value(news: dict[str, Any]) -> bool:
+    category = str(news.get("category") or "").lower()
+    title = str(news.get("title") or "").lower()
+    text = f"{news.get('title', '')} {news.get('summary', '')}".lower()
+
+    has_broad_value = _has_any(text, BROAD_AUDIENCE_VALUE_TERMS)
+    is_narrow = _has_any(text, NARROW_RESEARCH_OR_DEV_TERMS)
+    low_fit = _has_any(text, LOW_AUDIENCE_FIT_TERMS)
+
+    if category in {"web_design", "frontend", "marketing", "marketing_ai"}:
+        return has_broad_value and not any(term in title for term in EDITORIAL_REJECT_TERMS)
+
+    if category == "robotics":
+        return has_broad_value and not low_fit
+
+    if low_fit and not has_broad_value:
+        return False
+
+    if is_narrow and not has_broad_value:
+        return False
+
+    if is_narrow and not _has_any(
+        text,
+        {
+            "chatgpt", "claude code", "cursor", "windsurf", "lovable", "bolt.new",
+            "replit agent", "coding agent", "design tool", "marketing automation",
+            "app builder", "website", "frontend", "figma",
+        },
+    ):
+        return False
+
+    return has_broad_value
 
 
 def _has_any(text: str, terms: set[str]) -> bool:
