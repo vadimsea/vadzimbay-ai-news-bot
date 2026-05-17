@@ -200,5 +200,41 @@
       "language": "ru"
     },
     "updated_at": "2026-05-17T08:33:13.786201+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies",
+    "published_at": "2026-05-17T08:46:08.796883+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "AI radio hosts demonstrate why AI can’t be trusted alone",
+      "source_name": "The Verge AI",
+      "published_at": "2026-05-15T17:09:16+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-17T08:48:09.789146+00:00"
+  },
+  {
+    "url": "https://uxdesign.cc/the-undo-problem-in-ai-products-c90ff080de3b?source=rss----138adf9c44c---4",
+    "published_at": "2026-05-17T08:46:08.797394+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "The undo problem in AI products",
+      "source_name": "UX Collective",
+      "published_at": "2026-05-16T19:08:45+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-17T08:48:09.789841+00:00"
+  },
+  {
+    "url": "https://www.producthunt.com/products/kirki",
+    "published_at": "2026-05-17T08:48:10.403715+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Kirki",
+      "source_name": "Product Hunt",
+      "published_at": "2026-05-16T11:15:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-17T08:48:10.403715+00:00"
   }
 ]
