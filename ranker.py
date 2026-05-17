@@ -146,7 +146,11 @@ NARROW_RESEARCH_OR_DEV_TERMS = {
 LOW_AUDIENCE_FIT_TERMS = {
     "spacecraft", "space flight", "lunar", "mars", "processor", "chip",
     "semiconductor manufacturing", "battery chemistry", "quantum", "protein",
-    "molecule", "physics", "astronomy", "robotics research",
+    "molecule", "physics", "astronomy", "robotics research", "mmorpg",
+    "eve online", "rust", "systems programming language", "compiler output",
+    "native binaries", "transformer 7b", "benchmark", "edge ml", "soc",
+    "cnn", "vlm", "kubernetes", "agent sandboxes", "browser exploit",
+    "radio hosts", "distribution drift", "inference", "sensitivity analysis",
 }
 
 CONCRETE_EVENT_TERMS = {
@@ -163,6 +167,18 @@ PRODUCT_TOOL_TERMS = {
     "ai director", "marketing automation", "seo", "content", "campaign",
     "analytics", "conversion", "no-code", "automation", "figma", "cursor",
     "windsurf", "claude code", "lovable", "bolt.new", "replit agent",
+}
+
+BROAD_WORK_TOOL_TERMS = {
+    "chatgpt", "claude", "claude code", "gemini", "grok", "cursor", "windsurf",
+    "lovable", "bolt.new", "replit agent", "figma", "canva", "adobe", "runway",
+    "website builder", "app builder", "design tool", "marketing automation",
+    "seo tool", "content tool", "video tool", "ai assistant", "code assistant",
+}
+
+EDITORIAL_SENSITIVE_SOURCES = {
+    "habr ai", "habr robotics", "marktechpost", "ux collective",
+    "search engine journal", "search engine land", "sciencedaily robotics",
 }
 
 
@@ -310,6 +326,7 @@ def choose_top_news(
         max(source_cooldown_recent_posts * 2, 6),
         {"rejected"},
     )
+    recent_rejection_counts = _recent_rejection_counts(storage, limit=30)
 
     seen_urls: set[str] = set()
     for news in news_items:
@@ -325,6 +342,9 @@ def choose_top_news(
             stats["blocked_sources"] += 1
             continue
         if _source_name(news) in recent_sources:
+            stats["source_cooldown"] += 1
+            continue
+        if _source_name(news) in EDITORIAL_SENSITIVE_SOURCES and recent_rejection_counts.get(_source_name(news), 0) >= 2:
             stats["source_cooldown"] += 1
             continue
         if not is_recent_news(news, max_age_hours=max_age_hours):
@@ -343,6 +363,9 @@ def choose_top_news(
             stats["low_news_value"] += 1
             continue
         if not _is_concrete_product_or_release(news):
+            stats["low_news_value"] += 1
+            continue
+        if _is_too_specialized(news):
             stats["low_news_value"] += 1
             continue
         if not _has_broad_audience_value(news):
@@ -469,6 +492,20 @@ def _recent_sources_by_status(storage: PublishedStorage, limit: int, statuses: s
     return sources
 
 
+def _recent_rejection_counts(storage: PublishedStorage, limit: int) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    if limit <= 0:
+        return counts
+    for item in storage.load_published()[-limit:]:
+        if item.get("status", "published") != "rejected":
+            continue
+        metadata = item.get("metadata") or {}
+        source_name = str(metadata.get("source_name") or "").strip().lower()
+        if source_name:
+            counts[source_name] = counts.get(source_name, 0) + 1
+    return counts
+
+
 def _source_name(news: dict[str, Any]) -> str:
     return str(news.get("source_name") or "").strip().lower()
 
@@ -592,6 +629,25 @@ def _is_concrete_product_or_release(news: dict[str, Any]) -> bool:
             "agentic", "automation", "marketing", "web design", "frontend",
         },
     )
+
+
+def _is_too_specialized(news: dict[str, Any]) -> bool:
+    source = _source_name(news)
+    text = f"{news.get('title', '')} {news.get('summary', '')}".lower()
+    title = str(news.get("title") or "").lower()
+
+    has_low_fit = _has_any(text, LOW_AUDIENCE_FIT_TERMS)
+    has_broad_tool = _has_any(text, BROAD_WORK_TOOL_TERMS)
+    if has_low_fit and not has_broad_tool:
+        return True
+
+    if source in {"habr ai", "habr robotics", "marktechpost"}:
+        return not has_broad_tool
+
+    if any(term in title for term in {"melt", "transformer", "benchmark", "mmorpg", "rust", "soc"}):
+        return True
+
+    return False
 
 
 def _has_broad_audience_value(news: dict[str, Any]) -> bool:
