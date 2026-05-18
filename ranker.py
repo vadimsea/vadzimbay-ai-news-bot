@@ -120,6 +120,8 @@ EDITORIAL_REJECT_TERMS = {
     "personal finance", "bank accounts", "bank-to-app", "what i learned",
     "the undo problem", "why now is the time", "demonstrate why", "can't be trusted",
     "cannot be trusted", "pitfalls", "promises and pitfalls", "opinion", "essay",
+    "two gears", "one compass", "be like water", "should we be kind",
+    "for our own sake", "mindset shift",
 }
 
 BROAD_AUDIENCE_VALUE_TERMS = {
@@ -326,7 +328,6 @@ def choose_top_news(
         max(source_cooldown_recent_posts * 2, 6),
         {"rejected"},
     )
-    recent_rejection_counts = _recent_rejection_counts(storage, limit=30)
 
     seen_urls: set[str] = set()
     for news in news_items:
@@ -340,12 +341,6 @@ def choose_top_news(
         seen_urls.add(url)
         if blocked_sources and is_news_from_blocked_source(news, blocked_sources):
             stats["blocked_sources"] += 1
-            continue
-        if _source_name(news) in recent_sources:
-            stats["source_cooldown"] += 1
-            continue
-        if _source_name(news) in EDITORIAL_SENSITIVE_SOURCES and recent_rejection_counts.get(_source_name(news), 0) >= 2:
-            stats["source_cooldown"] += 1
             continue
         if not is_recent_news(news, max_age_hours=max_age_hours):
             stats["old"] += 1
@@ -371,12 +366,15 @@ def choose_top_news(
         if not _has_broad_audience_value(news):
             stats["low_news_value"] += 1
             continue
-        if is_low_news_value_material(news) or not has_news_event_signal(news):
+        if (is_low_news_value_material(news) or not has_news_event_signal(news)) and not _has_strong_broad_ai_signal(news):
             stats["low_news_value"] += 1
             continue
 
         topic_key = _topic_key(news)
         score, reasons = score_news(news, topic_count=topic_counts.get(topic_key, 1))
+        if _source_name(news) in recent_sources:
+            score -= 14
+            reasons.append("recent_published_source=-14")
         if _source_name(news) in recent_rejected_sources:
             score -= 10
             reasons.append("recent_rejected_source=-10")
@@ -608,6 +606,9 @@ def _is_concrete_product_or_release(news: dict[str, Any]) -> bool:
             {"crypto", "polymarket", "personal finance", "bank", "screen share", "game boy"},
         )
 
+    if _has_strong_broad_ai_signal(news):
+        return True
+
     has_event = _has_any(text, CONCRETE_EVENT_TERMS)
     has_product = _has_any(text, PRODUCT_TOOL_TERMS)
     has_major_release_brand = _has_any(
@@ -682,6 +683,34 @@ def _has_broad_audience_value(news: dict[str, Any]) -> bool:
         return False
 
     return has_broad_value
+
+
+def _has_strong_broad_ai_signal(news: dict[str, Any]) -> bool:
+    source = _source_name(news)
+    text = f"{news.get('title', '')} {news.get('summary', '')}".lower()
+    title = str(news.get("title") or "").lower()
+
+    if any(term in title for term in EDITORIAL_REJECT_TERMS):
+        return False
+
+    strong_sources = {
+        "techcrunch ai", "the verge ai", "mit technology review", "ars technica",
+        "wired", "the decoder", "infoq ai", "venturebeat ai", "google ai blog",
+        "google deepmind blog", "openai blog", "anthropic news", "nvidia blog",
+        "heise online", "golem.de", "t3n",
+    }
+    strong_brands = {
+        "openai", "chatgpt", "anthropic", "claude", "claude code", "google deepmind",
+        "gemini", "xai", "grok", "mistral", "meta ai", "llama", "nvidia",
+        "cursor", "windsurf", "lovable", "bolt.new", "replit agent", "figma",
+        "adobe", "canva", "runway",
+    }
+    work_terms = {
+        "coding agent", "code assistant", "developer tool", "agentic coding",
+        "vibe coding", "ai agent", "automation", "design tool", "marketing",
+        "seo", "website", "frontend", "product teams", "startup revenue",
+    }
+    return source in strong_sources and _has_any(text, strong_brands) and _has_any(text, work_terms)
 
 
 def _has_any(text: str, terms: set[str]) -> bool:

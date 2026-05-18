@@ -63,7 +63,7 @@ LOW_NEWS_VALUE_PATTERNS = {
 
 POLITICAL_STOP_WORDS = {
     "president", "government", "election", "vote", "voting", "parliament", "minister",
-    "law", "regulation", "regulator", "regulatory", "ban", "censorship", "sanction",
+    "law", "regulation", "regulator", "regulators", "regulatory", "ban", "censorship", "sanction",
     "sanctions", "war", "military", "army", "defense", "defence", "drone strike", "police",
     "surveillance", "intelligence agency", "propaganda", "geopolitical", "conflict",
     "weapon", "weapons", "missile", "battlefield", "pentagon", "nato", "white house",
