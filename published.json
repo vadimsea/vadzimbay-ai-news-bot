@@ -304,7 +304,8 @@
       "source_name": "The Decoder",
       "published_at": "2026-05-17T09:51:41+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-05-18T15:26:31.101131+00:00"
   },
   {
     "url": "https://www.infoq.com/news/2026/05/code-with-claude/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Artificial+Intelligence-news",
@@ -315,17 +316,19 @@
       "source_name": "InfoQ AI",
       "published_at": "2026-05-18T13:14:00+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-05-18T15:26:31.101815+00:00"
   },
   {
     "url": "https://www.producthunt.com/products/anyframe-2",
-    "published_at": "2026-05-18T15:00:07.080413+00:00",
-    "status": "offered",
+    "published_at": "2026-05-18T15:26:33.771788+00:00",
+    "status": "published",
     "metadata": {
       "title": "AnyFrame",
       "source_name": "Product Hunt",
       "published_at": "2026-05-18T06:49:44+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-05-18T15:26:33.771788+00:00"
   }
 ]
