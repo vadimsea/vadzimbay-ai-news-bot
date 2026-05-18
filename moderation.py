@@ -174,12 +174,15 @@ def _wait_for_decision(
             callback = update.get("callback_query") or {}
             data = callback.get("data") or ""
             callback_id = callback.get("id")
+            message = callback.get("message") or {}
 
             if data == f"approve:{token}":
                 _answer_callback(bot_token, callback_id, "Публикую")
+                _mark_moderation_message(bot_token, message, "✅ Выбрано к публикации")
                 return ModerationResult(True, "approved")
             if data == f"reject:{token}":
                 _answer_callback(bot_token, callback_id, "Отклонено")
+                _mark_moderation_message(bot_token, message, "❌ Отклонено")
                 return ModerationResult(False, "rejected")
 
         time.sleep(5)
@@ -205,10 +208,12 @@ def _wait_for_batch_decisions(
             callback = update.get("callback_query") or {}
             data = callback.get("data") or ""
             callback_id = callback.get("id")
+            message = callback.get("message") or {}
 
             for token in list(pending):
                 if data == f"approve:{token}":
                     _answer_callback(bot_token, callback_id, "Публикую")
+                    _mark_moderation_message(bot_token, message, "✅ Выбрано к публикации")
                     decisions[token] = ModerationResult(True, "approved")
                     pending.remove(token)
                     for skipped_token in pending:
@@ -216,6 +221,7 @@ def _wait_for_batch_decisions(
                     return decisions
                 if data == f"reject:{token}":
                     _answer_callback(bot_token, callback_id, "Отклонено")
+                    _mark_moderation_message(bot_token, message, "❌ Отклонено")
                     decisions[token] = ModerationResult(False, "rejected")
                     pending.remove(token)
                     break
@@ -251,6 +257,78 @@ def _answer_callback(bot_token: str, callback_id: str | None, text: str) -> None
         requests.post(url, json={"callback_query_id": callback_id, "text": text}, timeout=10)
     except requests.RequestException:
         logger.debug("Could not answer callback query", exc_info=True)
+
+
+def _mark_moderation_message(bot_token: str, message: dict[str, Any], status_text: str) -> None:
+    chat = message.get("chat") or {}
+    chat_id = chat.get("id")
+    message_id = message.get("message_id")
+    if not chat_id or not message_id:
+        return
+
+    _remove_inline_keyboard(bot_token, chat_id, message_id)
+
+    caption = message.get("caption")
+    text = message.get("text")
+    if caption is not None:
+        _edit_message_caption(bot_token, chat_id, message_id, caption, status_text)
+    elif text is not None:
+        _edit_message_text(bot_token, chat_id, message_id, text, status_text)
+
+
+def _remove_inline_keyboard(bot_token: str, chat_id: int | str, message_id: int) -> None:
+    url = TELEGRAM_API.format(token=bot_token, method="editMessageReplyMarkup")
+    payload = {"chat_id": chat_id, "message_id": message_id, "reply_markup": {"inline_keyboard": []}}
+    try:
+        requests.post(url, json=payload, timeout=10)
+    except requests.RequestException:
+        logger.debug("Could not remove moderation buttons", exc_info=True)
+
+
+def _edit_message_caption(
+    bot_token: str,
+    chat_id: int | str,
+    message_id: int,
+    caption: str,
+    status_text: str,
+) -> None:
+    updated = _append_status(caption, status_text, MAX_CAPTION_LENGTH)
+    url = TELEGRAM_API.format(token=bot_token, method="editMessageCaption")
+    payload = {"chat_id": chat_id, "message_id": message_id, "caption": updated, "parse_mode": "HTML"}
+    try:
+        response = requests.post(url, json=payload, timeout=10)
+        if not response.ok:
+            logger.debug("Could not edit moderation caption: %s %s", response.status_code, response.text)
+    except requests.RequestException:
+        logger.debug("Could not edit moderation caption", exc_info=True)
+
+
+def _edit_message_text(
+    bot_token: str,
+    chat_id: int | str,
+    message_id: int,
+    text: str,
+    status_text: str,
+) -> None:
+    updated = _append_status(text, status_text, 4096)
+    url = TELEGRAM_API.format(token=bot_token, method="editMessageText")
+    payload = {"chat_id": chat_id, "message_id": message_id, "text": updated, "parse_mode": "HTML"}
+    try:
+        response = requests.post(url, json=payload, timeout=10)
+        if not response.ok:
+            logger.debug("Could not edit moderation text: %s %s", response.status_code, response.text)
+    except requests.RequestException:
+        logger.debug("Could not edit moderation text", exc_info=True)
+
+
+def _append_status(text: str, status_text: str, limit: int) -> str:
+    marker = "\n\n" + status_text
+    if status_text in text:
+        return text[:limit]
+    available = limit - len(marker)
+    if available <= 0:
+        return status_text[:limit]
+    return text[:available].rstrip() + marker
 
 
 def _make_token(news: dict[str, Any]) -> str:
