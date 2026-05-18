@@ -294,5 +294,38 @@
       "language": "en"
     },
     "updated_at": "2026-05-18T06:02:04.337730+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/greg-brockman-consolidates-openais-product-teams-to-build-an-agentic-future/",
+    "published_at": "2026-05-18T15:00:07.079186+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Greg Brockman consolidates OpenAI's product teams to build an \"agentic future\"",
+      "source_name": "The Decoder",
+      "published_at": "2026-05-17T09:51:41+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/05/code-with-claude/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Artificial+Intelligence-news",
+    "published_at": "2026-05-18T15:00:07.079853+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic's Code With Claude Announces  Managed Agents, Proactive Workflows, Capability Curve",
+      "source_name": "InfoQ AI",
+      "published_at": "2026-05-18T13:14:00+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.producthunt.com/products/anyframe-2",
+    "published_at": "2026-05-18T15:00:07.080413+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "AnyFrame",
+      "source_name": "Product Hunt",
+      "published_at": "2026-05-18T06:49:44+00:00",
+      "language": "en"
+    }
   }
 ]
