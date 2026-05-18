@@ -211,7 +211,9 @@ def _wait_for_batch_decisions(
                     _answer_callback(bot_token, callback_id, "Публикую")
                     decisions[token] = ModerationResult(True, "approved")
                     pending.remove(token)
-                    break
+                    for skipped_token in pending:
+                        decisions[skipped_token] = ModerationResult(False, "skipped_after_approval")
+                    return decisions
                 if data == f"reject:{token}":
                     _answer_callback(bot_token, callback_id, "Отклонено")
                     decisions[token] = ModerationResult(False, "rejected")
