@@ -310,14 +310,14 @@
   {
     "url": "https://www.infoq.com/news/2026/05/code-with-claude/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Artificial+Intelligence-news",
     "published_at": "2026-05-18T15:00:07.079853+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "Anthropic's Code With Claude Announces  Managed Agents, Proactive Workflows, Capability Curve",
       "source_name": "InfoQ AI",
       "published_at": "2026-05-18T13:14:00+00:00",
       "language": "en"
     },
-    "updated_at": "2026-05-18T15:33:33.055665+00:00"
+    "updated_at": "2026-05-19T06:53:29.990657+00:00"
   },
   {
     "url": "https://www.producthunt.com/products/anyframe-2",
@@ -330,5 +330,29 @@
       "language": "en"
     },
     "updated_at": "2026-05-18T15:26:33.771788+00:00"
+  },
+  {
+    "url": "https://openai.com/index/dell-codex-enterprise-partnership",
+    "published_at": "2026-05-19T06:51:32.786154+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-05-18T10:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-19T06:53:29.989131+00:00"
+  },
+  {
+    "url": "https://simonwillison.net/2026/May/19/5-minute-llms/#atom-everything",
+    "published_at": "2026-05-19T06:51:32.786802+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "The last six months in LLMs in five minutes",
+      "source_name": "Simon Willison",
+      "published_at": "2026-05-19T01:09:44+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-19T06:53:29.989978+00:00"
   }
 ]
