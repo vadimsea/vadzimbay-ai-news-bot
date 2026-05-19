@@ -378,5 +378,41 @@
       "language": "en"
     },
     "updated_at": "2026-05-19T07:46:33.521557+00:00"
+  },
+  {
+    "url": "https://www.golem.de/news/gegruendet-in-linz-mistral-kauft-ki-simulations-start-up-emmi-ai-2605-208835.html",
+    "published_at": "2026-05-19T15:46:17.522977+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Gegründet in Linz: Mistral kauft KI-Simulations-Start-up Emmi AI",
+      "source_name": "Golem.de",
+      "published_at": "2026-05-19T15:33:02+00:00",
+      "language": "de"
+    },
+    "updated_at": "2026-05-19T15:50:05.592897+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/agora-1-turns-the-n64-classic-goldeneye-into-a-playable-ai-simulation-for-four-players/",
+    "published_at": "2026-05-19T15:46:17.523698+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Agora-1 turns the N64 classic GoldenEye into a playable AI simulation for four players",
+      "source_name": "The Decoder",
+      "published_at": "2026-05-19T13:57:38+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-19T15:50:05.593712+00:00"
+  },
+  {
+    "url": "https://www.producthunt.com/products/thinnest-ai",
+    "published_at": "2026-05-19T15:46:17.524293+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Thinnest AI",
+      "source_name": "Product Hunt",
+      "published_at": "2026-05-19T05:09:58+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-19T15:50:05.594420+00:00"
   }
 ]
