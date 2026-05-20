@@ -414,5 +414,40 @@
       "language": "en"
     },
     "updated_at": "2026-05-19T15:50:05.594420+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/05/19/with-gemini-3-5-flash-google-bets-its-next-ai-wave-on-agents-not-chatbots/",
+    "published_at": "2026-05-20T08:16:47.565442+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "With Gemini 3.5 Flash, Google bets its next AI wave on agents, not chatbots",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-05-19T17:51:30+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-20T08:49:17.314019+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/tech/932973/google-gmail-live-ai-keep-docs-io-2026",
+    "published_at": "2026-05-20T08:49:17.885738+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Gmail is going to start talking to you",
+      "source_name": "The Verge AI",
+      "published_at": "2026-05-19T17:45:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-20T08:49:17.885738+00:00"
+  },
+  {
+    "url": "https://www.wired.com/story/everything-google-announced-at-google-io-2026/",
+    "published_at": "2026-05-20T08:16:47.566763+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Everything Announced at Google I/O 2026: Gemini, Search, Smart Glasses",
+      "source_name": "Wired",
+      "published_at": "2026-05-19T20:00:48+00:00",
+      "language": "en"
+    }
   }
 ]
