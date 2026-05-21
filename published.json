@@ -486,5 +486,38 @@
       "language": "en"
     },
     "updated_at": "2026-05-21T07:37:55.863127+00:00"
+  },
+  {
+    "url": "https://openai.com/index/introducing-openai-for-singapore",
+    "published_at": "2026-05-21T17:01:46.153273+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Introducing OpenAI for Singapore",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-05-19T20:30:00+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.theverge.com/science/935229/spacex-anthropic-ipo-ai-capacity-deal-colossus",
+    "published_at": "2026-05-21T17:01:46.154071+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic is paying $15 billion a year for access to Elon Musk’s data centers",
+      "source_name": "The Verge AI",
+      "published_at": "2026-05-21T13:35:52+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.searchenginejournal.com/google-adds-ai-agents-to-search-redesigns-search-box-at-i-o/575311/",
+    "published_at": "2026-05-21T17:01:46.154771+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google’s New Search Box Hands Queries To AI Agents, I/O Reveals via @sejournal, @MattGSouthern",
+      "source_name": "Search Engine Journal",
+      "published_at": "2026-05-19T17:45:17+00:00",
+      "language": "en"
+    }
   }
 ]
