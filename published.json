@@ -541,6 +541,29 @@
       "source_name": "Google DeepMind Blog",
       "published_at": "2026-05-21T19:46:42+00:00",
       "language": "en"
+    },
+    "updated_at": "2026-05-22T14:01:39.648227+00:00"
+  },
+  {
+    "url": "https://www.marktechpost.com/2026/05/22/microsoft-releases-fara1-5-a-family-of-browser-computer-use-agents-4b-9b-27b-that-outperform-openai-operator-and-gemini-2-5-computer-use-on-online-mind2web/",
+    "published_at": "2026-05-22T14:01:39.646543+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Microsoft Releases Fara1.5: A Family of Browser Computer-Use Agents (4B/9B/27B) That Outperform OpenAI Operator and Gemini 2.5 Computer Use on Online-Mind2Web",
+      "source_name": "MarkTechPost",
+      "published_at": "2026-05-22T08:32:55+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.searchenginejournal.com/seo-pulse-google-launches-core-update-amid-i-o-ai-search-overhaul/575676/",
+    "published_at": "2026-05-22T14:01:39.647482+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google Launches Core Update Amid I/O AI Search Overhaul – SEO Pulse via @sejournal, @MattGSouthern",
+      "source_name": "Search Engine Journal",
+      "published_at": "2026-05-22T12:30:40+00:00",
+      "language": "en"
     }
   }
 ]
