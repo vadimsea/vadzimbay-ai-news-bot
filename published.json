@@ -500,14 +500,15 @@
   },
   {
     "url": "https://www.theverge.com/science/935229/spacex-anthropic-ipo-ai-capacity-deal-colossus",
-    "published_at": "2026-05-21T17:01:46.154071+00:00",
-    "status": "offered",
+    "published_at": "2026-05-22T07:32:44.554501+00:00",
+    "status": "published",
     "metadata": {
       "title": "Anthropic is paying $15 billion a year for access to Elon Musk’s data centers",
       "source_name": "The Verge AI",
       "published_at": "2026-05-21T13:35:52+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-05-22T07:32:44.554501+00:00"
   },
   {
     "url": "https://www.searchenginejournal.com/google-adds-ai-agents-to-search-redesigns-search-box-at-i-o/575311/",
@@ -517,6 +518,28 @@
       "title": "Google’s New Search Box Hands Queries To AI Agents, I/O Reveals via @sejournal, @MattGSouthern",
       "source_name": "Search Engine Journal",
       "published_at": "2026-05-19T17:45:17+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://simonwillison.net/2026/May/21/datasette-agent/#atom-everything",
+    "published_at": "2026-05-22T07:31:38.531599+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Datasette Agent",
+      "source_name": "Simon Willison",
+      "published_at": "2026-05-21T19:52:19+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
+    "published_at": "2026-05-22T07:31:38.533154+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "We’re launching the Google DeepMind Accelerator program in Asia Pacific to tackle environmental risks",
+      "source_name": "Google DeepMind Blog",
+      "published_at": "2026-05-21T19:46:42+00:00",
       "language": "en"
     }
   }
