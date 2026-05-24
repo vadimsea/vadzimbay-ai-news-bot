@@ -615,5 +615,16 @@
       "language": "en"
     },
     "updated_at": "2026-05-24T07:32:42.468314+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/researchers-let-claude-code-discover-ai-scaling-algorithms-that-humans-probably-wouldnt-have-designed/",
+    "published_at": "2026-05-24T14:46:01.095076+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Researchers let Claude Code discover AI scaling algorithms that humans probably wouldn't have designed",
+      "source_name": "The Decoder",
+      "published_at": "2026-05-24T08:06:35+00:00",
+      "language": "en"
+    }
   }
 ]
