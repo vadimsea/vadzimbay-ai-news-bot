@@ -639,5 +639,27 @@
       "language": "en"
     },
     "updated_at": "2026-05-25T07:38:53.803094+00:00"
+  },
+  {
+    "url": "https://www.marktechpost.com/2026/05/25/workos-releases-auth-md-an-open-agent-registration-protocol-built-on-oauth-standards/",
+    "published_at": "2026-05-25T14:01:33.384395+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "WorkOS Releases auth.md: An Open Agent Registration Protocol Built on OAuth Standards",
+      "source_name": "Planet AI",
+      "published_at": "2026-05-25T07:38:15+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://the-decoder.com/at-the-launch-of-pope-leo-xivs-encyclical-anthropic-co-founder-says-ai-models-show-signs-of-introspection/",
+    "published_at": "2026-05-25T14:01:33.385365+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "At the launch of Pope Leo XIV's encyclical, Anthropic co-founder says AI models show signs of introspection",
+      "source_name": "The Decoder",
+      "published_at": "2026-05-25T13:40:07+00:00",
+      "language": "en"
+    }
   }
 ]
