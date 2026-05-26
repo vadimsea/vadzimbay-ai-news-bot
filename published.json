@@ -673,6 +673,30 @@
       "source_name": "ComputerBase",
       "published_at": "2026-05-25T15:55:00+00:00",
       "language": "de"
+    },
+    "updated_at": "2026-05-26T15:46:18.067572+00:00"
+  },
+  {
+    "url": "https://uxdesign.cc/7-things-that-vibe-design-cant-replicate-014e3089f86e?source=rss----138adf9c44c---4",
+    "published_at": "2026-05-26T15:46:18.065932+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "7 things that Vibe Design can’t replicate",
+      "source_name": "UX Collective",
+      "published_at": "2026-05-26T07:21:08+00:00",
+      "language": "en"
     }
+  },
+  {
+    "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/",
+    "published_at": "2026-05-26T15:51:36.681403+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "AI Agents Plunged the Tech World Into Chaos. Here’s Exactly How That Happened",
+      "source_name": "Wired",
+      "published_at": "2026-05-26T10:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-26T15:51:36.681403+00:00"
   }
 ]
