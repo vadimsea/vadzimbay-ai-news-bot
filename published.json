@@ -649,17 +649,30 @@
       "source_name": "Planet AI",
       "published_at": "2026-05-25T07:38:15+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-05-26T06:01:39.738033+00:00"
   },
   {
     "url": "https://the-decoder.com/at-the-launch-of-pope-leo-xivs-encyclical-anthropic-co-founder-says-ai-models-show-signs-of-introspection/",
-    "published_at": "2026-05-25T14:01:33.385365+00:00",
-    "status": "offered",
+    "published_at": "2026-05-26T06:02:46.307859+00:00",
+    "status": "published",
     "metadata": {
       "title": "At the launch of Pope Leo XIV's encyclical, Anthropic co-founder says AI models show signs of introspection",
       "source_name": "The Decoder",
       "published_at": "2026-05-25T13:40:07+00:00",
       "language": "en"
+    },
+    "updated_at": "2026-05-26T06:02:46.307859+00:00"
+  },
+  {
+    "url": "https://www.computerbase.de/news/apps/anthropics-mythos-release-fuer-claude-code-und-claude-security-soll-bevorstehen.97509/",
+    "published_at": "2026-05-26T06:01:39.742956+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropics Mythos: Release für Claude Code und Claude Security soll bevor­ste­hen",
+      "source_name": "ComputerBase",
+      "published_at": "2026-05-25T15:55:00+00:00",
+      "language": "de"
     }
   }
 ]
