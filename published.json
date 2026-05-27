@@ -667,25 +667,26 @@
   {
     "url": "https://www.computerbase.de/news/apps/anthropics-mythos-release-fuer-claude-code-und-claude-security-soll-bevorstehen.97509/",
     "published_at": "2026-05-26T06:01:39.742956+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "Anthropics Mythos: Release für Claude Code und Claude Security soll bevor­ste­hen",
       "source_name": "ComputerBase",
       "published_at": "2026-05-25T15:55:00+00:00",
       "language": "de"
     },
-    "updated_at": "2026-05-26T15:46:18.067572+00:00"
+    "updated_at": "2026-05-27T08:50:59.292063+00:00"
   },
   {
     "url": "https://uxdesign.cc/7-things-that-vibe-design-cant-replicate-014e3089f86e?source=rss----138adf9c44c---4",
-    "published_at": "2026-05-26T15:46:18.065932+00:00",
-    "status": "offered",
+    "published_at": "2026-05-27T08:50:59.290962+00:00",
+    "status": "published",
     "metadata": {
       "title": "7 things that Vibe Design can’t replicate",
       "source_name": "UX Collective",
       "published_at": "2026-05-26T07:21:08+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-05-27T08:50:59.290962+00:00"
   },
   {
     "url": "https://www.wired.com/story/how-ai-agents-plunged-tech-world-into-chaos/",
@@ -698,5 +699,16 @@
       "language": "en"
     },
     "updated_at": "2026-05-26T15:51:36.681403+00:00"
+  },
+  {
+    "url": "https://www.producthunt.com/products/cometchat-skills",
+    "published_at": "2026-05-27T08:46:10.911816+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Calling Skills for AI Agents",
+      "source_name": "Product Hunt",
+      "published_at": "2026-05-26T09:59:31+00:00",
+      "language": "en"
+    }
   }
 ]
