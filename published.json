@@ -710,5 +710,28 @@
       "published_at": "2026-05-26T09:59:31+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "https://www.producthunt.com/products/zero-xyz",
+    "published_at": "2026-05-27T16:16:47.813658+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "zero.xyz",
+      "source_name": "Product Hunt",
+      "published_at": "2026-05-26T18:33:09+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-27T16:16:47.813658+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/05/google-synthid-content-detection/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Artificial+Intelligence-news",
+    "published_at": "2026-05-27T16:16:13.768119+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google Expands SynthID Adoption for AI Watermarking, Previews Content Detection API",
+      "source_name": "InfoQ AI",
+      "published_at": "2026-05-26T09:00:00+00:00",
+      "language": "en"
+    }
   }
 ]
