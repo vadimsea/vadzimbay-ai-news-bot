@@ -758,5 +758,38 @@
       "language": "en"
     },
     "updated_at": "2026-05-28T07:34:17.911711+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/mistral-rebrands-lechat-as-vibe-betting-its-chatbots-future-is-as-a-full-blown-work-agent/",
+    "published_at": "2026-05-28T15:31:28.718353+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Mistral rebrands LeChat as Vibe, betting its chatbot's future is as a full-blown work agent",
+      "source_name": "The Decoder",
+      "published_at": "2026-05-28T12:23:32+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.theverge.com/tech/938915/ios-27-siri-renders-bloomberg",
+    "published_at": "2026-05-28T15:31:28.719450+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "These new iOS 27 renders hint at Siri’s big redesign",
+      "source_name": "The Verge AI",
+      "published_at": "2026-05-28T14:33:31+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://openai.com/index/warp",
+    "published_at": "2026-05-28T15:31:28.720473+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Warp’s big bet on building open source with GPT-5.5",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-05-27T00:00:00+00:00",
+      "language": "en"
+    }
   }
 ]
