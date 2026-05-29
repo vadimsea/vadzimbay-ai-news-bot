@@ -762,13 +762,14 @@
   {
     "url": "https://the-decoder.com/mistral-rebrands-lechat-as-vibe-betting-its-chatbots-future-is-as-a-full-blown-work-agent/",
     "published_at": "2026-05-28T15:31:28.718353+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "Mistral rebrands LeChat as Vibe, betting its chatbot's future is as a full-blown work agent",
       "source_name": "The Decoder",
       "published_at": "2026-05-28T12:23:32+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-05-29T06:37:03.766821+00:00"
   },
   {
     "url": "https://www.theverge.com/tech/938915/ios-27-siri-renders-bloomberg",
@@ -789,6 +790,29 @@
       "title": "Warp’s big bet on building open source with GPT-5.5",
       "source_name": "OpenAI Blog",
       "published_at": "2026-05-27T00:00:00+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/939094/anthropic-claude-4-8-opus-honesty-effort",
+    "published_at": "2026-05-29T06:37:04.135295+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Claude’s new model is more ‘honest’ when it messes up",
+      "source_name": "The Verge AI",
+      "published_at": "2026-05-28T17:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-29T06:37:04.135295+00:00"
+  },
+  {
+    "url": "https://simonwillison.net/2026/May/29/anthropic/#atom-everything",
+    "published_at": "2026-05-29T06:31:16.250641+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic's run-rate revenue hits $47 billion",
+      "source_name": "Simon Willison",
+      "published_at": "2026-05-29T01:23:08+00:00",
       "language": "en"
     }
   }
