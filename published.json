@@ -860,6 +860,30 @@
       "source_name": "Wired",
       "published_at": "2026-05-29T19:07:46+00:00",
       "language": "en"
+    },
+    "updated_at": "2026-05-31T06:31:24.537835+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/salesforce-claims-ai-agents-cut-a-231-day-migration-to-13-days-with-fewer-incidents/",
+    "published_at": "2026-05-31T06:31:24.536664+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Salesforce claims AI agents cut a 231-day migration to 13 days with fewer incidents",
+      "source_name": "The Decoder",
+      "published_at": "2026-05-30T09:32:57+00:00",
+      "language": "en"
     }
+  },
+  {
+    "url": "https://www.theverge.com/tech/939686/adobes-conversational-ai-agent-is-a-mediocre-design-intern",
+    "published_at": "2026-05-31T06:32:04.633612+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Adobe’s conversational AI agent is a mediocre design intern",
+      "source_name": "The Verge AI",
+      "published_at": "2026-05-29T10:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-05-31T06:32:04.633612+00:00"
   }
 ]
