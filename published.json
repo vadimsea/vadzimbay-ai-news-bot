@@ -908,7 +908,7 @@
       "published_at": "2026-06-01T13:38:52+00:00",
       "language": "en"
     },
-    "updated_at": "2026-06-02T07:16:27.540242+00:00"
+    "updated_at": "2026-06-02T16:16:45.135190+00:00"
   },
   {
     "url": "https://uxdesign.cc/the-register-shift-cf72fed592ed?source=rss----138adf9c44c---4",
@@ -930,6 +930,29 @@
       "title": "Nvidia chases $200B CPU market with AI agent PCs from Microsoft, Dell, and HP",
       "source_name": "TechCrunch AI",
       "published_at": "2026-06-01T21:35:00+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/06/02/openai-launches-new-codex-tools-for-white-collar-work/",
+    "published_at": "2026-06-02T16:18:07.947014+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "OpenAI launches new Codex tools for white-collar work",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-06-02T16:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-02T16:18:07.947014+00:00"
+  },
+  {
+    "url": "https://uxdesign.cc/default-bias-who-chose-your-settings-d2acde25551b?source=rss----138adf9c44c---4",
+    "published_at": "2026-06-02T16:16:45.137601+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Default Bias: Who chose your settings?",
+      "source_name": "UX Collective",
+      "published_at": "2026-06-02T11:07:25+00:00",
       "language": "en"
     }
   }
