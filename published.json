@@ -955,5 +955,38 @@
       "published_at": "2026-06-02T11:07:25+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "https://www.theverge.com/news/941830/microsoft-project-solara-os-ai-agent-gadgets",
+    "published_at": "2026-06-03T08:46:28.391078+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Microsoft’s Project Solara is an OS for AI agent gadgets",
+      "source_name": "The Verge AI",
+      "published_at": "2026-06-02T17:31:02+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://the-decoder.com/claude-maker-anthropic-files-for-ipo-with-the-sec/",
+    "published_at": "2026-06-03T08:46:28.392575+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Claude maker Anthropic files for IPO with the SEC",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-01T17:26:59+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.zdnet.com/article/all-the-new-ai-models-microsoft-just-launched-at-build/",
+    "published_at": "2026-06-03T08:46:28.393728+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Microsoft's first reasoning model is one of 7 AIs just released at Build - what we know so far",
+      "source_name": "TensorFeed",
+      "published_at": "2026-06-02T18:38:00+00:00",
+      "language": "en"
+    }
   }
 ]
