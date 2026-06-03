@@ -981,12 +981,36 @@
   {
     "url": "https://www.zdnet.com/article/all-the-new-ai-models-microsoft-just-launched-at-build/",
     "published_at": "2026-06-03T08:46:28.393728+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "Microsoft's first reasoning model is one of 7 AIs just released at Build - what we know so far",
       "source_name": "TensorFeed",
       "published_at": "2026-06-02T18:38:00+00:00",
       "language": "en"
+    },
+    "updated_at": "2026-06-03T16:16:55.135143+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/tech/941664/microsoft-ai-model-reasoning-mai-thinking-1-build-2026",
+    "published_at": "2026-06-03T14:16:39.405432+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Microsoft’s first advanced reasoning AI is here",
+      "source_name": "The Verge AI",
+      "published_at": "2026-06-02T18:12:44+00:00",
+      "language": "en"
     }
+  },
+  {
+    "url": "https://the-decoder.com/nous-research-releases-hermes-desktop-an-open-source-ai-agent-for-every-platform/",
+    "published_at": "2026-06-03T14:16:39.406757+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Nous Research releases Hermes Desktop, an open-source AI agent for every platform",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-03T10:56:38+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-03T16:16:55.133673+00:00"
   }
 ]
