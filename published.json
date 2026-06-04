@@ -1012,5 +1012,40 @@
       "language": "en"
     },
     "updated_at": "2026-06-03T16:16:55.133673+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/942242/microsoft-build-ai-agents-openai-competition",
+    "published_at": "2026-06-04T06:16:34.297736+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Microsoft and OpenAI broke up — now they’re ready to fight",
+      "source_name": "The Verge AI",
+      "published_at": "2026-06-03T14:04:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-04T06:20:59.669250+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/ideogram-4-0-drops-as-an-open-weight-model-with-native-2k-resolution-and-improved-text-rendering/",
+    "published_at": "2026-06-04T06:21:00.900069+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Ideogram 4.0 drops as an open-weight model with native 2K resolution and improved text rendering",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-03T18:34:36+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-04T06:21:00.900069+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
+    "published_at": "2026-06-04T06:16:34.301369+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Coralogix raises $200M on bet that someone needs to watch the AI agents",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-06-03T13:02:51+00:00",
+      "language": "en"
+    }
   }
 ]
