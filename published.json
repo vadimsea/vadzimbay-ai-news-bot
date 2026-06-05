@@ -1082,6 +1082,30 @@
       "source_name": "TechCrunch AI",
       "published_at": "2026-06-04T22:43:26+00:00",
       "language": "en"
+    },
+    "updated_at": "2026-06-05T15:01:45.221573+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/06/dropbox-nova-ai-coding-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Artificial+Intelligence-news",
+    "published_at": "2026-06-05T15:01:45.220124+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Dropbox Introduces Nova, an Internal Platform for Running AI Coding Agents at Scale",
+      "source_name": "InfoQ AI",
+      "published_at": "2026-06-05T12:00:00+00:00",
+      "language": "en"
     }
+  },
+  {
+    "url": "https://openai.com/index/chatgpt-memory-dreaming",
+    "published_at": "2026-06-05T15:02:33.978557+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Dreaming: Better memory for a more helpful ChatGPT",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-06-04T09:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-05T15:02:33.978557+00:00"
   }
 ]
