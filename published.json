@@ -1051,14 +1051,15 @@
   },
   {
     "url": "https://www.theverge.com/ai-artificial-intelligence/942884/amazon-next-generation-warehouse-robot-proteus",
-    "published_at": "2026-06-04T15:16:31.557800+00:00",
-    "status": "offered",
+    "published_at": "2026-06-05T08:35:54.903392+00:00",
+    "status": "published",
     "metadata": {
       "title": "Amazon develops a warehouse robot that workers can speak to",
       "source_name": "The Verge AI",
       "published_at": "2026-06-04T09:31:14+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-06-05T08:35:54.903392+00:00"
   },
   {
     "url": "https://the-decoder.com/xai-updates-grok-imagine-to-1-5-with-image-to-video-generation-at-720p-resolution/",
@@ -1068,6 +1069,18 @@
       "title": "xAI updates Grok Imagine to 1.5 with image-to-video generation at 720p resolution",
       "source_name": "The Decoder",
       "published_at": "2026-06-04T08:04:48+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-05T08:31:41.348225+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/06/04/ahead-of-its-ipo-anthropics-daniela-amodei-shrugs-off-doubts-about-ais-returns/",
+    "published_at": "2026-06-05T08:31:41.349634+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Ahead of its IPO, Anthropic’s Daniela Amodei shrugs off doubts about AI’s returns",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-06-04T22:43:26+00:00",
       "language": "en"
     }
   }
