@@ -1118,6 +1118,30 @@
       "source_name": "Simon Willison",
       "published_at": "2026-06-06T03:53:34+00:00",
       "language": "en"
+    },
+    "updated_at": "2026-06-06T16:16:28.176220+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/sakana-ai-bets-ai-that-improves-itself-can-break-the-compute-arms-race-of-frontier-labs/",
+    "published_at": "2026-06-06T16:17:50.983583+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Sakana AI bets AI that improves itself can break the compute arms race of frontier labs",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-06T13:57:52+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-06T16:17:50.983583+00:00"
+  },
+  {
+    "url": "https://uxdesign.cc/the-psychological-cost-of-moving-too-fast-867fb3830722?source=rss----138adf9c44c---4",
+    "published_at": "2026-06-06T16:16:28.175003+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "The psychological cost of moving too fast",
+      "source_name": "UX Collective",
+      "published_at": "2026-06-06T12:15:43+00:00",
+      "language": "en"
     }
   }
 ]
