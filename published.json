@@ -1083,7 +1083,7 @@
       "published_at": "2026-06-04T22:43:26+00:00",
       "language": "en"
     },
-    "updated_at": "2026-06-05T15:01:45.221573+00:00"
+    "updated_at": "2026-06-06T06:31:30.131042+00:00"
   },
   {
     "url": "https://www.infoq.com/news/2026/06/dropbox-nova-ai-coding-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Artificial+Intelligence-news",
@@ -1094,7 +1094,8 @@
       "source_name": "InfoQ AI",
       "published_at": "2026-06-05T12:00:00+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-06-06T06:31:30.128124+00:00"
   },
   {
     "url": "https://openai.com/index/chatgpt-memory-dreaming",
@@ -1107,5 +1108,16 @@
       "language": "en"
     },
     "updated_at": "2026-06-05T15:02:33.978557+00:00"
+  },
+  {
+    "url": "https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/#atom-everything",
+    "published_at": "2026-06-06T06:31:30.129717+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Running Python code in a sandbox with MicroPython and WASM",
+      "source_name": "Simon Willison",
+      "published_at": "2026-06-06T03:53:34+00:00",
+      "language": "en"
+    }
   }
 ]
