@@ -1156,5 +1156,16 @@
       "language": "en"
     },
     "updated_at": "2026-06-07T08:48:07.148993+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/openai-says-chat-is-dead-and-plans-to-rebuild-chatgpt-as-a-full-blown-agent-app/",
+    "published_at": "2026-06-07T16:46:12.048038+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI says \"chat is dead\" and plans to rebuild ChatGPT as a full-blown agent app",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-07T11:15:28+00:00",
+      "language": "en"
+    }
   }
 ]
