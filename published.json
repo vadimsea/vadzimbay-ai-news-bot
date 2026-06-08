@@ -1167,6 +1167,28 @@
       "published_at": "2026-06-07T11:15:28+00:00",
       "language": "en"
     },
-    "updated_at": "2026-06-08T08:31:23.465117+00:00"
+    "updated_at": "2026-06-08T15:02:02.516943+00:00"
+  },
+  {
+    "url": "https://towardsai.net/p/machine-learning/moonshot-cracked-claude-codes-playbook-with-an-mit-terminal-agent-and-a-0-60-model",
+    "published_at": "2026-06-08T15:02:02.518590+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Moonshot Cracked Claude Code’s Playbook with an MIT Terminal Agent and a $0.60 Model",
+      "source_name": "Planet AI",
+      "published_at": "2026-06-08T09:07:31+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://github.com/davidreis97/defending-code-reference-harness-copilot",
+    "published_at": "2026-06-08T15:02:02.520023+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Show HN: GitHub Copilot port of Anthropic's AI vulnerability discovery harness",
+      "source_name": "TensorFeed",
+      "published_at": "2026-06-08T14:05:33+00:00",
+      "language": "en"
+    }
   }
 ]
