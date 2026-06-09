@@ -1212,6 +1212,29 @@
       "source_name": "The Verge AI",
       "published_at": "2026-06-08T16:00:00+00:00",
       "language": "en"
+    },
+    "updated_at": "2026-06-09T14:46:30.473282+00:00"
+  },
+  {
+    "url": "https://capakit.com/",
+    "published_at": "2026-06-09T14:46:30.475082+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Show HN: Sandbox AI-app lifecycle, from build to run",
+      "source_name": "TensorFeed",
+      "published_at": "2026-06-09T14:02:32+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://openai.com/index/economic-research-exchange",
+    "published_at": "2026-06-09T14:46:30.480701+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Introducing the OpenAI Economic Research Exchange",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-06-08T00:00:00+00:00",
+      "language": "en"
     }
   }
 ]
