@@ -1167,7 +1167,7 @@
       "published_at": "2026-06-07T11:15:28+00:00",
       "language": "en"
     },
-    "updated_at": "2026-06-08T15:02:02.516943+00:00"
+    "updated_at": "2026-06-09T06:16:26.040861+00:00"
   },
   {
     "url": "https://towardsai.net/p/machine-learning/moonshot-cracked-claude-codes-playbook-with-an-mit-terminal-agent-and-a-0-60-model",
@@ -1188,6 +1188,29 @@
       "title": "Show HN: GitHub Copilot port of Anthropic's AI vulnerability discovery harness",
       "source_name": "TensorFeed",
       "published_at": "2026-06-08T14:05:33+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://arstechnica.com/apple/2026/06/say-hi-to-siri-ai-apple-announces-new-more-conversational-voice-assistant/",
+    "published_at": "2026-06-09T06:18:20.091715+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Say hi to \"Siri AI\"—Apple announces new, more \"conversational\" voice assistant",
+      "source_name": "Ars Technica",
+      "published_at": "2026-06-08T19:30:05+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-09T06:18:20.091715+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/tech/944325/google-notebooklm-ai-gemini-update",
+    "published_at": "2026-06-09T06:16:26.043766+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "NotebookLM’s Gemini 3.5 upgrade adds a cloud computer and help finding sources",
+      "source_name": "The Verge AI",
+      "published_at": "2026-06-08T16:00:00+00:00",
       "language": "en"
     }
   }
