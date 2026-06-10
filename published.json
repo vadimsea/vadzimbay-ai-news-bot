@@ -1236,5 +1236,40 @@
       "published_at": "2026-06-08T00:00:00+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "https://the-decoder.com/anthropic-releases-claude-fable-5-and-mythos-5-with-major-gains-in-coding-and-science/",
+    "published_at": "2026-06-10T07:02:50.742092+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Anthropic releases Claude Fable 5 and Mythos 5 with major gains in coding and science",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-09T18:25:19+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-10T07:04:10.731519+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/news/946725/anthropic-releases-claude-fable-5-mythos",
+    "published_at": "2026-06-10T07:04:11.128028+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Anthropic releases its first Mythos-class model Claude Fable",
+      "source_name": "The Verge AI",
+      "published_at": "2026-06-09T17:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-10T07:04:11.128028+00:00"
+  },
+  {
+    "url": "https://medium.com/@alirezarezvani/claude-fable-5-guide-for-claude-code-11501ceb78a8",
+    "published_at": "2026-06-10T07:02:50.746202+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Claude Fable 5's new features, tested by having it write its own launch coverage",
+      "source_name": "TensorFeed",
+      "published_at": "2026-06-10T06:28:08+00:00",
+      "language": "en"
+    }
   }
 ]
