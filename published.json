@@ -1271,5 +1271,38 @@
       "published_at": "2026-06-10T06:28:08+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "https://the-decoder.com/googles-gemini-3-5-live-translate-delivers-real-time-voice-translation-across-70-languages/",
+    "published_at": "2026-06-10T14:01:58.696689+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google's Gemini 3.5 Live Translate delivers real-time voice translation across 70+ languages",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-09T17:18:59+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://simonwillison.net/2026/Jun/9/claude-fable-5/#atom-everything",
+    "published_at": "2026-06-10T14:01:58.698408+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Initial impressions of Claude Fable 5",
+      "source_name": "Simon Willison",
+      "published_at": "2026-06-09T23:59:54+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/06/10/jedify-raises-24m-to-help-companies-arm-ai-agents-with-context-on-their-business/",
+    "published_at": "2026-06-10T14:01:58.699882+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Jedify raises $24M to help companies arm AI agents with context on their business",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-06-10T13:33:09+00:00",
+      "language": "en"
+    }
   }
 ]
