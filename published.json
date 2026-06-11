@@ -1304,5 +1304,38 @@
       "published_at": "2026-06-10T13:33:09+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "https://the-decoder.com/anthropic-study-shows-ai-needs-hours-not-weeks-to-build-exploits-from-security-patches/",
+    "published_at": "2026-06-11T07:31:50.422755+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic study shows AI needs hours, not weeks, to build exploits from security patches",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-10T17:38:24+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/06/10/cybersecurity-researchers-arent-happy-about-the-guardrails-on-anthropics-fable/",
+    "published_at": "2026-06-11T07:31:50.424559+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Cybersecurity researchers aren’t happy about the guardrails on Anthropic’s Fable",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-06-10T15:41:22+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-local-gemma-diffusion/",
+    "published_at": "2026-06-11T07:31:50.426074+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "NVIDIA Accelerates Google DeepMind’s DiffusionGemma for Local AI",
+      "source_name": "TensorFeed",
+      "published_at": "2026-06-10T16:15:20+00:00",
+      "language": "en"
+    }
   }
 ]
