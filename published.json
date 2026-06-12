@@ -1326,7 +1326,8 @@
       "source_name": "TechCrunch AI",
       "published_at": "2026-06-10T15:41:22+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-06-12T06:46:25.535853+00:00"
   },
   {
     "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-local-gemma-diffusion/",
@@ -1362,5 +1363,27 @@
       "language": "en"
     },
     "updated_at": "2026-06-11T16:18:05.564731+00:00"
+  },
+  {
+    "url": "https://arstechnica.com/google/2026/06/googles-latest-diffusiongemma-open-ai-model-comes-with-a-4x-speed-boost/",
+    "published_at": "2026-06-12T06:46:25.532529+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google DeepMind releases DiffusionGemma, a model that runs local AI 4x faster",
+      "source_name": "Ars Technica",
+      "published_at": "2026-06-10T19:29:21+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/",
+    "published_at": "2026-06-12T06:46:25.534294+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Investing in multi-agent AI safety research",
+      "source_name": "Google DeepMind Blog",
+      "published_at": "2026-06-10T10:21:19+00:00",
+      "language": "en"
+    }
   }
 ]
