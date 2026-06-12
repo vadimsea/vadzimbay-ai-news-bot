@@ -1327,7 +1327,7 @@
       "published_at": "2026-06-10T15:41:22+00:00",
       "language": "en"
     },
-    "updated_at": "2026-06-12T06:46:25.535853+00:00"
+    "updated_at": "2026-06-12T14:31:42.360074+00:00"
   },
   {
     "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-local-gemma-diffusion/",
@@ -1383,6 +1383,28 @@
       "title": "Investing in multi-agent AI safety research",
       "source_name": "Google DeepMind Blog",
       "published_at": "2026-06-10T10:21:19+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://the-decoder.com/openai-buys-ona-to-push-codex-toward-long-running-autonomous-coding-tasks/",
+    "published_at": "2026-06-12T14:31:42.356716+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI buys Ona to push Codex toward long-running, autonomous coding tasks",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-12T10:13:55+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/06/pinecone-ai-agents-onelake/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Artificial+Intelligence-news",
+    "published_at": "2026-06-12T14:31:42.358505+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Pinecone Brings AI Agents Directly to Enterprise Data with Microsoft OneLake Integration",
+      "source_name": "InfoQ AI",
+      "published_at": "2026-06-12T12:00:00+00:00",
       "language": "en"
     }
   }
