@@ -1418,7 +1418,8 @@
       "source_name": "Simon Willison",
       "published_at": "2026-06-12T23:53:04+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-06-13T15:16:19.536614+00:00"
   },
   {
     "url": "https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/",
@@ -1428,6 +1429,18 @@
       "title": "Mistral is rumored to be raising €3B at €20B valuation",
       "source_name": "TechCrunch AI",
       "published_at": "2026-06-12T17:38:11+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-13T15:16:19.538229+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/microsofts-skillopt-boosts-gpt-5-5-by-using-nothing-but-a-trained-markdown-file/",
+    "published_at": "2026-06-13T15:16:19.534679+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Microsoft's SkillOpt boosts GPT-5.5 by using nothing but a trained Markdown file",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-13T12:20:39+00:00",
       "language": "en"
     }
   }
