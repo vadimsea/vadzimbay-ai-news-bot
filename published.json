@@ -1395,7 +1395,8 @@
       "source_name": "The Decoder",
       "published_at": "2026-06-12T10:13:55+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-06-13T07:16:23.863614+00:00"
   },
   {
     "url": "https://www.infoq.com/news/2026/06/pinecone-ai-agents-onelake/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Artificial+Intelligence-news",
@@ -1405,6 +1406,28 @@
       "title": "Pinecone Brings AI Agents Directly to Enterprise Data with Microsoft OneLake Integration",
       "source_name": "InfoQ AI",
       "published_at": "2026-06-12T12:00:00+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://simonwillison.net/2026/Jun/12/openai-webrtc/#atom-everything",
+    "published_at": "2026-06-13T07:16:23.865350+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI WebRTC Audio Session, now with document context",
+      "source_name": "Simon Willison",
+      "published_at": "2026-06-12T23:53:04+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/",
+    "published_at": "2026-06-13T07:16:23.866870+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Mistral is rumored to be raising €3B at €20B valuation",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-06-12T17:38:11+00:00",
       "language": "en"
     }
   }
