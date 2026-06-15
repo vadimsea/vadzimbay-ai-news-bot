@@ -1468,5 +1468,38 @@
       "language": "en"
     },
     "updated_at": "2026-06-15T07:03:10.389930+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/ai-coding-agents-find-the-right-file-but-miss-the-exact-lines-that-matter-study-shows/",
+    "published_at": "2026-06-15T14:16:43.732235+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "AI coding agents find the right file but miss the exact lines that matter, study shows",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-14T08:54:47+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.searchenginejournal.com/google-cloud-announces-the-open-knowledge-format/579253/",
+    "published_at": "2026-06-15T14:16:43.733952+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google Cloud Announces The Open Knowledge Format via @sejournal, @martinibuster",
+      "source_name": "Search Engine Journal",
+      "published_at": "2026-06-15T10:07:11+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/#atom-everything",
+    "published_at": "2026-06-15T14:16:43.735474+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Publishing WASM wheels to PyPI for use with Pyodide",
+      "source_name": "Simon Willison",
+      "published_at": "2026-06-13T23:55:18+00:00",
+      "language": "en"
+    }
   }
 ]
