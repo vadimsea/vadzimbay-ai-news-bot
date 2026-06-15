@@ -1436,24 +1436,37 @@
   {
     "url": "https://the-decoder.com/microsofts-skillopt-boosts-gpt-5-5-by-using-nothing-but-a-trained-markdown-file/",
     "published_at": "2026-06-13T15:16:19.534679+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "Microsoft's SkillOpt boosts GPT-5.5 by using nothing but a trained Markdown file",
       "source_name": "The Decoder",
       "published_at": "2026-06-13T12:20:39+00:00",
       "language": "en"
     },
-    "updated_at": "2026-06-14T07:01:37.272421+00:00"
+    "updated_at": "2026-06-15T07:03:10.386365+00:00"
   },
   {
     "url": "https://techcrunch.com/2026/06/13/as-anthropic-suspends-access-to-new-models-india-debates-its-ai-future/",
     "published_at": "2026-06-14T07:01:37.274293+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "As Anthropic suspends access to new models, India debates its AI future",
       "source_name": "TechCrunch AI",
       "published_at": "2026-06-14T03:00:00+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-06-15T07:03:10.388236+00:00"
+  },
+  {
+    "url": "https://openai.com/index/introducing-openai-partner-network",
+    "published_at": "2026-06-15T07:02:06.920507+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Introducing the OpenAI Partner Network",
+      "source_name": "Planet AI",
+      "published_at": "2026-06-14T17:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-15T07:03:10.389930+00:00"
   }
 ]
