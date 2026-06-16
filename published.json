@@ -1478,7 +1478,8 @@
       "source_name": "The Decoder",
       "published_at": "2026-06-14T08:54:47+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-06-16T06:46:33.700679+00:00"
   },
   {
     "url": "https://www.searchenginejournal.com/google-cloud-announces-the-open-knowledge-format/579253/",
@@ -1499,6 +1500,28 @@
       "title": "Publishing WASM wheels to PyPI for use with Pyodide",
       "source_name": "Simon Willison",
       "published_at": "2026-06-13T23:55:18+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.searchenginejournal.com/google-ads-three-bidding-budgeting-updates/579292/",
+    "published_at": "2026-06-16T06:46:33.702578+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google Ads Bidding Changes: What PPC Managers Need To Know About The 3 Updates via @sejournal, @brookeosmundson",
+      "source_name": "Search Engine Journal",
+      "published_at": "2026-06-15T15:24:12+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/",
+    "published_at": "2026-06-16T06:46:33.704298+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Salesforce acquires AI customer service platform Fin for $3.6B",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-06-15T14:34:45+00:00",
       "language": "en"
     }
   }
