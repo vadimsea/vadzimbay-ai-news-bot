@@ -1581,7 +1581,8 @@
       "source_name": "Simon Willison",
       "published_at": "2026-06-17T23:58:39+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-06-18T14:01:57.100075+00:00"
   },
   {
     "url": "https://uxdesign.cc/a2ui-under-the-hood-designing-for-the-new-era-of-radically-adaptive-ui-cebbf5f32fbe?source=rss----138adf9c44c---4",
@@ -1594,5 +1595,27 @@
       "language": "en"
     },
     "updated_at": "2026-06-18T08:24:06.594164+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/openai-researchers-want-to-predict-how-often-ai-models-will-fail-before-launch/",
+    "published_at": "2026-06-18T14:01:57.102169+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI researchers want to predict how often AI models will fail before launch",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-17T14:30:22+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.theverge.com/tech/952104/adobe-firefly-ai-agent-elements-projects-update",
+    "published_at": "2026-06-18T14:01:57.103967+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Adobe’s redesigned AI studio remembers what your creations look like",
+      "source_name": "The Verge AI",
+      "published_at": "2026-06-18T13:00:00+00:00",
+      "language": "en"
+    }
   }
 ]
