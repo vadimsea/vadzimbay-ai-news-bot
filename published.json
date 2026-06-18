@@ -1563,12 +1563,36 @@
   {
     "url": "https://the-decoder.com/nvidia-research-shows-robots-that-train-themselves-through-ai-coding-agents/",
     "published_at": "2026-06-17T16:46:39.241726+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "Nvidia research shows robots that train themselves through AI coding agents",
       "source_name": "The Decoder",
       "published_at": "2026-06-17T14:55:28+00:00",
       "language": "en"
+    },
+    "updated_at": "2026-06-18T08:24:06.592084+00:00"
+  },
+  {
+    "url": "https://simonwillison.net/2026/Jun/17/glm-52/#atom-everything",
+    "published_at": "2026-06-18T08:16:43.623834+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "GLM-5.2 is probably the most powerful text-only open weights LLM",
+      "source_name": "Simon Willison",
+      "published_at": "2026-06-17T23:58:39+00:00",
+      "language": "en"
     }
+  },
+  {
+    "url": "https://uxdesign.cc/a2ui-under-the-hood-designing-for-the-new-era-of-radically-adaptive-ui-cebbf5f32fbe?source=rss----138adf9c44c---4",
+    "published_at": "2026-06-18T08:16:43.627500+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "A2UI under the hood: Designing for the new era of radically adaptive UI",
+      "source_name": "UX Collective",
+      "published_at": "2026-06-17T22:59:32+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-18T08:24:06.594164+00:00"
   }
 ]
