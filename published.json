@@ -1698,7 +1698,8 @@
       "source_name": "Wired",
       "published_at": "2026-06-22T17:00:00+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-06-23T17:16:51.798848+00:00"
   },
   {
     "url": "https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/",
@@ -1719,6 +1720,28 @@
       "title": "Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code",
       "source_name": "Simon Willison",
       "published_at": "2026-06-22T23:43:51+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/06/23/fika-jobs-raises-4m-to-build-a-video-first-hiring-platform-where-ai-agents-interview-candidates/",
+    "published_at": "2026-06-23T17:16:51.794823+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Fika Jobs raises $4M to build a video-first hiring platform where AI agents interview candidates",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-06-23T13:00:00+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://the-decoder.com/cursor-announces-its-own-ai-model-a-new-git-platform-and-a-mobile-app/",
+    "published_at": "2026-06-23T17:16:51.797026+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Cursor announces its own AI model, a new Git platform, and a mobile app",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-23T12:12:40+00:00",
       "language": "en"
     }
   }
