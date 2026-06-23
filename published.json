@@ -1688,5 +1688,38 @@
       "published_at": "2026-06-21T08:25:41+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "https://www.wired.com/story/openai-launches-full-scale-effort-to-patch-open-source-bugs-as-it-takes-on-anthropics-mythos/",
+    "published_at": "2026-06-23T06:02:11.469459+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI Launches Full-Scale Effort to Patch Open-Source Bugs as It Takes on Anthropic’s Mythos",
+      "source_name": "Wired",
+      "published_at": "2026-06-22T17:00:00+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/",
+    "published_at": "2026-06-23T06:02:11.471781+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI launches new initiative to help find and patch open-source bugs",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-06-23T00:11:31+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://simonwillison.net/2026/Jun/22/porting-moebius/#atom-everything",
+    "published_at": "2026-06-23T06:02:11.473669+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code",
+      "source_name": "Simon Willison",
+      "published_at": "2026-06-22T23:43:51+00:00",
+      "language": "en"
+    }
   }
 ]
