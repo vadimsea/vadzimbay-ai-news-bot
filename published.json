@@ -1733,7 +1733,7 @@
       "published_at": "2026-06-23T13:00:00+00:00",
       "language": "en"
     },
-    "updated_at": "2026-06-24T07:46:35.113692+00:00"
+    "updated_at": "2026-06-24T16:16:41.489942+00:00"
   },
   {
     "url": "https://the-decoder.com/cursor-announces-its-own-ai-model-a-new-git-platform-and-a-mobile-app/",
@@ -1755,6 +1755,28 @@
       "title": "Google Launches Ask Ad Manager, Its First AI Agent For Publishers via @sejournal, @brookeosmundson",
       "source_name": "Search Engine Journal",
       "published_at": "2026-06-23T16:29:59+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.theverge.com/tech/955831/figma-code-design-tools-config-2026-announcements",
+    "published_at": "2026-06-24T16:16:41.492151+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Figma now has AI motion graphics and shader tools",
+      "source_name": "The Verge AI",
+      "published_at": "2026-06-24T16:15:00+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://the-decoder.com/mistrals-new-ocr-model-beats-competitors-in-72-percent-of-blind-test-cases-company-says/",
+    "published_at": "2026-06-24T16:16:41.494088+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Mistral's new OCR model beats competitors in 72 percent of blind test cases, company says",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-24T09:28:40+00:00",
       "language": "en"
     }
   }
