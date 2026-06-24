@@ -1732,16 +1732,29 @@
       "source_name": "TechCrunch AI",
       "published_at": "2026-06-23T13:00:00+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-06-24T07:46:35.113692+00:00"
   },
   {
     "url": "https://the-decoder.com/cursor-announces-its-own-ai-model-a-new-git-platform-and-a-mobile-app/",
-    "published_at": "2026-06-23T17:16:51.797026+00:00",
-    "status": "offered",
+    "published_at": "2026-06-24T07:49:35.110010+00:00",
+    "status": "published",
     "metadata": {
       "title": "Cursor announces its own AI model, a new Git platform, and a mobile app",
       "source_name": "The Decoder",
       "published_at": "2026-06-23T12:12:40+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-24T07:49:35.110010+00:00"
+  },
+  {
+    "url": "https://www.searchenginejournal.com/google-launches-ask-ad-manager-its-first-ai-agent-for-publishers/580249/",
+    "published_at": "2026-06-24T07:46:35.117729+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google Launches Ask Ad Manager, Its First AI Agent For Publishers via @sejournal, @brookeosmundson",
+      "source_name": "Search Engine Journal",
+      "published_at": "2026-06-23T16:29:59+00:00",
       "language": "en"
     }
   }
