@@ -1733,7 +1733,7 @@
       "published_at": "2026-06-23T13:00:00+00:00",
       "language": "en"
     },
-    "updated_at": "2026-06-24T16:16:41.489942+00:00"
+    "updated_at": "2026-06-25T07:01:48.386845+00:00"
   },
   {
     "url": "https://the-decoder.com/cursor-announces-its-own-ai-model-a-new-git-platform-and-a-mobile-app/",
@@ -1767,7 +1767,8 @@
       "source_name": "The Verge AI",
       "published_at": "2026-06-24T16:15:00+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-06-25T07:01:48.381818+00:00"
   },
   {
     "url": "https://the-decoder.com/mistrals-new-ocr-model-beats-competitors-in-72-percent-of-blind-test-cases-company-says/",
@@ -1778,6 +1779,7 @@
       "source_name": "The Decoder",
       "published_at": "2026-06-24T09:28:40+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-06-25T07:01:48.383928+00:00"
   }
 ]
