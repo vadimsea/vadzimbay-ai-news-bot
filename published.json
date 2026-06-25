@@ -1768,7 +1768,7 @@
       "published_at": "2026-06-24T16:15:00+00:00",
       "language": "en"
     },
-    "updated_at": "2026-06-25T07:01:48.381818+00:00"
+    "updated_at": "2026-06-25T15:31:37.283827+00:00"
   },
   {
     "url": "https://the-decoder.com/mistrals-new-ocr-model-beats-competitors-in-72-percent-of-blind-test-cases-company-says/",
@@ -1781,5 +1781,27 @@
       "language": "en"
     },
     "updated_at": "2026-06-25T07:01:48.383928+00:00"
+  },
+  {
+    "url": "https://towardsai.com/p/machine-learning/the-building-blocks-of-langgraph-part-0",
+    "published_at": "2026-06-25T15:31:37.285992+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "The Building Blocks of LangGraph (Part 0)",
+      "source_name": "Planet AI",
+      "published_at": "2026-06-25T11:42:38+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://the-decoder.com/figma-bets-on-human-judgment-at-config-2026-while-the-ai-powering-its-canvas-belongs-to-someone-else/",
+    "published_at": "2026-06-25T15:31:37.287868+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Figma bets on human judgment at Config 2026 while the AI powering its canvas belongs to someone else",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-24T16:49:01+00:00",
+      "language": "en"
+    }
   }
 ]
