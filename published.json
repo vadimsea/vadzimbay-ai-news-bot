@@ -1761,14 +1761,14 @@
   {
     "url": "https://www.theverge.com/tech/955831/figma-code-design-tools-config-2026-announcements",
     "published_at": "2026-06-24T16:16:41.492151+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "Figma now has AI motion graphics and shader tools",
       "source_name": "The Verge AI",
       "published_at": "2026-06-24T16:15:00+00:00",
       "language": "en"
     },
-    "updated_at": "2026-06-25T15:31:37.283827+00:00"
+    "updated_at": "2026-06-26T06:33:03.751290+00:00"
   },
   {
     "url": "https://the-decoder.com/mistrals-new-ocr-model-beats-competitors-in-72-percent-of-blind-test-cases-company-says/",
@@ -1803,5 +1803,29 @@
       "published_at": "2026-06-24T16:49:01+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "https://uxdesign.cc/rethinking-figma-in-an-ai-world-0facba587ba5?source=rss----138adf9c44c---4",
+    "published_at": "2026-06-26T06:31:39.419402+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Rethinking Figma in an AI World",
+      "source_name": "UX Collective",
+      "published_at": "2026-06-25T22:50:53+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-26T06:33:03.746916+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/",
+    "published_at": "2026-06-26T06:31:39.421646+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Patronus AI lands $50M to build ‘digital worlds’ that stress-test AI agents",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-06-25T20:19:25+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-26T06:33:03.749259+00:00"
   }
 ]
