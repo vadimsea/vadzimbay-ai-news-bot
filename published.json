@@ -1827,5 +1827,29 @@
       "language": "en"
     },
     "updated_at": "2026-06-26T06:33:03.749259+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/06/vercel-eve-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Artificial+Intelligence-news",
+    "published_at": "2026-06-26T17:16:24.457975+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Vercel Introduces Eve, an Open-Source Framework for Building AI Agents",
+      "source_name": "InfoQ AI",
+      "published_at": "2026-06-26T16:39:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-26T17:20:12.105282+00:00"
+  },
+  {
+    "url": "https://www.producthunt.com/products/gemini-spark",
+    "published_at": "2026-06-26T17:16:24.460234+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Gemini Spark",
+      "source_name": "Product Hunt",
+      "published_at": "2026-06-25T05:47:05+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-26T17:20:12.107522+00:00"
   }
 ]
