@@ -1851,5 +1851,39 @@
       "language": "en"
     },
     "updated_at": "2026-06-26T17:20:12.107522+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/bytedances-illada-is-a-diffusion-language-model-that-keeps-up-with-qwen2-5/",
+    "published_at": "2026-06-27T08:31:41.985866+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "ByteDance's \"iLLaDA\" is a diffusion language model that keeps up with Qwen2.5",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-27T07:48:29+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://uxdesign.cc/discovery-is-a-capability-not-a-phase-0fd6c1dab2f5?source=rss----138adf9c44c---4",
+    "published_at": "2026-06-27T08:31:41.988085+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Discovery is a capability, not a phase",
+      "source_name": "UX Collective",
+      "published_at": "2026-06-26T21:58:55+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://openclawlaunch.com",
+    "published_at": "2026-06-27T08:34:21.353759+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Show HN: OpenClaw Launch – deploy a managed OpenClaw AI agent in 30s",
+      "source_name": "TensorFeed",
+      "published_at": "2026-06-27T05:37:36+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-27T08:34:21.353759+00:00"
   }
 ]
