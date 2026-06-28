@@ -1897,6 +1897,29 @@
       "source_name": "Product Hunt",
       "published_at": "2026-06-27T15:17:01+00:00",
       "language": "en"
+    },
+    "updated_at": "2026-06-28T16:46:36.355362+00:00"
+  },
+  {
+    "url": "https://uxdesign.cc/what-are-hypertokens-the-layer-between-tokens-and-components-rebuilt-for-agents-962dbe93e0c4?source=rss----138adf9c44c---4",
+    "published_at": "2026-06-28T16:46:36.351115+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "What are hypertokens? The layer between tokens and components, rebuilt for agents",
+      "source_name": "UX Collective",
+      "published_at": "2026-06-28T14:48:13+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://the-decoder.com/the-companies-most-likely-to-automate-your-job-are-now-funding-a-1-billion-program-to-retrain-you/",
+    "published_at": "2026-06-28T16:46:36.353349+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "The companies most likely to automate your job are now funding a $1 billion program to retrain you",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-27T12:25:21+00:00",
+      "language": "en"
     }
   }
 ]
