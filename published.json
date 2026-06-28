@@ -1862,7 +1862,7 @@
       "published_at": "2026-06-27T07:48:29+00:00",
       "language": "en"
     },
-    "updated_at": "2026-06-27T16:16:25.896628+00:00"
+    "updated_at": "2026-06-28T08:16:28.702200+00:00"
   },
   {
     "url": "https://uxdesign.cc/discovery-is-a-capability-not-a-phase-0fd6c1dab2f5?source=rss----138adf9c44c---4",
@@ -1874,7 +1874,7 @@
       "published_at": "2026-06-26T21:58:55+00:00",
       "language": "en"
     },
-    "updated_at": "2026-06-27T16:16:25.898896+00:00"
+    "updated_at": "2026-06-28T08:16:28.704019+00:00"
   },
   {
     "url": "https://openclawlaunch.com",
@@ -1887,5 +1887,16 @@
       "language": "en"
     },
     "updated_at": "2026-06-27T08:34:21.353759+00:00"
+  },
+  {
+    "url": "https://www.producthunt.com/products/lyto",
+    "published_at": "2026-06-28T08:16:28.705568+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Lyto",
+      "source_name": "Product Hunt",
+      "published_at": "2026-06-27T15:17:01+00:00",
+      "language": "en"
+    }
   }
 ]
