@@ -1909,7 +1909,8 @@
       "source_name": "UX Collective",
       "published_at": "2026-06-28T14:48:13+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-06-29T07:31:48.627175+00:00"
   },
   {
     "url": "https://the-decoder.com/the-companies-most-likely-to-automate-your-job-are-now-funding-a-1-billion-program-to-retrain-you/",
@@ -1919,6 +1920,18 @@
       "title": "The companies most likely to automate your job are now funding a $1 billion program to retrain you",
       "source_name": "The Decoder",
       "published_at": "2026-06-27T12:25:21+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-29T07:31:48.631393+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/958804/chinas-z-ai-glm-52-mythos-cybersecurity",
+    "published_at": "2026-06-29T07:31:48.629409+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "China’s Z.ai claims it can match Mythos on cybersecurity",
+      "source_name": "The Verge AI",
+      "published_at": "2026-06-28T21:42:51+00:00",
       "language": "en"
     }
   }
