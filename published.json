@@ -1933,6 +1933,29 @@
       "source_name": "The Verge AI",
       "published_at": "2026-06-28T21:42:51+00:00",
       "language": "en"
+    },
+    "updated_at": "2026-06-29T17:16:30.232297+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/claude-code-runs-a-github-repos-hidden-malware-without-verification-giving-attackers-full-control/",
+    "published_at": "2026-06-29T17:16:30.228753+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Claude Code runs a GitHub repo's hidden malware without verification, giving attackers full control",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-29T10:04:32+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/06/29/cursor-now-has-a-mobile-app-for-guiding-your-coding-agent-on-the-go/",
+    "published_at": "2026-06-29T17:16:30.230666+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Cursor now has a mobile app for guiding your coding agent on the go",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-06-29T17:03:50+00:00",
+      "language": "en"
     }
   }
 ]
