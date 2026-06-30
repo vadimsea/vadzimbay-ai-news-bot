@@ -1946,7 +1946,7 @@
       "published_at": "2026-06-29T10:04:32+00:00",
       "language": "en"
     },
-    "updated_at": "2026-06-30T08:31:46.409493+00:00"
+    "updated_at": "2026-06-30T14:31:46.116876+00:00"
   },
   {
     "url": "https://techcrunch.com/2026/06/29/cursor-now-has-a-mobile-app-for-guiding-your-coding-agent-on-the-go/",
@@ -1971,5 +1971,27 @@
       "language": "en"
     },
     "updated_at": "2026-06-30T08:33:24.444064+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/06/29/vibe-coding-platform-base44-launches-own-model-as-ai-startups-seek-defensibility/",
+    "published_at": "2026-06-30T14:31:46.112272+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Vibe-coding platform Base44 launches own model as AI startups seek defensibility",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-06-30T02:28:41+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.heise.de/news/Claude-Code-in-der-Praxis-eigenen-KI-Chat-Agenten-in-fuenf-Sessions-entwickeln-11339961.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "published_at": "2026-06-30T14:31:46.114689+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "heise-Angebot: Claude Code in der Praxis – eigenen KI-Chat-Agenten in fünf Sessions entwickeln",
+      "source_name": "Heise Online",
+      "published_at": "2026-06-30T10:00:00+00:00",
+      "language": "de"
+    }
   }
 ]
