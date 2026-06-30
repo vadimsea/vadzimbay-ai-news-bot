@@ -1945,7 +1945,8 @@
       "source_name": "The Decoder",
       "published_at": "2026-06-29T10:04:32+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-06-30T08:31:46.409493+00:00"
   },
   {
     "url": "https://techcrunch.com/2026/06/29/cursor-now-has-a-mobile-app-for-guiding-your-coding-agent-on-the-go/",
@@ -1956,6 +1957,19 @@
       "source_name": "TechCrunch AI",
       "published_at": "2026-06-29T17:03:50+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-06-30T08:31:46.411765+00:00"
+  },
+  {
+    "url": "https://uxdesign.cc/rethinking-figma-the-cost-of-low-taste-your-banking-app-is-lying-to-you-20f2ec172f03?source=rss----138adf9c44c---4",
+    "published_at": "2026-06-30T08:33:24.444064+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Rethinking Figma, the cost of low taste, your banking app is lying to you",
+      "source_name": "UX Collective",
+      "published_at": "2026-06-29T11:10:21+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-06-30T08:33:24.444064+00:00"
   }
 ]
