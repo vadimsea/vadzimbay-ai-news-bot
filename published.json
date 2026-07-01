@@ -1993,5 +1993,38 @@
       "published_at": "2026-06-30T10:00:00+00:00",
       "language": "de"
     }
+  },
+  {
+    "url": "https://the-decoder.com/google-launches-nano-banana-2-lite-for-fast-ai-images-and-gemini-omni-flash-for-video-via-api/",
+    "published_at": "2026-07-01T08:46:29.310224+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google launches Nano Banana 2 Lite for fast AI images and Gemini Omni Flash for video via API",
+      "source_name": "The Decoder",
+      "published_at": "2026-06-30T17:17:33+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/",
+    "published_at": "2026-07-01T08:46:29.312701+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Amazon launches new $1 billion FDE org, following OpenAI and Anthropic",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-06-30T15:00:00+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/",
+    "published_at": "2026-07-01T08:46:29.314882+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Claude Science is Anthropic’s newest flagship product",
+      "source_name": "MIT Technology Review",
+      "published_at": "2026-06-30T21:50:04+00:00",
+      "language": "en"
+    }
   }
 ]
