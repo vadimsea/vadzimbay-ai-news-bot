@@ -2021,13 +2021,14 @@
   {
     "url": "https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/",
     "published_at": "2026-07-01T08:46:29.314882+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "Claude Science is Anthropic’s newest flagship product",
       "source_name": "MIT Technology Review",
       "published_at": "2026-06-30T21:50:04+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-07-02T15:33:01.223306+00:00"
   },
   {
     "url": "https://www.technologyreview.com/2026/07/01/1139996/the-download-anthropic-claude-science-california-carbon-manure/",
@@ -2064,5 +2065,29 @@
       "language": "en"
     },
     "updated_at": "2026-07-02T08:33:11.700887+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/",
+    "published_at": "2026-07-02T15:31:38.698303+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Microsoft launches its own AI deployment company with $2.5 billion commitment",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-07-02T13:53:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-02T15:33:01.225629+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/openai-paper-reveals-three-gpt-5-6-pro-models-breaking-with-single-top-tier-strategy/",
+    "published_at": "2026-07-02T15:31:38.700429+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI's genomics paper accidentally reveals a Pro lineup it hasn't announced yet",
+      "source_name": "The Decoder",
+      "published_at": "2026-07-01T10:03:41+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-02T15:33:01.229565+00:00"
   }
 ]
