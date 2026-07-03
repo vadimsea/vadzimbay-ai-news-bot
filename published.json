@@ -2089,5 +2089,39 @@
       "language": "en"
     },
     "updated_at": "2026-07-02T15:33:01.229565+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/microsoft-launches-2-5-billion-frontier-company-to-embed-6000-ai-engineers-inside-enterprise-clients/",
+    "published_at": "2026-07-03T07:46:30.676535+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Microsoft launches $2.5 billion \"Frontier Company\" to embed 6,000 AI engineers inside enterprise clients",
+      "source_name": "The Decoder",
+      "published_at": "2026-07-02T19:18:29+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.wired.com/story/can-cursor-remain-an-open-platform-inside-of-spacex/",
+    "published_at": "2026-07-03T07:46:30.678794+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Can Cursor Remain a Platform for OpenAI and Anthropic’s Models Inside SpaceX?",
+      "source_name": "Wired",
+      "published_at": "2026-07-02T18:01:20+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://uxdesign.cc/the-seven-ai-tools-i-actually-use-and-when-june-2026-edition-a0baca87994e?source=rss----138adf9c44c---4",
+    "published_at": "2026-07-03T07:47:13.887468+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "The seven AI tools I actually use and when",
+      "source_name": "UX Collective",
+      "published_at": "2026-07-03T03:56:18+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-03T07:47:13.887468+00:00"
   }
 ]
