@@ -2099,7 +2099,8 @@
       "source_name": "The Decoder",
       "published_at": "2026-07-02T19:18:29+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-07-03T17:16:36.973557+00:00"
   },
   {
     "url": "https://www.wired.com/story/can-cursor-remain-an-open-platform-inside-of-spacex/",
@@ -2110,7 +2111,8 @@
       "source_name": "Wired",
       "published_at": "2026-07-02T18:01:20+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-07-03T17:16:36.971296+00:00"
   },
   {
     "url": "https://uxdesign.cc/the-seven-ai-tools-i-actually-use-and-when-june-2026-edition-a0baca87994e?source=rss----138adf9c44c---4",
@@ -2123,5 +2125,16 @@
       "language": "en"
     },
     "updated_at": "2026-07-03T07:47:13.887468+00:00"
+  },
+  {
+    "url": "https://uxdesign.cc/you-design-it-then-what-a-clear-map-of-the-figma-to-code-ai-mess-954a4084175f?source=rss----138adf9c44c---4",
+    "published_at": "2026-07-03T17:16:36.968723+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "You design it. Then what? A clear map of the Figma-to-code AI mess",
+      "source_name": "UX Collective",
+      "published_at": "2026-07-03T11:17:14+00:00",
+      "language": "en"
+    }
   }
 ]
