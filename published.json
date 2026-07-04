@@ -2112,7 +2112,7 @@
       "published_at": "2026-07-02T18:01:20+00:00",
       "language": "en"
     },
-    "updated_at": "2026-07-03T17:16:36.971296+00:00"
+    "updated_at": "2026-07-04T08:02:07.401392+00:00"
   },
   {
     "url": "https://uxdesign.cc/the-seven-ai-tools-i-actually-use-and-when-june-2026-edition-a0baca87994e?source=rss----138adf9c44c---4",
@@ -2134,6 +2134,18 @@
       "title": "You design it. Then what? A clear map of the Figma-to-code AI mess",
       "source_name": "UX Collective",
       "published_at": "2026-07-03T11:17:14+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-04T08:02:07.397092+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/microsoft-follows-anthropic-and-openai-into-the-ai-super-app-race-with-overhauled-copilot-and-autopilot-agents/",
+    "published_at": "2026-07-04T08:02:07.403701+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Microsoft follows Anthropic and OpenAI into the AI super app race with overhauled Copilot and AutoPilot agents",
+      "source_name": "The Decoder",
+      "published_at": "2026-07-03T19:24:40+00:00",
       "language": "en"
     }
   }
