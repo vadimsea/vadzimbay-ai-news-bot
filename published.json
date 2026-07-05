@@ -2129,14 +2129,14 @@
   {
     "url": "https://uxdesign.cc/you-design-it-then-what-a-clear-map-of-the-figma-to-code-ai-mess-954a4084175f?source=rss----138adf9c44c---4",
     "published_at": "2026-07-03T17:16:36.968723+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "You design it. Then what? A clear map of the Figma-to-code AI mess",
       "source_name": "UX Collective",
       "published_at": "2026-07-03T11:17:14+00:00",
       "language": "en"
     },
-    "updated_at": "2026-07-04T08:02:07.397092+00:00"
+    "updated_at": "2026-07-05T06:32:58.533349+00:00"
   },
   {
     "url": "https://the-decoder.com/microsoft-follows-anthropic-and-openai-into-the-ai-super-app-race-with-overhauled-copilot-and-autopilot-agents/",
@@ -2148,5 +2148,29 @@
       "published_at": "2026-07-03T19:24:40+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything",
+    "published_at": "2026-07-05T06:31:54.113081+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
+      "source_name": "Simon Willison",
+      "published_at": "2026-07-05T01:00:48+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-05T06:32:58.536188+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/anthropic-launches-its-own-drug-discovery-programs-to-tackle-diseases-big-pharma-considers-unprofitable/",
+    "published_at": "2026-07-05T06:31:54.115330+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Anthropic launches its own drug discovery programs to tackle diseases Big Pharma considers unprofitable",
+      "source_name": "The Decoder",
+      "published_at": "2026-07-04T08:11:18+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-05T06:32:58.538705+00:00"
   }
 ]
