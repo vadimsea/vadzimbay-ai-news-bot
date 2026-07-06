@@ -2184,5 +2184,27 @@
       "language": "en"
     },
     "updated_at": "2026-07-06T08:03:13.729066+00:00"
+  },
+  {
+    "url": "https://www.golem.de/news/vibe-coding-schueler-hackt-streaminganbieter-mit-chatgpt-programm-2607-210541.html",
+    "published_at": "2026-07-06T15:01:54.732764+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Vibe Coding: Schüler hackt Streaminganbieter mit ChatGPT-Programm",
+      "source_name": "Golem.de",
+      "published_at": "2026-07-06T10:25:01+00:00",
+      "language": "de"
+    }
+  },
+  {
+    "url": "https://uxdesign.cc/design-system-debt-game-ux-39-principles-for-ai-interaction-dab9500dc926?source=rss----138adf9c44c---4",
+    "published_at": "2026-07-06T15:01:54.735443+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Design system debt, game UX, 39 principles for AI interaction",
+      "source_name": "UX Collective",
+      "published_at": "2026-07-06T11:25:19+00:00",
+      "language": "en"
+    }
   }
 ]
