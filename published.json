@@ -2217,7 +2217,8 @@
       "source_name": "The Decoder",
       "published_at": "2026-07-06T18:28:26+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-07-07T15:32:13.478491+00:00"
   },
   {
     "url": "https://uxdesign.cc/what-the-lean-startup-still-teaches-us-about-generative-ai-2d1505fe1db1?source=rss----138adf9c44c---4",
@@ -2227,6 +2228,18 @@
       "title": "What the Lean Startup still teaches us about generative AI",
       "source_name": "UX Collective",
       "published_at": "2026-07-06T22:11:57+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-07T15:32:13.483514+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/07/aws-devops-ai-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Artificial+Intelligence-news",
+    "published_at": "2026-07-07T15:32:13.481197+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "AWS Expands DevOps Agent with AI-Powered Release Management to Validate Code Before Production",
+      "source_name": "InfoQ AI",
+      "published_at": "2026-07-07T12:00:00+00:00",
       "language": "en"
     }
   }
