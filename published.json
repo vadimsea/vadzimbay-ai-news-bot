@@ -2194,7 +2194,8 @@
       "source_name": "Golem.de",
       "published_at": "2026-07-06T10:25:01+00:00",
       "language": "de"
-    }
+    },
+    "updated_at": "2026-07-07T07:18:02.062306+00:00"
   },
   {
     "url": "https://uxdesign.cc/design-system-debt-game-ux-39-principles-for-ai-interaction-dab9500dc926?source=rss----138adf9c44c---4",
@@ -2204,6 +2205,28 @@
       "title": "Design system debt, game UX, 39 principles for AI interaction",
       "source_name": "UX Collective",
       "published_at": "2026-07-06T11:25:19+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://the-decoder.com/zhipu-ai-launches-zcode-to-challenge-claude-code-and-openai-codex-at-a-fraction-of-the-cost/",
+    "published_at": "2026-07-07T07:18:02.052077+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Zhipu AI launches ZCode to challenge Claude Code and OpenAI Codex at a fraction of the cost",
+      "source_name": "The Decoder",
+      "published_at": "2026-07-06T18:28:26+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://uxdesign.cc/what-the-lean-startup-still-teaches-us-about-generative-ai-2d1505fe1db1?source=rss----138adf9c44c---4",
+    "published_at": "2026-07-07T07:18:02.054736+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "What the Lean Startup still teaches us about generative AI",
+      "source_name": "UX Collective",
+      "published_at": "2026-07-06T22:11:57+00:00",
       "language": "en"
     }
   }
