@@ -2235,12 +2235,37 @@
   {
     "url": "https://www.infoq.com/news/2026/07/aws-devops-ai-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=Artificial+Intelligence-news",
     "published_at": "2026-07-07T15:32:13.481197+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
-      "title": "AWS Expands DevOps Agent with AI-Powered Release Management to Validate Code Before Production",
+      "title": "AWS Expands DevOps Agent with AI-Powered Release Management to Validate Code before Production",
       "source_name": "InfoQ AI",
       "published_at": "2026-07-07T12:00:00+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-07-08T07:54:54.663742+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/tech/962485/meta-muse-image-ai-model-instagram",
+    "published_at": "2026-07-08T07:32:01.598082+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Meta’s new Muse Image model can pull other Instagram users into AI photos",
+      "source_name": "The Verge AI",
+      "published_at": "2026-07-07T20:31:58+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-08T07:54:54.658779+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/anthropics-claude-cowork-ai-agent-is-now-available-on-mobile-and-web/",
+    "published_at": "2026-07-08T07:32:01.600818+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Anthropic's Claude Cowork AI agent is now available on mobile and web",
+      "source_name": "The Decoder",
+      "published_at": "2026-07-07T17:04:30+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-08T07:54:54.661344+00:00"
   }
 ]
