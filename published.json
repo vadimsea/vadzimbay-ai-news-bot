@@ -2267,5 +2267,41 @@
       "language": "en"
     },
     "updated_at": "2026-07-08T07:54:54.661344+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/",
+    "published_at": "2026-07-08T16:46:44.656822+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Prime Intellect raises $130M Series A to help enterprises build their own AI agents",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-07-08T16:22:38+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-08T16:47:47.421025+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/muse-image-is-technically-impressive-but-metas-use-of-instagram-photos-raises-questions/",
+    "published_at": "2026-07-08T16:46:44.658885+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Muse Image is technically impressive, but Meta's use of Instagram photos raises questions",
+      "source_name": "The Decoder",
+      "published_at": "2026-07-08T11:16:37+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-08T16:47:47.423235+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/961978/anthropic-claude-cowork-mobile-web",
+    "published_at": "2026-07-08T16:46:44.664022+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Anthropic is launching Claude Cowork on mobile and web",
+      "source_name": "The Verge AI",
+      "published_at": "2026-07-07T17:46:59+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-08T16:47:47.425231+00:00"
   }
 ]
