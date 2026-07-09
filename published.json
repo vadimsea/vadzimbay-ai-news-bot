@@ -2325,7 +2325,8 @@
       "source_name": "TechCrunch AI",
       "published_at": "2026-07-08T19:30:16+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-07-09T16:16:27.862883+00:00"
   },
   {
     "url": "https://www.zdnet.com/article/ai-model-release-tracker/",
@@ -2335,6 +2336,28 @@
       "title": "OpenAI's new GPT-Live-1 voice model won't interrupt you - why that's a big deal",
       "source_name": "TensorFeed",
       "published_at": "2026-07-08T16:36:00+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://papercrane.ai/blog/today-im-launching-papercrane-cli-a-bi-tool-built-for-claude-code",
+    "published_at": "2026-07-09T16:16:27.860073+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Show HN: Papercrane-CLI – a BI tool built for Claude Code",
+      "source_name": "TensorFeed",
+      "published_at": "2026-07-09T15:33:45+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://the-decoder.com/google-deepmind-adds-background-execution-and-mcp-support-to-gemini-api-managed-agents/",
+    "published_at": "2026-07-09T16:16:27.865327+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google Deepmind adds background execution and MCP support to Gemini API managed agents",
+      "source_name": "The Decoder",
+      "published_at": "2026-07-08T14:45:35+00:00",
       "language": "en"
     }
   }
