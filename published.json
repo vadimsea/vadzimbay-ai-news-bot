@@ -2303,5 +2303,39 @@
       "language": "en"
     },
     "updated_at": "2026-07-08T16:47:47.425231+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/962856/chatgpt-upgraded-voice-mode-gpt-live",
+    "published_at": "2026-07-09T06:33:36.097607+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "ChatGPT’s upgraded voice mode is better at shutting up",
+      "source_name": "The Verge AI",
+      "published_at": "2026-07-08T17:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-09T06:33:36.097607+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/",
+    "published_at": "2026-07-09T06:32:00.967704+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "SpaceXAI releases Grok 4.5, which Elon describes as an ‘Opus-class model’",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-07-08T19:30:16+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.zdnet.com/article/ai-model-release-tracker/",
+    "published_at": "2026-07-09T06:32:00.970021+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI's new GPT-Live-1 voice model won't interrupt you - why that's a big deal",
+      "source_name": "TensorFeed",
+      "published_at": "2026-07-08T16:36:00+00:00",
+      "language": "en"
+    }
   }
 ]
