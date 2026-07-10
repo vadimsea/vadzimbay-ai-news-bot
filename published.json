@@ -2381,7 +2381,8 @@
       "source_name": "TechCrunch AI",
       "published_at": "2026-07-09T18:34:35+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-07-10T17:02:03.160459+00:00"
   },
   {
     "url": "https://www.theverge.com/ai-artificial-intelligence/963105/anthropic-claude-wrapped-reflection-ai-usage",
@@ -2391,6 +2392,18 @@
       "title": "Say hello to Claude Wrapped",
       "source_name": "The Verge AI",
       "published_at": "2026-07-09T13:30:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-10T17:02:03.162382+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/openai-kills-its-atlas-browser-after-just-eight-months-and-folds-everything-into-chatgpt/",
+    "published_at": "2026-07-10T17:02:03.158250+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI kills its Atlas browser after just eight months and folds everything into ChatGPT",
+      "source_name": "The Decoder",
+      "published_at": "2026-07-10T12:19:21+00:00",
       "language": "en"
     }
   }
