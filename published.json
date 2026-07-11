@@ -2370,7 +2370,8 @@
       "source_name": "The Decoder",
       "published_at": "2026-07-09T17:59:22+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-07-11T07:46:29.875717+00:00"
   },
   {
     "url": "https://techcrunch.com/2026/07/09/paris-based-ai-voice-startup-gradium-raises-100m-seed-backed-by-nvidia/",
@@ -2382,7 +2383,7 @@
       "published_at": "2026-07-09T18:34:35+00:00",
       "language": "en"
     },
-    "updated_at": "2026-07-10T17:02:03.160459+00:00"
+    "updated_at": "2026-07-11T07:46:29.878497+00:00"
   },
   {
     "url": "https://www.theverge.com/ai-artificial-intelligence/963105/anthropic-claude-wrapped-reflection-ai-usage",
@@ -2406,5 +2407,17 @@
       "published_at": "2026-07-10T12:19:21+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/963654/openai-chatgpt-atlas-ai-browser-shut-down-sunset",
+    "published_at": "2026-07-11T08:47:28.250195+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "The ChatGPT browser is already dead",
+      "source_name": "The Verge AI",
+      "published_at": "2026-07-09T20:34:05+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-11T08:47:28.250195+00:00"
   }
 ]
