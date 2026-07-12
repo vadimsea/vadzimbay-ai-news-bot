@@ -2423,23 +2423,25 @@
   {
     "url": "https://the-decoder.com/openai-admits-it-didnt-get-everything-quite-right-with-chatgpt-work-launch-and-scrambles-to-fix-ux-and-costs/",
     "published_at": "2026-07-11T15:16:33.775246+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "OpenAI admits it \"didn't get everything quite right\" with ChatGPT Work launch and scrambles to fix UX and costs",
       "source_name": "The Decoder",
       "published_at": "2026-07-11T08:01:09+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-07-12T06:33:05.179234+00:00"
   },
   {
     "url": "https://uxdesign.cc/craft-still-matters-but-its-not-about-pixels-anymore-ai-can-help-you-keep-it-e542cac33d12?source=rss----138adf9c44c---4",
     "published_at": "2026-07-11T15:16:33.778049+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "Craft still matters, but it’s about outcomes",
       "source_name": "UX Collective",
       "published_at": "2026-07-11T13:29:41+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-07-12T06:33:05.181989+00:00"
   }
 ]
