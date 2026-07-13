@@ -2446,15 +2446,15 @@
   },
   {
     "url": "https://the-decoder.com/claude-code-now-has-a-built-in-browser-that-lets-the-ai-read-click-and-type-on-external-websites/",
-    "published_at": "2026-07-12T16:16:23.769133+00:00",
-    "status": "offered",
+    "published_at": "2026-07-13T14:47:29.787428+00:00",
+    "status": "published",
     "metadata": {
       "title": "Claude Code now has a built-in browser that lets the AI read, click, and type on external websites",
       "source_name": "The Decoder",
       "published_at": "2026-07-12T15:02:06+00:00",
       "language": "en"
     },
-    "updated_at": "2026-07-13T07:46:27.035929+00:00"
+    "updated_at": "2026-07-13T14:47:29.787428+00:00"
   },
   {
     "url": "https://uxdesign.cc/the-interface-has-left-the-building-8fdb558d33a9?source=rss----138adf9c44c---4",
@@ -2470,23 +2470,25 @@
   {
     "url": "https://uxdesign.cc/taste-cannot-be-delegated-1706847a0b4b?source=rss----138adf9c44c---4",
     "published_at": "2026-07-13T07:46:27.038748+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "Taste cannot be delegated",
       "source_name": "UX Collective",
       "published_at": "2026-07-12T21:32:06+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-07-13T14:47:29.790151+00:00"
   },
   {
     "url": "https://www.producthunt.com/products/nyx-4",
     "published_at": "2026-07-13T07:46:27.041267+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "Playground",
       "source_name": "Product Hunt",
       "published_at": "2026-07-12T22:32:12+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-07-13T14:47:29.792833+00:00"
   }
 ]
