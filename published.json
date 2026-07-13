@@ -2453,7 +2453,8 @@
       "source_name": "The Decoder",
       "published_at": "2026-07-12T15:02:06+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-07-13T07:46:27.035929+00:00"
   },
   {
     "url": "https://uxdesign.cc/the-interface-has-left-the-building-8fdb558d33a9?source=rss----138adf9c44c---4",
@@ -2463,6 +2464,28 @@
       "title": "The interface has left the building",
       "source_name": "UX Collective",
       "published_at": "2026-07-12T09:30:16+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://uxdesign.cc/taste-cannot-be-delegated-1706847a0b4b?source=rss----138adf9c44c---4",
+    "published_at": "2026-07-13T07:46:27.038748+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Taste cannot be delegated",
+      "source_name": "UX Collective",
+      "published_at": "2026-07-12T21:32:06+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.producthunt.com/products/nyx-4",
+    "published_at": "2026-07-13T07:46:27.041267+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Playground",
+      "source_name": "Product Hunt",
+      "published_at": "2026-07-12T22:32:12+00:00",
       "language": "en"
     }
   }
