@@ -2490,5 +2490,41 @@
       "language": "en"
     },
     "updated_at": "2026-07-13T14:47:29.792833+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/turing-award-winner-rich-sutton-founds-oak-lab-to-build-ai-agents-that-learn-on-their-own/",
+    "published_at": "2026-07-14T08:46:37.848078+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Turing Award winner Rich Sutton founds Oak Lab to build AI agents that learn on their own",
+      "source_name": "The Decoder",
+      "published_at": "2026-07-13T17:15:58+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-14T08:47:29.079276+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/07/13/hermes-agent-maker-nous-research-in-talks-for-new-funding-at-1-5b-valuation/",
+    "published_at": "2026-07-14T08:46:37.850949+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Hermes agent maker Nous Research in talks for new funding at $1.5B valuation",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-07-13T23:31:18+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-14T08:47:29.082183+00:00"
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/machine-learning/building-an-agentic-ai-solution-at-bluesight-with-amazon-bedrock/",
+    "published_at": "2026-07-14T08:46:37.853480+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Building an agentic AI solution at Bluesight with Amazon Bedrock",
+      "source_name": "Planet AI",
+      "published_at": "2026-07-13T17:34:38+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-14T08:47:29.084966+00:00"
   }
 ]
