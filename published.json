@@ -2526,5 +2526,41 @@
       "language": "en"
     },
     "updated_at": "2026-07-14T08:47:29.084966+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/claude-values-study/",
+    "published_at": "2026-07-14T16:32:19.196796+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Claude responds with more warmth in Hindi and more rigor in Russian, showing how language shapes AI answers",
+      "source_name": "The Decoder",
+      "published_at": "2026-07-14T11:00:12+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-14T16:39:57.182927+00:00"
+  },
+  {
+    "url": "https://www.golem.de/news/cloudflare-precursor-dieser-bot-test-hoert-nie-auf-zuzusehen-2607-210829.html",
+    "published_at": "2026-07-14T16:32:19.199658+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Cloudflare Precursor: Dieser Bot-Test hört nie auf zuzusehen",
+      "source_name": "Golem.de",
+      "published_at": "2026-07-14T08:17:01+00:00",
+      "language": "de"
+    },
+    "updated_at": "2026-07-14T16:39:57.185776+00:00"
+  },
+  {
+    "url": "https://deepmind.google/blog/empowering-indias-next-generation-of-innovators-with-atl-saathi/",
+    "published_at": "2026-07-14T16:32:19.202217+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Empowering India’s next generation of innovators with ATL Saathi",
+      "source_name": "Planet AI",
+      "published_at": "2026-07-13T12:37:28+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-14T16:39:57.188415+00:00"
   }
 ]
