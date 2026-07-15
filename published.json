@@ -2572,7 +2572,8 @@
       "source_name": "The Decoder",
       "published_at": "2026-07-15T08:30:48+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-07-15T14:16:48.146607+00:00"
   },
   {
     "url": "https://techcrunch.com/2026/07/14/openai-researcher-miles-wang-in-talks-to-launch-ai-drug-discovery-startup-valued-at-2b/",
@@ -2596,5 +2597,16 @@
       "language": "en"
     },
     "updated_at": "2026-07-15T08:49:25.446743+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/",
+    "published_at": "2026-07-15T14:16:48.143487+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic, Blackstone bet the next trillion-dollar AI business is implementation, not models",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-07-15T13:10:47+00:00",
+      "language": "en"
+    }
   }
 ]
