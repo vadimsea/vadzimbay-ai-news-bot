@@ -2620,5 +2620,41 @@
       "published_at": "2026-07-15T17:09:37+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "https://www.technologyreview.com/2026/07/16/1140600/the-download-openai-unveils-gpt-red-heat-pumps-rise-us/",
+    "published_at": "2026-07-16T16:31:51.861249+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "The Download: OpenAI unveils GPT-Red and heat pumps rise in the US",
+      "source_name": "MIT Technology Review",
+      "published_at": "2026-07-16T12:10:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-16T16:32:54.442142+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/07/16/how-a-former-deepmind-researcher-raised-at-a-300m-pre-seed-valuation-before-launching-a-product/",
+    "published_at": "2026-07-16T16:31:51.864311+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "How a former DeepMind researcher raised at a $300M pre-seed valuation before launching a product",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-07-16T15:02:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-16T16:32:54.445228+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/openai-wants-developers-to-stop-typing-commands-and-start-using-a-joystick-to-control-their-ai-agents/",
+    "published_at": "2026-07-16T16:31:51.867023+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI wants developers to stop typing commands and start using a joystick to control their AI agents",
+      "source_name": "The Decoder",
+      "published_at": "2026-07-16T14:31:34+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-16T16:32:54.448124+00:00"
   }
 ]
