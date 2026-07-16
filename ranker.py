@@ -122,6 +122,13 @@ EDITORIAL_REJECT_TERMS = {
     "cannot be trusted", "pitfalls", "promises and pitfalls", "opinion", "essay",
     "two gears", "one compass", "be like water", "should we be kind",
     "for our own sake", "mindset shift",
+    "in five minutes", "last six months", "designing at velocity",
+    "sustaining quality", "lessons learned", "things i learned",
+    "everything you need to know", "ultimate guide", "complete guide",
+    "the download", "newsletter", "release tracker", "model release tracker",
+    "daily dose", "round-up", "round up", "this week in",
+    "лучшие", "топ-", "топ ", "что я понял", "личный опыт",
+    "почему пора", "всё что нужно знать", "подборка",
 }
 
 BROAD_AUDIENCE_VALUE_TERMS = {
@@ -181,6 +188,28 @@ BROAD_WORK_TOOL_TERMS = {
 EDITORIAL_SENSITIVE_SOURCES = {
     "habr ai", "habr robotics", "marktechpost", "ux collective",
     "search engine journal", "search engine land", "sciencedaily robotics",
+}
+
+MIN_EDITORIAL_SCORE = 72.0
+
+TOP_TIER_SOURCES = {
+    "techcrunch ai", "the verge ai", "mit technology review", "wired",
+    "the decoder", "venturebeat ai", "google ai blog", "google deepmind blog",
+    "openai blog", "anthropic news", "nvidia blog",
+}
+
+TOP_TIER_BRANDS = {
+    "openai", "chatgpt", "anthropic", "claude", "google deepmind", "gemini",
+    "xai", "grok", "mistral", "meta ai", "llama", "nvidia", "microsoft",
+    "cursor", "windsurf", "figma", "adobe", "runway",
+}
+
+TOP_TIER_EVENT_TERMS = {
+    "launch", "launches", "launched", "release", "releases", "released",
+    "unveils", "introduced", "introduces", "announced", "announces",
+    "rolls out", "debuts", "new model", "new ai model", "frontier model",
+    "reasoning model", "video model", "coding agent", "raises", "funding",
+    "acquires", "partners with", "open-sources", "open sources",
 }
 
 
@@ -259,12 +288,12 @@ def score_news(news: dict[str, Any], topic_count: int = 1) -> tuple[float, list[
 
     title = (news.get("title") or "").lower()
     if any(pattern in title for pattern in BORING_TITLE_PATTERNS):
-        score -= 12
-        reasons.append("boring_title=-12")
+        score -= 18
+        reasons.append("boring_title=-18")
 
     low_value_matches = sum(1 for term in LOW_BROAD_VALUE_TERMS if term in text)
     if low_value_matches:
-        penalty = min(12, low_value_matches * 4)
+        penalty = min(18, low_value_matches * 6)
         score -= penalty
         reasons.append(f"low_broad_value=-{penalty}")
 
@@ -366,6 +395,9 @@ def choose_top_news(
         if not _has_broad_audience_value(news):
             stats["low_news_value"] += 1
             continue
+        if not _is_top_tier_news(news):
+            stats["low_news_value"] += 1
+            continue
         if (is_low_news_value_material(news) or not has_news_event_signal(news)) and not _has_strong_broad_ai_signal(news):
             stats["low_news_value"] += 1
             continue
@@ -378,6 +410,9 @@ def choose_top_news(
         if _source_name(news) in recent_rejected_sources:
             score -= 10
             reasons.append("recent_rejected_source=-10")
+        if score < MIN_EDITORIAL_SCORE:
+            stats["low_news_value"] += 1
+            continue
         candidates.append((score, news, reasons))
 
     stats["candidates"] = len(candidates)
@@ -564,6 +599,8 @@ def _has_editorial_value(news: dict[str, Any]) -> bool:
 
     if any(term in title for term in EDITORIAL_REJECT_TERMS):
         return False
+    if " via @" in title:
+        return False
 
     if category in {"web_design", "frontend", "marketing"} and not _has_any(text, WOW_SIGNAL_TERMS):
         return False
@@ -579,6 +616,8 @@ def _has_editorial_value(news: dict[str, Any]) -> bool:
             "windsurf", "figma", "nvidia",
         )
     )
+    if len([word for word in re.split(r"\s+", title) if word]) <= 3 and not has_major_ai_brand:
+        return False
     has_wow_signal = _has_any(text, WOW_SIGNAL_TERMS)
     has_work_value = _has_any(
         text,
@@ -711,6 +750,30 @@ def _has_strong_broad_ai_signal(news: dict[str, Any]) -> bool:
         "seo", "website", "frontend", "product teams", "startup revenue",
     }
     return source in strong_sources and _has_any(text, strong_brands) and _has_any(text, work_terms)
+
+
+def _is_top_tier_news(news: dict[str, Any]) -> bool:
+    source = _source_name(news)
+    title = str(news.get("title") or "").lower()
+    text = f"{news.get('title', '')} {news.get('summary', '')}".lower()
+
+    if source not in TOP_TIER_SOURCES:
+        return False
+    if any(term in title for term in EDITORIAL_REJECT_TERMS):
+        return False
+    if " via @" in title:
+        return False
+
+    has_brand = _has_any(text, TOP_TIER_BRANDS)
+    has_event = _has_any(text, TOP_TIER_EVENT_TERMS)
+    if source in {"openai blog", "anthropic news", "google deepmind blog", "google ai blog", "nvidia blog"}:
+        return has_brand and has_event
+
+    return has_brand and has_event and (
+        _has_any(text, PRODUCT_TOOL_TERMS)
+        or _has_any(text, BROAD_WORK_TOOL_TERMS)
+        or _has_any(text, {"model", "agent", "assistant", "automation", "developer", "design", "marketing"})
+    )
 
 
 def _has_any(text: str, terms: set[str]) -> bool:

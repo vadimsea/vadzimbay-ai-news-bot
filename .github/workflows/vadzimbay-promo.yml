@@ -1,16 +1,18 @@
-name: Vadzimbay Weekly Promo
+name: Vadzimbay Scheduled Promo
 
 on:
   workflow_dispatch:
   schedule:
-    # Wednesday 12:00 Minsk time. Minsk is UTC+3.
-    - cron: "0 9 * * 3"
+    # 12:00 and 15:00 Minsk time. Minsk is UTC+3.
+    # Campaign rules are checked in promo.py.
+    - cron: "0 9 * * *"
+    - cron: "0 12 * * *"
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
-  group: vadzimbay-weekly-promo
+  group: vadzimbay-scheduled-promo
   cancel-in-progress: false
 
 jobs:
@@ -56,5 +58,22 @@ jobs:
           GROQ_MODEL=${{ vars.GROQ_MODEL || 'llama-3.3-70b-versatile' }}
           EOF
 
-      - name: Publish weekly promo
+      - name: Publish scheduled promo
         run: python main.py --promo
+
+      - name: Commit promo state
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          touch published.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin main
+          git add -f published.json
+          if git diff --cached --quiet; then
+            echo "No published.json changes to commit"
+            exit 0
+          fi
+          git commit -m "Update promo state"
+          git push

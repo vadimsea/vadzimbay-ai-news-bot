@@ -2656,5 +2656,38 @@
       "language": "en"
     },
     "updated_at": "2026-07-16T16:32:54.448124+00:00"
+  },
+  {
+    "url": "promo://programmer_bot_every_2_days/2026-07-01",
+    "published_at": "2026-07-01T15:40:41.920583+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "programmer_bot_every_2_days",
+      "day": "2026-07-01",
+      "published_at_local": "2026-07-01T18:40:40.994557+03:00",
+      "manual_test": true
+    }
+  },
+  {
+    "url": "promo://remote_belarus_weekly/2026-07-01",
+    "published_at": "2026-07-02T16:03:33.643307+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "remote_belarus_weekly",
+      "day": "2026-07-01",
+      "published_at_local": "2026-07-02T19:03:33.244793+03:00",
+      "catch_up": true
+    }
+  },
+  {
+    "url": "promo://aten_fri/2026-07-16",
+    "published_at": "2026-07-16T16:54:34.767685+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "aten_fri",
+      "day": "2026-07-16",
+      "published_at_local": "2026-07-16T19:54:34.476264+03:00",
+      "manual_catch_up": true
+    }
   }
 ]

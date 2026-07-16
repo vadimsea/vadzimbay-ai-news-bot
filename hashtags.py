@@ -4,7 +4,7 @@ import re
 from typing import Any
 
 
-MAX_HASHTAGS = 4
+MAX_HASHTAGS = 3
 
 TAG_RULES: list[tuple[str, tuple[str, ...]]] = [
     ("#ИИ", ("ai", "artificial intelligence", "искусственный интеллект", "ии", "ki")),
@@ -41,7 +41,7 @@ TAG_RULES: list[tuple[str, tuple[str, ...]]] = [
     ("#Microsoft", ("microsoft", "copilot")),
 ]
 
-FALLBACK_TAGS = ("#Технологии", "#Будущее")
+FALLBACK_TAGS: tuple[str, ...] = ()
 
 
 def build_hashtags(news: dict[str, Any], max_tags: int = MAX_HASHTAGS) -> list[str]:

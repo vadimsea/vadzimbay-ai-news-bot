@@ -38,6 +38,30 @@ class PublishedStorage:
     def mark_as_rejected(self, url: str, metadata: dict[str, Any] | None = None) -> None:
         self._mark(url, metadata, status="rejected")
 
+    def promo_keys_posted_for_day(self, day: str) -> set[str]:
+        keys: set[str] = set()
+        for item in self.load_published():
+            if item.get("status") != "promo":
+                continue
+            metadata = item.get("metadata", {})
+            if not isinstance(metadata, dict):
+                continue
+            if metadata.get("day") == day and metadata.get("promo_key"):
+                keys.add(str(metadata["promo_key"]))
+        return keys
+
+    def mark_promo_posted(
+        self,
+        promo_key: str,
+        day: str,
+        metadata: dict[str, Any] | None = None,
+    ) -> None:
+        self._mark(
+            f"promo://{promo_key}/{day}",
+            {"promo_key": promo_key, "day": day, **(metadata or {})},
+            status="promo",
+        )
+
     def _mark(self, url: str, metadata: dict[str, Any] | None, status: str) -> None:
         items = self.load_published()
         now = datetime.now(timezone.utc).isoformat()

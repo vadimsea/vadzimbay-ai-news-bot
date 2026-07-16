@@ -5,6 +5,8 @@ import logging
 from pprint import pformat
 import sys
 from typing import Any
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 from blocked_sources import filter_allowed_sources, load_blocked_sources
 from config import Settings, load_settings
@@ -14,13 +16,13 @@ from hashtags import append_hashtags
 from llm_ranker import select_best_news_with_llm
 from moderation import ModerationItem, request_moderation_batch
 from post_style import apply_title_emoji
-from promo import get_weekly_promo_text
+from promo import due_promo_posts, next_promo_hint
 from ranker import choose_top_news
 from scheduler import run_daily
 from sources import get_sources
 from storage import PublishedStorage
 from telegram_formatting import format_post_html
-from telegram_publisher import is_image_reachable, publish_to_telegram
+from telegram_publisher import is_image_reachable, publish_promo_to_telegram, publish_to_telegram
 from translator import adapt_news_to_russian
 
 
@@ -193,23 +195,47 @@ def _selected_metadata(selected: dict) -> dict:
 
 def run_promo_once() -> bool:
     settings = load_settings()
-    text = get_weekly_promo_text()
+    storage = PublishedStorage(settings.published_file)
+    timezone = ZoneInfo(settings.timezone)
+    now = datetime.now(timezone)
+    day = now.date().isoformat()
+    posted_keys = storage.promo_keys_posted_for_day(day)
+    promos = due_promo_posts(current=now, posted_keys=posted_keys)
+    promos = promos[:1]
 
-    if settings.dry_run:
-        print("\n=== DRY RUN: WEEKLY PROMO ===")
-        print(text)
-        return True
+    if not promos:
+        hint = next_promo_hint(current=now, posted_keys=posted_keys)
+        logger.info(
+            "No promo due now. Current time: %s.%s",
+            now.strftime("%Y-%m-%d %H:%M"),
+            f" Next promo window: {hint}" if hint else "",
+        )
+        return False
 
-    published = publish_to_telegram(
-        bot_token=settings.telegram_bot_token,
-        channel_id=settings.telegram_channel_id,
-        text=text,
-        image_url=None,
-        timeout=settings.request_timeout_seconds,
-    )
-    if published:
-        logger.info("Weekly promo publication succeeded")
-    return published
+    any_published = False
+    for promo in promos:
+        if settings.dry_run:
+            print(f"\n=== DRY RUN: PROMO {promo.key} ===")
+            print(promo.text)
+            print([(button.text, button.url) for button in promo.buttons])
+            any_published = True
+            continue
+
+        published = publish_promo_to_telegram(
+            bot_token=settings.telegram_bot_token,
+            channel_id=settings.telegram_channel_id,
+            promo=promo,
+            timeout=settings.request_timeout_seconds,
+        )
+        if published:
+            any_published = True
+            storage.mark_promo_posted(
+                promo.key,
+                day,
+                {"published_at_local": now.isoformat()},
+            )
+            logger.info("Promo publication succeeded: %s", promo.key)
+    return any_published
 
 
 def _log_stats(stats: dict, source_count: int, blocked_source_count: int) -> None:
@@ -251,7 +277,7 @@ def _print_dry_run_batch(items: list[ModerationItem], reasons: list[str]) -> Non
 def main() -> None:
     parser = argparse.ArgumentParser(description="Vadzimbay Telegram tech news bot")
     parser.add_argument("--once", action="store_true", help="Run one news cycle now")
-    parser.add_argument("--promo", action="store_true", help="Publish weekly services promo")
+    parser.add_argument("--promo", action="store_true", help="Publish scheduled promo")
     parser.add_argument("--schedule", action="store_true", help="Run forever with daily schedule")
     args = parser.parse_args()
 

@@ -7,6 +7,8 @@ from urllib.parse import urlparse
 
 import requests
 
+from promo import PromoPost
+
 logger = logging.getLogger(__name__)
 
 TELEGRAM_API = "https://api.telegram.org/bot{token}/{method}"
@@ -38,6 +40,32 @@ def publish_to_telegram(
     return _send_message(bot_token, channel_id, text, timeout)
 
 
+def publish_promo_to_telegram(
+    bot_token: str,
+    channel_id: str,
+    promo: PromoPost,
+    timeout: int = 15,
+) -> bool:
+    if not bot_token or not channel_id:
+        logger.error("Telegram credentials are missing")
+        return False
+
+    reply_markup = {
+        "inline_keyboard": [
+            [{"text": button.text, "url": button.url}]
+            for button in promo.buttons
+        ]
+    }
+    return _send_message(
+        bot_token,
+        channel_id,
+        promo.text,
+        timeout,
+        reply_markup=reply_markup,
+        disable_web_page_preview=True,
+    )
+
+
 def send_photo_with_caption(
     bot_token: str,
     channel_id: str,
@@ -51,14 +79,24 @@ def send_photo_with_caption(
     return _send_photo_by_upload(bot_token, channel_id, caption, image_url, timeout, reply_markup)
 
 
-def _send_message(bot_token: str, channel_id: str, text: str, timeout: int) -> bool:
+def _send_message(
+    bot_token: str,
+    channel_id: str,
+    text: str,
+    timeout: int,
+    *,
+    reply_markup: dict[str, Any] | None = None,
+    disable_web_page_preview: bool = False,
+) -> bool:
     url = TELEGRAM_API.format(token=bot_token, method="sendMessage")
     payload: dict[str, Any] = {
         "chat_id": channel_id,
         "text": text[:MAX_MESSAGE_LENGTH],
         "parse_mode": "HTML",
-        "disable_web_page_preview": False,
+        "disable_web_page_preview": disable_web_page_preview,
     }
+    if reply_markup:
+        payload["reply_markup"] = reply_markup
     return _post(url, payload, timeout)
 
 
