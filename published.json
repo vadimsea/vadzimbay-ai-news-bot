@@ -2711,5 +2711,15 @@
       "day": "2026-07-17",
       "published_at_local": "2026-07-17T13:53:06.473255+03:00"
     }
+  },
+  {
+    "url": "promo://programmer_bot_every_2_days/2026-07-17",
+    "published_at": "2026-07-17T13:45:56.745460+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "programmer_bot_every_2_days",
+      "day": "2026-07-17",
+      "published_at_local": "2026-07-17T16:45:56.218329+03:00"
+    }
   }
 ]
