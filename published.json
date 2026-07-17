@@ -2689,5 +2689,17 @@
       "published_at_local": "2026-07-16T19:54:34.476264+03:00",
       "manual_catch_up": true
     }
+  },
+  {
+    "url": "https://www.theverge.com/tech/966442/1password-anthropic-claude-browser-integration",
+    "published_at": "2026-07-17T06:51:01.281693+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Claude can now use your 1Password credentials for you",
+      "source_name": "The Verge AI",
+      "published_at": "2026-07-16T13:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-17T06:51:01.281693+00:00"
   }
 ]
