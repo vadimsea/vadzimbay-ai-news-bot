@@ -2701,5 +2701,15 @@
       "language": "en"
     },
     "updated_at": "2026-07-17T06:51:01.281693+00:00"
+  },
+  {
+    "url": "promo://aten_fri/2026-07-17",
+    "published_at": "2026-07-17T10:53:07.053730+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "aten_fri",
+      "day": "2026-07-17",
+      "published_at_local": "2026-07-17T13:53:06.473255+03:00"
+    }
   }
 ]
