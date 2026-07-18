@@ -2732,5 +2732,16 @@
       "published_at": "2026-07-15T19:41:38+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "https://the-decoder.com/gpt-5-6-is-deleting-user-files-when-given-full-access-and-openai-says-it-shouldnt-but-did/",
+    "published_at": "2026-07-18T06:16:01.250574+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "GPT-5.6 is deleting user files when given full access, and OpenAI says it shouldn't but did",
+      "source_name": "The Decoder",
+      "published_at": "2026-07-17T19:35:52+00:00",
+      "language": "en"
+    }
   }
 ]
