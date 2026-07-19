@@ -2744,5 +2744,15 @@
       "language": "en"
     },
     "updated_at": "2026-07-18T16:06:59.263072+00:00"
+  },
+  {
+    "url": "promo://minsk_housing_weekly/2026-07-19",
+    "published_at": "2026-07-19T10:39:14.319643+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "minsk_housing_weekly",
+      "day": "2026-07-19",
+      "published_at_local": "2026-07-19T13:39:13.956812+03:00"
+    }
   }
 ]
