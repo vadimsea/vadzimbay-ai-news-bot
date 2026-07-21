@@ -2786,5 +2786,15 @@
       "day": "2026-07-21",
       "published_at_local": "2026-07-21T14:13:03.215349+03:00"
     }
+  },
+  {
+    "url": "promo://programmer_bot_every_2_days/2026-07-21",
+    "published_at": "2026-07-21T14:00:25.101482+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "programmer_bot_every_2_days",
+      "day": "2026-07-21",
+      "published_at_local": "2026-07-21T17:00:24.435769+03:00"
+    }
   }
 ]
