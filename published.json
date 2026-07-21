@@ -2768,12 +2768,13 @@
   {
     "url": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen",
     "published_at": "2026-07-20T16:46:04.463616+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "China delivers a one-two punch to America’s AI dominance",
       "source_name": "The Verge AI",
       "published_at": "2026-07-20T10:16:33+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-07-21T06:16:19.029523+00:00"
   }
 ]
