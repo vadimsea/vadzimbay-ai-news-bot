@@ -2776,5 +2776,15 @@
       "language": "en"
     },
     "updated_at": "2026-07-21T06:16:19.029523+00:00"
+  },
+  {
+    "url": "promo://aten_tue/2026-07-21",
+    "published_at": "2026-07-21T11:13:03.722114+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "aten_tue",
+      "day": "2026-07-21",
+      "published_at_local": "2026-07-21T14:13:03.215349+03:00"
+    }
   }
 ]
