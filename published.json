@@ -2807,5 +2807,15 @@
       "published_at": "2026-07-21T17:00:00+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "promo://remote_belarus_weekly/2026-07-22",
+    "published_at": "2026-07-22T11:13:40.702429+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "remote_belarus_weekly",
+      "day": "2026-07-22",
+      "published_at_local": "2026-07-22T14:13:40.349560+03:00"
+    }
   }
 ]
