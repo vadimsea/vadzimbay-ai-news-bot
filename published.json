@@ -2799,14 +2799,15 @@
   },
   {
     "url": "https://openai.com/index/introducing-chatgpt-small-business-program",
-    "published_at": "2026-07-22T06:31:22.929018+00:00",
-    "status": "offered",
+    "published_at": "2026-07-23T07:46:19.094747+00:00",
+    "status": "published",
     "metadata": {
       "title": "Introducing the ChatGPT for small business program",
       "source_name": "OpenAI Blog",
       "published_at": "2026-07-21T17:00:00+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-07-23T07:46:19.094747+00:00"
   },
   {
     "url": "promo://remote_belarus_weekly/2026-07-22",
