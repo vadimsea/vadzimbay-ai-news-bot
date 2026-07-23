@@ -2831,6 +2831,7 @@
     }
   },
   {
+<<<<<<< Updated upstream
     "url": "promo://programmer_bot_every_2_days/2026-07-23",
     "published_at": "2026-07-23T14:09:21.152433+00:00",
     "status": "promo",
@@ -2838,6 +2839,16 @@
       "promo_key": "programmer_bot_every_2_days",
       "day": "2026-07-23",
       "published_at_local": "2026-07-23T17:09:20.663255+03:00"
+=======
+    "url": "https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-pre-release-models/",
+    "published_at": "2026-07-23T14:01:37.870092+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI says Hugging Face was breached by its pre-release models",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-07-21T20:56:55+00:00",
+      "language": "en"
+>>>>>>> Stashed changes
     }
   }
 ]
