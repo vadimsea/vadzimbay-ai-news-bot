@@ -2829,5 +2829,15 @@
       "published_at": "2026-07-21T15:00:00+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "promo://programmer_bot_every_2_days/2026-07-23",
+    "published_at": "2026-07-23T14:09:21.152433+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "programmer_bot_every_2_days",
+      "day": "2026-07-23",
+      "published_at_local": "2026-07-23T17:09:20.663255+03:00"
+    }
   }
 ]
