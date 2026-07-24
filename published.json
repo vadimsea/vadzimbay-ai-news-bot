@@ -9,5 +9,15 @@
       "published_at": "2026-07-23T17:07:35+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "promo://aten_fri/2026-07-24",
+    "published_at": "2026-07-24T11:06:39.758041+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "aten_fri",
+      "day": "2026-07-24",
+      "published_at_local": "2026-07-24T14:06:39.153660+03:00"
+    }
   }
 ]
