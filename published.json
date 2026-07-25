@@ -20,5 +20,17 @@
       "day": "2026-07-24",
       "published_at_local": "2026-07-24T14:06:39.153660+03:00"
     }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/970065/anthropic-voice-mode-claude-opus-sonnet-haiku-ai",
+    "published_at": "2026-07-25T06:45:49.228737+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Claude’s voice mode is now available for Opus and Sonnet",
+      "source_name": "The Verge AI",
+      "published_at": "2026-07-23T19:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-25T07:12:04.022929+00:00"
   }
 ]
