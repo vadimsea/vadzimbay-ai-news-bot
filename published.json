@@ -32,5 +32,15 @@
       "language": "en"
     },
     "updated_at": "2026-07-25T07:12:04.022929+00:00"
+  },
+  {
+    "url": "promo://programmer_bot_every_2_days/2026-07-25",
+    "published_at": "2026-07-25T13:42:07.252514+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "programmer_bot_every_2_days",
+      "day": "2026-07-25",
+      "published_at_local": "2026-07-25T16:42:06.762334+03:00"
+    }
   }
 ]
