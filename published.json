@@ -62,5 +62,17 @@
       "day": "2026-07-27",
       "published_at_local": "2026-07-27T15:31:48.031400+03:00"
     }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/971281/nvidia-open-secure-ai-alliance-cybersecurity",
+    "published_at": "2026-07-27T16:01:30.855096+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Nvidia, Microsoft launch open AI security alliance — without OpenAI, Google, or Anthropic",
+      "source_name": "The Verge AI",
+      "published_at": "2026-07-27T12:06:22+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-27T16:02:40.870026+00:00"
   }
 ]
