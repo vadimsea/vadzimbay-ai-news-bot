@@ -86,5 +86,15 @@
       "language": "en"
     },
     "updated_at": "2026-07-28T08:36:02.321715+00:00"
+  },
+  {
+    "url": "promo://aten_tue/2026-07-28",
+    "published_at": "2026-07-28T11:24:14.124239+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "aten_tue",
+      "day": "2026-07-28",
+      "published_at_local": "2026-07-28T14:24:13.567986+03:00"
+    }
   }
 ]
