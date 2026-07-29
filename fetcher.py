@@ -138,7 +138,18 @@ def _normalize_entry(entry: Any, source: NewsSource) -> dict[str, Any] | None:
 
 def fetch_news_from_source(source: NewsSource) -> list[dict[str, Any]]:
     try:
-        parsed = feedparser.parse(source.url)
+        response = requests.get(source.url, headers=REQUEST_HEADERS, timeout=20)
+        response.raise_for_status()
+        parsed = feedparser.parse(response.content)
+    except requests.exceptions.SSLError:
+        logger.warning("SSL verification failed for %s, retrying without verification", source.name)
+        try:
+            response = requests.get(source.url, headers=REQUEST_HEADERS, timeout=20, verify=False)
+            response.raise_for_status()
+            parsed = feedparser.parse(response.content)
+        except Exception:
+            logger.exception("Failed to fetch source after SSL fallback: %s", source.name)
+            return []
     except Exception:
         logger.exception("Failed to fetch source: %s", source.name)
         return []

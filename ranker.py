@@ -162,6 +162,21 @@ LOW_AUDIENCE_FIT_TERMS = {
     "radio hosts", "distribution drift", "inference", "sensitivity analysis",
 }
 
+SECURITY_CORPORATE_TERMS = {
+    "cybersecurity", "cybersecurity model", "security alliance", "secure ai alliance",
+    "open secure ai", "ai security", "security tools", "threat detection",
+    "defend against attacks", "frontier model attacks", "vulnerability", "exploit",
+    "malware", "phishing", "breach", "ransomware", "zero-day", "zero day",
+}
+
+DIRECT_WORKFLOW_TERMS = {
+    "chatgpt", "claude code", "cursor", "windsurf", "lovable", "bolt.new",
+    "replit agent", "figma", "canva", "adobe", "runway", "coding agent",
+    "code assistant", "website builder", "app builder", "design tool",
+    "marketing automation", "seo tool", "content tool", "campaign",
+    "frontend", "web design", "developer tool", "no-code", "automation",
+}
+
 CONCRETE_EVENT_TERMS = {
     "launch", "launches", "launched", "release", "releases", "released",
     "introduces", "introduced", "unveils", "unveiled", "announces", "announced",
@@ -382,6 +397,9 @@ def choose_top_news(
             continue
         if not _is_priority_channel_news(news):
             stats["off_topic_priority"] += 1
+            continue
+        if _is_corporate_security_news(news):
+            stats["low_news_value"] += 1
             continue
         if not _has_editorial_value(news):
             stats["low_news_value"] += 1
@@ -774,6 +792,13 @@ def _is_top_tier_news(news: dict[str, Any]) -> bool:
         or _has_any(text, BROAD_WORK_TOOL_TERMS)
         or _has_any(text, {"model", "agent", "assistant", "automation", "developer", "design", "marketing"})
     )
+
+
+def _is_corporate_security_news(news: dict[str, Any]) -> bool:
+    text = f"{news.get('title', '')} {news.get('summary', '')}".lower()
+    if not _has_any(text, SECURITY_CORPORATE_TERMS):
+        return False
+    return not _has_any(text, DIRECT_WORKFLOW_TERMS)
 
 
 def _has_any(text: str, terms: set[str]) -> bool:
