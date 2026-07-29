@@ -57,7 +57,7 @@ RSS_SOURCES: list[NewsSource] = [
     NewsSource("t3n", "https://t3n.de/rss.xml", "de", "technology", 0.78),
     NewsSource("OMR", "https://omr.com/de/feed", "de", "marketing", 0.8, enabled=False),
     NewsSource("ComputerBase", "https://www.computerbase.de/rss/news.xml", "de", "technology", 0.8),
-    NewsSource("Habr AI", "https://habr.com/ru/rss/hubs/artificial_intelligence/articles/", "ru", "ai", 0.78, enabled=False),
+    NewsSource("Habr AI", "https://habr.com/ru/rss/hubs/artificial_intelligence/articles/", "ru", "ai", 0.78),
     NewsSource("Habr Robotics", "https://habr.com/ru/rss/hubs/robotics/articles/", "ru", "robotics", 0.76, enabled=False),
     NewsSource("3DNews", "https://3dnews.ru/news/rss/", "ru", "technology", 0.76, enabled=False),
     NewsSource("iXBT", "https://www.ixbt.com/export/news.rss", "ru", "technology", 0.72, enabled=False),
