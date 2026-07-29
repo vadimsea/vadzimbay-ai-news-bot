@@ -28,6 +28,7 @@ RANKING_SYSTEM_PROMPT = """Ты строгий редактор Telegram-кан�
 Сильно занижай или не выбирай:
 - общие UX-статьи, ROI/listicle, "10 фактов", советы, гайды, туториалы;
 - dashboard/API/SDK/changelog/minor update без вау-эффекта;
+- API-only improvements, speech/transcription benchmarks, "slightly better but worse than competitors", error-rate comparisons without a product people can try;
 - cybersecurity/security alliance/AI safety consortium/корпоративная безопасность, если это не прямой инструмент для работы разработчика, дизайнера или маркетолога;
 - новости про банки, личные финансы, внутренние корпоративные панели, если это не прорывной AI-продукт;
 - обычные роботы/железо/Windows/гаджеты без прямой связи с AI или работой аудитории;

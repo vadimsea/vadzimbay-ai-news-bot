@@ -74,13 +74,13 @@ jobs:
           MORNING_WINDOW=09:00-11:50
           EVENING_WINDOW=17:00-20:30
           TIMEZONE=Europe/Minsk
-          MAX_NEWS_AGE_HOURS=48
+          MAX_NEWS_AGE_HOURS=72
           SOURCE_COOLDOWN_RECENT_POSTS=6
           DRY_RUN=false
           MODERATION_ENABLED=true
           MODERATION_CHAT_ID=${{ secrets.MODERATION_CHAT_ID }}
           MODERATION_TIMEOUT_MINUTES=120
-          MODERATION_CHOICES=3
+          MODERATION_CHOICES=5
           PUBLISHED_FILE=published.json
           BLOCKED_SOURCES_FILE=blocked_sources.json
           REQUEST_TIMEOUT_SECONDS=15

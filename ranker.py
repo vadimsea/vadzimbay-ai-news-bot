@@ -63,6 +63,8 @@ AUTHORITATIVE_US_EU_SOURCES = {
     "sciencedaily robotics", "google deepmind blog", "openai blog",
     "anthropic news", "nvidia blog", "smashing magazine", "css-tricks",
     "a list apart", "search engine land", "marketing ai institute",
+    "the gradient", "last week in ai", "ahead of ai", "latent space",
+    "import ai", "figma blog", "webflow blog", "martech",
     "heise online", "golem.de", "t3n", "omr", "computerbase",
 }
 
@@ -92,6 +94,9 @@ BORING_TITLE_PATTERNS = {
     "truths of user experience", "roi", "case study", "what i learned", "how i", "how to",
     "guide", "tutorial", "weekly", "roundup", "video friday", "dashboard rolls out",
     "offline conversion imports", "citations dashboard", "personal finance", "bank accounts",
+    "error rates", "can't catch", "cannot catch", "falls short", "lags behind", "trails",
+    "worse than", "not as accurate", "improves on its predecessor", "slightly better",
+    "minor improvement",
     "выпустила sdk", "выпустил sdk", "открытый sdk", "бенчмарк", "заметки к релизу",
     "минорное обновление",
 }
@@ -101,6 +106,11 @@ LOW_BROAD_VALUE_TERMS = {
     "breaking changes", "syntax", "configuration", "command line flag", "citations dashboard",
     "offline conversion", "dashboard shows", "data-backed facts", "measurable business cost",
     "personal finance", "bank-to-app", "bank accounts", "tips", "best practices",
+    "available through api", "available via api", "api-only", "error rate", "error rates",
+    "word error rate", "speech recognition benchmark", "transcription benchmark",
+    "can't catch", "cannot catch", "falls short", "lags behind", "trails behind",
+    "worse than", "not as accurate", "slightly better", "minor improvement",
+    "fehlerquote", "kann nicht mithalten", "schlechter als", "nur api",
     "внутренний инструмент", "руководство по миграции", "устаревший", "конфигурация",
 }
 
@@ -127,6 +137,10 @@ EDITORIAL_REJECT_TERMS = {
     "everything you need to know", "ultimate guide", "complete guide",
     "the download", "newsletter", "release tracker", "model release tracker",
     "daily dose", "round-up", "round up", "this week in",
+    "can't catch", "cannot catch", "falls short", "lags behind", "trails behind",
+    "error rates", "word error rate", "not as accurate", "minor improvement",
+    "slightly better", "available through api", "available via api",
+    "kann nicht mithalten", "schlechter als", "fehlerquote", "nur api",
     "лучшие", "топ-", "топ ", "что я понял", "личный опыт",
     "почему пора", "всё что нужно знать", "подборка",
 }
@@ -160,6 +174,8 @@ LOW_AUDIENCE_FIT_TERMS = {
     "native binaries", "transformer 7b", "benchmark", "edge ml", "soc",
     "cnn", "vlm", "kubernetes", "agent sandboxes", "browser exploit",
     "radio hosts", "distribution drift", "inference", "sensitivity analysis",
+    "moon", "asteroid", "mond", "verschluesselungsstandard",
+    "verschlüsselungsstandard",
 }
 
 SECURITY_CORPORATE_TERMS = {
@@ -167,6 +183,10 @@ SECURITY_CORPORATE_TERMS = {
     "open secure ai", "ai security", "security tools", "threat detection",
     "defend against attacks", "frontier model attacks", "vulnerability", "exploit",
     "malware", "phishing", "breach", "ransomware", "zero-day", "zero day",
+    "hack", "hacked", "hacking",
+    "cybersicherheit", "sicherheitsallianz", "verschluesselung",
+    "verschlüsselung", "sicherheitsmodell", "schwachstelle", "angriff",
+    "angriffe",
 }
 
 DIRECT_WORKFLOW_TERMS = {
@@ -205,18 +225,21 @@ EDITORIAL_SENSITIVE_SOURCES = {
     "search engine journal", "search engine land", "sciencedaily robotics",
 }
 
-MIN_EDITORIAL_SCORE = 72.0
+MIN_EDITORIAL_SCORE = 66.0
 
 TOP_TIER_SOURCES = {
     "techcrunch ai", "the verge ai", "mit technology review", "wired",
     "the decoder", "venturebeat ai", "google ai blog", "google deepmind blog",
-    "openai blog", "anthropic news", "nvidia blog",
+    "openai blog", "anthropic news", "nvidia blog", "the gradient",
+    "last week in ai", "ahead of ai", "latent space", "import ai",
+    "figma blog", "webflow blog", "marketing ai institute", "martech",
+    "heise online", "golem.de", "t3n", "computerbase",
 }
 
 TOP_TIER_BRANDS = {
     "openai", "chatgpt", "anthropic", "claude", "google deepmind", "gemini",
     "xai", "grok", "mistral", "meta ai", "llama", "nvidia", "microsoft",
-    "cursor", "windsurf", "figma", "adobe", "runway",
+    "cursor", "windsurf", "figma", "adobe", "runway", "perplexity",
 }
 
 TOP_TIER_EVENT_TERMS = {
@@ -401,6 +424,9 @@ def choose_top_news(
         if _is_corporate_security_news(news):
             stats["low_news_value"] += 1
             continue
+        if _is_incremental_benchmark_news(news):
+            stats["low_news_value"] += 1
+            continue
         if not _has_editorial_value(news):
             stats["low_news_value"] += 1
             continue
@@ -426,8 +452,8 @@ def choose_top_news(
             score -= 14
             reasons.append("recent_published_source=-14")
         if _source_name(news) in recent_rejected_sources:
-            score -= 10
-            reasons.append("recent_rejected_source=-10")
+            score -= 5
+            reasons.append("recent_rejected_source=-5")
         if score < MIN_EDITORIAL_SCORE:
             stats["low_news_value"] += 1
             continue
@@ -754,7 +780,9 @@ def _has_strong_broad_ai_signal(news: dict[str, Any]) -> bool:
         "techcrunch ai", "the verge ai", "mit technology review", "ars technica",
         "wired", "the decoder", "infoq ai", "venturebeat ai", "google ai blog",
         "google deepmind blog", "openai blog", "anthropic news", "nvidia blog",
-        "heise online", "golem.de", "t3n",
+        "the gradient", "last week in ai", "ahead of ai", "latent space",
+        "import ai", "figma blog", "webflow blog", "marketing ai institute",
+        "martech", "heise online", "golem.de", "t3n", "computerbase",
     }
     strong_brands = {
         "openai", "chatgpt", "anthropic", "claude", "claude code", "google deepmind",
@@ -787,6 +815,14 @@ def _is_top_tier_news(news: dict[str, Any]) -> bool:
     if source in {"openai blog", "anthropic news", "google deepmind blog", "google ai blog", "nvidia blog"}:
         return has_brand and has_event
 
+    has_product_or_work_tool = (
+        _has_any(text, PRODUCT_TOOL_TERMS)
+        or _has_any(text, BROAD_WORK_TOOL_TERMS)
+        or _has_any(text, {"ai agents", "ai voice", "voice models", "customer calls", "personal computer"})
+    )
+    if has_event and has_product_or_work_tool:
+        return True
+
     return has_brand and has_event and (
         _has_any(text, PRODUCT_TOOL_TERMS)
         or _has_any(text, BROAD_WORK_TOOL_TERMS)
@@ -799,6 +835,28 @@ def _is_corporate_security_news(news: dict[str, Any]) -> bool:
     if not _has_any(text, SECURITY_CORPORATE_TERMS):
         return False
     return not _has_any(text, DIRECT_WORKFLOW_TERMS)
+
+
+def _is_incremental_benchmark_news(news: dict[str, Any]) -> bool:
+    text = f"{news.get('title', '')} {news.get('summary', '')}".lower()
+    title = str(news.get("title") or "").lower()
+
+    weak_comparison_terms = {
+        "can't catch", "cannot catch", "falls short", "lags behind", "trails behind",
+        "worse than", "not as accurate", "error rate", "error rates", "word error rate",
+        "slightly better", "minor improvement", "improves on its predecessor",
+        "kann nicht mithalten", "schlechter als", "fehlerquote",
+    }
+    api_only_terms = {"available through api", "available via api", "api-only", "nur api"}
+    speech_terms = {"speech recognition", "transcribe", "transcription", "voice transcription"}
+
+    if _has_any(text, weak_comparison_terms):
+        return True
+    if _has_any(text, api_only_terms) and _has_any(text, speech_terms | {"benchmark"}):
+        return True
+    if "benchmark" in title and not _has_any(text, DIRECT_WORKFLOW_TERMS):
+        return True
+    return False
 
 
 def _has_any(text: str, terms: set[str]) -> bool:
