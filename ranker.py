@@ -106,6 +106,9 @@ LOW_BROAD_VALUE_TERMS = {
     "breaking changes", "syntax", "configuration", "command line flag", "citations dashboard",
     "offline conversion", "dashboard shows", "data-backed facts", "measurable business cost",
     "personal finance", "bank-to-app", "bank accounts", "tips", "best practices",
+    "customer calls", "sales calls", "sales techniques", "sales playbooks",
+    "sales reps", "sales team", "sales teams", "crm data", "crm platform",
+    "revenue intelligence", "call center", "contact center",
     "available through api", "available via api", "api-only", "error rate", "error rates",
     "word error rate", "speech recognition benchmark", "transcription benchmark",
     "can't catch", "cannot catch", "falls short", "lags behind", "trails behind",
@@ -137,6 +140,8 @@ EDITORIAL_REJECT_TERMS = {
     "everything you need to know", "ultimate guide", "complete guide",
     "the download", "newsletter", "release tracker", "model release tracker",
     "daily dose", "round-up", "round up", "this week in",
+    "customer calls", "sales calls", "sales playbooks", "crm data",
+    "revenue intelligence", "call center", "contact center",
     "can't catch", "cannot catch", "falls short", "lags behind", "trails behind",
     "error rates", "word error rate", "not as accurate", "minor improvement",
     "slightly better", "available through api", "available via api",
@@ -425,6 +430,9 @@ def choose_top_news(
             stats["low_news_value"] += 1
             continue
         if _is_incremental_benchmark_news(news):
+            stats["low_news_value"] += 1
+            continue
+        if _is_enterprise_sales_crm_news(news):
             stats["low_news_value"] += 1
             continue
         if not _has_editorial_value(news):
@@ -818,7 +826,7 @@ def _is_top_tier_news(news: dict[str, Any]) -> bool:
     has_product_or_work_tool = (
         _has_any(text, PRODUCT_TOOL_TERMS)
         or _has_any(text, BROAD_WORK_TOOL_TERMS)
-        or _has_any(text, {"ai agents", "ai voice", "voice models", "customer calls", "personal computer"})
+        or _has_any(text, {"ai agents", "ai voice", "voice models", "personal computer"})
     )
     if has_event and has_product_or_work_tool:
         return True
@@ -857,6 +865,21 @@ def _is_incremental_benchmark_news(news: dict[str, Any]) -> bool:
     if "benchmark" in title and not _has_any(text, DIRECT_WORKFLOW_TERMS):
         return True
     return False
+
+
+def _is_enterprise_sales_crm_news(news: dict[str, Any]) -> bool:
+    text = f"{news.get('title', '')} {news.get('summary', '')}".lower()
+    enterprise_sales_terms = {
+        "customer calls", "sales calls", "sales techniques", "sales playbooks",
+        "sales reps", "sales team", "sales teams", "crm data", "crm platform",
+        "revenue intelligence", "call center", "contact center",
+    }
+    strong_public_tool_terms = {
+        "chatgpt", "claude", "gemini", "perplexity", "cursor", "figma",
+        "website builder", "coding agent", "design tool", "video model",
+        "image model", "personal computer",
+    }
+    return _has_any(text, enterprise_sales_terms) and not _has_any(text, strong_public_tool_terms)
 
 
 def _has_any(text: str, terms: set[str]) -> bool:
