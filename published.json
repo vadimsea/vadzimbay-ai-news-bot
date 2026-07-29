@@ -106,5 +106,15 @@
       "day": "2026-07-29",
       "published_at_local": "2026-07-29T14:30:38.311087+03:00"
     }
+  },
+  {
+    "url": "promo://programmer_bot_every_2_days/2026-07-29",
+    "published_at": "2026-07-29T14:18:31.957832+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "programmer_bot_every_2_days",
+      "day": "2026-07-29",
+      "published_at_local": "2026-07-29T17:18:31.483229+03:00"
+    }
   }
 ]
