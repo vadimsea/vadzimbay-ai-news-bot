@@ -116,5 +116,17 @@
       "day": "2026-07-29",
       "published_at_local": "2026-07-29T17:18:31.483229+03:00"
     }
+  },
+  {
+    "url": "https://the-decoder.com/gpt-transcribe-improves-on-its-predecessor-but-cant-catch-elevenlabs-google-or-mistral-on-error-rates/",
+    "published_at": "2026-07-29T15:23:13.435341+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "GPT Transcribe improves on its predecessor but can't catch ElevenLabs, Google, or Mistral on error rates",
+      "source_name": "The Decoder",
+      "published_at": "2026-07-29T12:45:33+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-29T15:27:00.556476+00:00"
   }
 ]
