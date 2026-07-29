@@ -164,6 +164,31 @@ BROAD_AUDIENCE_VALUE_TERMS = {
     "unveils", "rolls out", "raises", "funding",
 }
 
+YOUTH_CREATOR_INTEREST_TERMS = {
+    "creator", "creators", "influencer", "influencers", "tiktok", "instagram",
+    "youtube", "shorts", "reels", "social media", "meme", "memes", "viral",
+    "video generation", "image generation", "voice generation", "ai voice",
+    "voice cloning", "music generation", "avatar", "avatars", "character",
+    "chatbot", "ai companion", "ai app", "mobile app", "consumer app",
+    "design tool", "creative tool", "figma", "canva", "adobe", "runway",
+    "midjourney", "sora", "veo", "pika", "kling", "capcut", "photoshop",
+    "website builder", "landing page", "no-code", "vibe coding", "lovable",
+    "bolt.new", "cursor", "windsurf", "claude code", "perplexity",
+    "marketing campaign", "ad campaign", "content marketing", "seo",
+}
+
+BORING_ENTERPRISE_TERMS = {
+    "enterprise", "enterprises", "b2b", "sales", "sales team", "sales teams",
+    "customer calls", "sales calls", "crm", "crm data", "revenue intelligence",
+    "call center", "contact center", "compliance", "procurement", "workflow platform",
+    "internal platform", "business users", "productivity suite", "enterprise ai",
+}
+
+FUNDING_ONLY_TERMS = {
+    "raises", "raised", "funding", "seed round", "series a", "series b",
+    "valuation", "invests", "investment", "acquires", "acquisition",
+}
+
 NARROW_RESEARCH_OR_DEV_TERMS = {
     "benchmark", "technical report", "paper", "dataset", "arxiv", "parameter",
     "parameters", "gpu", "experts", "moe", "inference", "latency", "eval",
@@ -340,6 +365,22 @@ def score_news(news: dict[str, Any], topic_count: int = 1) -> tuple[float, list[
         score -= penalty
         reasons.append(f"low_broad_value=-{penalty}")
 
+    youth_matches = sum(1 for term in YOUTH_CREATOR_INTEREST_TERMS if term in text)
+    if youth_matches:
+        boost = min(20, youth_matches * 5)
+        score += boost
+        reasons.append(f"youth_creator_interest=+{boost}")
+
+    enterprise_matches = sum(1 for term in BORING_ENTERPRISE_TERMS if term in text)
+    if enterprise_matches and not _has_any(text, YOUTH_CREATOR_INTEREST_TERMS):
+        penalty = min(24, enterprise_matches * 6)
+        score -= penalty
+        reasons.append(f"enterprise_boring=-{penalty}")
+
+    if _has_any(text, FUNDING_ONLY_TERMS):
+        score -= 16
+        reasons.append("funding_story=-16")
+
     if topic_count > 1:
         boost = min(10, (topic_count - 1) * 4)
         score += boost
@@ -433,6 +474,9 @@ def choose_top_news(
             stats["low_news_value"] += 1
             continue
         if _is_enterprise_sales_crm_news(news):
+            stats["low_news_value"] += 1
+            continue
+        if _is_boring_enterprise_or_funding_news(news):
             stats["low_news_value"] += 1
             continue
         if not _has_editorial_value(news):
@@ -880,6 +924,32 @@ def _is_enterprise_sales_crm_news(news: dict[str, Any]) -> bool:
         "image model", "personal computer",
     }
     return _has_any(text, enterprise_sales_terms) and not _has_any(text, strong_public_tool_terms)
+
+
+def _is_boring_enterprise_or_funding_news(news: dict[str, Any]) -> bool:
+    text = f"{news.get('title', '')} {news.get('summary', '')}".lower()
+    title = str(news.get("title") or "").lower()
+
+    has_youth_or_creator_angle = _has_any(text, YOUTH_CREATOR_INTEREST_TERMS)
+    has_enterprise_angle = _has_any(text, BORING_ENTERPRISE_TERMS)
+    has_funding_angle = _has_any(text, FUNDING_ONLY_TERMS)
+
+    if has_enterprise_angle and not has_youth_or_creator_angle:
+        return True
+    has_tryable_release = _has_any(
+        text,
+        {
+            "launches", "launched", "rolls out", "released", "new app",
+            "new tool", "new feature", "now available", "beta", "preview",
+            "public beta", "open beta",
+        },
+    )
+
+    if has_funding_angle and not has_tryable_release:
+        return True
+    if ("raises" in title or "raised" in title) and not has_tryable_release:
+        return True
+    return False
 
 
 def _has_any(text: str, terms: set[str]) -> bool:

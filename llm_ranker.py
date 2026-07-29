@@ -18,6 +18,7 @@ RANKING_SYSTEM_PROMPT = """Ты строгий редактор Telegram-кан�
 Если среди кандидатов нет такой новости, верни selected_index: -1.
 
 Высокий приоритет:
+- Новости, которые интересны молодой аудитории: AI для creators, соцсетей, TikTok/Instagram/YouTube, видео, музыки, аватаров, дизайна, мемов, личной продуктивности и инструментов, которые хочется попробовать самому;
 - новые AI-модели, заметные релизы OpenAI, Anthropic, Google DeepMind, xAI, Mistral, Meta AI;
 - AI-инструменты для кода, vibe coding, coding agents, Cursor, Windsurf, Claude Code, Lovable, Bolt, Replit Agent;
 - AI для маркетинга, контента, SEO, рекламы, аналитики и автоматизации продаж;
@@ -26,6 +27,7 @@ RANKING_SYSTEM_PROMPT = """Ты строгий редактор Telegram-кан�
 - зарубежные новости из авторитетных источников, которые интересно пересказать на русском.
 
 Сильно занижай или не выбирай:
+- funding/raises/acquisition/enterprise/B2B/CRM/sales-call news, unless there is a clear consumer, creator, design, social media, marketing, or hands-on tool angle for young people;
 - общие UX-статьи, ROI/listicle, "10 фактов", советы, гайды, туториалы;
 - dashboard/API/SDK/changelog/minor update без вау-эффекта;
 - API-only improvements, speech/transcription benchmarks, "slightly better but worse than competitors", error-rate comparisons without a product people can try;
