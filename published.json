@@ -151,5 +151,17 @@
       "published_at": "2026-07-29T14:41:06+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "https://www.theverge.com/tech/972927/microsoft-copilot-super-app-confirmed",
+    "published_at": "2026-07-30T06:02:07.009918+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Microsoft confirms Copilot ‘super app’ coming this year",
+      "source_name": "The Verge AI",
+      "published_at": "2026-07-29T22:17:38+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-30T06:02:07.009918+00:00"
   }
 ]
