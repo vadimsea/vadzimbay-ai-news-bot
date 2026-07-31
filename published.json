@@ -163,5 +163,17 @@
       "language": "en"
     },
     "updated_at": "2026-07-30T06:02:07.009918+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/tech/973276/google-deepmind-gemini-robotics-2-whole-body",
+    "published_at": "2026-07-31T07:14:10.821281+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Google DeepMind’s new AI model can control a robot’s entire body",
+      "source_name": "The Verge AI",
+      "published_at": "2026-07-30T17:18:45+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-07-31T07:14:10.821281+00:00"
   }
 ]
