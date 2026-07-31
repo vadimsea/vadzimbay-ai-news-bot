@@ -185,5 +185,15 @@
       "day": "2026-07-31",
       "published_at_local": "2026-07-31T14:32:27.709856+03:00"
     }
+  },
+  {
+    "url": "promo://programmer_bot_every_2_days/2026-07-31",
+    "published_at": "2026-07-31T14:15:56.427266+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "programmer_bot_every_2_days",
+      "day": "2026-07-31",
+      "published_at_local": "2026-07-31T17:15:55.842568+03:00"
+    }
   }
 ]
