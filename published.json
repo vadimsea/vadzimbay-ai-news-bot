@@ -195,5 +195,17 @@
       "day": "2026-07-31",
       "published_at_local": "2026-07-31T17:15:55.842568+03:00"
     }
+  },
+  {
+    "url": "https://the-decoder.com/google-deepmind-unveils-gemini-robotics-2-to-power-robots-of-all-shapes-from-tabletop-arms-to-humanoids/",
+    "published_at": "2026-08-01T07:04:53.925279+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Google Deepmind unveils Gemini Robotics 2 to power robots of all shapes from tabletop arms to humanoids",
+      "source_name": "The Decoder",
+      "published_at": "2026-07-31T18:25:08+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-08-01T07:04:53.925279+00:00"
   }
 ]
