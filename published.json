@@ -229,5 +229,15 @@
       "day": "2026-08-02",
       "published_at_local": "2026-08-02T13:44:50.067475+03:00"
     }
+  },
+  {
+    "url": "promo://programmer_bot_every_2_days/2026-08-02",
+    "published_at": "2026-08-02T13:35:08.325321+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "programmer_bot_every_2_days",
+      "day": "2026-08-02",
+      "published_at_local": "2026-08-02T16:35:07.959481+03:00"
+    }
   }
 ]
