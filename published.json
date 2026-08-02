@@ -211,12 +211,13 @@
   {
     "url": "https://the-decoder.com/ai-coding-agents-can-modernize-research-software-but-cant-judge-if-the-science-is-right/",
     "published_at": "2026-08-01T17:01:30.504343+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "AI coding agents can modernize research software but can't judge if the science is right",
       "source_name": "The Decoder",
       "published_at": "2026-08-01T14:26:28+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-08-02T06:31:38.097963+00:00"
   }
 ]
