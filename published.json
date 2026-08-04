@@ -251,5 +251,15 @@
       "language": "en"
     },
     "updated_at": "2026-08-04T06:14:42.697816+00:00"
+  },
+  {
+    "url": "promo://aten_tue/2026-08-04",
+    "published_at": "2026-08-04T11:29:54.687276+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "aten_tue",
+      "day": "2026-08-04",
+      "published_at_local": "2026-08-04T14:29:54.101397+03:00"
+    }
   }
 ]
