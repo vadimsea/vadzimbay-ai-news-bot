@@ -239,5 +239,17 @@
       "day": "2026-08-02",
       "published_at_local": "2026-08-02T16:35:07.959481+03:00"
     }
+  },
+  {
+    "url": "https://the-decoder.com/alibabas-new-qwen-model-is-also-taking-your-job-but-this-time-its-great/",
+    "published_at": "2026-08-04T06:14:42.697816+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Alibaba's new Qwen model is also taking your job, but this time it's great",
+      "source_name": "The Decoder",
+      "published_at": "2026-08-03T17:12:23+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-08-04T06:14:42.697816+00:00"
   }
 ]
