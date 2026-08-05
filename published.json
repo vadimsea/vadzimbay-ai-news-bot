@@ -271,5 +271,28 @@
       "day": "2026-08-04",
       "published_at_local": "2026-08-04T17:23:22.695912+03:00"
     }
+  },
+  {
+    "url": "https://martech.org/openai-ad-experiment-could-change-what-happens-after-the-click/",
+    "published_at": "2026-08-05T06:16:17.092696+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI ad experiment could change what happens after the click",
+      "source_name": "MarTech",
+      "published_at": "2026-08-04T14:28:57+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.latent.space/p/ainews-megakernels-are-so-dead-and",
+    "published_at": "2026-08-05T06:19:56.939076+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "[AINews] Megakernels are so dead and so back",
+      "source_name": "Latent Space",
+      "published_at": "2026-08-05T01:21:47+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-08-05T06:19:56.939076+00:00"
   }
 ]
