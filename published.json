@@ -351,5 +351,15 @@
       "published_at": "2026-08-05T21:21:28+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "promo://programmer_bot_every_2_days/2026-08-06",
+    "published_at": "2026-08-06T14:20:04.024400+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "programmer_bot_every_2_days",
+      "day": "2026-08-06",
+      "published_at_local": "2026-08-06T17:20:03.485240+03:00"
+    }
   }
 ]
