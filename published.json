@@ -308,14 +308,15 @@
   },
   {
     "url": "https://the-decoder.com/black-forest-labs-makes-flux-3-video-generally-available-and-claims-it-beats-seedance-2-0/",
-    "published_at": "2026-08-05T15:01:41.609827+00:00",
-    "status": "offered",
+    "published_at": "2026-08-06T06:27:20.229493+00:00",
+    "status": "published",
     "metadata": {
       "title": "Black Forest Labs makes FLUX 3 Video generally available and claims it beats Seedance 2.0",
       "source_name": "The Decoder",
       "published_at": "2026-08-05T13:06:48+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-08-06T06:27:20.229493+00:00"
   },
   {
     "url": "https://www.theverge.com/tech/975516/google-assistant-android-phones-tablets-shutdown",
@@ -328,5 +329,27 @@
       "language": "en"
     },
     "updated_at": "2026-08-05T17:01:50.903867+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/976004/elon-musk-grokipedia-ai-wikipedia-not-updating-dead",
+    "published_at": "2026-08-06T06:01:47.781661+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Elon Musk’s attempt at an AI Wikipedia hasn’t been updated in months",
+      "source_name": "The Verge AI",
+      "published_at": "2026-08-06T00:25:10+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/",
+    "published_at": "2026-08-06T06:01:47.782192+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Meta launches Muse Code, an AI agent for large code bases",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-08-05T21:21:28+00:00",
+      "language": "en"
+    }
   }
 ]
