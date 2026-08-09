@@ -430,5 +430,15 @@
       "language": "en"
     },
     "updated_at": "2026-08-09T08:37:25.484123+00:00"
+  },
+  {
+    "url": "promo://minsk_housing_weekly/2026-08-09",
+    "published_at": "2026-08-09T09:47:29.071770+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "minsk_housing_weekly",
+      "day": "2026-08-09",
+      "published_at_local": "2026-08-09T12:47:28.681747+03:00"
+    }
   }
 ]
