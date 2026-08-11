@@ -460,5 +460,27 @@
       "day": "2026-08-11",
       "published_at_local": "2026-08-11T13:04:41.313950+03:00"
     }
+  },
+  {
+    "url": "https://the-decoder.com/anthropic-watermarks-all-claude-outputs-globally-with-marks-that-may-persist-through-some-editing/",
+    "published_at": "2026-08-11T16:32:16.451314+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic watermarks all Claude outputs globally with marks that \"may persist through some editing\"",
+      "source_name": "The Decoder",
+      "published_at": "2026-08-11T08:45:06+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/08/11/an-unreleased-anthropic-model-made-progress-on-one-of-maths-biggest-unsolved-problems/",
+    "published_at": "2026-08-11T16:32:16.452110+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "An unreleased Anthropic model made progress on one of math’s biggest unsolved problems",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-08-11T16:25:20+00:00",
+      "language": "en"
+    }
   }
 ]
