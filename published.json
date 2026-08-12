@@ -463,14 +463,15 @@
   },
   {
     "url": "https://the-decoder.com/anthropic-watermarks-all-claude-outputs-globally-with-marks-that-may-persist-through-some-editing/",
-    "published_at": "2026-08-11T16:32:16.451314+00:00",
-    "status": "offered",
+    "published_at": "2026-08-12T07:19:04.157157+00:00",
+    "status": "published",
     "metadata": {
       "title": "Anthropic watermarks all Claude outputs globally with marks that \"may persist through some editing\"",
       "source_name": "The Decoder",
       "published_at": "2026-08-11T08:45:06+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-08-12T07:19:04.157157+00:00"
   },
   {
     "url": "https://techcrunch.com/2026/08/11/an-unreleased-anthropic-model-made-progress-on-one-of-maths-biggest-unsolved-problems/",
@@ -480,6 +481,28 @@
       "title": "An unreleased Anthropic model made progress on one of math’s biggest unsolved problems",
       "source_name": "TechCrunch AI",
       "published_at": "2026-08-11T16:25:20+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.theverge.com/games/978558/rideshare-stimulator-writer-ai-saber-interactive",
+    "published_at": "2026-08-12T07:16:24.301569+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Saber denies replacing Rideshare Stimulator’s writers with ChatGPT",
+      "source_name": "The Verge AI",
+      "published_at": "2026-08-12T00:39:26+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/08/11/openai-launches-chatgpt-desktop-app-for-linux/",
+    "published_at": "2026-08-12T07:16:24.302258+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI launches ChatGPT desktop app for Linux",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-08-11T19:15:35+00:00",
       "language": "en"
     }
   }
