@@ -504,7 +504,8 @@
       "source_name": "TechCrunch AI",
       "published_at": "2026-08-11T19:15:35+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-08-12T17:02:00.657666+00:00"
   },
   {
     "url": "promo://remote_belarus_weekly/2026-08-12",
@@ -524,6 +525,39 @@
       "promo_key": "programmer_bot_every_2_days",
       "day": "2026-08-12",
       "published_at_local": "2026-08-12T16:16:40.739979+03:00"
+    }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/978666/spacexai-grok-bot-ai-agent-beta-launch",
+    "published_at": "2026-08-12T17:02:00.656113+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Grok is now an AI ‘teammate’ you can assign work",
+      "source_name": "The Verge AI",
+      "published_at": "2026-08-12T11:58:54+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://the-decoder.com/openai-launches-chatgpt-desktop-app-for-linux/",
+    "published_at": "2026-08-12T17:02:00.656978+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI launches ChatGPT desktop app for Linux",
+      "source_name": "The Decoder",
+      "published_at": "2026-08-12T11:53:31+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://blogs.nvidia.com/blog/nvidia-life-glassdoor-best-ceo-2026/",
+    "published_at": "2026-08-12T17:02:00.658299+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "NVIDIA CEO Tops Glassdoor’s 2026 List of Best CEOs",
+      "source_name": "NVIDIA Blog",
+      "published_at": "2026-08-12T14:00:00+00:00",
+      "language": "en"
     }
   }
 ]
