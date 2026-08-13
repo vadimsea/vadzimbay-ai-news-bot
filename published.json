@@ -497,15 +497,15 @@
   },
   {
     "url": "https://techcrunch.com/2026/08/11/openai-launches-chatgpt-desktop-app-for-linux/",
-    "published_at": "2026-08-12T07:16:24.302258+00:00",
-    "status": "offered",
+    "published_at": "2026-08-13T08:17:11.282923+00:00",
+    "status": "published",
     "metadata": {
       "title": "OpenAI launches ChatGPT desktop app for Linux",
       "source_name": "TechCrunch AI",
       "published_at": "2026-08-11T19:15:35+00:00",
       "language": "en"
     },
-    "updated_at": "2026-08-12T17:02:00.657666+00:00"
+    "updated_at": "2026-08-13T08:17:11.282923+00:00"
   },
   {
     "url": "promo://remote_belarus_weekly/2026-08-12",
@@ -536,7 +536,8 @@
       "source_name": "The Verge AI",
       "published_at": "2026-08-12T11:58:54+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-08-13T08:16:20.453075+00:00"
   },
   {
     "url": "https://the-decoder.com/openai-launches-chatgpt-desktop-app-for-linux/",
@@ -547,17 +548,19 @@
       "source_name": "The Decoder",
       "published_at": "2026-08-12T11:53:31+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-08-13T08:16:20.453874+00:00"
   },
   {
     "url": "https://blogs.nvidia.com/blog/nvidia-life-glassdoor-best-ceo-2026/",
     "published_at": "2026-08-12T17:02:00.658299+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "NVIDIA CEO Tops Glassdoor’s 2026 List of Best CEOs",
       "source_name": "NVIDIA Blog",
       "published_at": "2026-08-12T14:00:00+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-08-13T08:17:11.283892+00:00"
   }
 ]
