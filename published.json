@@ -574,5 +574,15 @@
       "language": "en"
     },
     "updated_at": "2026-08-14T08:46:50.104844+00:00"
+  },
+  {
+    "url": "promo://aten_fri/2026-08-14",
+    "published_at": "2026-08-14T10:10:59.193779+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "aten_fri",
+      "day": "2026-08-14",
+      "published_at_local": "2026-08-14T13:10:58.719584+03:00"
+    }
   }
 ]
