@@ -598,12 +598,13 @@
   {
     "url": "https://the-decoder.com/anthropic-announces-watermark-detection-api-that-will-let-third-parties-detect-claudes-ai-texts/",
     "published_at": "2026-08-15T06:16:11.098975+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "Anthropic announces watermark detection API that will let third parties detect Claude's AI texts",
       "source_name": "The Decoder",
       "published_at": "2026-08-14T21:29:17+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-08-15T14:31:02.765014+00:00"
   }
 ]
