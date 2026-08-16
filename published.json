@@ -606,5 +606,15 @@
       "language": "en"
     },
     "updated_at": "2026-08-15T14:31:02.765014+00:00"
+  },
+  {
+    "url": "promo://minsk_housing_weekly/2026-08-16",
+    "published_at": "2026-08-16T09:33:11.838018+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "minsk_housing_weekly",
+      "day": "2026-08-16",
+      "published_at_local": "2026-08-16T12:33:11.472096+03:00"
+    }
   }
 ]
