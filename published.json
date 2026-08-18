@@ -630,12 +630,13 @@
   {
     "url": "https://www.theverge.com/ai-artificial-intelligence/980869/anthropic-claude-watermarks-synthid-text-system",
     "published_at": "2026-08-17T16:01:35.236595+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "Anthropic explains how Claude’s invisible text watermarks will work",
       "source_name": "The Verge AI",
       "published_at": "2026-08-17T10:57:13+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-08-18T06:46:55.694717+00:00"
   }
 ]
