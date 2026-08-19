@@ -662,13 +662,14 @@
   {
     "url": "https://the-decoder.com/openai-launches-a-chatgpt-version-built-for-teens/",
     "published_at": "2026-08-18T15:01:50.071275+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "OpenAI launches a ChatGPT version built for teens",
       "source_name": "The Decoder",
       "published_at": "2026-08-18T11:27:29+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-08-19T08:46:42.466219+00:00"
   },
   {
     "url": "https://techcrunch.com/2026/08/18/openai-launches-a-safer-chatgpt-for-teens-years-after-teens-started-using-it/",
@@ -685,12 +686,13 @@
   {
     "url": "https://www.theverge.com/ai-artificial-intelligence/981333/openai-chatgpt-teen-mode",
     "published_at": "2026-08-18T15:01:50.073000+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "ChatGPT is getting a dedicated mode for teens",
       "source_name": "The Verge AI",
       "published_at": "2026-08-18T11:00:00+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-08-19T08:46:42.467259+00:00"
   }
 ]
