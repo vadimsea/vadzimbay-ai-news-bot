@@ -694,5 +694,15 @@
       "language": "en"
     },
     "updated_at": "2026-08-19T08:46:42.467259+00:00"
+  },
+  {
+    "url": "promo://remote_belarus_weekly/2026-08-19",
+    "published_at": "2026-08-19T09:39:42.419058+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "remote_belarus_weekly",
+      "day": "2026-08-19",
+      "published_at_local": "2026-08-19T12:39:41.831859+03:00"
+    }
   }
 ]
