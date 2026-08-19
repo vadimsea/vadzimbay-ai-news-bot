@@ -704,5 +704,17 @@
       "day": "2026-08-19",
       "published_at_local": "2026-08-19T12:39:41.831859+03:00"
     }
+  },
+  {
+    "url": "https://www.theverge.com/tech/981269/google-home-gemini-pet-memory-nest-camera-review",
+    "published_at": "2026-08-19T16:31:21.057393+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google’s Pet Memory forgot who my cats are",
+      "source_name": "The Verge AI",
+      "published_at": "2026-08-18T12:01:29+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-08-19T16:39:59.885617+00:00"
   }
 ]
