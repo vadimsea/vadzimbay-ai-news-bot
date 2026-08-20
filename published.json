@@ -716,5 +716,29 @@
       "language": "en"
     },
     "updated_at": "2026-08-19T16:39:59.885617+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/tech/982270/meta-ai-mac-app",
+    "published_at": "2026-08-20T06:01:39.798505+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Meta AI is getting a Mac app",
+      "source_name": "The Verge AI",
+      "published_at": "2026-08-19T17:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-08-20T06:02:49.284339+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/08/19/google-launches-new-study-tools-for-students-across-search-and-gemini/",
+    "published_at": "2026-08-20T06:01:39.799505+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google packs Search and Gemini with new AI study tools",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-08-19T19:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-08-20T06:02:49.285576+00:00"
   }
 ]
