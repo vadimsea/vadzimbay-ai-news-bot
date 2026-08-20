@@ -750,5 +750,17 @@
       "day": "2026-08-20",
       "published_at_local": "2026-08-20T15:54:46.406063+03:00"
     }
+  },
+  {
+    "url": "https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch",
+    "published_at": "2026-08-20T15:22:11.037194+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Slack is launching collaborative vibe-coding channels",
+      "source_name": "The Verge AI",
+      "published_at": "2026-08-20T12:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-08-20T15:22:11.037194+00:00"
   }
 ]
