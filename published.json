@@ -848,5 +848,17 @@
       "day": "2026-08-25",
       "published_at_local": "2026-08-25T12:41:38.501796+03:00"
     }
+  },
+  {
+    "url": "https://the-decoder.com/metas-paid-ai-agent-hatch-launches-soon-with-a-new-model-called-watermelon-due-in-october/",
+    "published_at": "2026-08-25T17:01:32.894843+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Meta's paid AI agent Hatch launches soon, with a new model called Watermelon due in October",
+      "source_name": "The Decoder",
+      "published_at": "2026-08-25T13:43:40+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-08-25T17:01:55.371813+00:00"
   }
 ]
