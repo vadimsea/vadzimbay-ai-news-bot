@@ -826,5 +826,17 @@
       "day": "2026-08-24",
       "published_at_local": "2026-08-24T15:56:10.522982+03:00"
     }
+  },
+  {
+    "url": "https://the-decoder.com/pew-study-shows-ai-written-text-has-surged-across-the-web-since-late-2022/",
+    "published_at": "2026-08-25T07:36:02.823485+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Pew study confirms sharp rise of AI-written text on the web since ChatGPT's launch",
+      "source_name": "The Decoder",
+      "published_at": "2026-08-24T18:22:49+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-08-25T07:36:02.823485+00:00"
   }
 ]
