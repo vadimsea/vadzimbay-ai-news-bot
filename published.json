@@ -838,5 +838,15 @@
       "language": "en"
     },
     "updated_at": "2026-08-25T07:36:02.823485+00:00"
+  },
+  {
+    "url": "promo://aten_tue/2026-08-25",
+    "published_at": "2026-08-25T09:41:39.075116+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "aten_tue",
+      "day": "2026-08-25",
+      "published_at_local": "2026-08-25T12:41:38.501796+03:00"
+    }
   }
 ]
