@@ -913,5 +913,17 @@
       "day": "2026-08-28",
       "published_at_local": "2026-08-28T23:47:58.885767+03:00"
     }
+  },
+  {
+    "url": "https://the-decoder.com/google-gives-ai-agents-their-own-wiki-so-they-can-learn-from-mistakes-and-successes/",
+    "published_at": "2026-08-29T14:32:41.094936+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Google's WikiSkill gives AI agents a persistent memory of past mistakes to sharpen future performance",
+      "source_name": "The Decoder",
+      "published_at": "2026-08-29T12:51:24+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-08-29T14:32:41.094936+00:00"
   }
 ]
