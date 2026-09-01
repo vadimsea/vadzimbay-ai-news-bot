@@ -957,5 +957,15 @@
       "language": "en"
     },
     "updated_at": "2026-09-01T07:31:55.702716+00:00"
+  },
+  {
+    "url": "promo://programmer_bot_every_2_days/2026-09-01",
+    "published_at": "2026-09-01T14:04:18.323380+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "programmer_bot_every_2_days",
+      "day": "2026-09-01",
+      "published_at_local": "2026-09-01T17:04:17.786920+03:00"
+    }
   }
 ]
