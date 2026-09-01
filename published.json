@@ -949,12 +949,13 @@
   {
     "url": "https://lastweekin.ai/p/lwiai-podcast-255-gemini-37-jalapeno",
     "published_at": "2026-08-31T16:16:27.300756+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "LWiAI Podcast #255 - Gemini 3.7, Jalapeño, Qwen 3.8, Drones",
       "source_name": "Last Week in AI",
       "published_at": "2026-08-31T08:20:04+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-09-01T07:31:55.702716+00:00"
   }
 ]
