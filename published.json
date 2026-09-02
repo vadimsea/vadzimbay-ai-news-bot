@@ -1047,5 +1047,29 @@
       "day": "2026-09-02",
       "published_at_local": "2026-09-02T16:30:04.796637+03:00"
     }
+  },
+  {
+    "url": "https://techcrunch.com/2026/09/01/anthropics-new-fable-release-is-cheaper-less-restrictive/",
+    "published_at": "2026-09-02T16:31:36.743019+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Anthropic’s new Fable release is cheaper, less restrictive",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-09-01T19:39:22+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-02T16:32:17.203996+00:00"
+  },
+  {
+    "url": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/",
+    "published_at": "2026-09-02T16:32:17.729276+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "The latest AI news we announced in August 2026",
+      "source_name": "Google AI Blog",
+      "published_at": "2026-09-01T20:45:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-02T16:32:17.729276+00:00"
   }
 ]
