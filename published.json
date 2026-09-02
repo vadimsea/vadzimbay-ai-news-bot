@@ -1037,5 +1037,15 @@
       "language": "en"
     },
     "updated_at": "2026-09-02T09:10:44.718827+00:00"
+  },
+  {
+    "url": "promo://remote_belarus_weekly/2026-09-02",
+    "published_at": "2026-09-02T13:30:05.156410+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "remote_belarus_weekly",
+      "day": "2026-09-02",
+      "published_at_local": "2026-09-02T16:30:04.796637+03:00"
+    }
   }
 ]
