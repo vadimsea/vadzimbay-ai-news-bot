@@ -1071,5 +1071,28 @@
       "language": "en"
     },
     "updated_at": "2026-09-02T16:32:17.729276+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/988742/google-gemini-3-8-flash",
+    "published_at": "2026-09-03T07:01:58.911082+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google says its new Gemini 3.8 Flash model ‘works harder’ but might cost more",
+      "source_name": "The Verge AI",
+      "published_at": "2026-09-02T20:11:40+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/09/01/open-ais-astra-model-is-on-the-way-and-very-good-at-breaking-into-computer-systems/",
+    "published_at": "2026-09-03T07:05:11.792143+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "OpenAI’s Astra model is on the way — and very good at breaking into computer systems",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-09-01T21:06:24+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-03T07:05:11.792143+00:00"
   }
 ]
