@@ -1105,5 +1105,39 @@
       "day": "2026-09-03",
       "published_at_local": "2026-09-03T16:28:35.541009+03:00"
     }
+  },
+  {
+    "url": "https://www.latent.space/p/ainews-gpt-6-astra-openais-biggest",
+    "published_at": "2026-09-04T08:16:27.546727+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "[AINews] GPT-6 Astra: OpenAI’s biggest LLM launch of all time",
+      "source_name": "Latent Space",
+      "published_at": "2026-09-04T05:18:11+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://openai.com/index/daybreak-for-frontline-defenders",
+    "published_at": "2026-09-04T08:16:27.548127+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-09-03T13:15:00+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/09/03/openai-launches-astra-its-powerful-and-controversial-new-model/",
+    "published_at": "2026-09-04T08:21:31.946647+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "OpenAI launches Astra, its powerful (and controversial) new model",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-09-03T18:01:45+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-04T08:21:31.946647+00:00"
   }
 ]
