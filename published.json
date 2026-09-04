@@ -1115,7 +1115,8 @@
       "source_name": "Latent Space",
       "published_at": "2026-09-04T05:18:11+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-09-04T15:31:41.312315+00:00"
   },
   {
     "url": "https://openai.com/index/daybreak-for-frontline-defenders",
@@ -1126,7 +1127,8 @@
       "source_name": "OpenAI Blog",
       "published_at": "2026-09-03T13:15:00+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-09-04T15:31:41.314833+00:00"
   },
   {
     "url": "https://techcrunch.com/2026/09/03/openai-launches-astra-its-powerful-and-controversial-new-model/",
@@ -1148,6 +1150,17 @@
       "promo_key": "aten_fri",
       "day": "2026-09-04",
       "published_at_local": "2026-09-04T16:23:01.186104+03:00"
+    }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/990149/openai-rogue-agents-german-wiki",
+    "published_at": "2026-09-04T15:31:41.313633+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Rogue OpenAI agents appear to have organized another attack using a German wiki",
+      "source_name": "The Verge AI",
+      "published_at": "2026-09-04T13:34:12+00:00",
+      "language": "en"
     }
   }
 ]
