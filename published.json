@@ -1116,7 +1116,7 @@
       "published_at": "2026-09-04T05:18:11+00:00",
       "language": "en"
     },
-    "updated_at": "2026-09-04T15:31:41.312315+00:00"
+    "updated_at": "2026-09-05T07:46:15.545819+00:00"
   },
   {
     "url": "https://openai.com/index/daybreak-for-frontline-defenders",
@@ -1154,13 +1154,14 @@
   },
   {
     "url": "https://www.theverge.com/ai-artificial-intelligence/990149/openai-rogue-agents-german-wiki",
-    "published_at": "2026-09-04T15:31:41.313633+00:00",
-    "status": "offered",
+    "published_at": "2026-09-05T07:59:08.529202+00:00",
+    "status": "published",
     "metadata": {
       "title": "Rogue OpenAI agents appear to have organized another attack using a German wiki",
       "source_name": "The Verge AI",
       "published_at": "2026-09-04T13:34:12+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-09-05T07:59:08.529202+00:00"
   }
 ]
