@@ -1183,5 +1183,27 @@
       "day": "2026-09-06",
       "published_at_local": "2026-09-06T15:47:32.239383+03:00"
     }
+  },
+  {
+    "url": "https://the-decoder.com/metas-new-real-time-audio-model-is-the-foundation-for-ai-assistants-that-never-stop-listening/",
+    "published_at": "2026-09-06T17:16:16.154319+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Meta's new real-time audio model is the foundation for AI assistants that never stop listening",
+      "source_name": "The Decoder",
+      "published_at": "2026-09-06T09:45:18+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+    "published_at": "2026-09-06T17:16:16.155786+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Research acceleration: The view inside OpenAI",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-09-06T08:00:00+00:00",
+      "language": "en"
+    }
   }
 ]
