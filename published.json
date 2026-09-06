@@ -1173,5 +1173,15 @@
       "day": "2026-09-05",
       "published_at_local": "2026-09-05T15:32:24.697464+03:00"
     }
+  },
+  {
+    "url": "promo://minsk_housing_weekly/2026-09-06",
+    "published_at": "2026-09-06T12:47:32.649659+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "minsk_housing_weekly",
+      "day": "2026-09-06",
+      "published_at_local": "2026-09-06T15:47:32.239383+03:00"
+    }
   }
 ]
