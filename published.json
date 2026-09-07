@@ -1205,5 +1205,29 @@
       "published_at": "2026-09-06T08:00:00+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "https://the-decoder.com/google-brings-ai-music-generation-directly-into-the-gemini-app-with-its-new-lyria-3-5-model/",
+    "published_at": "2026-09-07T08:01:56.948760+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google brings AI music generation directly into the Gemini app with its new Lyria 3.5 model",
+      "source_name": "The Decoder",
+      "published_at": "2026-09-06T09:56:24+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-07T08:02:48.402373+00:00"
+  },
+  {
+    "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+    "published_at": "2026-09-07T08:01:56.949881+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Supporting independent journalism in Ukraine",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-09-07T00:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-07T08:02:48.403482+00:00"
   }
 ]
