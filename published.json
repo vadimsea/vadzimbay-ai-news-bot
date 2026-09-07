@@ -1229,5 +1229,15 @@
       "language": "en"
     },
     "updated_at": "2026-09-07T08:02:48.403482+00:00"
+  },
+  {
+    "url": "promo://programmer_bot_every_2_days/2026-09-07",
+    "published_at": "2026-09-07T14:58:09.943966+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "programmer_bot_every_2_days",
+      "day": "2026-09-07",
+      "published_at_local": "2026-09-07T17:58:09.573120+03:00"
+    }
   }
 ]
