@@ -1186,14 +1186,15 @@
   },
   {
     "url": "https://the-decoder.com/metas-new-real-time-audio-model-is-the-foundation-for-ai-assistants-that-never-stop-listening/",
-    "published_at": "2026-09-06T17:16:16.154319+00:00",
-    "status": "offered",
+    "published_at": "2026-09-07T16:13:09.755532+00:00",
+    "status": "published",
     "metadata": {
       "title": "Meta's new real-time audio model is the foundation for AI assistants that never stop listening",
       "source_name": "The Decoder",
       "published_at": "2026-09-06T09:45:18+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-09-07T16:13:09.755532+00:00"
   },
   {
     "url": "https://openai.com/index/research-acceleration-view-inside-openai",
@@ -1238,6 +1239,17 @@
       "promo_key": "programmer_bot_every_2_days",
       "day": "2026-09-07",
       "published_at_local": "2026-09-07T17:58:09.573120+03:00"
+    }
+  },
+  {
+    "url": "https://lastweekin.ai/p/last-week-in-ai-343-gpt-6-openais",
+    "published_at": "2026-09-07T15:46:10.716264+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Last Week in AI #343 - GPT-6, OpenAI’s agents chatted on a wiki, Fable 5.1",
+      "source_name": "Last Week in AI",
+      "published_at": "2026-09-07T13:02:49+00:00",
+      "language": "en"
     }
   }
 ]
