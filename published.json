@@ -1252,5 +1252,15 @@
       "language": "en"
     },
     "updated_at": "2026-09-08T08:32:03.863570+00:00"
+  },
+  {
+    "url": "promo://aten_tue/2026-09-08",
+    "published_at": "2026-09-08T13:27:22.875380+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "aten_tue",
+      "day": "2026-09-08",
+      "published_at_local": "2026-09-08T16:27:22.396423+03:00"
+    }
   }
 ]
