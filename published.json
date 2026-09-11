@@ -1340,5 +1340,29 @@
       "day": "2026-09-11",
       "published_at_local": "2026-09-11T16:27:17.754601+03:00"
     }
+  },
+  {
+    "url": "https://the-decoder.com/openais-gpt-live-1-api-lets-developers-build-apps-that-talk-and-listen-at-the-same-time/",
+    "published_at": "2026-09-11T15:01:53.864675+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI's GPT-Live-1 API lets developers build apps that talk and listen at the same time",
+      "source_name": "The Decoder",
+      "published_at": "2026-09-10T17:47:35+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-11T15:25:50.065732+00:00"
+  },
+  {
+    "url": "https://www.figma.com/blog/japan-local-data-hosting/",
+    "published_at": "2026-09-11T15:01:53.866402+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Figma launches data residency in Japan",
+      "source_name": "Figma Blog",
+      "published_at": "2026-09-11T15:25:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-11T15:25:50.067475+00:00"
   }
 ]
