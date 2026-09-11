@@ -1298,23 +1298,37 @@
   {
     "url": "https://the-decoder.com/muse-can-shop-write-emails-and-negotiate-prices-for-users-all-through-whatsapp/",
     "published_at": "2026-09-10T15:31:33.231404+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "Muse can shop, write emails, and negotiate prices for users, all through WhatsApp",
       "source_name": "The Decoder",
       "published_at": "2026-09-10T12:27:18+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-09-11T08:17:41.831603+00:00"
   },
   {
     "url": "https://www.theverge.com/tech/993391/meta-muse-ai-hands-on",
     "published_at": "2026-09-10T15:31:33.234174+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "Meta’s Muse AI works and creeps me out",
       "source_name": "The Verge AI",
       "published_at": "2026-09-10T15:00:00+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-09-11T08:17:42.529098+00:00"
+  },
+  {
+    "url": "https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/",
+    "published_at": "2026-09-11T08:17:42.527469+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Skild AI Taps NVIDIA Physical AI to Teach Robots New Tasks From a Single Video",
+      "source_name": "NVIDIA Blog",
+      "published_at": "2026-09-10T16:30:35+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-11T08:17:42.527469+00:00"
   }
 ]
