@@ -1394,5 +1394,17 @@
       "day": "2026-09-13",
       "published_at_local": "2026-09-13T18:51:54.111948+03:00"
     }
+  },
+  {
+    "url": "https://martech.org/who-owns-your-ai-agents-after-they-launch/",
+    "published_at": "2026-09-14T14:16:48.732441+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Who owns your AI agents after they launch?",
+      "source_name": "MarTech",
+      "published_at": "2026-09-14T12:49:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-14T14:16:48.732441+00:00"
   }
 ]
