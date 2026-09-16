@@ -1426,5 +1426,39 @@
       "day": "2026-09-15",
       "published_at_local": "2026-09-15T19:34:59.512614+03:00"
     }
+  },
+  {
+    "url": "https://techcrunch.com/2026/09/15/meta-now-lets-ai-agents-handle-the-boring-parts-of-whatsapp-business-setup/",
+    "published_at": "2026-09-16T06:01:44.119277+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Meta now lets AI agents handle the boring parts of WhatsApp Business setup",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-09-15T20:12:53+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://the-decoder.com/google-launches-gemini-3-8-live-to-take-on-openais-gpt-live-1-at-a-fraction-of-the-cost/",
+    "published_at": "2026-09-16T06:53:47.868193+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Google launches Gemini 3.8 Live to take on OpenAI's GPT-Live-1 at a fraction of the cost",
+      "source_name": "The Decoder",
+      "published_at": "2026-09-15T18:23:20+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-16T06:53:47.868193+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/tech/995365/simplisafe-video-doorbell-series-2-virtual-guard-price-specs",
+    "published_at": "2026-09-16T06:01:44.122599+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "This doorbell camera lets a human security guard watch your front door",
+      "source_name": "The Verge AI",
+      "published_at": "2026-09-15T13:36:45+00:00",
+      "language": "en"
+    }
   }
 ]
