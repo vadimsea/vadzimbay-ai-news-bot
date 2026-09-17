@@ -1518,5 +1518,17 @@
       "day": "2026-09-17",
       "published_at_local": "2026-09-17T17:13:53.444078+03:00"
     }
+  },
+  {
+    "url": "https://martech.org/the-latest-ai-powered-martech-news-and-releases/",
+    "published_at": "2026-09-17T15:33:23.982336+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "The latest AI-powered martech news and releases",
+      "source_name": "MarTech",
+      "published_at": "2026-09-17T12:45:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-17T15:33:23.982336+00:00"
   }
 ]
