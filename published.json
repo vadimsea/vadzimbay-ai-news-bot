@@ -1530,5 +1530,16 @@
       "language": "en"
     },
     "updated_at": "2026-09-17T15:33:23.982336+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/997134/anthropic-claude-code-projects",
+    "published_at": "2026-09-18T08:46:04.372017+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Claude Code relaunches Projects to manage multiple AI agents in the cloud",
+      "source_name": "The Verge AI",
+      "published_at": "2026-09-17T18:58:05+00:00",
+      "language": "en"
+    }
   }
 ]
