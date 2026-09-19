@@ -1534,14 +1534,14 @@
   {
     "url": "https://www.theverge.com/ai-artificial-intelligence/997134/anthropic-claude-code-projects",
     "published_at": "2026-09-18T08:46:04.372017+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "Claude Code relaunches Projects to manage multiple AI agents in the cloud",
       "source_name": "The Verge AI",
       "published_at": "2026-09-17T18:58:05+00:00",
       "language": "en"
     },
-    "updated_at": "2026-09-18T16:31:31.569921+00:00"
+    "updated_at": "2026-09-19T06:16:58.482735+00:00"
   },
   {
     "url": "promo://aten_fri/2026-09-18",
@@ -1552,5 +1552,17 @@
       "day": "2026-09-18",
       "published_at_local": "2026-09-18T16:31:48.635048+03:00"
     }
+  },
+  {
+    "url": "https://openai.com/index/australian-youth-safety-blueprint",
+    "published_at": "2026-09-19T06:16:14.215889+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Introducing the Australian Youth Safety Blueprint",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-09-18T12:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-19T06:16:58.484622+00:00"
   }
 ]
