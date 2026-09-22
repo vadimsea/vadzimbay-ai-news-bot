@@ -1618,5 +1618,15 @@
       "language": "en"
     },
     "updated_at": "2026-09-22T06:47:45.268530+00:00"
+  },
+  {
+    "url": "promo://aten_tue/2026-09-22",
+    "published_at": "2026-09-22T14:01:06.825029+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "aten_tue",
+      "day": "2026-09-22",
+      "published_at_local": "2026-09-22T17:01:06.448246+03:00"
+    }
   }
 ]
