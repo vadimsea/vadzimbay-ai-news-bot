@@ -1628,5 +1628,41 @@
       "day": "2026-09-22",
       "published_at_local": "2026-09-22T17:01:06.448246+03:00"
     }
+  },
+  {
+    "url": "https://www.wired.com/story/rabbit-r1-os3-jesse-lyu/",
+    "published_at": "2026-09-23T06:31:45.169817+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Rabbit Is Back, This Time With an AI Agent App",
+      "source_name": "Wired",
+      "published_at": "2026-09-22T16:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-23T06:32:49.268921+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/openais-gpt-6-sol-and-luna-cut-prices-in-half-but-barely-move-the-needle-on-performance/",
+    "published_at": "2026-09-23T06:31:45.171680+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI's GPT-6 Sol and Luna cut prices in half but barely move the needle on performance",
+      "source_name": "The Decoder",
+      "published_at": "2026-09-22T20:06:51+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-23T06:32:49.271415+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
+    "published_at": "2026-09-23T06:31:45.173317+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI launches GPT-6 Sol and Luna, boasting lower cost and fewer mistakes",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-09-22T18:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-23T06:32:49.273949+00:00"
   }
 ]
