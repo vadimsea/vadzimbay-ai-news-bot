@@ -1674,5 +1674,28 @@
       "day": "2026-09-23",
       "published_at_local": "2026-09-23T17:10:35.241930+03:00"
     }
+  },
+  {
+    "url": "https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/",
+    "published_at": "2026-09-23T14:16:36.889582+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Anthropic releases Opus 5.5 with lower prices and Fable-level performance",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-09-22T16:30:07+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-23T14:16:36.889582+00:00"
+  },
+  {
+    "url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
+    "published_at": "2026-09-23T14:16:19.113364+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Grab and OpenAI bring practical AI skills to Southeast Asia",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-09-23T00:00:00+00:00",
+      "language": "en"
+    }
   }
 ]
