@@ -1720,5 +1720,27 @@
       "language": "en"
     },
     "updated_at": "2026-09-24T08:32:20.875918+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/deepmind-was-built-to-chase-agi-but-its-new-chief-just-wants-gemini-4-out-the-door/",
+    "published_at": "2026-09-24T14:16:14.089368+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Deepmind was built to chase AGI, but its new chief just wants Gemini 4 out the door",
+      "source_name": "The Decoder",
+      "published_at": "2026-09-24T13:35:44+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.theverge.com/tech/999802/google-deepmind-gemini-4-timeline-koray-kavukcuoglu",
+    "published_at": "2026-09-24T14:16:14.091588+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Gemini 4 is almost ready, says new Google DeepMind chief",
+      "source_name": "The Verge AI",
+      "published_at": "2026-09-24T09:04:18+00:00",
+      "language": "en"
+    }
   }
 ]
