@@ -1690,13 +1690,14 @@
   {
     "url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
     "published_at": "2026-09-23T14:16:19.113364+00:00",
-    "status": "offered",
+    "status": "rejected",
     "metadata": {
       "title": "Grab and OpenAI bring practical AI skills to Southeast Asia",
       "source_name": "OpenAI Blog",
       "published_at": "2026-09-23T00:00:00+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-09-24T08:32:20.878099+00:00"
   },
   {
     "url": "promo://remote_belarus_weekly/2026-09-23",
@@ -1707,5 +1708,17 @@
       "day": "2026-09-23",
       "published_at_local": "2026-09-23T19:25:59.289657+03:00"
     }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/999470/anthropic-biolab-claude-crispr",
+    "published_at": "2026-09-24T08:31:28.103841+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Anthropic’s biolab made a discovery it’s comparing to Crispr",
+      "source_name": "The Verge AI",
+      "published_at": "2026-09-23T18:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-24T08:32:20.875918+00:00"
   }
 ]
