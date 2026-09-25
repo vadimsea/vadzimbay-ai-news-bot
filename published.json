@@ -1754,5 +1754,17 @@
       "published_at": "2026-09-24T16:04:31+00:00",
       "language": "en"
     }
+  },
+  {
+    "url": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot",
+    "published_at": "2026-09-25T14:16:11.765580+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Microsoft thinks its new Copilot ‘super app’ will be as influential as Office",
+      "source_name": "The Verge AI",
+      "published_at": "2026-09-25T12:00:00+00:00",
+      "language": "en"
+    },
+    "updated_at": "2026-09-25T14:17:05.115638+00:00"
   }
 ]
