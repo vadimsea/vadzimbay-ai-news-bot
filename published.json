@@ -1730,7 +1730,8 @@
       "source_name": "The Decoder",
       "published_at": "2026-09-24T13:35:44+00:00",
       "language": "en"
-    }
+    },
+    "updated_at": "2026-09-25T07:16:15.243539+00:00"
   },
   {
     "url": "https://www.theverge.com/tech/999802/google-deepmind-gemini-4-timeline-koray-kavukcuoglu",
@@ -1740,6 +1741,17 @@
       "title": "Gemini 4 is almost ready, says new Google DeepMind chief",
       "source_name": "The Verge AI",
       "published_at": "2026-09-24T09:04:18+00:00",
+      "language": "en"
+    }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1000116/google-gemini-business-phone-calls",
+    "published_at": "2026-09-25T07:16:15.241460+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Gemini can now call businesses for you so you don’t have to wait on hold",
+      "source_name": "The Verge AI",
+      "published_at": "2026-09-24T16:04:31+00:00",
       "language": "en"
     }
   }
