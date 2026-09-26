@@ -93,29 +93,12 @@ def run_once() -> bool:
         _print_dry_run_batch(prepared_items, stats.get("selected_reasons", []))
         return True
 
-    if settings.moderation_enabled:
-        for item in prepared_items:
-            storage.mark_as_offered(item.news["url"], _selected_metadata(item.news))
-        moderation_results = request_moderation_batch(
-            bot_token=settings.telegram_bot_token,
-            moderation_chat_id=settings.moderation_chat_id,
-            items=prepared_items,
-            timeout_minutes=settings.moderation_timeout_minutes,
-            request_timeout=settings.request_timeout_seconds,
-        )
-    else:
-        moderation_results = [
-            type("Result", (), {"approved": True, "reason": "moderation disabled"})()
-            for _ in prepared_items
-        ]
-
-    any_published = False
-    for item, moderation in zip(prepared_items, moderation_results):
+    def handle(item: ModerationItem, moderation) -> bool:
         logger.info("Moderation result for %s: %s", item.news.get("title"), moderation.reason)
         if not moderation.approved:
             if moderation.reason == "rejected":
                 storage.mark_as_rejected(item.news["url"], _selected_metadata(item.news))
-            continue
+            return False
 
         published = publish_to_telegram(
             bot_token=settings.telegram_bot_token,
@@ -125,9 +108,38 @@ def run_once() -> bool:
             timeout=settings.request_timeout_seconds,
         )
         if published:
-            any_published = True
             storage.mark_as_published(item.news["url"], _selected_metadata(item.news))
-    return any_published
+        return published
+
+    if not settings.moderation_enabled:
+        moderation_ok = type("Result", (), {"approved": True, "reason": "moderation disabled"})()
+        return any([handle(item, moderation_ok) for item in prepared_items])
+
+    for item in prepared_items:
+        storage.mark_as_offered(item.news["url"], _selected_metadata(item.news))
+
+    handled: set[int] = set()
+    published_any = False
+
+    def on_decision(index: int, moderation) -> None:
+        # Publish as soon as a card is approved; other cards stay active until the timeout.
+        nonlocal published_any
+        handled.add(index)
+        if handle(prepared_items[index], moderation):
+            published_any = True
+
+    moderation_results = request_moderation_batch(
+        bot_token=settings.telegram_bot_token,
+        moderation_chat_id=settings.moderation_chat_id,
+        items=prepared_items,
+        timeout_minutes=settings.moderation_timeout_minutes,
+        request_timeout=settings.request_timeout_seconds,
+        on_decision=on_decision,
+    )
+    for index, (item, moderation) in enumerate(zip(prepared_items, moderation_results)):
+        if index not in handled:
+            logger.info("Moderation result for %s: %s", item.news.get("title"), moderation.reason)
+    return published_any
 
 
 def _offers_for_this_run(settings: Settings, storage: PublishedStorage) -> int:

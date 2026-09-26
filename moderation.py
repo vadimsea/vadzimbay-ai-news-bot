@@ -4,7 +4,7 @@ from dataclasses import dataclass
 import hashlib
 import logging
 import time
-from typing import Any
+from typing import Any, Callable
 
 import requests
 
@@ -76,7 +76,14 @@ def request_moderation_batch(
     items: list[ModerationItem],
     timeout_minutes: int,
     request_timeout: int = 15,
+    on_decision: Callable[[int, ModerationResult], None] | None = None,
 ) -> list[ModerationResult]:
+    """Send previews and wait for button presses.
+
+    Every card stays active until its own decision or the timeout, so several can be approved.
+    `on_decision(item_index, result)` is called as soon as a decision arrives, so an approved
+    post is published right away instead of after the whole batch has been decided.
+    """
     if not moderation_chat_id:
         return [ModerationResult(False, "MODERATION_CHAT_ID is empty") for _ in items]
 
@@ -110,11 +117,16 @@ def request_moderation_batch(
         return results
 
     logger.info("Moderation batch sent: %s item(s). Waiting up to %s minutes", len(items), timeout_minutes)
+    def notify(token: str, decision: ModerationResult) -> None:
+        if on_decision:
+            on_decision(token_indexes[token], decision)
+
     decisions = _wait_for_batch_decisions(
         bot_token=bot_token,
         tokens=tokens,
         timeout_minutes=timeout_minutes,
         request_timeout=request_timeout,
+        on_decision=notify,
     )
     for token, decision in decisions.items():
         results[token_indexes[token]] = decision
@@ -195,6 +207,7 @@ def _wait_for_batch_decisions(
     tokens: list[str],
     timeout_minutes: int,
     request_timeout: int,
+    on_decision: Callable[[str, ModerationResult], None] | None = None,
 ) -> dict[str, ModerationResult]:
     pending = set(tokens)
     decisions: dict[str, ModerationResult] = {}
@@ -216,14 +229,16 @@ def _wait_for_batch_decisions(
                     _mark_moderation_message(bot_token, message, "✅ Выбрано к публикации")
                     decisions[token] = ModerationResult(True, "approved")
                     pending.remove(token)
-                    for skipped_token in pending:
-                        decisions[skipped_token] = ModerationResult(False, "skipped_after_approval")
-                    return decisions
+                    if on_decision:
+                        on_decision(token, decisions[token])
+                    break
                 if data == f"reject:{token}":
                     _answer_callback(bot_token, callback_id, "Отклонено")
                     _mark_moderation_message(bot_token, message, "❌ Отклонено")
                     decisions[token] = ModerationResult(False, "rejected")
                     pending.remove(token)
+                    if on_decision:
+                        on_decision(token, decisions[token])
                     break
 
         time.sleep(5)
