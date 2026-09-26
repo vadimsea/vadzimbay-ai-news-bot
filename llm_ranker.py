@@ -65,12 +65,12 @@ SCORING_SYSTEM_PROMPT = """Ты строгий редактор Telegram-кан�
 
 Понижай оценку: funding/raises/acquisition/enterprise/B2B/CRM без потребительского или творческого угла; гайды, туториалы, listicles, общие рассуждения и эссе; SDK, API, changelog, минорные обновления; бенчмарки и сравнения «чуть лучше/хуже»; корпоративная кибербезопасность; железо и гаджеты без связи с ИИ; скучные пресс-релизы.
 
-Если несколько кандидатов про одно и то же событие (в том числе на разных языках), высокую оценку получает только самый сильный источник, остальным не больше 4.
+Если несколько кандидатов про одно и то же событие (в том числе на разных языках), только самый сильный источник оценивается как обычно, а у остальных в поле duplicate_of указан index сильного кандидата.
 
 Политика, война, армия, полиция, санкции, выборы, регулирование, геополитика: оценка 1.
 
 Ответь только JSON, по одной записи на каждого кандидата, reason не длиннее 12 слов:
-{"scores": [{"index": 0, "score": 7, "reason": "..."}]}
+{"scores": [{"index": 0, "score": 7, "reason": "...", "duplicate_of": null}]}
 """
 
 
@@ -86,7 +86,7 @@ def score_news_with_llm(
     if not candidates:
         return {}
 
-    payload = _build_payload(candidates)
+    payload = _build_payload(candidates, summary_chars=400)
     content = ""
     if llm_provider == "groq" and groq_api_key:
         content = _complete_with_groq(SCORING_SYSTEM_PROMPT, payload, groq_api_key, groq_model)
@@ -108,7 +108,7 @@ def _complete_with_groq(system_prompt: str, payload: str, api_key: str, model: s
                 {"role": "user", "content": f"Кандидаты:\n{payload}"},
             ],
             temperature=0.1,
-            max_tokens=3000,
+            max_tokens=7000,
             response_format={"type": "json_object"},
         )
         return response.choices[0].message.content or ""
@@ -127,7 +127,7 @@ def _complete_with_openai(system_prompt: str, payload: str, api_key: str, model:
                 {"role": "user", "content": f"Кандидаты:\n{payload}"},
             ],
             temperature=0.1,
-            max_output_tokens=3000,
+            max_output_tokens=7000,
         )
         return response.output_text or ""
     except Exception:
@@ -150,8 +150,18 @@ def _parse_scores(content: str, count: int) -> dict[int, tuple[float, str]] | No
             score = float(row["score"])
         except (KeyError, TypeError, ValueError):
             continue
-        if 0 <= index < count:
-            scores[index] = (max(1.0, min(10.0, score)), str(row.get("reason", "")))
+        if not 0 <= index < count:
+            continue
+        score = max(1.0, min(10.0, score))
+        reason = str(row.get("reason", ""))
+        try:
+            duplicate_of = int(row.get("duplicate_of"))
+        except (TypeError, ValueError):
+            duplicate_of = None
+        if duplicate_of is not None and duplicate_of != index and 0 <= duplicate_of < count:
+            score = min(score, 3.0)
+            reason = f"дубль #{duplicate_of}: {reason}"
+        scores[index] = (score, reason)
     return scores or None
 
 
@@ -179,14 +189,14 @@ def select_best_news_with_llm(
     return None, ""
 
 
-def _build_payload(candidates: list[dict[str, Any]]) -> str:
+def _build_payload(candidates: list[dict[str, Any]], summary_chars: int = 700) -> str:
     compact_items: list[dict[str, Any]] = []
     for index, news in enumerate(candidates):
         compact_items.append(
             {
                 "index": index,
                 "title": news.get("title", "")[:300],
-                "summary": news.get("summary", "")[:700],
+                "summary": news.get("summary", "")[:summary_chars],
                 "source": news.get("source_name", ""),
                 "language": news.get("language", ""),
                 "category": news.get("category", ""),

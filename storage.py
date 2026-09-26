@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone, tzinfo
 import json
 from pathlib import Path
 from typing import Any
@@ -28,6 +28,29 @@ class PublishedStorage:
             if status in {"published", "rejected"}:
                 return True
         return False
+
+    def recently_offered_urls(self, hours: int) -> set[str]:
+        """URLs already shown to the moderator within `hours`, so runs do not repeat each other."""
+        cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
+        urls: set[str] = set()
+        for item in self.load_published():
+            if item.get("status") != "offered":
+                continue
+            moment = _entry_time(item)
+            if moment and moment >= cutoff:
+                urls.add(_normalize_url(item.get("url", "")))
+        return urls
+
+    def count_news_on(self, day: date, tz: tzinfo) -> int:
+        """News (not promo) offered, published or rejected on the given local day."""
+        count = 0
+        for item in self.load_published():
+            if item.get("status", "published") not in {"offered", "published", "rejected"}:
+                continue
+            moment = _entry_time(item)
+            if moment and moment.astimezone(tz).date() == day:
+                count += 1
+        return count
 
     def mark_as_published(self, url: str, metadata: dict[str, Any] | None = None) -> None:
         self._mark(url, metadata, status="published")
@@ -85,6 +108,17 @@ class PublishedStorage:
             }
         )
         self.path.write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def _entry_time(item: dict[str, Any]) -> datetime | None:
+    moments: list[datetime] = []
+    for key in ("published_at", "updated_at"):
+        try:
+            moment = datetime.fromisoformat(str(item.get(key) or ""))
+        except ValueError:
+            continue
+        moments.append(moment if moment.tzinfo else moment.replace(tzinfo=timezone.utc))
+    return max(moments) if moments else None
 
 
 def _normalize_url(url: str) -> str:

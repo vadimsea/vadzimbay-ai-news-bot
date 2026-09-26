@@ -17,6 +17,7 @@ RSS_SOURCES: list[NewsSource] = [
     NewsSource("TechCrunch AI", "https://techcrunch.com/category/artificial-intelligence/feed/", "en", "ai", 0.88),
     NewsSource("The Verge AI", "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "en", "ai", 0.82),
     NewsSource("MIT Technology Review", "https://www.technologyreview.com/feed/", "en", "technology", 0.92),
+    NewsSource("Ars Technica AI", "https://arstechnica.com/ai/feed/", "en", "ai", 0.86),
     NewsSource("Ars Technica", "https://feeds.arstechnica.com/arstechnica/index", "en", "technology", 0.86, enabled=False),
     NewsSource("VentureBeat AI", "https://venturebeat.com/category/ai/feed/", "en", "ai", 0.82),
     NewsSource("Wired", "https://www.wired.com/feed/rss", "en", "technology", 0.9),

@@ -35,6 +35,9 @@ class Settings:
     moderation_timeout_minutes: int
     moderation_choices: int
     min_llm_score: float
+    fallback_llm_score: float
+    daily_offer_target: int
+    max_offers_per_run: int
     published_file: Path
     blocked_sources_file: Path
     request_timeout_seconds: int
@@ -63,6 +66,9 @@ def load_settings() -> Settings:
         moderation_timeout_minutes=int(os.getenv("MODERATION_TIMEOUT_MINUTES", "120")),
         moderation_choices=max(1, int(os.getenv("MODERATION_CHOICES", "1"))),
         min_llm_score=float(os.getenv("MIN_LLM_SCORE", "7")),
+        fallback_llm_score=float(os.getenv("FALLBACK_LLM_SCORE", "6")),
+        daily_offer_target=int(os.getenv("DAILY_OFFER_TARGET", "12")),
+        max_offers_per_run=max(1, int(os.getenv("MAX_OFFERS_PER_RUN", "10"))),
         published_file=BASE_DIR / os.getenv("PUBLISHED_FILE", "published.json"),
         blocked_sources_file=BASE_DIR / os.getenv("BLOCKED_SOURCES_FILE", "blocked_sources.json"),
         request_timeout_seconds=int(os.getenv("REQUEST_TIMEOUT_SECONDS", "15")),

@@ -6,6 +6,7 @@ from pprint import pformat
 import sys
 from typing import Any
 from datetime import datetime
+import math
 from zoneinfo import ZoneInfo
 
 from blocked_sources import filter_allowed_sources, load_blocked_sources
@@ -19,7 +20,7 @@ from popularity import fetch_hn_popularity
 from post_style import apply_title_emoji
 from promo import due_promo_posts, next_promo_hint
 from ranker import choose_top_news
-from scheduler import run_daily
+from scheduler import _parse_window as parse_window, run_daily
 from sources import get_sources
 from storage import PublishedStorage
 from telegram_formatting import format_post_html
@@ -49,7 +50,8 @@ def run_once() -> bool:
             ", ".join(source.name for source in blocked_source_entries),
         )
 
-    logger.info("Processing %s sources", len(sources))
+    offers = _offers_for_this_run(settings, storage)
+    logger.info("Processing %s sources, offering %s news this run", len(sources), offers)
     news_items = fetch_all_news(sources)
     logger.info("Found %s news items", len(news_items))
 
@@ -69,10 +71,12 @@ def run_once() -> bool:
         blocked_sources=blocked_sources,
         max_age_hours=settings.max_news_age_hours,
         source_cooldown_recent_posts=settings.source_cooldown_recent_posts,
-        selection_count=max(settings.moderation_choices * 3, settings.moderation_choices),
+        selection_count=offers * 3,
         llm_scorer=llm_scorer,
         min_llm_score=settings.min_llm_score,
         popularity=fetch_hn_popularity(timeout=settings.request_timeout_seconds),
+        target_count=offers,
+        fallback_llm_score=settings.fallback_llm_score,
     )
     _log_stats(stats, len(sources), len(blocked_source_entries))
 
@@ -80,7 +84,7 @@ def run_once() -> bool:
         logger.info("No suitable news found. Nothing will be published.")
         return False
 
-    prepared_items = _prepare_posts(selected_items, settings, limit=settings.moderation_choices)
+    prepared_items = _prepare_posts(selected_items, settings, limit=offers)
     if not prepared_items:
         logger.info("No selected news could be prepared with valid image and safe text.")
         return False
@@ -124,6 +128,25 @@ def run_once() -> bool:
             any_published = True
             storage.mark_as_published(item.news["url"], _selected_metadata(item.news))
     return any_published
+
+
+def _offers_for_this_run(settings: Settings, storage: PublishedStorage) -> int:
+    """How many news to offer now so that the whole day reaches DAILY_OFFER_TARGET.
+
+    Runs that came up short (no good news, failed images) push their debt to later runs.
+    """
+    if settings.daily_offer_target <= 0:
+        return settings.moderation_choices
+
+    timezone = ZoneInfo(settings.timezone)
+    now = datetime.now(timezone)
+    windows = [parse_window(settings.morning_window), parse_window(settings.evening_window)]
+    upcoming = sum(1 for start, _ in windows if start > (now.hour, now.minute))
+    runs_left = min(1 + upcoming, len(windows))
+
+    remaining = settings.daily_offer_target - storage.count_news_on(now.date(), timezone)
+    per_run = math.ceil(max(remaining, 0) / runs_left)
+    return max(1, min(per_run, settings.max_offers_per_run))
 
 
 def _prepare_posts(news_items: list[dict[str, Any]], settings: Settings, limit: int) -> list[ModerationItem]:
