@@ -11,7 +11,7 @@ from zoneinfo import ZoneInfo
 
 from blocked_sources import filter_allowed_sources, load_blocked_sources
 from config import Settings, load_settings
-from fetcher import extract_article_image_url, fetch_all_news
+from fetcher import extract_article_description, extract_article_image_url, fetch_all_news
 from filters import contains_political_text
 from hashtags import append_hashtags
 from llm_ranker import score_news_with_llm
@@ -77,6 +77,7 @@ def run_once() -> bool:
         popularity=fetch_hn_popularity(timeout=settings.request_timeout_seconds),
         target_count=offers,
         fallback_llm_score=settings.fallback_llm_score,
+        topic_min_llm_score=settings.topic_min_llm_score,
     )
     _log_stats(stats, len(sources), len(blocked_source_entries))
 
@@ -188,6 +189,11 @@ def _prepare_posts(news_items: list[dict[str, Any]], settings: Settings, limit: 
         ):
             logger.info("Selected news has no valid image, skipping: %s", selected.get("title"))
             continue
+
+        if len((selected.get("summary") or "").strip()) < 100:
+            description = extract_article_description(selected["url"])
+            if description:
+                selected["summary"] = description
 
         post_text = adapt_news_to_russian(
             selected,

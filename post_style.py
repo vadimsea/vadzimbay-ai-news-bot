@@ -4,6 +4,8 @@ import random
 import re
 from typing import Any
 
+from filters import contains_term
+
 
 DEFAULT_EMOJIS = ("🚀", "⚡", "✨")
 
@@ -12,6 +14,8 @@ EMOJI_RULES: list[tuple[str, tuple[str, ...]]] = [
     ("🧠", ("ai", "artificial intelligence", "neural", "llm", "ии", "нейросеть", "модель")),
     ("📱", ("gadget", "device", "smartphone", "wearable", "гаджет", "устройство", "смартфон")),
     ("🎨", ("web design", "ui", "ux", "figma", "design", "веб-дизайн", "дизайн", "интерфейс")),
+    ("🐍", ("python", "django", "fastapi", "питон")),
+    ("⚙️", ("backend", "back-end", "бэкенд", "postgres", "docker", "kubernetes", "golang", "rust", "node.js")),
     ("🧩", ("frontend", "front-end", "web development", "react", "next.js", "css", "фронтенд", "веб-разработка")),
     ("📈", ("marketing", "martech", "advertising", "seo", "crm", "маркетинг", "реклама")),
     ("⌨️", ("vibe coding", "vibecoding", "вайбкодинг", "вайб-кодинг", "ai coding", "coding agent", "cursor", "windsurf", "claude code")),
@@ -23,7 +27,7 @@ EMOJI_RULES: list[tuple[str, tuple[str, ...]]] = [
 
 def pick_title_emoji(news: dict[str, Any]) -> str:
     text = f"{news.get('title', '')} {news.get('summary', '')} {news.get('category', '')}".lower()
-    matches = [emoji for emoji, keywords in EMOJI_RULES if any(keyword in text for keyword in keywords)]
+    matches = [emoji for emoji, keywords in EMOJI_RULES if any(contains_term(text, keyword) for keyword in keywords)]
     return random.choice(matches or list(DEFAULT_EMOJIS))
 
 

@@ -85,6 +85,7 @@ jobs:
           MAX_OFFERS_PER_RUN=10
           MIN_LLM_SCORE=7
           FALLBACK_LLM_SCORE=6
+          TOPIC_MIN_LLM_SCORE=5
           PUBLISHED_FILE=published.json
           BLOCKED_SOURCES_FILE=blocked_sources.json
           REQUEST_TIMEOUT_SECONDS=15

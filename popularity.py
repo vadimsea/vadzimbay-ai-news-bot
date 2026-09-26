@@ -19,8 +19,8 @@ def url_key(url: str) -> str:
     return f"{host}{parsed.path.rstrip('/')}".lower()
 
 
-def fetch_hn_popularity(hours: int = 96, min_points: int = 20, timeout: int = 15) -> dict[str, int]:
-    """Hacker News points for recent stories, keyed by url_key. Empty dict on any failure."""
+def fetch_hn_stories(hours: int = 96, min_points: int = 20, timeout: int = 15) -> list[dict[str, Any]]:
+    """Recent Hacker News stories with at least `min_points`. Empty list on any failure."""
     since = int(time.time()) - hours * 3600
     params = {
         "tags": "story",
@@ -30,11 +30,15 @@ def fetch_hn_popularity(hours: int = 96, min_points: int = 20, timeout: int = 15
     try:
         response = requests.get(HN_SEARCH_URL, params=params, timeout=timeout)
         response.raise_for_status()
-        hits = response.json().get("hits", [])
+        return response.json().get("hits", [])
     except (requests.RequestException, ValueError):
-        logger.warning("Could not load Hacker News popularity, continuing without it", exc_info=True)
-        return {}
+        logger.warning("Could not load Hacker News stories, continuing without them", exc_info=True)
+        return []
 
+
+def fetch_hn_popularity(hours: int = 96, min_points: int = 20, timeout: int = 15) -> dict[str, int]:
+    """Hacker News points for recent stories, keyed by url_key. Empty dict on any failure."""
+    hits = fetch_hn_stories(hours, min_points, timeout)
     table: dict[str, int] = {}
     for hit in hits:
         url = hit.get("url")
