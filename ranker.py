@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from dataclasses import dataclass
 from datetime import datetime, timezone
 import logging
 import re
@@ -7,6 +8,8 @@ from typing import Any
 
 from blocked_sources import BlockedSources, is_news_from_blocked_source
 from filters import (
+    contains_term,
+    has_any_term,
     has_news_event_signal,
     has_required_fields,
     is_low_news_value_material,
@@ -14,6 +17,7 @@ from filters import (
     is_recent_news,
     is_relevant_tech_news,
 )
+from popularity import popularity_points
 from storage import PublishedStorage
 
 logger = logging.getLogger(__name__)
@@ -146,6 +150,7 @@ EDITORIAL_REJECT_TERMS = {
     "error rates", "word error rate", "not as accurate", "minor improvement",
     "slightly better", "available through api", "available via api",
     "kann nicht mithalten", "schlechter als", "fehlerquote", "nur api",
+    "podcast", "episode", "webinar", "livestream",
     "лучшие", "топ-", "топ ", "что я понял", "личный опыт",
     "почему пора", "всё что нужно знать", "подборка",
 }
@@ -257,6 +262,11 @@ EDITORIAL_SENSITIVE_SOURCES = {
 
 MIN_EDITORIAL_SCORE = 66.0
 
+AD_TITLE_MARKERS = (
+    "anzeige", "sponsored", "advertorial", "werbung", "partner content", "paid post",
+    "реклама", "на правах рекламы", "[ad]", "(ad)", "(g+)",
+)
+
 TOP_TIER_SOURCES = {
     "techcrunch ai", "the verge ai", "mit technology review", "wired",
     "the decoder", "venturebeat ai", "google ai blog", "google deepmind blog",
@@ -301,11 +311,11 @@ def score_news(news: dict[str, Any], topic_count: int = 1) -> tuple[float, list[
     score += freshness * 20
     reasons.append(f"freshness={freshness:.2f}")
 
-    if any(term in text for term in MAJOR_TECH_TERMS):
+    if has_any_term(text, MAJOR_TECH_TERMS):
         score += 12
         reasons.append("major_brand")
 
-    if any(term in text for term in IMPORTANT_EVENT_TERMS):
+    if has_any_term(text, IMPORTANT_EVENT_TERMS):
         score += 10
         reasons.append("important_event")
 
@@ -325,7 +335,7 @@ def score_news(news: dict[str, Any], topic_count: int = 1) -> tuple[float, list[
         score += 1
         reasons.append("russian_language=+1")
 
-    broad_matches = sum(1 for term in BROAD_INTEREST_TERMS if term in text)
+    broad_matches = sum(1 for term in BROAD_INTEREST_TERMS if contains_term(text, term))
     if broad_matches:
         boost = min(14, broad_matches * 3)
         score += boost
@@ -337,9 +347,9 @@ def score_news(news: dict[str, Any], topic_count: int = 1) -> tuple[float, list[
         reasons.append("authoritative_us_eu=+12")
 
     category = str(news.get("category") or "").lower()
-    has_ai_signal = category in {"ai", "robotics", "marketing_ai"} or any(term in text for term in AI_CORE_TERMS)
-    has_web_marketing_signal = category in {"web_design", "frontend", "marketing", "marketing_ai"} or any(
-        term in text for term in WEB_MARKETING_TERMS
+    has_ai_signal = category in {"ai", "robotics", "marketing_ai"} or has_any_term(text, AI_CORE_TERMS)
+    has_web_marketing_signal = category in {"web_design", "frontend", "marketing", "marketing_ai"} or has_any_term(
+        text, WEB_MARKETING_TERMS
     )
     if has_ai_signal:
         score += 8
@@ -348,30 +358,30 @@ def score_news(news: dict[str, Any], topic_count: int = 1) -> tuple[float, list[
         score += 7
         reasons.append("web_marketing_frontend=+7")
 
-    niche_matches = sum(1 for term in NICHE_DEVELOPER_TERMS if term in text)
+    niche_matches = sum(1 for term in NICHE_DEVELOPER_TERMS if contains_term(text, term))
     if niche_matches:
         penalty = min(18, niche_matches * 4)
         score -= penalty
         reasons.append(f"niche_developer=-{penalty}")
 
     title = (news.get("title") or "").lower()
-    if any(pattern in title for pattern in BORING_TITLE_PATTERNS):
+    if has_any_term(title, BORING_TITLE_PATTERNS):
         score -= 18
         reasons.append("boring_title=-18")
 
-    low_value_matches = sum(1 for term in LOW_BROAD_VALUE_TERMS if term in text)
+    low_value_matches = sum(1 for term in LOW_BROAD_VALUE_TERMS if contains_term(text, term))
     if low_value_matches:
         penalty = min(18, low_value_matches * 6)
         score -= penalty
         reasons.append(f"low_broad_value=-{penalty}")
 
-    youth_matches = sum(1 for term in YOUTH_CREATOR_INTEREST_TERMS if term in text)
+    youth_matches = sum(1 for term in YOUTH_CREATOR_INTEREST_TERMS if contains_term(text, term))
     if youth_matches:
         boost = min(20, youth_matches * 5)
         score += boost
         reasons.append(f"youth_creator_interest=+{boost}")
 
-    enterprise_matches = sum(1 for term in BORING_ENTERPRISE_TERMS if term in text)
+    enterprise_matches = sum(1 for term in BORING_ENTERPRISE_TERMS if contains_term(text, term))
     if enterprise_matches and not _has_any(text, YOUTH_CREATOR_INTEREST_TERMS):
         penalty = min(24, enterprise_matches * 6)
         score -= penalty
@@ -381,6 +391,12 @@ def score_news(news: dict[str, Any], topic_count: int = 1) -> tuple[float, list[
         score -= 16
         reasons.append("funding_story=-16")
 
+    hn_points = int(news.get("hn_points") or 0)
+    if hn_points:
+        boost = min(HN_MAX_BONUS, hn_points // HN_POINTS_PER_BONUS)
+        score += boost
+        reasons.append(f"hn_points=+{boost}:{hn_points}")
+
     if topic_count > 1:
         boost = min(10, (topic_count - 1) * 4)
         score += boost
@@ -389,24 +405,18 @@ def score_news(news: dict[str, Any], topic_count: int = 1) -> tuple[float, list[
     return score, reasons
 
 
-def choose_best_news(
-    news_items: list[dict[str, Any]],
-    storage: PublishedStorage,
-    blocked_sources: BlockedSources | None = None,
-    max_age_hours: int = 48,
-    source_cooldown_recent_posts: int = 2,
-    llm_selector=None,
-) -> tuple[dict[str, Any] | None, dict[str, Any]]:
-    selected_items, stats = choose_top_news(
-        news_items=news_items,
-        storage=storage,
-        blocked_sources=blocked_sources,
-        max_age_hours=max_age_hours,
-        source_cooldown_recent_posts=source_cooldown_recent_posts,
-        selection_count=1,
-        llm_selector=llm_selector,
-    )
-    return (selected_items[0] if selected_items else None), stats
+LLM_POOL_SIZE = 30
+STRICT_BONUS = 8.0
+HN_POINTS_PER_BONUS = 10
+HN_MAX_BONUS = 20
+
+
+@dataclass
+class _Candidate:
+    news: dict[str, Any]
+    score: float
+    reasons: list[str]
+    strict: bool
 
 
 def choose_top_news(
@@ -416,8 +426,18 @@ def choose_top_news(
     max_age_hours: int = 48,
     source_cooldown_recent_posts: int = 2,
     selection_count: int = 3,
-    llm_selector=None,
+    llm_scorer=None,
+    min_llm_score: float = 7.0,
+    popularity: dict[str, int] | None = None,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Pick news for the channel.
+
+    Hard filters drop what must never be posted (duplicates, politics, off-topic, how-tos).
+    The rest is pre-ranked by heuristics plus Hacker News popularity, then an LLM rates the
+    top of that pool 1-10 for "would the audience read and share this". Only news at or
+    above `min_llm_score` is offered. Without an LLM answer we fall back to the old strict
+    keyword gates.
+    """
     stats: dict[str, Any] = {
         "total": len(news_items),
         "missing_required_fields": 0,
@@ -430,10 +450,14 @@ def choose_top_news(
         "low_news_value": 0,
         "political": 0,
         "candidates": 0,
+        "llm_scored": 0,
+        "llm_below_threshold": 0,
+        "llm_used": False,
         "selected_reason": "",
         "selected_reasons": [],
     }
-    candidates: list[tuple[float, dict[str, Any], list[str]]] = []
+    popularity = popularity or {}
+    candidates: list[_Candidate] = []
     topic_counts = _build_topic_counts(news_items)
     recent_sources = _recent_published_sources(storage, source_cooldown_recent_posts)
     recent_rejected_sources = _recent_sources_by_status(
@@ -467,126 +491,127 @@ def choose_top_news(
         if not _is_priority_channel_news(news):
             stats["off_topic_priority"] += 1
             continue
-        if _is_corporate_security_news(news):
-            stats["low_news_value"] += 1
-            continue
-        if _is_incremental_benchmark_news(news):
-            stats["low_news_value"] += 1
-            continue
-        if _is_enterprise_sales_crm_news(news):
-            stats["low_news_value"] += 1
-            continue
-        if _is_boring_enterprise_or_funding_news(news):
-            stats["low_news_value"] += 1
-            continue
-        if not _has_editorial_value(news):
-            stats["low_news_value"] += 1
-            continue
-        if not _is_concrete_product_or_release(news):
-            stats["low_news_value"] += 1
-            continue
-        if _is_too_specialized(news):
-            stats["low_news_value"] += 1
-            continue
-        if not _has_broad_audience_value(news):
-            stats["low_news_value"] += 1
-            continue
-        if not _is_top_tier_news(news):
-            stats["low_news_value"] += 1
-            continue
-        if (is_low_news_value_material(news) or not has_news_event_signal(news)) and not _has_strong_broad_ai_signal(news):
+        if _fails_hard_editorial_filters(news):
             stats["low_news_value"] += 1
             continue
 
+        news = {**news, "hn_points": popularity_points(news, popularity)}
+        strict = _passes_strict_gates(news)
         topic_key = _topic_key(news)
         score, reasons = score_news(news, topic_count=topic_counts.get(topic_key, 1))
+        if strict:
+            score += STRICT_BONUS
+            reasons.append(f"strict_gates=+{STRICT_BONUS:.0f}")
         if _source_name(news) in recent_sources:
             score -= 14
             reasons.append("recent_published_source=-14")
         if _source_name(news) in recent_rejected_sources:
             score -= 5
             reasons.append("recent_rejected_source=-5")
-        if score < MIN_EDITORIAL_SCORE:
-            stats["low_news_value"] += 1
-            continue
-        candidates.append((score, news, reasons))
+        candidates.append(_Candidate(news, score, reasons, strict))
 
-    stats["candidates"] = len(candidates)
-    if not candidates:
+    candidates.sort(key=lambda item: item.score, reverse=True)
+    ranked = _rank_with_llm(candidates, llm_scorer, min_llm_score, stats)
+    if ranked is None:
+        ranked = _rank_with_strict_gates(candidates, stats)
+
+    stats["candidates"] = len(ranked)
+    if not ranked:
         return [], stats
 
-    candidates.sort(key=lambda item: item[0], reverse=True)
     selected_items: list[dict[str, Any]] = []
     selected_reasons: list[str] = []
-    source_counts: dict[str, int] = {}
-
-    if llm_selector:
-        foreign_candidates = [
-            item[1]
-            for item in candidates
-            if str(item[1].get("language") or "").lower() in {"en", "de", "zh", "he"}
-        ][:20]
-        llm_pool = foreign_candidates if foreign_candidates else [item[1] for item in candidates[:20]]
-        llm_news, llm_reason = llm_selector(llm_pool)
-        if llm_news:
-            selected_items.append(llm_news)
-            source_counts[_source_name(llm_news)] = 1
-            selected_reasons.append(f"llm_selected; {llm_reason}")
-            logger.info("LLM selected news: %s (%s)", llm_news.get("title"), selected_reasons[-1])
-
-    foreign_available = sum(
-        1
-        for _, news, _ in candidates
-        if _is_foreign(news)
-        and not any(_normalize_url(item.get("url", "")) == _normalize_url(news.get("url", "")) for item in selected_items)
-    )
-    for score, news, reasons in candidates:
+    used_sources: set[str] = set()
+    used_topics: set[str] = set()
+    for final_score, candidate, reason in sorted(ranked, key=lambda item: item[0], reverse=True):
         if len(selected_items) >= selection_count:
             break
-        if any(_normalize_url(item.get("url", "")) == _normalize_url(news.get("url", "")) for item in selected_items):
+        source_name = _source_name(candidate.news)
+        topic_key = _topic_key(candidate.news)
+        if source_name in used_sources or (topic_key and topic_key in used_topics):
             continue
-        if not _is_foreign(news) and foreign_available >= selection_count - len(selected_items):
-            continue
-        source_name = _source_name(news)
-        if source_counts.get(source_name, 0) >= 1:
-            continue
-        selected_items.append(news)
-        source_counts[source_name] = source_counts.get(source_name, 0) + 1
-        selected_reasons.append(f"score={score:.1f}; " + ", ".join(reasons))
-
-    if len(selected_items) < selection_count:
-        for score, news, reasons in candidates:
-            if len(selected_items) >= selection_count:
-                break
-            if any(_normalize_url(item.get("url", "")) == _normalize_url(news.get("url", "")) for item in selected_items):
-                continue
-            source_name = _source_name(news)
-            if source_counts.get(source_name, 0) >= 1:
-                continue
-            if not _is_foreign(news):
-                continue
-            selected_items.append(news)
-            source_counts[source_name] = source_counts.get(source_name, 0) + 1
-            selected_reasons.append(f"score={score:.1f}; " + ", ".join(reasons))
-
-    if len(selected_items) < selection_count:
-        for score, news, reasons in candidates:
-            if len(selected_items) >= selection_count:
-                break
-            if any(_normalize_url(item.get("url", "")) == _normalize_url(news.get("url", "")) for item in selected_items):
-                continue
-            source_name = _source_name(news)
-            if source_counts.get(source_name, 0) >= 1:
-                continue
-            selected_items.append(news)
-            source_counts[source_name] = source_counts.get(source_name, 0) + 1
-            selected_reasons.append(f"score={score:.1f}; " + ", ".join(reasons))
+        used_sources.add(source_name)
+        used_topics.add(topic_key)
+        selected_items.append(candidate.news)
+        selected_reasons.append(f"final={final_score:.1f}; {reason}; " + ", ".join(candidate.reasons))
 
     stats["selected_reasons"] = selected_reasons
     stats["selected_reason"] = selected_reasons[0] if selected_reasons else ""
     for news, reason in zip(selected_items, selected_reasons):
         logger.info("Selected news option: %s (%s)", news.get("title"), reason)
     return selected_items, stats
+
+
+def _fails_hard_editorial_filters(news: dict[str, Any]) -> bool:
+    title = str(news.get("title") or "").lower()
+    return (
+        has_any_term(title, EDITORIAL_REJECT_TERMS)
+        or any(marker in title for marker in AD_TITLE_MARKERS)
+        or " via @" in title
+        or _is_corporate_security_news(news)
+        or _is_incremental_benchmark_news(news)
+        or _is_enterprise_sales_crm_news(news)
+    )
+
+
+def _passes_strict_gates(news: dict[str, Any]) -> bool:
+    """The old keyword gates. Now only a bonus and the no-LLM fallback."""
+    return (
+        not _is_boring_enterprise_or_funding_news(news)
+        and _has_editorial_value(news)
+        and _is_concrete_product_or_release(news)
+        and not _is_too_specialized(news)
+        and _has_broad_audience_value(news)
+        and _is_top_tier_news(news)
+        and not (
+            (is_low_news_value_material(news) or not has_news_event_signal(news))
+            and not _has_strong_broad_ai_signal(news)
+        )
+    )
+
+
+def _rank_with_llm(
+    candidates: list[_Candidate],
+    llm_scorer,
+    min_llm_score: float,
+    stats: dict[str, Any],
+) -> list[tuple[float, _Candidate, str]] | None:
+    if not llm_scorer or not candidates:
+        return None
+
+    pool = candidates[:LLM_POOL_SIZE]
+    scores = llm_scorer([candidate.news for candidate in pool])
+    if not scores:
+        logger.warning("LLM scoring unavailable, falling back to strict keyword gates")
+        return None
+
+    stats["llm_used"] = True
+    stats["llm_scored"] = len(scores)
+    ranked: list[tuple[float, _Candidate, str]] = []
+    for index, (llm_score, llm_reason) in scores.items():
+        candidate = pool[index]
+        candidate.news["llm_score"] = llm_score
+        if llm_score < min_llm_score:
+            stats["llm_below_threshold"] += 1
+            continue
+        # LLM opinion dominates; heuristics (freshness, HN points, trust) break ties.
+        final_score = llm_score * 10 + candidate.score * 0.15
+        reason = f"llm={llm_score:.0f} ({llm_reason}); hn={candidate.news.get('hn_points', 0)}"
+        ranked.append((final_score, candidate, reason))
+    return ranked
+
+
+def _rank_with_strict_gates(
+    candidates: list[_Candidate],
+    stats: dict[str, Any],
+) -> list[tuple[float, _Candidate, str]]:
+    ranked: list[tuple[float, _Candidate, str]] = []
+    for candidate in candidates:
+        if not candidate.strict or candidate.score < MIN_EDITORIAL_SCORE:
+            stats["low_news_value"] += 1
+            continue
+        ranked.append((candidate.score, candidate, "fallback_strict"))
+    return ranked
 
 
 def _build_topic_counts(news_items: list[dict[str, Any]]) -> dict[str, int]:
@@ -693,7 +718,7 @@ def _has_editorial_value(news: dict[str, Any]) -> bool:
     title = str(news.get("title") or "").lower()
     text = f"{news.get('title', '')} {news.get('summary', '')}".lower()
 
-    if any(term in title for term in EDITORIAL_REJECT_TERMS):
+    if has_any_term(title, EDITORIAL_REJECT_TERMS):
         return False
     if " via @" in title:
         return False
@@ -732,7 +757,7 @@ def _is_concrete_product_or_release(news: dict[str, Any]) -> bool:
     title = str(news.get("title") or "").lower()
     text = f"{news.get('title', '')} {news.get('summary', '')}".lower()
 
-    if any(term in title for term in EDITORIAL_REJECT_TERMS):
+    if has_any_term(title, EDITORIAL_REJECT_TERMS):
         return False
 
     if source == "product hunt":
@@ -780,7 +805,7 @@ def _is_too_specialized(news: dict[str, Any]) -> bool:
     if source in {"habr ai", "habr robotics", "marktechpost"}:
         return not has_broad_tool
 
-    if any(term in title for term in {"melt", "transformer", "benchmark", "mmorpg", "rust", "soc"}):
+    if has_any_term(title, {"melt", "transformer", "benchmark", "mmorpg", "rust", "soc"}):
         return True
 
     return False
@@ -796,7 +821,7 @@ def _has_broad_audience_value(news: dict[str, Any]) -> bool:
     low_fit = _has_any(text, LOW_AUDIENCE_FIT_TERMS)
 
     if category in {"web_design", "frontend", "marketing", "marketing_ai"}:
-        return has_broad_value and not any(term in title for term in EDITORIAL_REJECT_TERMS)
+        return has_broad_value and not has_any_term(title, EDITORIAL_REJECT_TERMS)
 
     if category == "robotics":
         return has_broad_value and not low_fit
@@ -825,7 +850,7 @@ def _has_strong_broad_ai_signal(news: dict[str, Any]) -> bool:
     text = f"{news.get('title', '')} {news.get('summary', '')}".lower()
     title = str(news.get("title") or "").lower()
 
-    if any(term in title for term in EDITORIAL_REJECT_TERMS):
+    if has_any_term(title, EDITORIAL_REJECT_TERMS):
         return False
 
     strong_sources = {
@@ -857,7 +882,7 @@ def _is_top_tier_news(news: dict[str, Any]) -> bool:
 
     if source not in TOP_TIER_SOURCES:
         return False
-    if any(term in title for term in EDITORIAL_REJECT_TERMS):
+    if has_any_term(title, EDITORIAL_REJECT_TERMS):
         return False
     if " via @" in title:
         return False
@@ -953,14 +978,7 @@ def _is_boring_enterprise_or_funding_news(news: dict[str, Any]) -> bool:
 
 
 def _has_any(text: str, terms: set[str]) -> bool:
-    for term in terms:
-        if term in {"ai", "ии", "ui", "ux", "seo", "css"}:
-            if re.search(r"(?<![\wа-яё])" + re.escape(term) + r"(?![\wа-яё])", text):
-                return True
-            continue
-        if term in text:
-            return True
-    return False
+    return has_any_term(text, terms)
 
 
 def _topic_key(news: dict[str, Any]) -> str:

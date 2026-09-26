@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
+from functools import lru_cache
 import re
 from typing import Any
 from urllib.parse import urlparse
@@ -94,6 +95,29 @@ POLITICAL_STOP_PHRASES = {
 }
 
 
+SHORT_TERM_MAX_LEN = 4
+
+
+@lru_cache(maxsize=4096)
+def _short_term_pattern(term: str) -> re.Pattern[str]:
+    return re.compile(r"(?<![\wа-яёäöüß])" + re.escape(term) + r"(?:s|es)?(?![\wа-яёäöüß])")
+
+
+def contains_term(text: str, term: str) -> bool:
+    """Substring match, but short terms ("ai", "soc", "rust") must be whole words.
+
+    Plain substring search made "ai" match "said" and "soc" match "social".
+    `text` is expected to be lowercase.
+    """
+    if len(term) <= SHORT_TERM_MAX_LEN and term.isalnum():
+        return _short_term_pattern(term).search(text) is not None
+    return term in text
+
+
+def has_any_term(text: str, terms: set[str]) -> bool:
+    return any(contains_term(text, term) for term in terms)
+
+
 def _combined_text(news: dict[str, Any]) -> str:
     host = urlparse(news.get("url") or "").netloc
     parts = [
@@ -128,13 +152,16 @@ def is_recent_news(news: dict[str, Any], max_age_hours: int = 48) -> bool:
 
 
 def is_relevant_tech_news(news: dict[str, Any]) -> bool:
-    text = _combined_text(news)
-    return any(keyword in text for keyword in TECH_KEYWORDS)
+    # URL and host are left out on purpose: ".ai" domains and slugs matched everything.
+    text = " ".join(
+        [news.get("title") or "", news.get("summary") or "", news.get("source_name") or ""]
+    ).lower()
+    return has_any_term(text, TECH_KEYWORDS)
 
 
 def has_news_event_signal(news: dict[str, Any]) -> bool:
     text = _combined_text(news)
-    return any(keyword in text for keyword in NEWS_EVENT_KEYWORDS)
+    return has_any_term(text, NEWS_EVENT_KEYWORDS)
 
 
 def is_low_news_value_material(news: dict[str, Any]) -> bool:
