@@ -34,6 +34,7 @@ class Settings:
     moderation_chat_id: str
     moderation_timeout_minutes: int
     moderation_choices: int
+    min_llm_score: float
     published_file: Path
     blocked_sources_file: Path
     request_timeout_seconds: int
@@ -61,6 +62,7 @@ def load_settings() -> Settings:
         moderation_chat_id=os.getenv("MODERATION_CHAT_ID", "").strip(),
         moderation_timeout_minutes=int(os.getenv("MODERATION_TIMEOUT_MINUTES", "120")),
         moderation_choices=max(1, int(os.getenv("MODERATION_CHOICES", "1"))),
+        min_llm_score=float(os.getenv("MIN_LLM_SCORE", "7")),
         published_file=BASE_DIR / os.getenv("PUBLISHED_FILE", "published.json"),
         blocked_sources_file=BASE_DIR / os.getenv("BLOCKED_SOURCES_FILE", "blocked_sources.json"),
         request_timeout_seconds=int(os.getenv("REQUEST_TIMEOUT_SECONDS", "15")),

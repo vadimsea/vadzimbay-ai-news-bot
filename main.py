@@ -13,8 +13,9 @@ from config import Settings, load_settings
 from fetcher import extract_article_image_url, fetch_all_news
 from filters import contains_political_text
 from hashtags import append_hashtags
-from llm_ranker import select_best_news_with_llm
+from llm_ranker import score_news_with_llm
 from moderation import ModerationItem, request_moderation_batch
+from popularity import fetch_hn_popularity
 from post_style import apply_title_emoji
 from promo import due_promo_posts, next_promo_hint
 from ranker import choose_top_news
@@ -52,8 +53,8 @@ def run_once() -> bool:
     news_items = fetch_all_news(sources)
     logger.info("Found %s news items", len(news_items))
 
-    def llm_selector(candidates):
-        return select_best_news_with_llm(
+    def llm_scorer(candidates):
+        return score_news_with_llm(
             candidates=candidates,
             llm_provider=settings.llm_provider,
             groq_api_key=settings.groq_api_key,
@@ -69,7 +70,9 @@ def run_once() -> bool:
         max_age_hours=settings.max_news_age_hours,
         source_cooldown_recent_posts=settings.source_cooldown_recent_posts,
         selection_count=max(settings.moderation_choices * 3, settings.moderation_choices),
-        llm_selector=llm_selector,
+        llm_scorer=llm_scorer,
+        min_llm_score=settings.min_llm_score,
+        popularity=fetch_hn_popularity(timeout=settings.request_timeout_seconds),
     )
     _log_stats(stats, len(sources), len(blocked_source_entries))
 
@@ -190,6 +193,8 @@ def _selected_metadata(selected: dict) -> dict:
         "source_name": selected.get("source_name"),
         "published_at": selected.get("published_at"),
         "language": selected.get("language"),
+        "llm_score": selected.get("llm_score"),
+        "hn_points": selected.get("hn_points"),
     }
 
 
@@ -251,6 +256,7 @@ def _log_stats(stats: dict, source_count: int, blocked_source_count: int) -> Non
     logger.info("Rejected outside channel priority topics: %s", stats.get("off_topic_priority", 0))
     logger.info("Rejected as low news value: %s", stats.get("low_news_value", 0))
     logger.info("Rejected as politics/war/geopolitics: %s", stats.get("political", 0))
+    logger.info("LLM scored: %s (below threshold: %s)", stats.get("llm_scored", 0), stats.get("llm_below_threshold", 0))
     logger.info("Candidates after filters: %s", stats.get("candidates", 0))
 
 

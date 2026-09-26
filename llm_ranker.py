@@ -50,6 +50,111 @@ RANKING_SYSTEM_PROMPT = """Ты строгий редактор Telegram-кан�
 """
 
 
+SCORING_SYSTEM_PROMPT = """Ты строгий редактор Telegram-канала "ИИ x Маркетинг x Дизайн".
+
+Аудитория: junior/middle айтишники, веб-дизайнеры, frontend-разработчики, маркетологи, продуктовые менеджеры и владельцы малого бизнеса, много молодёжи.
+Тебе дан список новостей-кандидатов. Оцени КАЖДУЮ по шкале 1-10: захочет ли читатель открыть пост, обсудить его или переслать коллеге.
+
+Шкала:
+- 9-10: громкий релиз или событие, о котором завтра будут говорить все; инструмент, который хочется попробовать прямо сейчас;
+- 7-8: интересно и понятно нашей аудитории, есть конкретная польза или неожиданный факт;
+- 5-6: нормально, но без искры, можно пропустить;
+- 1-4: скучно, узко, корпоративно, для исследователей или не по теме.
+
+Повышай оценку: новые модели и заметные релизы OpenAI, Anthropic, Google, xAI, Mistral, Meta; ИИ-инструменты для кода, дизайна, видео, музыки, соцсетей, маркетинга; новости про creators и продукты, которые можно потрогать самому; неожиданные, спорные или забавные истории про ИИ, о которых хочется поговорить. Поле hn_points — сколько очков набрала ссылка на Hacker News: высокое значение (100+) признак живого интереса, но не решает всё.
+
+Понижай оценку: funding/raises/acquisition/enterprise/B2B/CRM без потребительского или творческого угла; гайды, туториалы, listicles, общие рассуждения и эссе; SDK, API, changelog, минорные обновления; бенчмарки и сравнения «чуть лучше/хуже»; корпоративная кибербезопасность; железо и гаджеты без связи с ИИ; скучные пресс-релизы.
+
+Если несколько кандидатов про одно и то же событие (в том числе на разных языках), высокую оценку получает только самый сильный источник, остальным не больше 4.
+
+Политика, война, армия, полиция, санкции, выборы, регулирование, геополитика: оценка 1.
+
+Ответь только JSON, по одной записи на каждого кандидата, reason не длиннее 12 слов:
+{"scores": [{"index": 0, "score": 7, "reason": "..."}]}
+"""
+
+
+def score_news_with_llm(
+    candidates: list[dict[str, Any]],
+    llm_provider: str,
+    groq_api_key: str | None,
+    groq_model: str,
+    openai_api_key: str | None,
+    openai_model: str,
+) -> dict[int, tuple[float, str]] | None:
+    """Score every candidate 1-10. Returns {candidate index: (score, reason)} or None if no LLM answered."""
+    if not candidates:
+        return {}
+
+    payload = _build_payload(candidates)
+    content = ""
+    if llm_provider == "groq" and groq_api_key:
+        content = _complete_with_groq(SCORING_SYSTEM_PROMPT, payload, groq_api_key, groq_model)
+        if not content:
+            logger.warning("Groq LLM scoring failed, falling back to OpenAI")
+    if not content and openai_api_key:
+        content = _complete_with_openai(SCORING_SYSTEM_PROMPT, payload, openai_api_key, openai_model)
+
+    return _parse_scores(content, len(candidates)) if content else None
+
+
+def _complete_with_groq(system_prompt: str, payload: str, api_key: str, model: str) -> str:
+    client = Groq(api_key=api_key)
+    try:
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": f"Кандидаты:\n{payload}"},
+            ],
+            temperature=0.1,
+            max_tokens=3000,
+            response_format={"type": "json_object"},
+        )
+        return response.choices[0].message.content or ""
+    except Exception:
+        logger.exception("Groq LLM scoring request failed")
+        return ""
+
+
+def _complete_with_openai(system_prompt: str, payload: str, api_key: str, model: str) -> str:
+    client = OpenAI(api_key=api_key)
+    try:
+        response = client.responses.create(
+            model=model,
+            input=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": f"Кандидаты:\n{payload}"},
+            ],
+            temperature=0.1,
+            max_output_tokens=3000,
+        )
+        return response.output_text or ""
+    except Exception:
+        logger.exception("OpenAI LLM scoring request failed")
+        return ""
+
+
+def _parse_scores(content: str, count: int) -> dict[int, tuple[float, str]] | None:
+    try:
+        data = json.loads(_extract_json(content))
+        rows = data["scores"]
+    except (ValueError, KeyError, TypeError, json.JSONDecodeError):
+        logger.warning("Could not parse LLM scoring response: %s", content[:500])
+        return None
+
+    scores: dict[int, tuple[float, str]] = {}
+    for row in rows:
+        try:
+            index = int(row["index"])
+            score = float(row["score"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        if 0 <= index < count:
+            scores[index] = (max(1.0, min(10.0, score)), str(row.get("reason", "")))
+    return scores or None
+
+
 def select_best_news_with_llm(
     candidates: list[dict[str, Any]],
     llm_provider: str,
@@ -87,6 +192,7 @@ def _build_payload(candidates: list[dict[str, Any]]) -> str:
                 "category": news.get("category", ""),
                 "published_at": news.get("published_at", ""),
                 "url": news.get("url", ""),
+                "hn_points": news.get("hn_points", 0),
             }
         )
     return json.dumps(compact_items, ensure_ascii=False)

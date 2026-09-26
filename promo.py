@@ -6,7 +6,6 @@ from typing import Optional, Sequence
 
 ATEN_URL = "https://vadzim.by/aten/"
 REMOTE_JOBS_URL = "https://t.me/remote_belarus"
-HOUSING_URL = "https://t.me/minsk_housing"
 PROGRAMMER_BOT_URL = "https://t.me/vadzim_by_programmer_bot"
 PROMO_INTERVAL_START = date(2026, 7, 1)
 
@@ -65,20 +64,10 @@ ATEN — цифровое пространство для нормального
 Доступна веб-версия и Windows-клиент.""",
         ),
         PromoCampaign(
-            key="aten_fri",
-            at=time(12, 0),
-            weekdays={4},
-            url=ATEN_URL,
-            button_text="Попробовать ATEN",
-            text="""<b>ATEN / Атон</b>
-
-ATEN — цифровое пространство для нормального общения: написал главное, получил ответ, вернулся к делу.
-Доступна веб-версия и Windows-клиент.""",
-        ),
-        PromoCampaign(
             key="remote_belarus_weekly",
             at=time(12, 0),
             weekdays={2},
+            interval_days=14,
             url=REMOTE_JOBS_URL,
             button_text="Удалённая работа в Беларуси",
             text="""<b>Удалённая работа в Беларуси</b>
@@ -87,19 +76,9 @@ ATEN — цифровое пространство для нормального
 В канале публикуются вакансии для IT, маркетинга, дизайна и digital-специалистов.""",
         ),
         PromoCampaign(
-            key="minsk_housing_weekly",
-            at=time(12, 0),
-            weekdays={6},
-            url=HOUSING_URL,
-            button_text="Квартиры в Минске",
-            text="""<b>Квартиры в Минске</b>
-
-Аренда, покупка и полезная информация по квартирам в Минске — в отдельной группе.""",
-        ),
-        PromoCampaign(
-            key="programmer_bot_every_2_days",
+            key="programmer_bot_weekly",
             at=time(15, 0),
-            interval_days=2,
+            weekdays={4},
             url=PROGRAMMER_BOT_URL,
             button_text="Открыть бота",
             text="""<b>Помощник программиста</b>
