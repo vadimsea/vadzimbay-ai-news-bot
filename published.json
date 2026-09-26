@@ -1954,5 +1954,18 @@
       "hn_points": 0
     },
     "updated_at": "2026-09-26T18:12:13.267297+00:00"
+  },
+  {
+    "url": "https://mouse.dev/blog/muse-special/",
+    "published_at": "2026-09-26T18:39:46.391387+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Meta's Muse appears to use an OpenAI model labeled muse-special",
+      "source_name": "Hacker News",
+      "published_at": "2026-09-25T18:18:06Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 140
+    }
   }
 ]
