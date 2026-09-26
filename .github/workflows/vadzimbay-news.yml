@@ -81,6 +81,10 @@ jobs:
           MODERATION_CHAT_ID=${{ secrets.MODERATION_CHAT_ID }}
           MODERATION_TIMEOUT_MINUTES=120
           MODERATION_CHOICES=5
+          DAILY_OFFER_TARGET=12
+          MAX_OFFERS_PER_RUN=10
+          MIN_LLM_SCORE=7
+          FALLBACK_LLM_SCORE=6
           PUBLISHED_FILE=published.json
           BLOCKED_SOURCES_FILE=blocked_sources.json
           REQUEST_TIMEOUT_SECONDS=15

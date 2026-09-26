@@ -62,7 +62,7 @@ BROAD_INTEREST_TERMS = {
 }
 
 AUTHORITATIVE_US_EU_SOURCES = {
-    "techcrunch ai", "the verge ai", "mit technology review", "ars technica",
+    "techcrunch ai", "the verge ai", "mit technology review", "ars technica", "ars technica ai",
     "venturebeat ai", "wired", "the decoder", "ieee spectrum robotics",
     "sciencedaily robotics", "google deepmind blog", "openai blog",
     "anthropic news", "nvidia blog", "smashing magazine", "css-tricks",
@@ -405,7 +405,8 @@ def score_news(news: dict[str, Any], topic_count: int = 1) -> tuple[float, list[
     return score, reasons
 
 
-LLM_POOL_SIZE = 30
+LLM_POOL_SIZE = 80
+SOURCE_REPEAT_PENALTY = 12.0
 STRICT_BONUS = 8.0
 HN_POINTS_PER_BONUS = 10
 HN_MAX_BONUS = 20
@@ -429,14 +430,17 @@ def choose_top_news(
     llm_scorer=None,
     min_llm_score: float = 7.0,
     popularity: dict[str, int] | None = None,
+    target_count: int = 0,
+    fallback_llm_score: float | None = None,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     """Pick news for the channel.
 
     Hard filters drop what must never be posted (duplicates, politics, off-topic, how-tos).
     The rest is pre-ranked by heuristics plus Hacker News popularity, then an LLM rates the
     top of that pool 1-10 for "would the audience read and share this". Only news at or
-    above `min_llm_score` is offered. Without an LLM answer we fall back to the old strict
-    keyword gates.
+    above `min_llm_score` is offered; if that leaves fewer than `target_count`, the best of
+    the rest down to `fallback_llm_score` fill the gap. Without an LLM answer we fall back to
+    the old strict keyword gates.
     """
     stats: dict[str, Any] = {
         "total": len(news_items),
@@ -459,6 +463,7 @@ def choose_top_news(
     popularity = popularity or {}
     candidates: list[_Candidate] = []
     topic_counts = _build_topic_counts(news_items)
+    recently_offered = storage.recently_offered_urls(max_age_hours)
     recent_sources = _recent_published_sources(storage, source_cooldown_recent_posts)
     recent_rejected_sources = _recent_sources_by_status(
         storage,
@@ -472,7 +477,7 @@ def choose_top_news(
         if not has_required_fields(news):
             stats["missing_required_fields"] += 1
             continue
-        if url in seen_urls or storage.is_published(url):
+        if url in seen_urls or storage.is_published(url) or url in recently_offered:
             stats["duplicates"] += 1
             continue
         seen_urls.add(url)
@@ -511,7 +516,12 @@ def choose_top_news(
         candidates.append(_Candidate(news, score, reasons, strict))
 
     candidates.sort(key=lambda item: item.score, reverse=True)
-    ranked = _rank_with_llm(candidates, llm_scorer, min_llm_score, stats)
+    ranked = _rank_with_llm(
+        candidates, llm_scorer, min_llm_score, stats,
+        pool_size=max(LLM_POOL_SIZE, selection_count * 2),
+        target_count=target_count,
+        fallback_llm_score=fallback_llm_score,
+    )
     if ranked is None:
         ranked = _rank_with_strict_gates(candidates, stats)
 
@@ -521,17 +531,22 @@ def choose_top_news(
 
     selected_items: list[dict[str, Any]] = []
     selected_reasons: list[str] = []
-    used_sources: set[str] = set()
+    source_counts: dict[str, int] = {}
     used_topics: set[str] = set()
-    for final_score, candidate, reason in sorted(ranked, key=lambda item: item[0], reverse=True):
-        if len(selected_items) >= selection_count:
-            break
-        source_name = _source_name(candidate.news)
+    remaining = [item for item in ranked if item[1].news.get("url")]
+    while remaining and len(selected_items) < selection_count:
+        # Best score first, but each extra pick from one source costs SOURCE_REPEAT_PENALTY.
+        remaining.sort(
+            key=lambda item: item[0] - SOURCE_REPEAT_PENALTY * source_counts.get(_source_name(item[1].news), 0),
+            reverse=True,
+        )
+        final_score, candidate, reason = remaining.pop(0)
         topic_key = _topic_key(candidate.news)
-        if source_name in used_sources or (topic_key and topic_key in used_topics):
+        if topic_key and topic_key in used_topics:
             continue
-        used_sources.add(source_name)
         used_topics.add(topic_key)
+        source_name = _source_name(candidate.news)
+        source_counts[source_name] = source_counts.get(source_name, 0) + 1
         selected_items.append(candidate.news)
         selected_reasons.append(f"final={final_score:.1f}; {reason}; " + ", ".join(candidate.reasons))
 
@@ -575,11 +590,14 @@ def _rank_with_llm(
     llm_scorer,
     min_llm_score: float,
     stats: dict[str, Any],
+    pool_size: int = LLM_POOL_SIZE,
+    target_count: int = 0,
+    fallback_llm_score: float | None = None,
 ) -> list[tuple[float, _Candidate, str]] | None:
     if not llm_scorer or not candidates:
         return None
 
-    pool = candidates[:LLM_POOL_SIZE]
+    pool = candidates[:pool_size]
     scores = llm_scorer([candidate.news for candidate in pool])
     if not scores:
         logger.warning("LLM scoring unavailable, falling back to strict keyword gates")
@@ -588,16 +606,29 @@ def _rank_with_llm(
     stats["llm_used"] = True
     stats["llm_scored"] = len(scores)
     ranked: list[tuple[float, _Candidate, str]] = []
+    near_misses: list[tuple[float, _Candidate, str]] = []
     for index, (llm_score, llm_reason) in scores.items():
         candidate = pool[index]
         candidate.news["llm_score"] = llm_score
-        if llm_score < min_llm_score:
-            stats["llm_below_threshold"] += 1
-            continue
         # LLM opinion dominates; heuristics (freshness, HN points, trust) break ties.
         final_score = llm_score * 10 + candidate.score * 0.15
         reason = f"llm={llm_score:.0f} ({llm_reason}); hn={candidate.news.get('hn_points', 0)}"
-        ranked.append((final_score, candidate, reason))
+        if llm_score >= min_llm_score:
+            ranked.append((final_score, candidate, reason))
+        elif fallback_llm_score is not None and llm_score >= fallback_llm_score:
+            near_misses.append((final_score, candidate, reason + "; below_threshold_fill"))
+        else:
+            stats["llm_below_threshold"] += 1
+
+    # Fill to 1.5x the target: some picks later fail the image or text checks.
+    fill_to = target_count + target_count // 2
+    if len(ranked) < fill_to and near_misses:
+        near_misses.sort(key=lambda item: item[0], reverse=True)
+        missing = fill_to - len(ranked)
+        ranked.extend(near_misses[:missing])
+        stats["llm_below_threshold"] += len(near_misses) - min(missing, len(near_misses))
+    else:
+        stats["llm_below_threshold"] += len(near_misses)
     return ranked
 
 
