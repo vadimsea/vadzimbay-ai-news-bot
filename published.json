@@ -1967,5 +1967,145 @@
       "llm_score": 9.0,
       "hn_points": 140
     }
+  },
+  {
+    "url": "https://ollaya.dev/",
+    "published_at": "2026-09-26T18:41:21.105910+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Ollaya – Ollama for open-source, Jev-style decision models",
+      "source_name": "Hacker News",
+      "published_at": "2026-09-25T18:33:50Z",
+      "language": "en",
+      "llm_score": 10.0,
+      "hn_points": 559
+    },
+    "updated_at": "2026-09-26T18:42:12.783889+00:00"
+  },
+  {
+    "url": "https://t3n.de/news/openai-gpt-6-raetsel-code-1764423/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "published_at": "2026-09-26T18:41:21.108343+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Rätsel nach 108 Jahren gelöst: Wie OpenAI-Modell GPT-6 Astra einen Weltkriegs-Funkspruch knackte",
+      "source_name": "t3n",
+      "published_at": "2026-09-26T10:05:00+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-26T18:42:40.737274+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/09/docker-cloud-sandboxes/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-09-26T18:41:21.110410+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction Across Laptop and Cloud",
+      "source_name": "InfoQ",
+      "published_at": "2026-09-26T17:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-26T18:42:53.505104+00:00"
+  },
+  {
+    "url": "https://vercel.com/changelog/pixel-canary-is-now-available-in-stealth-for-free-on-ai-gateway",
+    "published_at": "2026-09-26T18:41:21.112466+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Pixel Canary is now available in stealth for free on AI Gateway",
+      "source_name": "Vercel Blog",
+      "published_at": "2026-09-25T00:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-26T18:43:09.576337+00:00"
+  },
+  {
+    "url": "https://ppc.land/googles-safe-uses-4-ai-agents-to-investigate-youtube-slop-networks/",
+    "published_at": "2026-09-26T18:41:21.114630+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google's SAFE uses 4 AI agents to investigate YouTube slop networks",
+      "source_name": "PPC Land",
+      "published_at": "2026-09-25T20:50:42+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-26T18:43:21.533920+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/another-google-deepmind-researcher-quits-says-building-superintelligent-ai-soon-is-inherently-irresponsible/",
+    "published_at": "2026-09-26T18:41:21.116806+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Another Google Deepmind researcher quits, says building superintelligent AI soon is \"inherently irresponsible\"",
+      "source_name": "The Decoder",
+      "published_at": "2026-09-25T17:55:51+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-26T18:43:36.692610+00:00"
+  },
+  {
+    "url": "https://www.creativebloq.com/design/design-software/adobe-max-2026s-lineup-tells-us-a-lot-about-the-companys-ai-priorities-right-now",
+    "published_at": "2026-09-26T18:41:21.118912+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Adobe Max 2026's lineup tells us a lot about the company's AI priorities right now",
+      "source_name": "Creative Bloq",
+      "published_at": "2026-09-26T08:00:00+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-26T18:43:47.710262+00:00"
+  },
+  {
+    "url": "https://ppc.land/chatgpt-loses-20-points-of-us-ai-prompt-share-to-gemini-and-claude/",
+    "published_at": "2026-09-26T18:41:21.121004+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "ChatGPT loses 20 points of US AI prompt share to Gemini and Claude",
+      "source_name": "PPC Land",
+      "published_at": "2026-09-26T04:22:56+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-26T18:44:09.696971+00:00"
+  },
+  {
+    "url": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
+    "published_at": "2026-09-26T18:44:47.907774+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Google's first Suncatcher orbital data center test launches October 1",
+      "source_name": "Ars Technica AI",
+      "published_at": "2026-09-24T16:16:34+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 51
+    },
+    "updated_at": "2026-09-26T18:44:47.907774+00:00"
+  },
+  {
+    "url": "https://www.heise.de/news/KI-von-OpenAI-stellte-Nutzer-Bilder-auf-Online-Plattformen-11466970.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "published_at": "2026-09-26T18:41:21.125238+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI informiert „dutzende“ Institutionen über unbefugte KI-Interaktionen",
+      "source_name": "Heise Online",
+      "published_at": "2026-09-26T11:27:00+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-26T18:45:45.542687+00:00"
   }
 ]
