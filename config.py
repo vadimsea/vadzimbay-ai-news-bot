@@ -36,6 +36,7 @@ class Settings:
     moderation_choices: int
     min_llm_score: float
     fallback_llm_score: float
+    topic_min_llm_score: float
     daily_offer_target: int
     max_offers_per_run: int
     published_file: Path
@@ -67,6 +68,7 @@ def load_settings() -> Settings:
         moderation_choices=max(1, int(os.getenv("MODERATION_CHOICES", "1"))),
         min_llm_score=float(os.getenv("MIN_LLM_SCORE", "7")),
         fallback_llm_score=float(os.getenv("FALLBACK_LLM_SCORE", "6")),
+        topic_min_llm_score=float(os.getenv("TOPIC_MIN_LLM_SCORE", "5")),
         daily_offer_target=int(os.getenv("DAILY_OFFER_TARGET", "12")),
         max_offers_per_run=max(1, int(os.getenv("MAX_OFFERS_PER_RUN", "10"))),
         published_file=BASE_DIR / os.getenv("PUBLISHED_FILE", "published.json"),

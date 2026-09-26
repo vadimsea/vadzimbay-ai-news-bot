@@ -32,6 +32,9 @@ TECH_KEYWORDS = {
     "вайбкодинг", "вайб-кодинг", "вибкодинг", "ии для кода", "ии-программирование",
     "ai-программирование", "кодинг-агент", "агент для кода", "нейросеть для кода",
     "генерация кода", "программирование с ии", "cursor", "windsurf", "claude code",
+    "python", "django", "fastapi", "backend", "back-end", "rust", "golang", "postgres", "docker",
+    "kubernetes", "linux", "github", "open source", "open-source", "питон", "бэкенд", "разработчик",
+    "программирование", "дизайн", "design", "designer", "rebrand", "typography", "logo",
     "ki", "künstliche intelligenz", "roboter", "robotik", "automatisierung", "technologie",
     "webdesign", "ux design", "ui design", "marketing-ki", "ki-marketing",
 }
@@ -67,6 +70,7 @@ POLITICAL_STOP_WORDS = {
     "law", "regulation", "regulator", "regulators", "regulatory", "ban", "censorship", "sanction",
     "sanctions", "war", "military", "army", "defense", "defence", "drone strike", "police",
     "surveillance", "intelligence agency", "propaganda", "geopolitical", "conflict",
+    "nsa", "cia", "fbi", "spy", "spies", "espionage",
     "weapon", "weapons", "missile", "battlefield", "pentagon", "nato", "white house",
     "congress", "senate", "court", "lawsuit", "export controls", "national security",
     "donald trump", "trump", "joe biden", "biden", "putin", "zelensky",
@@ -94,6 +98,11 @@ POLITICAL_STOP_PHRASES = {
     "ии придерживается политических взглядов",
 }
 
+
+# Sources of these categories are already on-topic, so the keyword relevance check is skipped.
+SELF_RELEVANT_CATEGORIES = {
+    "frontend", "backend", "python", "dev", "web_design", "design", "marketing", "marketing_ai",
+}
 
 SHORT_TERM_MAX_LEN = 4
 
@@ -152,6 +161,8 @@ def is_recent_news(news: dict[str, Any], max_age_hours: int = 48) -> bool:
 
 
 def is_relevant_tech_news(news: dict[str, Any]) -> bool:
+    if str(news.get("category") or "").lower() in SELF_RELEVANT_CATEGORIES:
+        return True
     # URL and host are left out on purpose: ".ai" domains and slugs matched everything.
     text = " ".join(
         [news.get("title") or "", news.get("summary") or "", news.get("source_name") or ""]

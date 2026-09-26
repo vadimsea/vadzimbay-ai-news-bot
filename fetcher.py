@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 import logging
@@ -10,6 +11,7 @@ from bs4 import BeautifulSoup
 import feedparser
 import requests
 
+from popularity import fetch_hn_stories
 from sources import NewsSource
 
 logger = logging.getLogger(__name__)
@@ -108,6 +110,26 @@ def extract_article_image_url(article_url: str) -> str:
     return ""
 
 
+def extract_article_description(article_url: str) -> str:
+    """Meta description of the article page; used when the feed gives no real summary."""
+    if not article_url:
+        return ""
+    try:
+        response = requests.get(article_url, headers=REQUEST_HEADERS, timeout=10)
+        response.raise_for_status()
+    except requests.RequestException:
+        logger.debug("Could not fetch article page for description: %s", article_url)
+        return ""
+
+    soup = BeautifulSoup(response.text, "html.parser")
+    for selector in ('meta[property="og:description"]', 'meta[name="description"]', 'meta[name="twitter:description"]'):
+        tag = soup.select_one(selector)
+        value = (tag.get("content") if tag else "") or ""
+        if value.strip():
+            return value.strip()
+    return ""
+
+
 def _looks_like_content_image(url: str) -> bool:
     lowered = url.lower()
     bad_parts = ("logo", "avatar", "icon", "sprite", "tracking", "pixel", "banner")
@@ -119,6 +141,8 @@ def _normalize_entry(entry: Any, source: NewsSource) -> dict[str, Any] | None:
     url = (entry.get("link") or entry.get("id") or "").strip()
     title = _clean_html(entry.get("title"))
     summary = _clean_html(entry.get("summary") or entry.get("description"))
+    if summary.startswith("Article URL:") or "Comments URL:" in summary:
+        summary = ""  # Hacker News feed boilerplate, not a summary
 
     if not url:
         return None
@@ -136,7 +160,39 @@ def _normalize_entry(entry: Any, source: NewsSource) -> dict[str, Any] | None:
     }
 
 
+HN_SOURCE_PREFIX = "hn-algolia://"
+
+
+def _fetch_hn_source(source: NewsSource) -> list[dict[str, Any]]:
+    """Popular Hacker News stories as news: what developers actually upvote."""
+    params = dict(part.split("=", 1) for part in source.url.removeprefix(HN_SOURCE_PREFIX).split("&") if "=" in part)
+    stories = fetch_hn_stories(hours=int(params.get("hours", 72)), min_points=int(params.get("min_points", 100)))
+    news: list[dict[str, Any]] = []
+    for story in stories:
+        url = (story.get("url") or "").strip()
+        title = (story.get("title") or "").strip()
+        if not url or not title:
+            continue
+        news.append(
+            {
+                "title": title,
+                "summary": "",
+                "url": url,
+                "image_url": "",
+                "published_at": str(story.get("created_at") or datetime.now(timezone.utc).isoformat()),
+                "language": source.language,
+                "source_name": source.name,
+                "category": source.category,
+                "trust_score": source.trust_score,
+            }
+        )
+    logger.info("Fetched %s items from %s", len(news), source.name)
+    return news
+
+
 def fetch_news_from_source(source: NewsSource) -> list[dict[str, Any]]:
+    if source.url.startswith(HN_SOURCE_PREFIX):
+        return _fetch_hn_source(source)
     try:
         response = requests.get(source.url, headers=REQUEST_HEADERS, timeout=20)
         response.raise_for_status()
@@ -168,7 +224,7 @@ def fetch_news_from_source(source: NewsSource) -> list[dict[str, Any]]:
 
 
 def fetch_all_news(sources: list[NewsSource]) -> list[dict[str, Any]]:
-    all_news: list[dict[str, Any]] = []
-    for source in sources:
-        all_news.extend(fetch_news_from_source(source))
-    return all_news
+    # Feeds are independent and slow; fetch in parallel, keep the order of `sources`.
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        batches = list(pool.map(fetch_news_from_source, sources))
+    return [news for batch in batches for news in batch]

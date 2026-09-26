@@ -19,6 +19,7 @@ from filters import (
 )
 from popularity import popularity_points
 from storage import PublishedStorage
+from topics import AI, DEV, DESIGN, MARKETING, TOPIC_SHARES, topic_of, topic_quotas
 
 logger = logging.getLogger(__name__)
 
@@ -151,6 +152,10 @@ EDITORIAL_REJECT_TERMS = {
     "slightly better", "available through api", "available via api",
     "kann nicht mithalten", "schlechter als", "fehlerquote", "nur api",
     "podcast", "episode", "webinar", "livestream",
+    "deals", "% off", "discount", "coupon", "black friday", "prime day", "cyber monday",
+    "buying guide", "kickstarter", "giveaway", "wallpaper", "quiz", "ticker:",
+    "release notes", "technology preview", "changelog", "patch release", "security release",
+    "(lts)", "(beta)", "weekly digest",
     "лучшие", "топ-", "топ ", "что я понял", "личный опыт",
     "почему пора", "всё что нужно знать", "подборка",
 }
@@ -262,6 +267,20 @@ EDITORIAL_SENSITIVE_SOURCES = {
 
 MIN_EDITORIAL_SCORE = 66.0
 
+TOPIC_MAJOR_TERMS = {
+    DEV: {
+        "python", "django", "fastapi", "react", "next.js", "typescript", "rust", "node.js",
+        "chrome", "github", "vercel", "cloudflare", "linux", "postgres", "docker", "kubernetes",
+        "javascript", "webassembly", "open source", "open-source",
+    },
+    DESIGN: {"figma", "adobe", "canva", "framer", "webflow", "rebrand", "redesign", "logo", "apple", "google"},
+    MARKETING: {
+        "google", "meta", "tiktok", "instagram", "youtube", "linkedin", "amazon", "chatgpt",
+        "search update", "core update", "algorithm", "ads",
+    },
+}
+TOPIC_OVERSHARE_PENALTY = 20.0
+
 AD_TITLE_MARKERS = (
     "anzeige", "sponsored", "advertorial", "werbung", "partner content", "paid post",
     "реклама", "на правах рекламы", "[ad]", "(ad)", "(g+)",
@@ -301,7 +320,7 @@ def _published_dt(news: dict[str, Any]) -> datetime:
     return dt
 
 
-def score_news(news: dict[str, Any], topic_count: int = 1) -> tuple[float, list[str]]:
+def score_news(news: dict[str, Any], topic_count: int = 1, topic: str | None = None) -> tuple[float, list[str]]:
     text = f"{news.get('title', '')} {news.get('summary', '')}".lower()
     score = float(news.get("trust_score") or 0.5) * 10
     reasons: list[str] = [f"trust={news.get('trust_score', 0.5)}"]
@@ -358,8 +377,12 @@ def score_news(news: dict[str, Any], topic_count: int = 1) -> tuple[float, list[
         score += 7
         reasons.append("web_marketing_frontend=+7")
 
+    if topic in TOPIC_MAJOR_TERMS and has_any_term(text, TOPIC_MAJOR_TERMS[topic]):
+        score += 8
+        reasons.append(f"topic_major_term=+8:{topic}")
+
     niche_matches = sum(1 for term in NICHE_DEVELOPER_TERMS if contains_term(text, term))
-    if niche_matches:
+    if niche_matches and topic != DEV:
         penalty = min(18, niche_matches * 4)
         score -= penalty
         reasons.append(f"niche_developer=-{penalty}")
@@ -418,6 +441,7 @@ class _Candidate:
     score: float
     reasons: list[str]
     strict: bool
+    topic: str
 
 
 def choose_top_news(
@@ -432,6 +456,7 @@ def choose_top_news(
     popularity: dict[str, int] | None = None,
     target_count: int = 0,
     fallback_llm_score: float | None = None,
+    topic_min_llm_score: float | None = None,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     """Pick news for the channel.
 
@@ -493,17 +518,20 @@ def choose_top_news(
         if not is_relevant_tech_news(news):
             stats["irrelevant"] += 1
             continue
-        if not _is_priority_channel_news(news):
+        topic = topic_of(news)
+        if topic is None or (
+            str(news.get("category") or "").lower() == "robotics" and not _is_priority_channel_news(news)
+        ):
             stats["off_topic_priority"] += 1
             continue
-        if _fails_hard_editorial_filters(news):
+        if _fails_hard_editorial_filters(news, topic):
             stats["low_news_value"] += 1
             continue
 
-        news = {**news, "hn_points": popularity_points(news, popularity)}
+        news = {**news, "hn_points": popularity_points(news, popularity), "topic": topic}
         strict = _passes_strict_gates(news)
         topic_key = _topic_key(news)
-        score, reasons = score_news(news, topic_count=topic_counts.get(topic_key, 1))
+        score, reasons = score_news(news, topic_count=topic_counts.get(topic_key, 1), topic=topic)
         if strict:
             score += STRICT_BONUS
             reasons.append(f"strict_gates=+{STRICT_BONUS:.0f}")
@@ -513,7 +541,7 @@ def choose_top_news(
         if _source_name(news) in recent_rejected_sources:
             score -= 5
             reasons.append("recent_rejected_source=-5")
-        candidates.append(_Candidate(news, score, reasons, strict))
+        candidates.append(_Candidate(news, score, reasons, strict, topic))
 
     candidates.sort(key=lambda item: item.score, reverse=True)
     ranked = _rank_with_llm(
@@ -521,6 +549,7 @@ def choose_top_news(
         pool_size=max(LLM_POOL_SIZE, selection_count * 2),
         target_count=target_count,
         fallback_llm_score=fallback_llm_score,
+        topic_min_llm_score=topic_min_llm_score,
     )
     if ranked is None:
         ranked = _rank_with_strict_gates(candidates, stats)
@@ -532,14 +561,13 @@ def choose_top_news(
     selected_items: list[dict[str, Any]] = []
     selected_reasons: list[str] = []
     source_counts: dict[str, int] = {}
+    topic_counts_selected: dict[str, int] = {}
+    quotas = topic_quotas(max(target_count, 1))
     used_topics: set[str] = set()
     remaining = [item for item in ranked if item[1].news.get("url")]
     while remaining and len(selected_items) < selection_count:
         # Best score first, but each extra pick from one source costs SOURCE_REPEAT_PENALTY.
-        remaining.sort(
-            key=lambda item: item[0] - SOURCE_REPEAT_PENALTY * source_counts.get(_source_name(item[1].news), 0),
-            reverse=True,
-        )
+        remaining.sort(key=lambda item: _selection_score(item, source_counts, topic_counts_selected, quotas), reverse=True)
         final_score, candidate, reason = remaining.pop(0)
         topic_key = _topic_key(candidate.news)
         if topic_key and topic_key in used_topics:
@@ -547,6 +575,7 @@ def choose_top_news(
         used_topics.add(topic_key)
         source_name = _source_name(candidate.news)
         source_counts[source_name] = source_counts.get(source_name, 0) + 1
+        topic_counts_selected[candidate.topic] = topic_counts_selected.get(candidate.topic, 0) + 1
         selected_items.append(candidate.news)
         selected_reasons.append(f"final={final_score:.1f}; {reason}; " + ", ".join(candidate.reasons))
 
@@ -557,13 +586,41 @@ def choose_top_news(
     return selected_items, stats
 
 
-def _fails_hard_editorial_filters(news: dict[str, Any]) -> bool:
+def _selection_score(
+    item: tuple[float, _Candidate, str],
+    source_counts: dict[str, int],
+    topic_counts: dict[str, int],
+    quotas: dict[str, int],
+) -> float:
+    """Best score first; repeats of one source and topics over their quota cost points."""
+    final_score, candidate, _ = item
+    score = final_score - SOURCE_REPEAT_PENALTY * source_counts.get(_source_name(candidate.news), 0)
+    over_quota = max(0, topic_counts.get(candidate.topic, 0) + 1 - quotas.get(candidate.topic, 1))
+    return score - TOPIC_OVERSHARE_PENALTY * over_quota
+
+
+def _balanced_pool(candidates: list[_Candidate], pool_size: int) -> list[_Candidate]:
+    """Top candidates per topic, so AI-heavy heuristics do not crowd out dev/design/marketing."""
+    per_topic = {topic: max(8, round(pool_size * share)) for topic, share in TOPIC_SHARES.items()}
+    taken: dict[str, int] = {}
+    pool: list[_Candidate] = []
+    rest: list[_Candidate] = []
+    for candidate in candidates:  # already sorted by heuristic score
+        if taken.get(candidate.topic, 0) < per_topic.get(candidate.topic, 0):
+            taken[candidate.topic] = taken.get(candidate.topic, 0) + 1
+            pool.append(candidate)
+        else:
+            rest.append(candidate)
+    return (pool + rest[: max(0, pool_size - len(pool))])[:pool_size]
+
+
+def _fails_hard_editorial_filters(news: dict[str, Any], topic: str | None = None) -> bool:
     title = str(news.get("title") or "").lower()
     return (
         has_any_term(title, EDITORIAL_REJECT_TERMS)
         or any(marker in title for marker in AD_TITLE_MARKERS)
         or " via @" in title
-        or _is_corporate_security_news(news)
+        or (topic != DEV and _is_corporate_security_news(news))
         or _is_incremental_benchmark_news(news)
         or _is_enterprise_sales_crm_news(news)
     )
@@ -593,11 +650,12 @@ def _rank_with_llm(
     pool_size: int = LLM_POOL_SIZE,
     target_count: int = 0,
     fallback_llm_score: float | None = None,
+    topic_min_llm_score: float | None = None,
 ) -> list[tuple[float, _Candidate, str]] | None:
     if not llm_scorer or not candidates:
         return None
 
-    pool = candidates[:pool_size]
+    pool = _balanced_pool(candidates, pool_size)
     scores = llm_scorer([candidate.news for candidate in pool])
     if not scores:
         logger.warning("LLM scoring unavailable, falling back to strict keyword gates")
@@ -607,6 +665,7 @@ def _rank_with_llm(
     stats["llm_scored"] = len(scores)
     ranked: list[tuple[float, _Candidate, str]] = []
     near_misses: list[tuple[float, _Candidate, str]] = []
+    topic_only: list[tuple[float, _Candidate, str]] = []  # good enough only to keep a topic represented
     for index, (llm_score, llm_reason) in scores.items():
         candidate = pool[index]
         candidate.news["llm_score"] = llm_score
@@ -617,13 +676,30 @@ def _rank_with_llm(
             ranked.append((final_score, candidate, reason))
         elif fallback_llm_score is not None and llm_score >= fallback_llm_score:
             near_misses.append((final_score, candidate, reason + "; below_threshold_fill"))
+        elif topic_min_llm_score is not None and llm_score >= topic_min_llm_score:
+            topic_only.append((final_score, candidate, reason + "; topic_minimum_fill"))
         else:
             stats["llm_below_threshold"] += 1
+
+    near_misses.sort(key=lambda item: item[0], reverse=True)
+
+    # Every topic gets its minimum share from its best available items (>= topic floor).
+    if target_count:
+        reserve = sorted(near_misses + topic_only, key=lambda item: item[0], reverse=True)
+        for topic, share in TOPIC_SHARES.items():
+            minimum = int(share * target_count)
+            have = sum(1 for _, candidate, _ in ranked if candidate.topic == topic)
+            for item in [near for near in reserve if near[1].topic == topic][: max(0, minimum - have)]:
+                ranked.append(item)
+                if item in near_misses:
+                    near_misses.remove(item)
+        stats["llm_below_threshold"] += sum(1 for item in topic_only if not any(item is r for r in ranked))
+    else:
+        stats["llm_below_threshold"] += len(topic_only)
 
     # Fill to 1.5x the target: some picks later fail the image or text checks.
     fill_to = target_count + target_count // 2
     if len(ranked) < fill_to and near_misses:
-        near_misses.sort(key=lambda item: item[0], reverse=True)
         missing = fill_to - len(ranked)
         ranked.extend(near_misses[:missing])
         stats["llm_below_threshold"] += len(near_misses) - min(missing, len(near_misses))

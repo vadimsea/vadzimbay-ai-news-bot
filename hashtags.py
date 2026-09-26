@@ -23,6 +23,9 @@ TAG_RULES: list[tuple[str, tuple[str, ...]]] = [
             "react", "next.js", "vue", "svelte", "css", "фронтенд", "веб-разработка",
         ),
     ),
+    ("#Python", ("python", "django", "fastapi", "flask", "pypi", "питон")),
+    ("#Backend", ("backend", "back-end", "бэкенд", "postgres", "postgresql", "docker", "kubernetes", "golang", "rust", "node.js")),
+    ("#Дизайн", ("design", "designer", "rebrand", "logo", "typography", "дизайн", "ребрендинг", "логотип")),
     ("#Маркетинг", ("marketing", "маркетинг", "martech", "adtech", "advertising", "реклама", "seo", "crm")),
     (
         "#Вайбкодинг",
@@ -76,7 +79,7 @@ def append_hashtags(text: str, news: dict[str, Any], max_length: int = 1024) -> 
 def _keyword_matches(text: str, keyword: str) -> bool:
     keyword = keyword.lower()
     exact_keywords = {
-        "ai", "ии", "ki", "ui", "ux", "seo", "crm", "css", "vue",
+        "ai", "ии", "ki", "ui", "ux", "seo", "crm", "css", "vue", "rust", "logo", "docker",
         "react", "svelte", "frontend", "front-end",
     }
     if keyword in exact_keywords:
