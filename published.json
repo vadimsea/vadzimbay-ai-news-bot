@@ -2107,5 +2107,88 @@
       "hn_points": 0
     },
     "updated_at": "2026-09-26T18:45:45.542687+00:00"
+  },
+  {
+    "url": "https://tangled.org/yanndegat.tngl.sh/drawgent",
+    "published_at": "2026-09-27T08:28:07.879754+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Drawgent: Coding agent on a live Excalidraw canvas",
+      "source_name": "Hacker News",
+      "published_at": "2026-09-26T15:56:34Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 141
+    },
+    "updated_at": "2026-09-27T08:28:07.879754+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/09/gke-pod-snapshots-benchmarks/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-09-27T07:16:44.161534+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "GKE Pod Snapshots Cut Model Load Times, and Move the Work to Snapshot Lifecycle Management",
+      "source_name": "InfoQ",
+      "published_at": "2026-09-27T06:46:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-27T08:27:12.701272+00:00"
+  },
+  {
+    "url": "https://t3n.de/news/world-models-raumfahrt-ki-iss-andocken-1765291/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "published_at": "2026-09-27T08:26:58.346223+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Out-of-this-World-Model: KI-System für Manöver im Weltraum vorgestellt",
+      "source_name": "t3n",
+      "published_at": "2026-09-26T19:52:35+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-27T08:26:58.346223+00:00"
+  },
+  {
+    "url": "https://www.privatemode.ai/blog/system-one-from-glm-flash",
+    "published_at": "2026-09-27T07:16:44.165925+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Turn GLM-5.3-Flash into a Jev-like System One model",
+      "source_name": "Lobsters",
+      "published_at": "2026-09-27T02:07:23+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 82
+    },
+    "updated_at": "2026-09-27T08:26:25.629661+00:00"
+  },
+  {
+    "url": "https://ppc.land/adthena-ranks-fixes-for-rising-search-ad-costs-using-competitor-data/",
+    "published_at": "2026-09-27T07:16:44.168139+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Adthena ranks fixes for rising search ad costs using competitor data",
+      "source_name": "PPC Land",
+      "published_at": "2026-09-26T15:32:33+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-27T08:26:10.013731+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/games/999972/meta-horizon-create-studio-ai-games",
+    "published_at": "2026-09-27T07:16:44.170369+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Meta is going to let you build games with AI right on your phone",
+      "source_name": "The Verge AI",
+      "published_at": "2026-09-24T17:52:29+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
   }
 ]
