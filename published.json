@@ -2190,5 +2190,83 @@
       "llm_score": 7.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://the-decoder.com/researchers-plug-gpt-6-astra-directly-into-a-robot-and-let-it-clean-up-an-unfamiliar-kitchen/",
+    "published_at": "2026-09-27T14:47:02.057016+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Researchers plug GPT-6 Astra directly into a robot and let it clean up an unfamiliar kitchen",
+      "source_name": "The Decoder",
+      "published_at": "2026-09-27T10:59:11+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.golem.de/news/ki-mit-kontrollverlust-openai-stoppt-training-seiner-top-modelle-2609-213470.html",
+    "published_at": "2026-09-27T14:47:02.059717+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "KI mit Kontrollverlust: OpenAI stoppt Training seiner Top-Modelle",
+      "source_name": "Golem.de",
+      "published_at": "2026-09-27T10:45:02+00:00",
+      "language": "de",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/09/c-rust-rewrite/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-09-27T14:47:02.062072+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google Rewrites Critical C Dependencies to Rust Using AI and Differential Fuzzing",
+      "source_name": "InfoQ",
+      "published_at": "2026-09-27T14:14:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/09/swift-6-4-released/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-09-27T14:47:02.064434+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Swift 6.4 Brings Subprocess 1.0, Improved Interoperability, Faster Wasm, and More",
+      "source_name": "InfoQ",
+      "published_at": "2026-09-27T14:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.heise.de/news/OpenAI-pausiert-KI-Training-nach-neuem-Zwischenfall-11467188.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "published_at": "2026-09-27T14:47:02.066734+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI pausiert KI-Training nach neuem Zwischenfall",
+      "source_name": "Heise Online",
+      "published_at": "2026-09-27T10:31:00+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/09/vercel-scriptc-node/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-09-27T14:47:02.071012+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Vercel Labs Ships scriptc, a TypeScript-to-Native Compiler That Leaves the JavaScript Engine Behind",
+      "source_name": "InfoQ",
+      "published_at": "2026-09-25T05:49:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
   }
 ]
