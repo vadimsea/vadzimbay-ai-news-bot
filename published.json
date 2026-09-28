@@ -2268,5 +2268,89 @@
       "llm_score": 7.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1001193/engram-sampler-ai-hallucinations-music",
+    "published_at": "2026-09-28T06:16:40.768865+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Engram is a sampler that turns broken AI hallucinations into music",
+      "source_name": "The Verge AI",
+      "published_at": "2026-09-27T20:46:36+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-28T06:33:59.557458+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/copilot-agents-identity-runtime/",
+    "published_at": "2026-09-28T06:16:40.771671+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Microsoft’s new Copilot agents get their own email, calendar — and a place in the org chart",
+      "source_name": "The New Stack",
+      "published_at": "2026-09-25T17:16:31+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-28T06:34:07.908404+00:00"
+  },
+  {
+    "url": "https://ppc.land/youtubes-ai-answer-tool-rises-over-500-since-december-reaching-140m-users/",
+    "published_at": "2026-09-28T06:34:30.896057+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "YouTube's AI answer tool rises over 500% since December, reaching 140M users",
+      "source_name": "PPC Land",
+      "published_at": "2026-09-27T20:32:41+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-28T06:34:30.896057+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/nvidia-drops-a-free-100m-parameter-model-that-identifies-up-to-eight-speakers-in-real-time/",
+    "published_at": "2026-09-28T06:16:40.789509+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Nvidia drops a free 100M-parameter model that identifies up to eight speakers in real time",
+      "source_name": "The Decoder",
+      "published_at": "2026-09-27T11:01:13+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-28T06:34:42.778198+00:00"
+  },
+  {
+    "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
+    "published_at": "2026-09-28T06:16:40.791796+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Improving site performance by shipping more CSS",
+      "source_name": "GitHub Blog",
+      "published_at": "2026-09-25T15:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 82
+    },
+    "updated_at": "2026-09-28T06:34:52.153686+00:00"
+  },
+  {
+    "url": "https://nura.eco/blog/2026/09/27/nura-rename/",
+    "published_at": "2026-09-28T06:16:40.794085+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "PostmarketOS is rebranding as Nura",
+      "source_name": "Hacker News",
+      "published_at": "2026-09-27T15:31:15Z",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 172
+    },
+    "updated_at": "2026-09-28T06:35:00.252838+00:00"
   }
 ]
