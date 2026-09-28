@@ -2352,5 +2352,89 @@
       "hn_points": 172
     },
     "updated_at": "2026-09-28T06:35:00.252838+00:00"
+  },
+  {
+    "url": "https://thecivilian.co.nz/2026/09/27/ai-companies-in-fierce-arms-race-to-demonstrate-their-model-is-the-most-existentially-threatening-to-humanity/",
+    "published_at": "2026-09-28T14:04:14.338465+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "AI companies in race to demonstrate their model most threatening to humanity",
+      "source_name": "Hacker News",
+      "published_at": "2026-09-28T08:35:40Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 316
+    },
+    "updated_at": "2026-09-28T14:04:14.338465+00:00"
+  },
+  {
+    "url": "https://t3n.de/news/openai-pausiert-ki-training-neue-modelle-1765374/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "published_at": "2026-09-28T14:02:26.982126+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI pausiert Training neuer KI-Modelle nach weiterem Vorfall: So soll es jetzt weitergehen",
+      "source_name": "t3n",
+      "published_at": "2026-09-28T09:30:46+00:00",
+      "language": "de",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-28T14:04:29.733001+00:00"
+  },
+  {
+    "url": "https://blog.cloudflare.com/voidzero-update/",
+    "published_at": "2026-09-28T14:02:26.984355+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Four months of VoidZero at Cloudflare: making the open-source JavaScript toolchain faster for all humans and agents",
+      "source_name": "Cloudflare Blog",
+      "published_at": "2026-09-28T13:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-28T14:04:43.033020+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/nvidia-openshell-sentry-agents/",
+    "published_at": "2026-09-28T14:02:26.986608+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Nvidia launches Open Agent Safety Platform to lock down rogue AI agents",
+      "source_name": "The New Stack",
+      "published_at": "2026-09-28T10:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-28T14:04:49.880545+00:00"
+  },
+  {
+    "url": "https://www.creativebloq.com/design/graphic-design-software/coreldraw-adds-text-to-vector-ai-in-the-september-update-is-it-a-good-move",
+    "published_at": "2026-09-28T14:05:20.551757+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "CorelDRAW adds Text-to-Vector AI in the September update – is it a good move?",
+      "source_name": "Creative Bloq",
+      "published_at": "2026-09-28T12:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-28T14:05:20.551757+00:00"
+  },
+  {
+    "url": "https://martech.org/optimizing-content-for-generative-engine-search-models/",
+    "published_at": "2026-09-28T14:02:26.991039+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Optimizing content for generative engine search models",
+      "source_name": "MarTech",
+      "published_at": "2026-09-28T12:34:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-28T14:05:42.418745+00:00"
   }
 ]
