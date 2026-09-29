@@ -2436,5 +2436,89 @@
       "hn_points": 0
     },
     "updated_at": "2026-09-28T14:05:42.418745+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/gpt-6-1-astra-is-too-deceptive-for-release-marking-openais-most-dramatic-safety-intervention-yet/",
+    "published_at": "2026-09-29T08:35:39.880349+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "GPT-6.1 Astra is too deceptive for release, marking OpenAI's most dramatic safety intervention yet",
+      "source_name": "The Decoder",
+      "published_at": "2026-09-29T08:26:38+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-29T08:35:39.880349+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/09/28/openai-still-doesnt-seem-to-have-a-handle-on-all-of-its-rogue-ai-activity/",
+    "published_at": "2026-09-29T08:32:01.575478+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI still doesn’t seem to have a handle on all of its rogue AI activity",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-09-28T17:09:02+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 106
+    },
+    "updated_at": "2026-09-29T08:36:17.820202+00:00"
+  },
+  {
+    "url": "https://blog.cloudflare.com/cloudflare-cf-cli-launch/",
+    "published_at": "2026-09-29T08:32:01.578017+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Introducing cf: the agentic CLI for the entire Cloudflare API",
+      "source_name": "Cloudflare Blog",
+      "published_at": "2026-09-28T14:50:37+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 152
+    },
+    "updated_at": "2026-09-29T08:36:27.681481+00:00"
+  },
+  {
+    "url": "https://www.technologyreview.com/2026/09/28/1145230/when-can-we-say-ai-made-a-scientific-discovery/",
+    "published_at": "2026-09-29T08:32:01.580592+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "When can we say AI made a scientific discovery?",
+      "source_name": "MIT Technology Review",
+      "published_at": "2026-09-28T17:03:16+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-29T08:36:50.238321+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/openai-agents-security-bypasses/",
+    "published_at": "2026-09-29T08:32:01.583153+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI blocked its agent’s web access. Then it tunneled out through DNS.",
+      "source_name": "The New Stack",
+      "published_at": "2026-09-28T17:15:34+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-29T08:37:14.440164+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1001590/openai-devday-2026-aeon-ai-agent",
+    "published_at": "2026-09-29T08:32:01.585692+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI’s AI agents need to catch up",
+      "source_name": "The Verge AI",
+      "published_at": "2026-09-28T18:45:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-29T08:37:26.694387+00:00"
   }
 ]
