@@ -2520,5 +2520,89 @@
       "hn_points": 0
     },
     "updated_at": "2026-09-29T08:37:26.694387+00:00"
+  },
+  {
+    "url": "https://jagi.studio/posts/phyllotaxis/",
+    "published_at": "2026-09-29T15:35:10.934154+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Phyllotaxis: An audio-reactive LED display",
+      "source_name": "Hacker News",
+      "published_at": "2026-09-28T16:18:57Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 201
+    },
+    "updated_at": "2026-09-29T15:35:10.934154+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents/",
+    "published_at": "2026-09-29T15:32:10.430857+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Nvidia launches new platform for reining in rogue AI agents",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-09-28T18:31:23+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-29T15:33:37.613241+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/more-than-20-leading-ai-researchers-warn-that-automated-ai-research-poses-extreme-risks/",
+    "published_at": "2026-09-29T15:32:10.433142+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "More than 20 leading AI researchers warn that automated AI research poses extreme risks",
+      "source_name": "The Decoder",
+      "published_at": "2026-09-28T19:26:21+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-29T15:33:48.810306+00:00"
+  },
+  {
+    "url": "https://arstechnica.com/ai/2026/09/openai-says-planned-gpt-6-1-is-too-insecure-to-release/",
+    "published_at": "2026-09-29T15:32:10.435362+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI says planned GPT-6.1 is too insecure to release",
+      "source_name": "Ars Technica AI",
+      "published_at": "2026-09-29T14:22:31+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-29T15:34:10.867821+00:00"
+  },
+  {
+    "url": "https://martech.org/braze-expands-ai-from-content-creation-to-campaign-operations/",
+    "published_at": "2026-09-29T15:32:10.437443+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Braze expands AI from content creation to campaign operations",
+      "source_name": "MarTech",
+      "published_at": "2026-09-29T13:42:52+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-29T15:34:37.738106+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1001886/meta-muse-ai-facebook-marketplace-security-concerns",
+    "published_at": "2026-09-29T15:32:10.439589+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Meta’s Muse AI sent a YouTuber’s address to a stranger",
+      "source_name": "The Verge AI",
+      "published_at": "2026-09-29T14:08:21+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-29T15:35:00.819276+00:00"
   }
 ]
