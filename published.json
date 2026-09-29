@@ -2604,5 +2604,15 @@
       "hn_points": 0
     },
     "updated_at": "2026-09-29T15:35:00.819276+00:00"
+  },
+  {
+    "url": "promo://aten_tue/2026-09-29",
+    "published_at": "2026-09-29T15:37:00.280434+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "aten_tue",
+      "day": "2026-09-29",
+      "published_at_local": "2026-09-29T18:36:59.848086+03:00"
+    }
   }
 ]
