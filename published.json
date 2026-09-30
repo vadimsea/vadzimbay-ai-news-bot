@@ -2698,5 +2698,89 @@
       "hn_points": 0
     },
     "updated_at": "2026-09-30T06:48:36.506826+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1002033/openai-dots-launch-muse-competitor",
+    "published_at": "2026-09-30T14:16:47.159303+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI launches Dots, its Muse competitor",
+      "source_name": "The Verge AI",
+      "published_at": "2026-09-29T17:15:00+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-30T14:17:10.287373+00:00"
+  },
+  {
+    "url": "https://lastweekin.ai/p/last-week-in-ai-345-5-new-models",
+    "published_at": "2026-09-30T14:16:47.162559+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Last Week in AI #345 - 5 new models, 9 misalignment incidents, some Dots",
+      "source_name": "Last Week in AI",
+      "published_at": "2026-09-30T11:23:54+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-30T14:17:19.185030+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/openais-reveals-a-new-chatgpt-that-looks-less-like-a-chatbot-and-more-like-an-operating-system/",
+    "published_at": "2026-09-30T14:16:47.165355+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI's reveals a new ChatGPT that looks less like a chatbot and more like an operating system",
+      "source_name": "The Decoder",
+      "published_at": "2026-09-29T17:23:22+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-30T14:17:28.588741+00:00"
+  },
+  {
+    "url": "https://blog.cloudflare.com/auto-router/",
+    "published_at": "2026-09-30T14:16:47.168135+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Cut your AI spend with AI Gateway's Auto Router",
+      "source_name": "Cloudflare Blog",
+      "published_at": "2026-09-30T13:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-30T14:17:35.307566+00:00"
+  },
+  {
+    "url": "https://martech.org/states-are-starting-to-rewrite-the-rules-of-social-media/",
+    "published_at": "2026-09-30T14:16:47.172079+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "States are rewriting the rules of social media",
+      "source_name": "MarTech",
+      "published_at": "2026-09-30T12:28:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-30T14:17:58.361023+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/09/29/the-internet-is-convinced-elon-musks-xai-trolled-openais-dots-launch/",
+    "published_at": "2026-09-30T14:16:47.174959+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "The internet is convinced Elon Musk’s xAI trolled OpenAI’s ‘Dots’ launch",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-09-29T22:20:59+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-30T14:18:25.053750+00:00"
   }
 ]
