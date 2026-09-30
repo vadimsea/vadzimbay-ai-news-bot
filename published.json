@@ -2614,5 +2614,89 @@
       "day": "2026-09-29",
       "published_at_local": "2026-09-29T18:36:59.848086+03:00"
     }
+  },
+  {
+    "url": "https://openai.com/index/introducing-dots",
+    "published_at": "2026-09-30T06:46:40.713022+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Introducing dots",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "language": "en",
+      "llm_score": 10.0,
+      "hn_points": 549
+    },
+    "updated_at": "2026-09-30T06:47:03.516779+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/openai-launches-always-on-dots-agents-to-rival-metas-muse/",
+    "published_at": "2026-09-30T06:46:40.715598+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI launches always-on Dots agents to rival Meta's Muse",
+      "source_name": "The Decoder",
+      "published_at": "2026-09-29T17:14:45+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-30T06:48:11.460642+00:00"
+  },
+  {
+    "url": "https://railcode.dev/blog/vibe-coded-website",
+    "published_at": "2026-09-30T06:48:43.513469+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "How our vibe coded website looks like a designer made it",
+      "source_name": "Hacker News",
+      "published_at": "2026-09-29T22:59:28Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 107
+    },
+    "updated_at": "2026-09-30T06:48:43.513469+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/09/29/openais-latest-features-take-direct-aim-at-the-app-store-model/",
+    "published_at": "2026-09-30T06:46:40.720444+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI’s latest features take direct aim at the app store model",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-09-29T20:15:47+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-30T06:48:18.899597+00:00"
+  },
+  {
+    "url": "https://vercel.com/changelog/gpt-6-1-sol-now-available-on-ai-gateway",
+    "published_at": "2026-09-30T06:46:40.722819+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "GPT-6.1 Sol now available on AI Gateway",
+      "source_name": "Vercel Blog",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-30T06:48:30.003375+00:00"
+  },
+  {
+    "url": "https://www.socialmediatoday.com/news/meta-launches-muse-ai-for-smbs/831714/",
+    "published_at": "2026-09-30T06:46:40.725348+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Meta launches Muse AI for SMBs",
+      "source_name": "Social Media Today",
+      "published_at": "2026-09-29T21:32:26+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-09-30T06:48:36.506826+00:00"
   }
 ]
