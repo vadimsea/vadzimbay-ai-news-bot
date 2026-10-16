@@ -2832,5 +2832,15 @@
       "day": "2026-10-13",
       "published_at_local": "2026-10-13T19:50:45.771840+03:00"
     }
+  },
+  {
+    "url": "promo://programmer_bot_weekly/2026-10-16",
+    "published_at": "2026-10-16T13:52:19.016607+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "programmer_bot_weekly",
+      "day": "2026-10-16",
+      "published_at_local": "2026-10-16T16:52:18.598000+03:00"
+    }
   }
 ]
