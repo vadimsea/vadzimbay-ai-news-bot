@@ -8,6 +8,7 @@ from groq import Groq
 from openai import OpenAI
 
 from filters import contains_political_text, is_political_news
+from llm_ranker import _provider_order, note_provider_error
 
 logger = logging.getLogger(__name__)
 MAX_TELEGRAM_PHOTO_CAPTION_LENGTH = 1024
@@ -149,17 +150,15 @@ def adapt_news_to_russian(
         logger.warning("Translator rejected political source news: %s", news.get("url"))
         return None
 
-    if openai_api_key:
-        text = _adapt_with_openai(news, openai_api_key, model)
+    # LLM_PROVIDER goes first; any other provider with a key is a fallback (no credits, outage).
+    for provider in _provider_order(llm_provider, groq_api_key, openai_api_key):
+        if provider == "openai":
+            text = _adapt_with_openai(news, openai_api_key, model)
+        else:
+            text = _adapt_with_groq(news, groq_api_key, groq_model)
         if text:
             return text
-        logger.warning("OpenAI adaptation failed, falling back to configured provider")
-
-    if llm_provider == "groq" and groq_api_key:
-        text = _adapt_with_groq(news, groq_api_key, groq_model)
-        if text:
-            return text
-        logger.warning("Groq adaptation failed, falling back to template")
+        logger.warning("%s adaptation failed, trying next provider", provider)
 
     return _fallback_post(news)
 
@@ -188,8 +187,9 @@ def _adapt_with_groq(news: dict[str, Any], groq_api_key: str, model: str) -> str
             temperature=0.25,
             max_tokens=650,
         )
-    except Exception:
+    except Exception as exc:
         logger.exception("Groq adaptation failed")
+        note_provider_error("groq", exc)
         return None
 
     return _finalize_text(response.choices[0].message.content or "", news, lambda text: _shorten_with_groq(client, text, news, model))
@@ -207,8 +207,9 @@ def _adapt_with_openai(news: dict[str, Any], openai_api_key: str, model: str) ->
             temperature=0.25,
             max_output_tokens=650,
         )
-    except Exception:
+    except Exception as exc:
         logger.exception("OpenAI adaptation failed")
+        note_provider_error("openai", exc)
         return None
 
     return _finalize_text(response.output_text or "", news, lambda text: _shorten_with_openai(client, text, news, model))
