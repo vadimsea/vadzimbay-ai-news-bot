@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import logging
+import time
 from typing import Any
 
 from groq import Groq
@@ -79,6 +80,35 @@ SCORING_SYSTEM_PROMPT = """Ты главный редактор топового
 """
 
 
+# Groq's free tier allows ~12k tokens per minute, so it gets small batches with pauses.
+GROQ_BATCH_SIZE = 20
+GROQ_BATCH_PAUSE_SECONDS = 25
+
+
+# Providers that answered "no credits / bad key" are skipped for the rest of this process.
+_DISABLED_PROVIDERS: set[str] = set()
+_FATAL_MARKERS = ("insufficient_quota", "credit_balance", "invalid_api_key", "incorrect api key", "authentication")
+
+
+def note_provider_error(provider: str, error: Exception) -> None:
+    if any(marker in str(error).lower() for marker in _FATAL_MARKERS):
+        if provider not in _DISABLED_PROVIDERS:
+            logger.error("%s disabled for this run: %s", provider, str(error)[:200])
+        _DISABLED_PROVIDERS.add(provider)
+
+
+def _provider_order(llm_provider: str, groq_api_key: str | None, openai_api_key: str | None) -> list[str]:
+    """Preferred provider first; the other one is a fallback whenever it has a key."""
+    available = [
+        name for name, key in (("openai", openai_api_key), ("groq", groq_api_key))
+        if key and name not in _DISABLED_PROVIDERS
+    ]
+    if llm_provider in available:
+        available.remove(llm_provider)
+        available.insert(0, llm_provider)
+    return available
+
+
 def score_news_with_llm(
     candidates: list[dict[str, Any]],
     llm_provider: str,
@@ -87,24 +117,48 @@ def score_news_with_llm(
     openai_api_key: str | None,
     openai_model: str,
 ) -> dict[int, tuple[float, str]] | None:
-    """Score every candidate 1-10. Returns {candidate index: (score, reason)} or None if no LLM answered."""
+    """Score every candidate 1-10. Returns {candidate index: (score, reason)} or None if no LLM answered.
+
+    Providers are tried in order (LLM_PROVIDER first); a provider that fails entirely
+    (no credits, outage) hands over to the next one.
+    """
     if not candidates:
         return {}
 
-    payload = _build_payload(candidates, summary_chars=400)
-    content = ""
-    if llm_provider == "groq" and groq_api_key:
-        content = _complete_with_groq(SCORING_SYSTEM_PROMPT, payload, groq_api_key, groq_model)
-        if not content:
-            logger.warning("Groq LLM scoring failed, falling back to OpenAI")
-    if not content and openai_api_key:
-        content = _complete_with_openai(SCORING_SYSTEM_PROMPT, payload, openai_api_key, openai_model)
+    for provider in _provider_order(llm_provider, groq_api_key, openai_api_key):
+        if provider == "openai":
+            payload = _build_payload(candidates, summary_chars=400)
+            content = _complete_with_openai(SCORING_SYSTEM_PROMPT, payload, openai_api_key, openai_model, max_tokens=7000)
+            scores = _parse_scores(content, len(candidates)) if content else None
+        else:
+            scores = _score_with_groq_batches(candidates, groq_api_key, groq_model)
+        if scores:
+            logger.info("Scored %s of %s candidates with %s", len(scores), len(candidates), provider)
+            return scores
+        logger.warning("LLM scoring with %s failed, trying next provider", provider)
+    return None
 
-    return _parse_scores(content, len(candidates)) if content else None
+
+def _score_with_groq_batches(
+    candidates: list[dict[str, Any]],
+    api_key: str,
+    model: str,
+) -> dict[int, tuple[float, str]] | None:
+    scores: dict[int, tuple[float, str]] = {}
+    for start in range(0, len(candidates), GROQ_BATCH_SIZE):
+        if start:
+            time.sleep(GROQ_BATCH_PAUSE_SECONDS)
+        batch = candidates[start : start + GROQ_BATCH_SIZE]
+        payload = _build_payload(batch, summary_chars=250, start_index=start)
+        content = _complete_with_groq(SCORING_SYSTEM_PROMPT, payload, api_key, model, max_tokens=2000)
+        batch_scores = _parse_scores(content, len(candidates)) if content else None
+        if batch_scores:
+            scores.update({index: value for index, value in batch_scores.items() if start <= index < start + len(batch)})
+    return scores or None
 
 
-def _complete_with_groq(system_prompt: str, payload: str, api_key: str, model: str) -> str:
-    client = Groq(api_key=api_key)
+def _complete_with_groq(system_prompt: str, payload: str, api_key: str, model: str, max_tokens: int = 7000) -> str:
+    client = Groq(api_key=api_key, max_retries=4)
     try:
         response = client.chat.completions.create(
             model=model,
@@ -113,16 +167,17 @@ def _complete_with_groq(system_prompt: str, payload: str, api_key: str, model: s
                 {"role": "user", "content": f"Кандидаты:\n{payload}"},
             ],
             temperature=0.1,
-            max_tokens=7000,
+            max_tokens=max_tokens,
             response_format={"type": "json_object"},
         )
         return response.choices[0].message.content or ""
-    except Exception:
+    except Exception as exc:
         logger.exception("Groq LLM scoring request failed")
+        note_provider_error("groq", exc)
         return ""
 
 
-def _complete_with_openai(system_prompt: str, payload: str, api_key: str, model: str) -> str:
+def _complete_with_openai(system_prompt: str, payload: str, api_key: str, model: str, max_tokens: int = 7000) -> str:
     client = OpenAI(api_key=api_key)
     try:
         response = client.responses.create(
@@ -132,11 +187,12 @@ def _complete_with_openai(system_prompt: str, payload: str, api_key: str, model:
                 {"role": "user", "content": f"Кандидаты:\n{payload}"},
             ],
             temperature=0.1,
-            max_output_tokens=7000,
+            max_output_tokens=max_tokens,
         )
         return response.output_text or ""
-    except Exception:
+    except Exception as exc:
         logger.exception("OpenAI LLM scoring request failed")
+        note_provider_error("openai", exc)
         return ""
 
 
@@ -194,9 +250,9 @@ def select_best_news_with_llm(
     return None, ""
 
 
-def _build_payload(candidates: list[dict[str, Any]], summary_chars: int = 700) -> str:
+def _build_payload(candidates: list[dict[str, Any]], summary_chars: int = 700, start_index: int = 0) -> str:
     compact_items: list[dict[str, Any]] = []
-    for index, news in enumerate(candidates):
+    for index, news in enumerate(candidates, start=start_index):
         compact_items.append(
             {
                 "index": index,

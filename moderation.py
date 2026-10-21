@@ -133,6 +133,19 @@ def request_moderation_batch(
     return results
 
 
+def notify_admin(bot_token: str, chat_id: str, text: str, timeout: int = 15) -> None:
+    """Plain message to the moderation chat; never raises."""
+    if not bot_token or not chat_id:
+        return
+    url = TELEGRAM_API.format(token=bot_token, method="sendMessage")
+    try:
+        response = requests.post(url, json={"chat_id": chat_id, "text": text}, timeout=timeout)
+        if not response.ok:
+            logger.warning("Admin notification failed: %s %s", response.status_code, response.text)
+    except requests.RequestException:
+        logger.warning("Admin notification request failed", exc_info=True)
+
+
 def _send_moderation_preview(
     bot_token: str,
     chat_id: str,

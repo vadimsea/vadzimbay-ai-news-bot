@@ -15,7 +15,7 @@ from fetcher import extract_article_description, extract_article_image_url, fetc
 from filters import contains_political_text
 from hashtags import append_hashtags
 from llm_ranker import score_news_with_llm
-from moderation import ModerationItem, request_moderation_batch
+from moderation import ModerationItem, notify_admin, request_moderation_batch
 from popularity import fetch_hn_popularity
 from post_style import apply_title_emoji
 from promo import due_promo_posts, next_promo_hint
@@ -81,13 +81,24 @@ def run_once() -> bool:
     )
     _log_stats(stats, len(sources), len(blocked_source_entries))
 
+    def alert(message: str) -> None:
+        logger.error(message)
+        if not settings.dry_run and settings.moderation_enabled:
+            notify_admin(settings.telegram_bot_token, settings.moderation_chat_id, f"⚠️ {message}", settings.request_timeout_seconds)
+
+    if not stats.get("llm_used") and (settings.openai_api_key or settings.groq_api_key):
+        alert(
+            "Бот: ни один LLM-провайдер не ответил (закончились кредиты OpenAI/Groq или сбой). "
+            "Оценка новостей работает по запасным правилам, посты могут не формироваться. Проверьте баланс API."
+        )
+
     if not selected_items:
         logger.info("No suitable news found. Nothing will be published.")
         return False
 
     prepared_items = _prepare_posts(selected_items, settings, limit=offers)
     if not prepared_items:
-        logger.info("No selected news could be prepared with valid image and safe text.")
+        alert("Бот: новости отобраны, но ни одну не удалось подготовить (нет картинки или LLM не сформировал текст).")
         return False
 
     if settings.dry_run:
