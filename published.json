@@ -2852,5 +2852,15 @@
       "day": "2026-10-20",
       "published_at_local": "2026-10-20T17:13:42.436585+03:00"
     }
+  },
+  {
+    "url": "promo://remote_belarus_weekly/2026-10-21",
+    "published_at": "2026-10-21T14:25:33.443530+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "remote_belarus_weekly",
+      "day": "2026-10-21",
+      "published_at_local": "2026-10-21T17:25:32.958716+03:00"
+    }
   }
 ]
