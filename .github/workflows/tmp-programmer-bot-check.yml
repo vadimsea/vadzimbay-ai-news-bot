@@ -1,0 +1,53 @@
+name: TMP programmer bot conversation check
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Branch of vadimsea/telegram-programmer-bot"
+        default: "master"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: vadimsea/telegram-programmer-bot
+          ref: ${{ inputs.ref }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Conversation
+        env:
+          TELEGRAM_TOKEN: dummy
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          cat > /tmp/conv.py <<'PY'
+          import asyncio, time, logging
+          logging.basicConfig(level=logging.WARNING)
+          import main
+          from enhanced_ai_handler import EnhancedAIHandler
+          async def run():
+              h = EnhancedAIHandler()
+              ctx = main.UserContext(); ctx.user_id = 1
+              turns = [
+                "привет",
+                "Меня зовут Игорь, я только учусь. Почему у меня не работает print('привет)?",
+                "ничего не понимаю, это слишком сложно",
+                "кто твой создатель?",
+                "как работает async/await в Python, если коротко?",
+                "спасибо, ты классный!",
+              ]
+              for t in turns:
+                  ctx.add_message("user", t)
+                  t0 = time.time()
+                  resp, fb = await asyncio.wait_for(h.get_specialized_response(t, "general", ctx, skill_level=ctx.skill_level, preferences=ctx.preferences), 75)
+                  ctx.add_message("assistant", resp)
+                  print("\n=== USER:", t)
+                  print(f"=== BOT (fallback={fb}, {time.time()-t0:.1f}s, model={h._groq_model}):\n{resp}")
+          asyncio.run(run())
+          PY
+          PYTHONPATH="$PWD" python /tmp/conv.py
