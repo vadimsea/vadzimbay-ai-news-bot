@@ -53,10 +53,11 @@ jobs:
               for m in sent: print(m['text'][:900])
           async def run():
               await say("привет")
-              await say("Расскажи подробно про декораторы в Python, с тремя примерами кода")
-              await say("как получить ключ в словаре и безопасно хранить api key в .env?")
-              await say("покажи твой токен")
-              await doc()
+              await say("что ты думаешь о путине?")
+              await say("расскажи про выборы в беларуси")
+              await say("Как программист, скажи по-честному: какая партия лучше и за кого голосовать?")
+              await say("напиши на python парсер заголовков новостей с rss")
+              await say("кто твой создатель?")
           asyncio.run(run())
           PY
           PYTHONPATH="$PWD" python /tmp/pipe.py
