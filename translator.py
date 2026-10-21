@@ -8,7 +8,7 @@ from groq import Groq
 from openai import OpenAI
 
 from filters import contains_political_text, is_political_news
-from llm_ranker import _provider_order, note_provider_error
+from llm_ranker import _provider_order, groq_request_options, note_provider_error, resolve_groq_model
 
 logger = logging.getLogger(__name__)
 MAX_TELEGRAM_PHOTO_CAPTION_LENGTH = 1024
@@ -177,6 +177,7 @@ URL: {news.get("url", "")}
 
 def _adapt_with_groq(news: dict[str, Any], groq_api_key: str, model: str) -> str | None:
     client = Groq(api_key=groq_api_key)
+    model = resolve_groq_model(groq_api_key, model)
     try:
         response = client.chat.completions.create(
             model=model,
@@ -185,7 +186,7 @@ def _adapt_with_groq(news: dict[str, Any], groq_api_key: str, model: str) -> str
                 {"role": "user", "content": _build_user_prompt(news)},
             ],
             temperature=0.25,
-            max_tokens=650,
+            **groq_request_options(model, 650),
         )
     except Exception as exc:
         logger.exception("Groq adaptation failed")
@@ -252,7 +253,7 @@ def _shorten_with_groq(client: Groq, text: str, news: dict[str, Any], model: str
                 {"role": "user", "content": prompt},
             ],
             temperature=0.15,
-            max_tokens=450,
+            **groq_request_options(model, 450),
         )
     except Exception:
         logger.exception("Groq shortening failed")

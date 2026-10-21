@@ -97,6 +97,44 @@ def note_provider_error(provider: str, error: Exception) -> None:
         _DISABLED_PROVIDERS.add(provider)
 
 
+# Groq retires models regularly; if the configured one is gone (404), pick the first usable model.
+_GROQ_MODEL_PREFERENCE = (
+    "llama-3.3-70b-versatile",
+    "openai/gpt-oss-120b",
+    "meta-llama/llama-4-maverick-17b-128e-instruct",
+    "meta-llama/llama-4-scout-17b-16e-instruct",
+    "openai/gpt-oss-20b",
+    "llama-3.1-8b-instant",
+)
+_NOT_CHAT_MARKERS = ("whisper", "guard", "tts", "playai", "distil-whisper", "orpheus", "safeguard", "compound")
+_resolved_groq_models: dict[str, str] = {}
+
+
+def resolve_groq_model(api_key: str, configured: str) -> str:
+    """The configured model if Groq still serves it, otherwise the best available chat model."""
+    if configured in _resolved_groq_models:
+        return _resolved_groq_models[configured]
+    resolved = configured
+    try:
+        ids = sorted(model.id for model in Groq(api_key=api_key).models.list().data)
+        logger.info("Groq models available: %s", ", ".join(ids))
+        if configured not in ids:
+            chat_ids = [i for i in ids if not any(marker in i.lower() for marker in _NOT_CHAT_MARKERS)]
+            resolved = next((m for m in _GROQ_MODEL_PREFERENCE if m in chat_ids), chat_ids[0] if chat_ids else configured)
+            logger.warning("Groq model %s is not available, using %s", configured, resolved)
+    except Exception:
+        logger.warning("Could not list Groq models, keeping %s", configured, exc_info=True)
+    _resolved_groq_models[configured] = resolved
+    return resolved
+
+
+def groq_request_options(model: str, max_tokens: int) -> dict[str, Any]:
+    """Extra request params per model. gpt-oss reasons before answering: keep it short, leave token headroom."""
+    if model.startswith("openai/gpt-oss"):
+        return {"max_tokens": max_tokens * 3, "reasoning_effort": "low"}
+    return {"max_tokens": max_tokens}
+
+
 def _provider_order(llm_provider: str, groq_api_key: str | None, openai_api_key: str | None) -> list[str]:
     """Preferred provider first; the other one is a fallback whenever it has a key."""
     available = [
@@ -159,6 +197,7 @@ def _score_with_groq_batches(
 
 def _complete_with_groq(system_prompt: str, payload: str, api_key: str, model: str, max_tokens: int = 7000) -> str:
     client = Groq(api_key=api_key, max_retries=4)
+    model = resolve_groq_model(api_key, model)
     try:
         response = client.chat.completions.create(
             model=model,
@@ -167,8 +206,8 @@ def _complete_with_groq(system_prompt: str, payload: str, api_key: str, model: s
                 {"role": "user", "content": f"Кандидаты:\n{payload}"},
             ],
             temperature=0.1,
-            max_tokens=max_tokens,
             response_format={"type": "json_object"},
+            **groq_request_options(model, max_tokens),
         )
         return response.choices[0].message.content or ""
     except Exception as exc:
