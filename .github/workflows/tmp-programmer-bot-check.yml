@@ -50,4 +50,4 @@ jobs:
                   print(f"=== BOT (fallback={fb}, {time.time()-t0:.1f}s, model={h._groq_model}):\n{resp}")
           asyncio.run(run())
           PY
-          python /tmp/conv.py
+          PYTHONPATH="$PWD" python /tmp/conv.py
