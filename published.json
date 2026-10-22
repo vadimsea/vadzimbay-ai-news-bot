@@ -3079,5 +3079,89 @@
       "hn_points": 0
     },
     "updated_at": "2026-10-22T08:53:02.402076+00:00"
+  },
+  {
+    "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+    "published_at": "2026-10-22T15:18:47.260298+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-10-21T07:00:00+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 259
+    },
+    "updated_at": "2026-10-22T15:19:09.918387+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/an-ai-agent-in-skynet-mode-hijacks-unprotected-language-models-to-launch-self-sustaining-cyberattacks/",
+    "published_at": "2026-10-22T15:18:47.263168+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "An AI agent in \"Skynet mode\" hijacks unprotected language models to launch self-sustaining cyberattacks",
+      "source_name": "The Decoder",
+      "published_at": "2026-10-22T11:30:56+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-22T15:19:20.227857+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/presentations/actors-for-production-ai-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-10-22T15:18:47.265791+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Presentation: Actors for Agents: Patterns for Production AI",
+      "source_name": "InfoQ",
+      "published_at": "2026-10-22T11:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-22T15:19:41.925240+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/google-agent-compute-engine/",
+    "published_at": "2026-10-22T15:18:47.268362+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google turns the infrastructure behind Gemini’s agents into a cloud service",
+      "source_name": "The New Stack",
+      "published_at": "2026-10-22T13:00:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-22T15:20:04.059498+00:00"
+  },
+  {
+    "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
+    "published_at": "2026-10-22T15:18:47.270952+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Using thousands of AI agents to uncover new leads in biological data",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-10-21T04:50:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 151
+    },
+    "updated_at": "2026-10-22T15:20:34.444842+00:00"
+  },
+  {
+    "url": "https://www.socialmediatoday.com/news/youtube-shares-data-on-how-creators-are-using-ai/833657/",
+    "published_at": "2026-10-22T15:21:58.308315+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "YouTube shares data on how creators are using AI",
+      "source_name": "Social Media Today",
+      "published_at": "2026-10-21T20:00:56+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-22T15:21:58.308315+00:00"
   }
 ]
