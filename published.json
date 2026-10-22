@@ -2995,5 +2995,89 @@
       "llm_score": 7.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://openai.com/index/openai-models-google-cloud",
+    "published_at": "2026-10-22T08:48:32.415932+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI models are coming to Google Cloud",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-10-21T12:00:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 285
+    },
+    "updated_at": "2026-10-22T08:51:05.905593+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1015843/anthropic-claude-duet-ai-agent",
+    "published_at": "2026-10-22T08:48:32.418498+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Anthropic takes on Muse with Claude Duet, its new AI agent",
+      "source_name": "The Verge AI",
+      "published_at": "2026-10-21T19:53:20+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-22T08:51:17.438628+00:00"
+  },
+  {
+    "url": "https://josie.lol/blog/linux-rtx-spark",
+    "published_at": "2026-10-22T08:48:32.420396+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Putting Linux on my RTX Spark laptop because I don't have a Microsoft account",
+      "source_name": "Hacker News",
+      "published_at": "2026-10-19T21:08:18Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 285
+    },
+    "updated_at": "2026-10-22T08:51:30.980463+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/deepmind-founder-hassabis-shortens-agi-timeline-from-five-to-two-to-three-years/",
+    "published_at": "2026-10-22T08:52:00.932231+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Deepmind founder Hassabis shortens AGI timeline from five to two to three years",
+      "source_name": "The Decoder",
+      "published_at": "2026-10-21T17:10:46+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-22T08:52:00.932231+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/anthropic-mythos-safety-pace/",
+    "published_at": "2026-10-22T08:48:32.424184+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Amodei says Anthropic’s safety delay may have cost it an AI lead",
+      "source_name": "The New Stack",
+      "published_at": "2026-10-21T21:22:53+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-22T08:52:38.178163+00:00"
+  },
+  {
+    "url": "https://ppc.land/creative-fatigue/",
+    "published_at": "2026-10-22T08:48:32.426032+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Creative fatigue",
+      "source_name": "PPC Land",
+      "published_at": "2026-10-21T20:22:59+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-22T08:53:02.402076+00:00"
   }
 ]
