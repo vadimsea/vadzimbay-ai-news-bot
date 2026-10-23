@@ -3257,5 +3257,83 @@
       "day": "2026-10-23",
       "published_at_local": "2026-10-23T17:09:44.593614+03:00"
     }
+  },
+  {
+    "url": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans",
+    "published_at": "2026-10-23T14:34:18.827433+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Every AI model has the same \"controversial\" take on humans",
+      "source_name": "Hacker News",
+      "published_at": "2026-10-22T16:08:00Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 528
+    }
+  },
+  {
+    "url": "https://the-decoder.com/anthropics-claude-now-writes-code-and-proves-it-safe-automatically/",
+    "published_at": "2026-10-23T14:34:18.830969+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic's Claude now writes code and proves it safe automatically",
+      "source_name": "The Decoder",
+      "published_at": "2026-10-23T11:32:19+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+    "published_at": "2026-10-23T14:34:18.834241+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-10-22T19:00:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://thenewstack.io/microsoft-streaming-speech-models/",
+    "published_at": "2026-10-23T14:34:18.837510+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Microsoft’s new voice AI can start working out what you want before you finish speaking",
+      "source_name": "The New Stack",
+      "published_at": "2026-10-23T12:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/10/photocraft-adobe-parity/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-10-23T14:34:18.840771+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Developer Behind the AI-Built Adobe Clones Says They Are “Not Anywhere Close to Ready",
+      "source_name": "InfoQ",
+      "published_at": "2026-10-22T07:41:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.socialmediatoday.com/news/google-adds-brand-management-tools-to-gemini/833790/",
+    "published_at": "2026-10-23T14:34:18.844040+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google adds brand management tools to Gemini",
+      "source_name": "Social Media Today",
+      "published_at": "2026-10-22T19:25:08+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
   }
 ]
