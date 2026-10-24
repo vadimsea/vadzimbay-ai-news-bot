@@ -3419,5 +3419,75 @@
       "hn_points": 0
     },
     "updated_at": "2026-10-24T09:50:08.193745+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
+    "published_at": "2026-10-24T16:01:13.511968+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
+      "source_name": "The Verge AI",
+      "published_at": "2026-10-23T16:52:55+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 364
+    },
+    "updated_at": "2026-10-24T16:01:13.511968+00:00"
+  },
+  {
+    "url": "https://astral.sh/blog/uv-ty-integration",
+    "published_at": "2026-10-24T15:48:48.558588+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Bringing uv and ty together",
+      "source_name": "Lobsters",
+      "published_at": "2026-10-24T15:27:34+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 223
+    },
+    "updated_at": "2026-10-24T16:01:28.174508+00:00"
+  },
+  {
+    "url": "https://martech.org/chatgpt-sends-less-than-1-of-googles-traffic/",
+    "published_at": "2026-10-24T15:48:48.560713+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "ChatGPT sends less than 1% of Google’s traffic",
+      "source_name": "MarTech",
+      "published_at": "2026-10-22T14:56:47+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-24T16:01:37.884743+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/blocks-new-ai-model-dessa-was-trained-entirely-on-human-speech-to-catch-emotions-text-based-models-miss/",
+    "published_at": "2026-10-24T15:48:48.562806+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Block's new AI model Dessa was trained entirely on human speech to catch emotions text-based models miss",
+      "source_name": "The Decoder",
+      "published_at": "2026-10-24T14:09:46+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-24T16:01:52.603566+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
+    "published_at": "2026-10-24T15:48:48.564912+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Canva’s first AI image model plans designs before generating them",
+      "source_name": "The Verge AI",
+      "published_at": "2026-10-22T21:51:25+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-24T16:02:21.364358+00:00"
   }
 ]
