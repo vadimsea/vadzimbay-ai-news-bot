@@ -3335,5 +3335,89 @@
       "llm_score": 6.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://arstechnica.com/gadgets/2026/10/updated-google-privacy-policy-says-your-gmail-might-be-used-for-advertising/",
+    "published_at": "2026-10-24T08:04:00.482586+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Updated Google privacy policy says your Gmail might be used for advertising",
+      "source_name": "Ars Technica AI",
+      "published_at": "2026-10-23T20:19:55+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-24T09:49:07.647001+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia/",
+    "published_at": "2026-10-24T08:04:00.487263+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Uber rival inDrive eyes 2027 robotaxi tests in Central Asia with Pony AI and Nvidia",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-10-23T04:00:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-24T09:49:19.946202+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/three-week-on-site-audit-at-openai-reveals-major-gaps-in-ai-safety-monitoring/",
+    "published_at": "2026-10-24T08:04:00.490732+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Three-week on-site audit at OpenAI reveals major gaps in AI safety monitoring",
+      "source_name": "The Decoder",
+      "published_at": "2026-10-23T18:00:32+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-24T09:49:26.845884+00:00"
+  },
+  {
+    "url": "https://ppc.land/gemini-4-argons-25-trillion-tokens-in-72-hours-leave-google-short-of-compute/",
+    "published_at": "2026-10-24T08:04:00.494061+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Gemini 4 Argon's 25 trillion tokens in 72 hours leave Google short of compute",
+      "source_name": "PPC Land",
+      "published_at": "2026-10-23T20:09:16+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-24T09:49:36.336990+00:00"
+  },
+  {
+    "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+    "published_at": "2026-10-24T08:04:00.497358+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-10-23T17:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-24T09:49:45.794708+00:00"
+  },
+  {
+    "url": "https://www.wired.com/story/hugging-face-new-ai-biology-model-chat-with-dna/",
+    "published_at": "2026-10-24T08:04:00.500708+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Hugging Face’s New AI Biology Model Lets You Chat With DNA",
+      "source_name": "Wired",
+      "published_at": "2026-10-22T10:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-24T09:50:08.193745+00:00"
   }
 ]
