@@ -3573,5 +3573,83 @@
       "hn_points": 0
     },
     "updated_at": "2026-10-25T07:53:39.596286+00:00"
+  },
+  {
+    "url": "https://t3n.de/news/chatgpt-gedaechtnis-psychologische-profile-studie-1769797/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "published_at": "2026-10-25T14:03:51.176044+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Algorithmisches Selbstporträt: Wie ChatGPT ungefragt psychologische Profile seiner Nutzenden anlegt",
+      "source_name": "t3n",
+      "published_at": "2026-10-25T12:55:21+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/10/google-argon-optimizes-adk/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-10-25T14:03:51.180154+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google Optimizes Agent Development Kit's 200K-line Python Codebase Overnight with Gemini 4 Argon",
+      "source_name": "InfoQ",
+      "published_at": "2026-10-24T16:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.heise.de/news/Anthropic-laesst-KI-Agenten-Verhandlungsregeln-fuer-Menschen-lernen-11498981.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "published_at": "2026-10-25T14:03:51.183929+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic lässt KI-Agenten Verhandlungsregeln für Menschen lernen",
+      "source_name": "Heise Online",
+      "published_at": "2026-10-24T08:14:00+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.golem.de/news/ki-modell-moonshot-ai-stellt-kimi-k3-1-pro-vor-2610-214477.html",
+    "published_at": "2026-10-25T14:03:51.187323+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "KI-Modell: Moonshot AI stellt Kimi K3.1 Pro vor",
+      "source_name": "Golem.de",
+      "published_at": "2026-10-24T13:20:02+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://ppc.land/google-ai-overviews-reach-88-of-commercial-searches-as-ai-clicks-stay-thin/",
+    "published_at": "2026-10-25T14:03:51.190809+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google AI Overviews reach 88% of commercial searches as AI clicks stay thin",
+      "source_name": "PPC Land",
+      "published_at": "2026-10-23T06:23:37+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://the-decoder.com/ex-google-ceo-eric-schmidt-calls-openai-and-anthropic-modern-colonial-trading-companies/",
+    "published_at": "2026-10-25T14:03:51.194204+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Ex-Google CEO Eric Schmidt calls OpenAI and Anthropic modern colonial trading companies",
+      "source_name": "The Decoder",
+      "published_at": "2026-10-25T08:09:32+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
   }
 ]
