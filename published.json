@@ -3489,5 +3489,89 @@
       "hn_points": 0
     },
     "updated_at": "2026-10-24T16:02:21.364358+00:00"
+  },
+  {
+    "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
+    "published_at": "2026-10-25T07:49:02.452441+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Cerebras Deploys Trillion-Parameter AI Models",
+      "source_name": "Hacker News",
+      "published_at": "2026-10-25T01:33:49Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 114
+    },
+    "updated_at": "2026-10-25T07:49:44.395371+00:00"
+  },
+  {
+    "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+    "published_at": "2026-10-25T07:49:02.456590+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Securing our frontier model training environment",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-10-23T10:00:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 119
+    },
+    "updated_at": "2026-10-25T07:49:56.191137+00:00"
+  },
+  {
+    "url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
+    "published_at": "2026-10-25T07:52:07.746926+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "America has lost 200k of jobs in media, film and the arts. How much is AI?",
+      "source_name": "Hacker News",
+      "published_at": "2026-10-24T23:11:54Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 321
+    },
+    "updated_at": "2026-10-25T07:52:07.746926+00:00"
+  },
+  {
+    "url": "https://vercel.com/blog/how-vercel-agent-accesses-production-safely",
+    "published_at": "2026-10-25T07:49:02.463597+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "How Vercel Agent accesses production safely",
+      "source_name": "Vercel Blog",
+      "published_at": "2026-10-23T20:29:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-25T07:52:32.138897+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
+    "published_at": "2026-10-25T07:49:02.467062+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-10-23T23:05:49+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-25T07:52:39.983271+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/10/24/these-clever-apps-show-off-the-iphone-duos-potential/",
+    "published_at": "2026-10-25T07:49:02.470551+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "These clever apps show off the iPhone Duo’s potential",
+      "source_name": "TechCrunch Apps",
+      "published_at": "2026-10-24T15:00:00+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-25T07:53:39.596286+00:00"
   }
 ]
