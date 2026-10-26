@@ -3651,5 +3651,89 @@
       "llm_score": 6.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://lynchlab.net/llm-skin-cancer",
+    "published_at": "2026-10-26T07:18:33.029291+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
+      "source_name": "Hacker News",
+      "published_at": "2026-10-25T17:15:38Z",
+      "language": "en",
+      "llm_score": 10.0,
+      "hn_points": 521
+    },
+    "updated_at": "2026-10-26T07:22:00.704236+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/10/google-meta-torchtpu/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-10-26T07:18:33.032225+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "PyTorch Conference 2026: Google and Meta Open-Source TorchTPU for Native PyTorch on TPUs",
+      "source_name": "InfoQ",
+      "published_at": "2026-10-25T18:00:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-26T07:22:11.796833+00:00"
+  },
+  {
+    "url": "https://www.golem.de/news/ausbruchsgefahr-openai-sperrt-seine-ki-modelle-vom-internet-aus-2610-214474.html",
+    "published_at": "2026-10-26T07:18:33.034540+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Ausbruchsgefahr: OpenAI sperrt seine KI-Modelle vom Internet aus",
+      "source_name": "Golem.de",
+      "published_at": "2026-10-24T11:27:01+00:00",
+      "language": "de",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-26T07:22:19.514112+00:00"
+  },
+  {
+    "url": "https://minimaxir.com/2026/10/cheap-llms/",
+    "published_at": "2026-10-26T07:18:33.036849+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+      "source_name": "Hacker News",
+      "published_at": "2026-10-25T21:11:31Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 255
+    },
+    "updated_at": "2026-10-26T07:22:41.301527+00:00"
+  },
+  {
+    "url": "https://korindiehacker.bloffy.blog/en/removing-nextjs-got-my-blog-to-100-on-every-lighthouse-category",
+    "published_at": "2026-10-26T07:18:33.039128+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Removing Next.js Got My Blog to 100 on Every Lighthouse Category",
+      "source_name": "Hacker News",
+      "published_at": "2026-10-26T01:03:39Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 104
+    },
+    "updated_at": "2026-10-26T07:22:47.829745+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/column/1017983/google-ai-search-online-publishing",
+    "published_at": "2026-10-26T07:18:33.041364+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google’s AI search changes upended online publishing",
+      "source_name": "The Verge AI",
+      "published_at": "2026-10-25T12:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-26T07:22:54.767882+00:00"
   }
 ]
