@@ -3735,5 +3735,60 @@
       "hn_points": 0
     },
     "updated_at": "2026-10-26T07:22:54.767882+00:00"
+  },
+  {
+    "url": "https://github.com/KrushnaVardhanReddy/PaperPilot",
+    "published_at": "2026-10-26T14:18:35.724403+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "PaperPilot – Zero-Cloud, Pure-Rust PDF Engine with WASM and MCP",
+      "source_name": "Hacker News",
+      "published_at": "2026-10-26T03:29:05Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 189
+    },
+    "updated_at": "2026-10-26T14:19:10.267089+00:00"
+  },
+  {
+    "url": "https://www.heise.de/news/Brotli-Decoder-Luecke-nicht-nur-in-Node-js-sondern-auch-in-Bun-Python-und-mehr-11499975.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "published_at": "2026-10-26T14:18:35.728077+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Brotli-Decoder-Lücke nicht nur in Node.js, sondern auch in Bun, Python und mehr",
+      "source_name": "Heise Online",
+      "published_at": "2026-10-26T10:04:00+00:00",
+      "language": "de",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-26T14:19:17.894408+00:00"
+  },
+  {
+    "url": "https://www.wired.com/story/ai-agents-are-trying-to-be-journalists-now/",
+    "published_at": "2026-10-26T14:18:35.731337+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Meet the AI Agents Trying to Be Real-Life Journalists",
+      "source_name": "Wired",
+      "published_at": "2026-10-26T09:30:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.heise.de/news/Python-schliesst-per-Update-kritische-TLS-Luecke-wegen-eMudhra-Schluesseln-11499933.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "published_at": "2026-10-26T14:19:41.842498+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Python schließt per Update kritische TLS-Lücke wegen eMudhra-Schlüsseln",
+      "source_name": "Heise Online",
+      "published_at": "2026-10-26T10:18:00+00:00",
+      "language": "de",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-26T14:19:41.842498+00:00"
   }
 ]
