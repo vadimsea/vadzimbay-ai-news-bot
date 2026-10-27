@@ -3790,5 +3790,89 @@
       "hn_points": 0
     },
     "updated_at": "2026-10-26T14:19:41.842498+00:00"
+  },
+  {
+    "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+    "published_at": "2026-10-27T08:34:35.789053+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Introducing GPT-6.1 Terra",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-10-26T00:00:00+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 579
+    },
+    "updated_at": "2026-10-27T08:34:35.789053+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1019143/openai-eth-kaseya-science-math-physics",
+    "published_at": "2026-10-27T08:33:55.553723+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI announces three big science discoveries and a new way to work with academics",
+      "source_name": "The Verge AI",
+      "published_at": "2026-10-26T23:34:58+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-27T08:34:45.198475+00:00"
+  },
+  {
+    "url": "https://latent.space/p/ainews-anthropic-s1/",
+    "published_at": "2026-10-27T08:33:55.557564+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "[AINews] Anthropic files for $2T IPO in 2 weeks: 1400% growth rate, 48% of revenue through cloud partners, 85% margin, $1B op profit in Q2, $134B cash in bank and $10B lifetime burn",
+      "source_name": "Latent Space",
+      "published_at": "2026-10-27T07:24:59+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-27T08:34:56.141046+00:00"
+  },
+  {
+    "url": "https://css-tricks.com/css-tricks-has-a-new-owner/",
+    "published_at": "2026-10-27T08:33:55.561386+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "CSS-Tricks has a new owner!",
+      "source_name": "CSS-Tricks",
+      "published_at": "2026-10-26T15:29:36+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 451
+    },
+    "updated_at": "2026-10-27T08:35:35.682044+00:00"
+  },
+  {
+    "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation/",
+    "published_at": "2026-10-27T08:33:55.565211+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model, and our remediation with SGLang",
+      "source_name": "Cloudflare Blog",
+      "published_at": "2026-10-26T22:01:23+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 127
+    },
+    "updated_at": "2026-10-27T08:35:42.502649+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/gpt-6-1-terra-halves-openais-api-prices-and-still-gains-ground-on-its-larger-models/",
+    "published_at": "2026-10-27T08:33:55.568965+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "GPT-6.1 Terra halves OpenAI's API prices and still gains ground on its larger models",
+      "source_name": "The Decoder",
+      "published_at": "2026-10-26T20:30:55+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-27T08:36:04.458438+00:00"
   }
 ]
