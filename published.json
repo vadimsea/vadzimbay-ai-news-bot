@@ -3884,5 +3884,89 @@
       "day": "2026-10-27",
       "published_at_local": "2026-10-27T18:15:27.390138+03:00"
     }
+  },
+  {
+    "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
+    "published_at": "2026-10-27T16:18:40.965378+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Python's experimental JIT to be removed",
+      "source_name": "Hacker News",
+      "published_at": "2026-10-27T11:17:57Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 252
+    },
+    "updated_at": "2026-10-27T16:20:45.344526+00:00"
+  },
+  {
+    "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+    "published_at": "2026-10-27T16:18:40.968822+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Working with academic communities to build scientific understanding",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-10-26T14:30:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 1068
+    },
+    "updated_at": "2026-10-27T16:20:53.178170+00:00"
+  },
+  {
+    "url": "https://www.computerbase.de/news/apps/neues-ki-modell-openai-setzt-bei-gpt-6-1-terra-den-fokus-auf-effizienz.100020/",
+    "published_at": "2026-10-27T16:18:40.971292+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "GPT-6.1 Terra: OpenAI veröffentlicht neues KI-Modell mit höherer Effizienz",
+      "source_name": "ComputerBase",
+      "published_at": "2026-10-27T09:35:00+00:00",
+      "language": "de",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-27T16:21:08.282456+00:00"
+  },
+  {
+    "url": "https://arstechnica.com/google/2026/10/deepminds-genie-4-world-model-adds-audio-and-more-realistic-people-to-simulations/",
+    "published_at": "2026-10-27T16:18:40.973683+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "DeepMind unveils Genie 4 world model promising more realistic physics and humans",
+      "source_name": "Ars Technica AI",
+      "published_at": "2026-10-27T16:00:22+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-27T16:21:19.013240+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/10/cloudflare-auto-router/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-10-27T16:18:40.976110+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Cloudflare’s Auto Router Rates Each Request for Stakes, from the Most Recent Turns",
+      "source_name": "InfoQ",
+      "published_at": "2026-10-26T10:20:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-27T16:21:35.479962+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/openai-asks-outside-experts-including-a-nobel-laureate-to-check-proofs-its-ai-produced-in-math-computer-science-and-physics/",
+    "published_at": "2026-10-27T16:22:13.639268+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "OpenAI asks outside experts, including a Nobel laureate, to check proofs its AI produced in math, computer science, and physics",
+      "source_name": "The Decoder",
+      "published_at": "2026-10-27T12:37:24+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-27T16:22:13.639268+00:00"
   }
 ]
