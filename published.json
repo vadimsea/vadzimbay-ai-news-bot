@@ -3968,5 +3968,89 @@
       "hn_points": 0
     },
     "updated_at": "2026-10-27T16:22:13.639268+00:00"
+  },
+  {
+    "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+    "published_at": "2026-10-28T08:36:40.489743+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Genie 4: A new generation of world simulation",
+      "source_name": "Google DeepMind Blog",
+      "published_at": "2026-10-27T16:01:38+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 866
+    },
+    "updated_at": "2026-10-28T08:36:40.489743+00:00"
+  },
+  {
+    "url": "https://www.heise.de/news/GPT-6-1-Terra-Guenstiges-Modell-fuer-effiziente-Computerarbeit-11501275.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "published_at": "2026-10-28T08:34:44.837623+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "GPT-6.1 Terra: Günstiges Modell für effiziente Computerarbeit",
+      "source_name": "Heise Online",
+      "published_at": "2026-10-27T09:17:00+00:00",
+      "language": "de",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-28T08:36:52.767168+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/genie-4-world-model/",
+    "published_at": "2026-10-28T08:34:44.840134+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google built AI agents a world to practice in. The physics still aren’t quite right.",
+      "source_name": "The New Stack",
+      "published_at": "2026-10-27T22:33:51+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-28T08:37:04.611322+00:00"
+  },
+  {
+    "url": "https://ppc.land/americans-use-chatgpt-at-work-most-to-make-decisions-1-in-5-requests/",
+    "published_at": "2026-10-28T08:37:58.341546+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Americans use ChatGPT at work most to make decisions - 1 in 5 requests",
+      "source_name": "PPC Land",
+      "published_at": "2026-10-27T11:32:44+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-28T08:37:58.341546+00:00"
+  },
+  {
+    "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+    "published_at": "2026-10-28T08:34:44.845041+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-10-27T07:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-28T08:37:28.274785+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/10/27/opera-introduces-a-new-web-standard-to-let-users-deploy-ai-locally-in-their-browser/",
+    "published_at": "2026-10-28T08:34:44.847521+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Opera introduces a new web standard to let users deploy AI locally in their browser",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-10-27T13:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-28T08:38:12.541320+00:00"
   }
 ]
