@@ -4052,5 +4052,89 @@
       "hn_points": 0
     },
     "updated_at": "2026-10-28T08:38:12.541320+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/github-copilot-fusion/",
+    "published_at": "2026-10-28T16:48:47.438318+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "GitHub debuts Copilot Fusion, a new model selection & orchestration system that beats Claude Code for half the API cost",
+      "source_name": "The New Stack",
+      "published_at": "2026-10-28T16:19:31+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-28T16:52:46.011333+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/tech/1019373/apple-pages-keynote-numbers-ai-chatbot-update",
+    "published_at": "2026-10-28T16:48:47.442783+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Apple is adding an AI chatbot to Pages, Keynote, and Numbers",
+      "source_name": "The Verge AI",
+      "published_at": "2026-10-27T13:50:51+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-28T16:52:56.108418+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/nvidias-open-nemotron-3-5-transcribe-combines-transcription-translation-and-speaker-recognition/",
+    "published_at": "2026-10-28T16:48:47.446699+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Nvidia's open Nemotron 3.5 Transcribe combines transcription, translation, and speaker recognition",
+      "source_name": "The Decoder",
+      "published_at": "2026-10-28T15:49:39+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-28T16:53:02.937461+00:00"
+  },
+  {
+    "url": "https://vercel.com/changelog/gpt-6-1-terra-now-available-on-ai-gateway",
+    "published_at": "2026-10-28T16:48:47.450634+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "GPT-6.1 Terra now available on AI Gateway",
+      "source_name": "Vercel Blog",
+      "published_at": "2026-10-26T00:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-28T16:53:09.553432+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/",
+    "published_at": "2026-10-28T16:48:47.454651+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google’s Genie 4 world model adds audio, more realistic worlds, and real-time steering",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-10-27T16:30:57+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-28T16:53:16.071128+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/10/28/meta-has-a-new-ai-pet-app-called-waddle-world/",
+    "published_at": "2026-10-28T16:48:47.458613+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Meta has a new AI pet app called Waddle World",
+      "source_name": "TechCrunch Apps",
+      "published_at": "2026-10-28T13:53:31+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-28T16:53:31.975343+00:00"
   }
 ]
