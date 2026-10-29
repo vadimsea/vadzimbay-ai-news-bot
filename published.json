@@ -4136,5 +4136,89 @@
       "hn_points": 0
     },
     "updated_at": "2026-10-28T16:53:31.975343+00:00"
+  },
+  {
+    "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+    "published_at": "2026-10-29T08:18:44.453471+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt",
+      "source_name": "Hugging Face Blog",
+      "published_at": "2026-10-28T14:58:17+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 120
+    },
+    "updated_at": "2026-10-29T09:13:18.308004+00:00"
+  },
+  {
+    "url": "https://latent.space/p/ainews-gemini-4-carbon/",
+    "published_at": "2026-10-29T08:18:44.458043+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "[AINews] Gemini 4 Carbon tops leaderboards, launches for cyber defenders",
+      "source_name": "Latent Space",
+      "published_at": "2026-10-29T05:55:19+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-29T09:13:25.985812+00:00"
+  },
+  {
+    "url": "https://openai.com/index/retell-ai",
+    "published_at": "2026-10-29T08:18:44.461855+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Retell uses OpenAI models to help power 100M monthly calls",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-10-27T15:00:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-29T09:13:34.237052+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/android-agents-build-debug/",
+    "published_at": "2026-10-29T08:18:44.465440+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google just handed its rivals the keys to Android",
+      "source_name": "The New Stack",
+      "published_at": "2026-10-28T17:43:09+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-29T09:13:41.184988+00:00"
+  },
+  {
+    "url": "https://blog.jetbrains.com/platform/2026/10/jetbrains-terminal-now-uses-ghostty/",
+    "published_at": "2026-10-29T08:18:44.469250+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "The Terminal in JetBrains IDEs Now Runs on libghostty",
+      "source_name": "JetBrains Blog",
+      "published_at": "2026-10-27T09:36:36+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 76
+    },
+    "updated_at": "2026-10-29T09:13:57.901655+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/google-opens-android-development-to-third-party-ai-agents-and-unveils-new-gemini-apis/",
+    "published_at": "2026-10-29T08:18:44.473055+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google opens Android development to third-party AI agents and unveils new Gemini APIs",
+      "source_name": "The Decoder",
+      "published_at": "2026-10-28T16:59:59+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-29T09:14:05.884709+00:00"
   }
 ]
