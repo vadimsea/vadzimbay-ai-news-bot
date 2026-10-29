@@ -4220,5 +4220,89 @@
       "hn_points": 0
     },
     "updated_at": "2026-10-29T09:14:05.884709+00:00"
+  },
+  {
+    "url": "https://mistral.ai/news/mistral-large-4-oss/",
+    "published_at": "2026-10-29T16:04:19.017311+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Mistral Large 4 (Le Chonk) is now Open Weight",
+      "source_name": "Hacker News",
+      "published_at": "2026-10-29T14:13:21Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 412
+    },
+    "updated_at": "2026-10-29T16:46:15.216530+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/",
+    "published_at": "2026-10-29T16:04:19.022275+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Voice AI in vogue: Nvidia releases new open transcription model",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-10-28T15:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-29T16:46:21.782180+00:00"
+  },
+  {
+    "url": "https://ppc.land/googles-genie-4-simulates-people-who-talk-back-in-real-time/",
+    "published_at": "2026-10-29T16:04:19.026522+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google's Genie 4 simulates people who talk back in real time",
+      "source_name": "PPC Land",
+      "published_at": "2026-10-28T21:18:31+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-29T16:46:32.556195+00:00"
+  },
+  {
+    "url": "https://www.computerbase.de/news/apps/googles-weltenmodell-genie-4-simuliert-komplette-szenen-und-erzeugt-ton-sowie-dialoge.100043/",
+    "published_at": "2026-10-29T16:04:19.030728+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Googles Weltenmodell: Genie 4 erzeugt kom­plette Szenen, Ton und Dia­loge",
+      "source_name": "ComputerBase",
+      "published_at": "2026-10-28T07:55:00+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-29T16:46:38.807811+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/mistral-chonk-coding-model/",
+    "published_at": "2026-10-29T16:04:19.035023+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Mistral’s Large 4 open weights arrive with a 1-point coding lead over GLM-5.3: “There’s nothing you can’t do with this model that you can do with competitors.”",
+      "source_name": "The New Stack",
+      "published_at": "2026-10-29T14:49:44+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-29T16:46:45.035879+00:00"
+  },
+  {
+    "url": "https://vercel.com/changelog/particle-1-is-now-available-on-ai-gateway",
+    "published_at": "2026-10-29T16:04:19.039285+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Particle-1 is now available on AI Gateway",
+      "source_name": "Vercel Blog",
+      "published_at": "2026-10-28T00:00:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-10-29T16:46:52.767228+00:00"
   }
 ]
