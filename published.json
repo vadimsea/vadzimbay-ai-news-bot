@@ -4304,5 +4304,83 @@
       "hn_points": 0
     },
     "updated_at": "2026-10-29T16:46:52.767228+00:00"
+  },
+  {
+    "url": "https://www.wired.com/story/ai-made-decades-of-computer-science-research-irrelevant/",
+    "published_at": "2026-10-30T06:04:19.717924+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "An AI Breakthrough Has Made Decades of Computer Science Research ‘Irrelevant’",
+      "source_name": "Wired",
+      "published_at": "2026-10-29T10:45:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
+    "published_at": "2026-10-30T06:04:19.723266+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Claude Code regularly sends each background agent’s transcript to its model",
+      "source_name": "Hacker News",
+      "published_at": "2026-10-29T03:33:42Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 565
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/10/qcon-ai-newyork-2026-pc-picks/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-10-30T06:04:19.727716+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "QCon AI New York 2026 Program Committee Picks: Agent Identity, Context Costs, and Open-Source Infere",
+      "source_name": "InfoQ",
+      "published_at": "2026-10-29T11:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.marketingdive.com/news/googles-ai-overhaul-of-search-hits-snags-as-ad-revenue-growth-cools/873150/",
+    "published_at": "2026-10-30T06:04:19.732101+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google’s AI overhaul of search hits snags as ad revenue growth cools",
+      "source_name": "Marketing Dive",
+      "published_at": "2026-10-29T14:28:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://the-decoder.com/openai-teases-dots-for-europe-but-its-berlin-devday-was-really-about-building-a-platform/",
+    "published_at": "2026-10-30T06:04:19.736619+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI teases Dots for Europe, but its Berlin DevDay was really about building a platform",
+      "source_name": "The Decoder",
+      "published_at": "2026-10-28T16:25:02+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://t3n.de/news/gemini-4-carbon-google-1770698/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "published_at": "2026-10-30T06:04:19.740998+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Gemini 4 Carbon: Google kündigt nur 2 Wochen nach Argon noch besseres KI-Modell an",
+      "source_name": "t3n",
+      "published_at": "2026-10-29T18:25:26+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
   }
 ]
