@@ -4476,5 +4476,83 @@
       "hn_points": 0
     },
     "updated_at": "2026-10-30T16:46:52.344615+00:00"
+  },
+  {
+    "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+    "published_at": "2026-10-31T07:48:47.207504+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+      "source_name": "Hacker News",
+      "published_at": "2026-10-30T07:09:12Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 873
+    }
+  },
+  {
+    "url": "https://the-decoder.com/a-claude-model-autonomously-chose-a-gene-therapy-and-operated-on-a-mouse-brain-with-no-human-decision-making/",
+    "published_at": "2026-10-31T07:48:47.212168+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "A Claude model autonomously chose a gene therapy and operated on a mouse brain with no human decision-making",
+      "source_name": "The Decoder",
+      "published_at": "2026-10-30T19:42:59+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.golem.de/news/mistral-large-4-mistral-macht-1-billion-parameter-modell-frei-zugaenglich-2610-214675.html",
+    "published_at": "2026-10-31T07:48:47.216548+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Mistral Large 4: Mistral macht 1-Billion-Parameter-Modell frei zugänglich",
+      "source_name": "Golem.de",
+      "published_at": "2026-10-30T10:16:01+00:00",
+      "language": "de",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.githubstatus.com/incidents/pwxsjgnvrk6b",
+    "published_at": "2026-10-31T07:48:47.220786+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "GitHub Incident with Actions, Pages, and Webhooks",
+      "source_name": "Hacker News",
+      "published_at": "2026-10-30T17:57:35Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 150
+    }
+  },
+  {
+    "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
+    "published_at": "2026-10-31T07:48:47.224945+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "The biggest names in AI are backing a new way to opt out of scraping",
+      "source_name": "The Verge AI",
+      "published_at": "2026-10-30T20:26:10+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://ppc.land/google-and-bing-back-one-robots-txt-rule-to-opt-out-of-ai-training/",
+    "published_at": "2026-10-31T07:48:47.229162+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google and Bing back one robots.txt rule to opt out of AI training",
+      "source_name": "PPC Land",
+      "published_at": "2026-10-31T05:43:54+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    }
   }
 ]
