@@ -4554,5 +4554,83 @@
       "llm_score": 5.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://thenewstack.io/gpt-6-1-terra-vs-gpt-6-astra/",
+    "published_at": "2026-10-31T14:34:15.034136+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "GPT-6.1 Terra vs. GPT-6 Astra: One sacrifices accuracy for lower cost and higher speed at high effort",
+      "source_name": "The New Stack",
+      "published_at": "2026-10-30T14:59:35+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.figma.com/blog/the-tldr-on-figma-weave/",
+    "published_at": "2026-10-31T14:34:15.038848+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "The TL;DR on Figma Weave: Make your creative process repeatable",
+      "source_name": "Figma Blog",
+      "published_at": "2026-10-31T00:58:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/10/google-pagebreak-security-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-10-31T14:34:15.043298+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+      "source_name": "InfoQ",
+      "published_at": "2026-10-31T06:20:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://t3n.de/news/mit-experiment-ki-einsame-insel-1769624/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "published_at": "2026-10-31T14:34:15.047752+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "MIT-Experiment: Forscher setzen 13 KI-Agenten auf einer einsamen Insel aus – und schauen 30 Stunden lang zu",
+      "source_name": "t3n",
+      "published_at": "2026-10-31T06:20:00+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://ppc.land/roblox-developers-buy-ads-for-traffic-as-80-of-top-games-use-ai/",
+    "published_at": "2026-10-31T14:34:15.052148+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Roblox developers buy ads for traffic as 80% of top games use AI",
+      "source_name": "PPC Land",
+      "published_at": "2026-10-31T08:40:00+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.firezone.dev/blog/introducing-sanstun",
+    "published_at": "2026-10-31T14:34:15.056650+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Sanstun: A sans-IO, parallel-friendly WireGuard implementation in Rust",
+      "source_name": "Hacker News",
+      "published_at": "2026-10-30T21:30:00Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 144
+    }
   }
 ]
