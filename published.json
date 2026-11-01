@@ -4632,5 +4632,89 @@
       "llm_score": 9.0,
       "hn_points": 144
     }
+  },
+  {
+    "url": "https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering",
+    "published_at": "2026-11-01T06:18:59.140045+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Anthropic takes steps to block Claude from reverse-engineering video games",
+      "source_name": "Hacker News",
+      "published_at": "2026-10-31T21:07:58Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 128
+    },
+    "updated_at": "2026-11-01T08:07:39.477500+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/gpt-6-1-terra-vs-claude-opus-5-5/",
+    "published_at": "2026-11-01T08:08:10.625191+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "GPT-6.1 Terra vs. Claude Opus 5.5: Cheaper and faster in three tests at max effort",
+      "source_name": "The New Stack",
+      "published_at": "2026-10-31T14:00:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-01T08:08:10.625191+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/google-deepmind-creates-a-global-map-of-forests-with-satellite-data-and-ai/",
+    "published_at": "2026-11-01T06:18:59.150037+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google Deepmind creates a global map of forests with satellite data and AI",
+      "source_name": "The Decoder",
+      "published_at": "2026-10-31T10:15:45+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-01T08:08:34.942633+00:00"
+  },
+  {
+    "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+    "published_at": "2026-11-01T06:18:59.154677+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Anthropic blocks users for anything touching training larger models",
+      "source_name": "Hacker News",
+      "published_at": "2026-10-31T19:39:19Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 294
+    },
+    "updated_at": "2026-11-01T08:09:11.910770+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/10/doordash-ai-grocery-reorder/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-01T06:18:59.159273+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+      "source_name": "InfoQ",
+      "published_at": "2026-10-30T13:31:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-01T08:09:20.226433+00:00"
+  },
+  {
+    "url": "https://www.computerbase.de/news/prozessoren/weniger-abhaengig-von-nvidia-openai-will-ki-chips-von-google-kaufen.100074/",
+    "published_at": "2026-11-01T06:18:59.163995+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Weniger abhängig von Nvidia: OpenAI will KI-Chips von Google kaufen",
+      "source_name": "ComputerBase",
+      "published_at": "2026-10-29T12:22:00+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-01T08:09:29.309014+00:00"
   }
 ]
