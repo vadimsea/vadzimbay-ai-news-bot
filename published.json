@@ -4716,5 +4716,89 @@
       "hn_points": 0
     },
     "updated_at": "2026-11-01T08:09:29.309014+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/",
+    "published_at": "2026-11-01T15:04:04.091738+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Anthropic expected to receive high ‘junk’ rating from credit agencies following IPO, FT report says",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-10-30T21:52:03+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 100
+    },
+    "updated_at": "2026-11-01T15:39:19.765381+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/adobe-is-testing-how-well-ai-agents-can-use-editing-tools-like-a-photoshop-professional-would/",
+    "published_at": "2026-11-01T15:04:04.094918+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Adobe is testing how well AI agents can use editing tools like a Photoshop professional would",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-01T14:56:44+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-01T15:39:29.625479+00:00"
+  },
+  {
+    "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
+    "published_at": "2026-11-01T15:04:04.097644+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours",
+      "source_name": "Ars Technica AI",
+      "published_at": "2026-10-30T21:09:54+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-01T15:39:38.869418+00:00"
+  },
+  {
+    "url": "https://github.com/picocss/pico/discussions/754",
+    "published_at": "2026-11-01T15:04:04.100357+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Pico CSS is no longer maintained",
+      "source_name": "Hacker News",
+      "published_at": "2026-10-30T01:58:44Z",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 197
+    },
+    "updated_at": "2026-11-01T15:40:19.476510+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/",
+    "published_at": "2026-11-01T15:04:04.103073+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google’s first data center satellite is online and writing poetry",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-10-30T17:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-01T15:40:33.155329+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/openais-upcoming-chat-and-work-merger-in-chatgpt-signals-the-end-of-all-you-can-prompt-pricing/",
+    "published_at": "2026-11-01T15:04:04.105689+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI's upcoming chat-and-work merger in ChatGPT signals the end of all-you-can-prompt pricing",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-01T09:51:06+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-01T15:41:04.806250+00:00"
   }
 ]
