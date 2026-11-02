@@ -4800,5 +4800,88 @@
       "hn_points": 0
     },
     "updated_at": "2026-11-01T15:41:04.806250+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+    "published_at": "2026-11-02T06:52:28.390345+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "AI delivers 'zero financial payoff' to most companies, Apollo economist says",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-01T22:10:45Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 214
+    },
+    "updated_at": "2026-11-02T06:52:28.390345+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission",
+    "published_at": "2026-11-02T06:53:53.988567+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Google’s satellite AI server transmits its first response to Earth",
+      "source_name": "The Verge AI",
+      "published_at": "2026-10-30T18:21:38+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-02T06:53:53.988567+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/jassy-bedrock-multimodel-prediction/",
+    "published_at": "2026-11-02T06:48:31.339046+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Amazon CEO predicts 6 to 8 AI models will be ‘good enough’ for almost everything",
+      "source_name": "The New Stack",
+      "published_at": "2026-10-31T14:30:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://ppc.land/marie-haynes-tells-seos-to-build-google-search-apps-instead-of-chasing-geo/",
+    "published_at": "2026-11-02T06:48:31.342953+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Marie Haynes tells SEOs to build Google Search apps instead of chasing GEO",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-01T07:25:37+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-02T06:55:17.947236+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/presentations/ai-software-engineering-pipeline/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-02T06:56:11.616163+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Presentation: The Ladder Is Missing Rungs: Engineering Progression When AI Ate the Middle",
+      "source_name": "InfoQ",
+      "published_at": "2026-10-30T11:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-02T06:56:11.616163+00:00"
+  },
+  {
+    "url": "https://github.com/ivankovic/omnidiff",
+    "published_at": "2026-11-02T06:48:31.350927+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-01T13:02:30Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 207
+    },
+    "updated_at": "2026-11-02T06:56:23.047770+00:00"
   }
 ]
