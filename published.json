@@ -5045,5 +5045,89 @@
       "llm_score": 5.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://the-decoder.com/anthropic-cracks-down-on-game-cloning-in-claude-code-after-wave-of-ai-built-knockoffs/",
+    "published_at": "2026-11-03T16:54:41.192494+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Anthropic cracks down on game cloning in Claude Code after wave of AI-built knockoffs",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-03T09:48:08+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-03T16:54:41.192494+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/anthropics-message-threads-cut-time-to-first-token-by-35-percent-for-long-conversations/",
+    "published_at": "2026-11-03T15:18:48.920699+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Anthropic's Message Threads cut time to first token by 35 percent for long conversations",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-03T12:35:49+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-03T16:54:08.894909+00:00"
+  },
+  {
+    "url": "https://vercel.com/changelog/longcat-2-5-now-available-on-ai-gateway",
+    "published_at": "2026-11-03T15:18:48.925892+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "LongCat 2.5 now available on AI Gateway",
+      "source_name": "Vercel Blog",
+      "published_at": "2026-11-02T00:00:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-03T16:53:57.998745+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/presentations/canvas-ai-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-03T15:18:48.931138+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Presentation: Beyond the Harness: Canvas for AI Agents",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-03T11:00:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-03T16:53:49.894317+00:00"
+  },
+  {
+    "url": "https://blog.cloudflare.com/dns-targeted-zone-builds/",
+    "published_at": "2026-11-03T15:18:48.936246+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "How we halved DNS build delay and cut memory use by 85%",
+      "source_name": "Cloudflare Blog",
+      "published_at": "2026-11-02T14:00:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 189
+    },
+    "updated_at": "2026-11-03T16:53:41.054325+00:00"
+  },
+  {
+    "url": "https://syscall.sh/",
+    "published_at": "2026-11-03T15:18:48.942152+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Show HN: I've updated my Linux System Call website and API",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-02T09:29:16Z",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 225
+    },
+    "updated_at": "2026-11-03T16:53:27.699594+00:00"
   }
 ]
