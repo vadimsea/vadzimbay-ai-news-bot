@@ -4967,5 +4967,83 @@
       "hn_points": 0
     },
     "updated_at": "2026-11-02T14:08:19.832919+00:00"
+  },
+  {
+    "url": "https://openai.com/index/scaling-git-at-openai",
+    "published_at": "2026-11-03T08:03:57.185776+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Scaling Git at OpenAI",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-11-02T15:30:00+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 192
+    }
+  },
+  {
+    "url": "https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432",
+    "published_at": "2026-11-03T08:03:57.192654+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Ubuntu still has not released patch for Linux 0day RCE in almost 3 weeks",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-02T18:39:38Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 457
+    }
+  },
+  {
+    "url": "https://the-decoder.com/spacexsi-apparently-cuts-grok-bot-quotas-weeks-after-musk-called-it-his-fastest-growing-product/",
+    "published_at": "2026-11-03T08:03:57.196772+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "SpaceXSI apparently cuts Grok Bot quotas weeks after Musk called it his fastest-growing product",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-02T18:15:39+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.regenerator1.com/p/anthropics-growth-just-flattened",
+    "published_at": "2026-11-03T08:03:57.200743+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic's growth just flattened",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-02T22:33:20Z",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 203
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/torchtpu-native-pythorch-tpu/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-03T08:03:57.204870+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google and Meta Open-source TorchTPU to Bring Native PyTorch Support to Google TPUs",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-02T17:00:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://ppc.land/google-moves-brand-ai-overviews-aside-as-buyers-question-search-budgets/",
+    "published_at": "2026-11-03T08:03:57.208508+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google moves brand AI Overviews aside as buyers question search budgets",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-03T06:19:17+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    }
   }
 ]
