@@ -5223,5 +5223,89 @@
       "hn_points": 532
     },
     "updated_at": "2026-11-04T07:41:45.875026+00:00"
+  },
+  {
+    "url": "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop",
+    "published_at": "2026-11-04T14:18:20.981905+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Nvidia RTX Spark encrypted firmware slows inference speed to 35% on Linux",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-04T08:46:29Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 255
+    },
+    "updated_at": "2026-11-04T14:40:25.656218+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/openai-says-gpt-6-astra-designed-a-hardware-device-from-scratch-in-under-a-week/",
+    "published_at": "2026-11-04T14:18:20.986871+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI says GPT-6 Astra designed a hardware device from scratch in under a week",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-03T20:15:45+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-04T14:40:32.528190+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1025482/openai-says-chatgpt-is-catching-up-to-google-in-search",
+    "published_at": "2026-11-04T14:40:56.254934+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "OpenAI says ChatGPT is catching up to Google in search",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-03T18:30:42+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-04T14:40:56.254934+00:00"
+  },
+  {
+    "url": "https://sw.kovidgoyal.net/kitty/changelog/#id1",
+    "published_at": "2026-11-04T14:18:20.997227+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "kitty 0.50.0",
+      "source_name": "Lobsters",
+      "published_at": "2026-11-03T17:43:09+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 237
+    },
+    "updated_at": "2026-11-04T14:41:03.278854+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/",
+    "published_at": "2026-11-04T14:18:21.001622+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Anthropic is working on a system to prove AI models’ identity",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-11-03T22:41:03+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-04T14:41:25.680592+00:00"
+  },
+  {
+    "url": "https://ppc.land/youtube-gives-creators-4-ai-tracks-to-clear-music-copyright-claims/",
+    "published_at": "2026-11-04T14:18:21.006004+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "YouTube gives creators 4 AI tracks to clear music copyright claims",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-04T01:05:44+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-04T14:41:32.607092+00:00"
   }
 ]
