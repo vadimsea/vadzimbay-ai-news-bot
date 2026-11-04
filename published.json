@@ -5307,5 +5307,15 @@
       "hn_points": 0
     },
     "updated_at": "2026-11-04T14:41:32.607092+00:00"
+  },
+  {
+    "url": "promo://remote_belarus_weekly/2026-11-04",
+    "published_at": "2026-11-04T16:59:24.090506+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "remote_belarus_weekly",
+      "day": "2026-11-04",
+      "published_at_local": "2026-11-04T19:59:23.484961+03:00"
+    }
   }
 ]
