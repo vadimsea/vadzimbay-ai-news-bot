@@ -5139,5 +5139,89 @@
       "day": "2026-11-03",
       "published_at_local": "2026-11-03T19:56:15.244190+03:00"
     }
+  },
+  {
+    "url": "https://github.com/NVIDIA/auto-ontology",
+    "published_at": "2026-11-04T07:34:23.472058+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Nvidia – open-source auto-ontology",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-03T07:04:50Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 274
+    },
+    "updated_at": "2026-11-04T07:39:55.356164+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/litert-tensor-api/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-04T07:34:23.477655+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google Launches LiteRT Tensor API for Building, Customizing, and Optimizing ML Models for On-Device",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-03T19:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-04T07:40:04.017465+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/bug-hunters-can-now-earn-up-to-172000-from-openai-as-company-ramps-up-security/",
+    "published_at": "2026-11-04T07:34:23.482627+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Bug hunters can now earn up to $172,000 from OpenAI as company ramps up security",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-03T10:42:44+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-04T07:40:28.220905+00:00"
+  },
+  {
+    "url": "https://ppc.land/google-moves-ai-overviews-for-brand-searches-out-of-the-main-results/",
+    "published_at": "2026-11-04T07:34:23.487597+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google moves AI Overviews for brand searches out of the main results",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-03T02:11:51+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-04T07:40:50.842114+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/claude-code-developer-refusals/",
+    "published_at": "2026-11-04T07:34:23.492746+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Developers are downgrading their AI on purpose — and it’s working",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-02T21:03:31+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-04T07:40:57.838860+00:00"
+  },
+  {
+    "url": "https://neufangled.com/",
+    "published_at": "2026-11-04T07:41:45.875026+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Stringman, an $800 open-source room scale gripper robot",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-03T16:47:29Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 532
+    },
+    "updated_at": "2026-11-04T07:41:45.875026+00:00"
   }
 ]
