@@ -5401,5 +5401,83 @@
       "hn_points": 0
     },
     "updated_at": "2026-11-05T08:23:04.665370+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/openai-acquires-pierre-computer-company-to-make-git-keep-up-with-ai-coding-agents/",
+    "published_at": "2026-11-05T16:04:20.850409+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI acquires Pierre Computer Company to make Git keep up with AI coding agents",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-04T18:41:03+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.figma.com/blog/workflow-lab-build-with-code-on-the-canvas-using-the-figma-agent-and-code-layers/",
+    "published_at": "2026-11-05T16:04:20.859404+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Workflow lab: Test ideas with code layers and the Figma agent",
+      "source_name": "Figma Blog",
+      "published_at": "2026-11-04T22:12:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/gcp-api-gateway-streaming/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-05T16:04:20.864644+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google Cloud API Gateway Introduces Streaming Support for Real-Time and AI-Powered Applications",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-05T16:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://ppc.land/chatgpt-reaches-a-fifth-of-google-search-volume-as-taboola-blames-ai/",
+    "published_at": "2026-11-05T16:04:20.869880+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "ChatGPT reaches a fifth of Google search volume as Taboola blames AI",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-05T05:56:20+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://blog.jetbrains.com/webstorm/2026/11/webstorm-2026-3/",
+    "published_at": "2026-11-05T16:04:20.875085+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "WebStorm 2026.3: New Design-Code-Production Workflow, JetBrains Air in WebStorm, and More",
+      "source_name": "JetBrains Blog",
+      "published_at": "2026-11-05T13:27:56+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://the-decoder.com/meta-buys-ai-coding-startup-conductor-as-big-tech-races-to-lock-in-developers/",
+    "published_at": "2026-11-05T16:04:20.880312+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Meta buys AI coding startup Conductor as big tech races to lock in developers",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-05T15:01:09+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
   }
 ]
