@@ -5735,5 +5735,89 @@
       "hn_points": 0
     },
     "updated_at": "2026-11-07T07:13:46.799993+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1029380/openai-1-25-trillion-investment-valuation",
+    "published_at": "2026-11-07T17:05:37.485073+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "OpenAI valued at $1.25 trillion, as rival Anthropic nears its IPO",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-06T23:46:18+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-07T17:05:37.485073+00:00"
+  },
+  {
+    "url": "https://github.com/anomalyco/rune",
+    "published_at": "2026-11-07T17:03:51.304254+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Rune: A native GPU-rendered Rust UI framework for macOS, Windows, Linux and web",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-06T16:31:32Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 174
+    },
+    "updated_at": "2026-11-07T17:05:53.088279+00:00"
+  },
+  {
+    "url": "https://www.computerbase.de/news/gaming/gta-6-marketing-flugzeug-malt-gta-6-logo-mit-8-stunden-flugroute.100207/",
+    "published_at": "2026-11-07T17:06:31.244931+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "GTA 6: Rockstar setzt auf abgehobene Werbemaßnahme",
+      "source_name": "ComputerBase",
+      "published_at": "2026-11-06T12:51:00+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-07T17:06:31.244931+00:00"
+  },
+  {
+    "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-hogwarts-legacy-dlss-5/",
+    "published_at": "2026-11-07T17:03:51.315627+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "‘Hogwarts Legacy’ Gets a Magical NVIDIA DLSS 5 Upgrade on GeForce NOW",
+      "source_name": "NVIDIA Blog",
+      "published_at": "2026-11-05T14:00:34+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-07T17:06:46.312685+00:00"
+  },
+  {
+    "url": "https://asahilinux.org/2026/11/progress-report-7-3/",
+    "published_at": "2026-11-07T17:03:51.321329+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Asahi Linux Progress Linux 7.3",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-07T05:20:18Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 233
+    },
+    "updated_at": "2026-11-07T17:06:53.236068+00:00"
+  },
+  {
+    "url": "https://ppc.land/amazon-opens-its-search-to-outside-stores-as-bots-block-ai-shoppers/",
+    "published_at": "2026-11-07T17:03:51.326876+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Amazon opens its search to outside stores as bots block AI shoppers",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-06T07:36:19+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-07T17:07:02.824931+00:00"
   }
 ]
