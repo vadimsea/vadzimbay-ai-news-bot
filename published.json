@@ -5651,5 +5651,89 @@
       "day": "2026-11-06",
       "published_at_local": "2026-11-06T19:40:23.567461+03:00"
     }
+  },
+  {
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+    "published_at": "2026-11-07T06:48:38.019502+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+      "source_name": "Google AI Blog",
+      "published_at": "2026-11-05T17:00:00+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 315
+    },
+    "updated_at": "2026-11-07T07:15:46.755493+00:00"
+  },
+  {
+    "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/",
+    "published_at": "2026-11-07T06:48:38.025778+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Inside GitHub’s new Git storage architecture",
+      "source_name": "GitHub Blog",
+      "published_at": "2026-11-05T20:23:21+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 115
+    },
+    "updated_at": "2026-11-07T07:15:25.300366+00:00"
+  },
+  {
+    "url": "https://martech.org/chatgpts-paid-traffic-is-worth-far-less-than-googles/",
+    "published_at": "2026-11-07T07:15:12.334873+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "ChatGPT’s paid traffic is worth far less than Google’s",
+      "source_name": "MarTech",
+      "published_at": "2026-11-06T13:27:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-07T07:15:12.334873+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/ripple-65b-preview-delivers-strong-agentic-coding-results-as-a-fully-apache-2-0-open-us-model/",
+    "published_at": "2026-11-07T06:48:38.037201+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Ripple-65B Preview delivers strong agentic coding results as a fully Apache 2.0 open US model",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-06T19:47:04+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-07T07:14:25.825621+00:00"
+  },
+  {
+    "url": "https://www.heise.de/news/Alles-neu-in-Rust-Discord-verabschiedet-sich-von-React-und-Electron-11515467.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "published_at": "2026-11-07T06:48:38.042694+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Discord stellt Client auf Rust um",
+      "source_name": "Heise Online",
+      "published_at": "2026-11-06T17:35:00+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-07T07:14:13.884073+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/cursor-ai-app-deployment/",
+    "published_at": "2026-11-07T07:13:46.799993+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "“Most apps never make it off localhost”: Cursor takes on Lovable and Replit with fully managed app deployment",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-06T15:15:21+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-07T07:13:46.799993+00:00"
   }
 ]
