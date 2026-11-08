@@ -5819,5 +5819,89 @@
       "hn_points": 0
     },
     "updated_at": "2026-11-07T17:07:02.824931+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/openai-gpt6-cyber-exploits/",
+    "published_at": "2026-11-08T08:48:42.007656+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI’s new GPT-6 Cyber is better at hacking and better at staying in its lane",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-05T19:01:03+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-08T08:49:08.162011+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development",
+    "published_at": "2026-11-08T08:48:42.013611+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Why a new report on Anthropic automating AI development is alarming researchers",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-07T12:30:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-08T08:49:38.141454+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/11/05/tiktok-quietly-launches-a-standalone-tiktok-shop-app/",
+    "published_at": "2026-11-08T08:50:02.901440+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "TikTok quietly launches a stand-alone TikTok Shop app",
+      "source_name": "TechCrunch Apps",
+      "published_at": "2026-11-05T15:33:58+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-08T08:50:02.901440+00:00"
+  },
+  {
+    "url": "https://vercel.com/changelog/json-render-and-chat-sdk-agents",
+    "published_at": "2026-11-08T08:48:42.024544+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Chat SDK agents can now stream generative UI with json-render",
+      "source_name": "Vercel Blog",
+      "published_at": "2026-11-06T21:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-08T08:50:25.474267+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/typescript-7-1-beta/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-08T08:48:42.029992+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "TypeScript 7.1 Beta: Restores the Compiler API and Makes Vue and Svelte First-Class",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-06T11:06:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-08T08:50:32.548258+00:00"
+  },
+  {
+    "url": "https://github.blog/changelog/2026-11-05-new-pull-request-overview-page-in-public-preview/",
+    "published_at": "2026-11-08T08:48:42.035412+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "GitHub New pull request overview page in public preview",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-07T23:09:40Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 132
+    },
+    "updated_at": "2026-11-08T08:50:33.989115+00:00"
   }
 ]
