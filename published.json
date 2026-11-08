@@ -5903,5 +5903,89 @@
       "hn_points": 132
     },
     "updated_at": "2026-11-08T08:50:33.989115+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/andrej-karpathy-built-a-curated-video-platform-in-a-weekend-using-claude-and-20-years-of-hacker-news/",
+    "published_at": "2026-11-08T15:18:34.211967+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Andrej Karpathy built a curated video platform in a weekend using Claude and 20 years of Hacker News",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-08T14:23:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-08T15:27:56.761608+00:00"
+  },
+  {
+    "url": "https://www.creativebloq.com/news/the-worlds-biggest-library-of-scanned-assets-for-3d-artists-is-now-free-and-it-seems-that-this-time-its-for-good",
+    "published_at": "2026-11-08T15:18:34.216696+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "The world's biggest library of scanned 3D assets is now free – and it seems that this time it's for good",
+      "source_name": "Creative Bloq",
+      "published_at": "2026-11-07T14:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-08T15:28:18.503767+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/kubernetes-ai-learning-loop/",
+    "published_at": "2026-11-08T15:18:34.220306+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Postcards from tomorrow: Powering the agentic era through open source",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-05T16:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-08T15:28:24.867578+00:00"
+  },
+  {
+    "url": "https://ppc.land/apple-patent-describes-ai-that-repaints-app-screenshots-per-keyword/",
+    "published_at": "2026-11-08T15:18:34.223766+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Apple patent describes AI that repaints app screenshots per keyword",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-08T13:42:51+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-08T15:28:48.898550+00:00"
+  },
+  {
+    "url": "https://github.com/torvalds/linux",
+    "published_at": "2026-11-08T15:18:34.227222+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "GitHub Down Again?",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-08T09:56:07Z",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 111
+    },
+    "updated_at": "2026-11-08T15:29:02.036926+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/ai-coding-agents-still-need-human-cleanup-on-nearly-three-out-of-four-tasks-in-a-real-world-test/",
+    "published_at": "2026-11-08T15:30:00.588620+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "AI coding agents still need human cleanup on nearly three out of four tasks in a real-world test",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-08T09:50:59+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-08T15:30:00.588620+00:00"
   }
 ]
