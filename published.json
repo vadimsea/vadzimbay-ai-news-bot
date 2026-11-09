@@ -6065,5 +6065,83 @@
       "llm_score": 7.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/google-gemini-argon/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-09T16:48:33.782415+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google Releases Gemini 4 Argon for Robotics Control, Simulation, and Policy Improvement",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-09T15:44:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.theverge.com/tech/1029773/disney-adobe-generative-ai-partnership",
+    "published_at": "2026-11-09T16:48:33.787878+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Disney and Adobe are building generative AI tools together",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-09T15:38:56+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.heise.de/news/KI-Coding-Agenten-verfrachten-Zugangsdaten-in-oeffentliche-Repositories-11517278.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "published_at": "2026-11-09T16:48:33.792697+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "KI-Coding-Agenten verfrachten Zugangsdaten in öffentliche Repositories",
+      "source_name": "Heise Online",
+      "published_at": "2026-11-09T12:23:00+00:00",
+      "language": "de",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.searchenginejournal.com/new-organic-growth-stack-search-social-communities-ai/594542/",
+    "published_at": "2026-11-09T16:48:33.797444+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "The New Organic Growth Stack: Search, Social, Communities & AI",
+      "source_name": "Search Engine Journal",
+      "published_at": "2026-11-09T13:00:04+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/aws-torchneuron-trainium-pytorch/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-09T16:48:33.802207+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "AWS Launches TorchNeuron to Run PyTorch Models on AWS Trainium Without Modifications",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-09T11:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/topcoat-rust-framework/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-09T16:48:33.806932+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Tokio Releases Topcoat: A Batteries-Included Full-Stack Rust Framework",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-09T06:42:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
   }
 ]
