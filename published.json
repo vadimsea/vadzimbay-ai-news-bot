@@ -5987,5 +5987,83 @@
       "hn_points": 0
     },
     "updated_at": "2026-11-08T15:30:00.588620+00:00"
+  },
+  {
+    "url": "https://ketchup3d.github.io/app/",
+    "published_at": "2026-11-09T06:34:12.070257+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-08T22:35:35Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 364
+    }
+  },
+  {
+    "url": "https://www.heise.de/news/NVKE-Nvidia-bringt-eigene-Kubernetes-Engine-als-Preview-11515947.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "published_at": "2026-11-09T06:34:12.074223+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "NVKE: Nvidia bringt eigene Kubernetes Engine als Preview",
+      "source_name": "Heise Online",
+      "published_at": "2026-11-07T08:15:00+00:00",
+      "language": "de",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://t3n.de/news/napoleon-brief-ki-entschluesselt-geheimcode-astra-1766406/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "published_at": "2026-11-09T06:34:12.077538+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Was Napoleon verheimlichte: KI entschlüsselt bisher unlesbare Briefe",
+      "source_name": "t3n",
+      "published_at": "2026-11-08T15:50:00+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic",
+    "published_at": "2026-11-09T06:34:12.080812+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Apple is racing to make Siri more agentic",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-08T19:18:19+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://ppc.land/google-ads-drops-language-targeting-from-search-campaigns/",
+    "published_at": "2026-11-09T06:34:12.084653+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google Ads drops language targeting from Search campaigns",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-08T13:34:05+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/",
+    "published_at": "2026-11-09T06:34:12.087940+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-11-06T15:54:47+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
   }
 ]
