@@ -6143,5 +6143,89 @@
       "llm_score": 6.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2",
+    "published_at": "2026-11-10T08:35:00.853891+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Anthropic launches new Claude Fable and Mythos 5.2 models",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-09T19:00:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-10T08:35:00.853891+00:00"
+  },
+  {
+    "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github/",
+    "published_at": "2026-11-10T08:33:39.862205+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Claude Code is accidentally exposing secrets all over GitHub",
+      "source_name": "Ars Technica AI",
+      "published_at": "2026-11-09T17:24:26+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-10T08:35:07.071106+00:00"
+  },
+  {
+    "url": "https://www.wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol/",
+    "published_at": "2026-11-10T08:33:39.868213+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "A New AI Tool From Google DeepMind Proved the Signal Protocol Is Secure",
+      "source_name": "Wired",
+      "published_at": "2026-11-10T05:01:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-10T08:35:13.324174+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/cursor-antigravity-voice-agents/",
+    "published_at": "2026-11-10T08:35:26.906569+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Cursor and Google join OpenAI in giving coding agents a voice. Claude Code stays silent.",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-09T18:22:41+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-10T08:35:26.906569+00:00"
+  },
+  {
+    "url": "https://ppc.land/googles-ai-chip-business-nears-100-customers-as-it-adds-tpu-8tx-and-8i-max/",
+    "published_at": "2026-11-10T08:33:39.880050+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google's AI chip business nears 100 customers as it adds TPU 8tx and 8i Max",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-09T19:52:13+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-10T08:35:41.016918+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/disney-bets-on-adobes-firefly-to-create-brand-safe-ai-models-for-its-entertainment-empire/",
+    "published_at": "2026-11-10T08:33:39.885885+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Disney bets on Adobe's Firefly to create brand-safe AI models for its entertainment empire",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-09T16:54:16+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-10T08:35:47.250328+00:00"
   }
 ]
