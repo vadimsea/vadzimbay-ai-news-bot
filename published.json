@@ -6227,5 +6227,84 @@
       "hn_points": 0
     },
     "updated_at": "2026-11-10T08:35:47.250328+00:00"
+  },
+  {
+    "url": "https://broyojo.com/python-formalization/",
+    "published_at": "2026-11-10T14:49:00.086974+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Formalizing CPython",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-10T01:56:48Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 107
+    }
+  },
+  {
+    "url": "https://www.creativebloq.com/news/adobes-firefly-is-now-a-creative-studio-and-it-means-ai-is-everything-everywhere-all-at-once",
+    "published_at": "2026-11-10T14:49:00.093608+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Adobe Firefly is now a creative studio, and it means AI is everything everywhere all at once",
+      "source_name": "Creative Bloq",
+      "published_at": "2026-11-10T14:00:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/",
+    "published_at": "2026-11-10T14:49:00.099623+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic releases new Mythos and Fable models amid RSI concerns",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-11-09T19:24:51+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://habr.com/ru/companies/ru_mts/articles/1105820/?utm_campaign=1105820&utm_source=habrahabr&utm_medium=rss",
+    "published_at": "2026-11-10T14:49:00.105692+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Project Sid: как ИИ-агенты учились жить вместе в Minecraft",
+      "source_name": "Habr AI",
+      "published_at": "2026-11-10T12:01:59+00:00",
+      "language": "ru",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.theverge.com/tech/1030593/adobe-max-ai-agents-mcp-firefly-assistant-updates",
+    "published_at": "2026-11-10T14:49:00.111721+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Adobe is going all in on agentic AI",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-10T14:00:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/11/10/adobe-adds-more-ai-to-its-products-and-launches-an-mcp/",
+    "published_at": "2026-11-10T16:01:10.660446+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Adobe brings AI agents and new creative tools to Photoshop, Premiere, and Firefly",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-11-10T14:05:10+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-10T16:01:10.660446+00:00"
   }
 ]
