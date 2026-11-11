@@ -6316,5 +6316,89 @@
       "day": "2026-11-10",
       "published_at_local": "2026-11-10T19:55:15.050267+03:00"
     }
+  },
+  {
+    "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+    "published_at": "2026-11-11T08:48:30.072224+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Tracking Anthropic-discovered vulnerabilities",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-10T22:17:56Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 393
+    },
+    "updated_at": "2026-11-11T08:57:21.219791+00:00"
+  },
+  {
+    "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+    "published_at": "2026-11-11T08:48:30.078963+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+      "source_name": "Google DeepMind Blog",
+      "published_at": "2026-11-10T12:02:28+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 624
+    },
+    "updated_at": "2026-11-11T08:57:11.319415+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/angular-compiler-rust-typescript/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-11T08:48:30.084914+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Angular's TypeScript 7-Powered Compiler Enters Beta with Rust-Based Preprocessor",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-11T07:06:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-11T08:56:48.591410+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/google-deepminds-gemini-robotics-2-5-scores-96-percent-sorting-metal-parts-in-a-mercedes-benz-assembly-pilot/",
+    "published_at": "2026-11-11T08:48:30.090846+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google DeepMind's Gemini Robotics 2.5 scores 96 percent sorting metal parts in a Mercedes-Benz assembly pilot",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-10T17:11:10+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-11T08:56:39.494693+00:00"
+  },
+  {
+    "url": "https://www.creativebloq.com/news/adobes-google-partnership-hints-at-a-radically-different-future-for-photoshop",
+    "published_at": "2026-11-11T08:48:30.096778+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Adobe's Google partnership hints at a radically different future for Photoshop",
+      "source_name": "Creative Bloq",
+      "published_at": "2026-11-10T15:56:28+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-11T08:56:18.020668+00:00"
+  },
+  {
+    "url": "https://habr.com/ru/articles/1104778/?utm_campaign=1104778&utm_source=habrahabr&utm_medium=rss",
+    "published_at": "2026-11-11T08:56:08.350759+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Я протестировал DeepSeek Harness и вот что у меня получилось",
+      "source_name": "Habr Web Dev",
+      "published_at": "2026-11-09T09:40:08+00:00",
+      "language": "ru",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-11T08:56:08.350759+00:00"
   }
 ]
