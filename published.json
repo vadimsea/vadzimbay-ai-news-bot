@@ -6568,5 +6568,83 @@
       "hn_points": 0
     },
     "updated_at": "2026-11-12T07:18:51.871231+00:00"
+  },
+  {
+    "url": "https://ipo.anthropic.com/us/",
+    "published_at": "2026-11-12T15:18:42.997558+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic IPO",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-12T11:46:41Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 294
+    }
+  },
+  {
+    "url": "https://thenewstack.io/microsoft-ignite-2026/",
+    "published_at": "2026-11-12T15:18:43.001778+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "See what AI looks like in production at Microsoft Ignite",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-12T14:00:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.creativebloq.com/news/adobe-unveils-photoshop-2027-with-a-host-of-new-ai-features",
+    "published_at": "2026-11-12T15:18:43.005383+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Adobe unveils Photoshop 2027 with a host of new AI features",
+      "source_name": "Creative Bloq",
+      "published_at": "2026-11-10T15:21:36+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://vercel.com/changelog/gemini-decision-1-now-available-on-ai-gateway",
+    "published_at": "2026-11-12T15:18:43.008961+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Gemini Decision 1 now available on AI Gateway",
+      "source_name": "Vercel Blog",
+      "published_at": "2026-11-11T00:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1031524/google-deepmind-alphagenome-2-genetic-ai-model",
+    "published_at": "2026-11-12T15:18:43.014845+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google’s AlphaGenome 2 zooms in on the cellular roots of disease",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-11T15:00:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://hugovk.dev/blog/2026/lock-github-actions/",
+    "published_at": "2026-11-12T15:18:43.018427+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Lock Your GitHub Actions",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-11T22:16:41Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 309
+    }
   }
 ]
