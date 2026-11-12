@@ -6484,5 +6484,89 @@
       "hn_points": 0
     },
     "updated_at": "2026-11-11T15:49:50.740970+00:00"
+  },
+  {
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+    "published_at": "2026-11-12T07:18:29.009562+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+      "source_name": "Google AI Blog",
+      "published_at": "2026-11-11T18:00:00+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 380
+    },
+    "updated_at": "2026-11-12T07:20:59.996177+00:00"
+  },
+  {
+    "url": "https://ftrain.com/aboard-the-web-is-more-than-enough",
+    "published_at": "2026-11-12T07:18:29.016704+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "The Web Is More Than Enough",
+      "source_name": "Lobsters",
+      "published_at": "2026-11-11T20:21:19+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 211
+    },
+    "updated_at": "2026-11-12T07:20:52.257663+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/anthropic-fable-opus-cost/",
+    "published_at": "2026-11-12T07:18:29.022827+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Anthropic built a model that beats Opus. It recommends Opus anyway.",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-11T19:15:21+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-12T07:20:21.235904+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/google-deepminds-alphaproof-code-verified-signals-cryptographic-core-in-four-weeks-instead-of-years/",
+    "published_at": "2026-11-12T07:18:29.028931+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google Deepmind's AlphaProof Code verified Signal's cryptographic core in four weeks instead of years",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-11T18:18:25+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-12T07:20:09.653061+00:00"
+  },
+  {
+    "url": "https://www.theverge.com/tech/1031505/adobe-max-2026-sneaks-experiments-ai",
+    "published_at": "2026-11-12T07:18:29.034877+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Adobe’s AI experiments let you walk around in photos and interview your characters",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-11T14:00:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-12T07:19:59.540727+00:00"
+  },
+  {
+    "url": "https://ppc.land/appsflyer-tests-agent-that-changes-apple-ads-bids-once-marketers-approve/",
+    "published_at": "2026-11-12T07:18:29.040766+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "AppsFlyer tests agent that changes Apple Ads bids once marketers approve",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-11T20:44:50+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-12T07:18:51.871231+00:00"
   }
 ]
