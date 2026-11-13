@@ -6730,5 +6730,15 @@
       "hn_points": 0
     },
     "updated_at": "2026-11-13T09:03:30.488878+00:00"
+  },
+  {
+    "url": "promo://programmer_bot_weekly/2026-11-13",
+    "published_at": "2026-11-13T17:04:04.551678+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "programmer_bot_weekly",
+      "day": "2026-11-13",
+      "published_at_local": "2026-11-13T20:04:04.040562+03:00"
+    }
   }
 ]
