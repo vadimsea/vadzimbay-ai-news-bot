@@ -6740,5 +6740,83 @@
       "day": "2026-11-13",
       "published_at_local": "2026-11-13T20:04:04.040562+03:00"
     }
+  },
+  {
+    "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/",
+    "published_at": "2026-11-13T17:18:37.221618+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google rolls out Gemini 4 Hydrogen, finally replacing 3.8 Flash",
+      "source_name": "Ars Technica AI",
+      "published_at": "2026-11-12T19:23:03+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/",
+    "published_at": "2026-11-13T17:18:37.228532+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "[AINews] Jensen Huang resigns after 33 years leading NVIDIA",
+      "source_name": "Latent Space",
+      "published_at": "2026-11-13T09:04:13+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://github.com/Parcha-ai/agentrun/blob/main/README.md",
+    "published_at": "2026-11-13T17:18:37.234990+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Show HN: AgentRun – open-source, Self-improving Managed Agents",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-12T18:15:48Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 129
+    }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
+    "published_at": "2026-11-13T17:18:37.241314+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google’s new Gemini model is better at understanding complicated questions",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-12T21:55:32+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.figma.com/blog/how-3d-transforms-and-figmas-agent-brought-a-launch-video-to-life/",
+    "published_at": "2026-11-13T17:18:37.247644+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "How 3D transforms and Figma’s agent brought a launch video to life",
+      "source_name": "Figma Blog",
+      "published_at": "2026-11-12T14:00:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://ppc.land/jensen-huang-quits-nvidia-as-google-gives-every-searcher-gemini-4-hydrogen/",
+    "published_at": "2026-11-13T17:18:37.254013+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Jensen Huang quits Nvidia as Google gives every searcher Gemini 4 Hydrogen",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-13T06:23:53+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
   }
 ]
