@@ -6646,5 +6646,89 @@
       "llm_score": 8.0,
       "hn_points": 309
     }
+  },
+  {
+    "url": "https://unemploymentlabs.com/checkpoint-forensics",
+    "published_at": "2026-11-13T08:48:57.159448+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Chinese frontier AI models carry the fingerprint of export-controlled GPUs",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-12T21:56:11Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 282
+    },
+    "updated_at": "2026-11-13T09:05:22.931643+00:00"
+  },
+  {
+    "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+    "published_at": "2026-11-13T08:48:57.165130+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+      "source_name": "Google AI Blog",
+      "published_at": "2026-11-12T18:00:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-13T09:04:45.045402+00:00"
+  },
+  {
+    "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+    "published_at": "2026-11-13T08:48:57.170286+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Rust 1.100",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-12T18:39:05Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 645
+    },
+    "updated_at": "2026-11-13T09:04:22.600203+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/gemini-4-hydrogen-orchestrator/",
+    "published_at": "2026-11-13T08:48:57.175428+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google’s Gemini 4 coding agent now switches models mid-task — and finishes 19% faster",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-12T21:26:08+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-13T09:04:15.329034+00:00"
+  },
+  {
+    "url": "https://agustinbarrientos.com/writing/senior-eye/interfaces-that-understand-what-we-want",
+    "published_at": "2026-11-13T08:48:57.180542+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Building interfaces that understand what we want to do",
+      "source_name": "Sidebar",
+      "published_at": "2026-11-13T05:05:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-13T09:03:52.972357+00:00"
+  },
+  {
+    "url": "https://martech.org/iab-unveils-framework-for-measuring-ais-part-in-conversions/",
+    "published_at": "2026-11-13T09:03:30.488878+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "IAB unveils framework for measuring AI’s part in conversions",
+      "source_name": "MarTech",
+      "published_at": "2026-11-12T14:06:00+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-13T09:03:30.488878+00:00"
   }
 ]
