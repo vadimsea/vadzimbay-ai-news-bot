@@ -6818,5 +6818,83 @@
       "llm_score": 6.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/",
+    "published_at": "2026-11-14T08:04:18.273166+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI disbands its robotics team as its general models start running robots",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-13T17:55:23Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 162
+    }
+  },
+  {
+    "url": "https://martech.org/marketers-deploying-ai-agents-faster-than-they-can-measure-them/",
+    "published_at": "2026-11-14T08:04:18.282803+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Marketers deploying AI agents faster than they can measure them",
+      "source_name": "MarTech",
+      "published_at": "2026-11-13T13:34:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.figma.com/blog/ai-role-in-the-creative-process/",
+    "published_at": "2026-11-14T08:04:18.289859+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "AI’s role in the creative process",
+      "source_name": "Figma Blog",
+      "published_at": "2026-11-13T20:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://vercel.com/changelog/gemini-4-hydrogen-now-available-on-ai-gateway",
+    "published_at": "2026-11-14T08:04:18.297135+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Gemini 4 Hydrogen now available on AI Gateway",
+      "source_name": "Vercel Blog",
+      "published_at": "2026-11-12T00:00:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://the-decoder.com/metas-muse-now-calls-businesses-for-you-but-many-companies-might-just-hang-up-on-the-ai/",
+    "published_at": "2026-11-14T08:04:18.304557+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Meta's Muse now calls businesses for you, but many companies might just hang up on the AI",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-13T15:12:44+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
+    "published_at": "2026-11-14T08:04:18.311907+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh-oh, Jensen!",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-11-13T18:40:30+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
   }
 ]
