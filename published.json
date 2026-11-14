@@ -6896,5 +6896,83 @@
       "llm_score": 6.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+    "published_at": "2026-11-14T14:03:58.678782+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "ChatGPT’s new Wallet lets AI agents shop and check out for you",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-11-13T16:00:12+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://thenewstack.io/google-gemini-decisions-api/",
+    "published_at": "2026-11-14T14:03:58.684705+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google built an AI model that can’t write a sentence — and that’s the point",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-12T17:02:36+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://the-decoder.com/openai-reassigns-robotics-researchers-to-other-teams-as-general-purpose-models-might-make-specialized-robotics-ai-unnecessary/",
+    "published_at": "2026-11-14T14:03:58.690851+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI reassigns robotics researchers to other teams as general-purpose models might make specialized robotics AI unnecessary",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-14T11:40:51+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet",
+    "published_at": "2026-11-14T14:03:58.697429+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-13T20:45:10+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://t3n.de/news/anthropic-claude-fable-5-2-mythos-5-2-release-1772515/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "published_at": "2026-11-14T14:03:58.737948+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic legt nach: Fable 5.2 und Mythos 5.2 im Performance-Check",
+      "source_name": "t3n",
+      "published_at": "2026-11-14T13:35:00+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.computerbase.de/news/apps/gemini-4-hydrogen-google-setzt-bei-neuem-modell-auf-tempo-und-effizienz.100317/",
+    "published_at": "2026-11-14T14:03:58.743852+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Gemini 4 Hydrogen: Google setzt bei neu­em Mo­dell auf Tempo und Effizienz",
+      "source_name": "ComputerBase",
+      "published_at": "2026-11-13T12:19:00+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
   }
 ]
