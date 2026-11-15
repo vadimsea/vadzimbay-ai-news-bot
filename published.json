@@ -7058,5 +7058,57 @@
       "hn_points": 0
     },
     "updated_at": "2026-11-15T08:19:34.585621+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/",
+    "published_at": "2026-11-15T14:04:05.023163+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Meituan releases a 1.6-trillion-parameter agent model that never touched an Nvidia GPU",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-15T10:06:06+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
+    "published_at": "2026-11-15T14:04:05.029205+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-13T14:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/claude-code-review/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-15T14:04:05.034541+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic Outlines Its AI-Powered Code Review Process for Claude Code",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-15T09:55:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://stackoverflow.blog/2026/11/13/your-coding-agent-shouldn-t-grade-its-own-homework/",
+    "published_at": "2026-11-15T14:04:05.039966+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Your coding agent shouldn't grade its own homework",
+      "source_name": "Stack Overflow Blog",
+      "published_at": "2026-11-13T17:27:39+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
   }
 ]
