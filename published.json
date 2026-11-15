@@ -6974,5 +6974,89 @@
       "llm_score": 7.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+    "published_at": "2026-11-15T08:18:27.800168+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Nvidia allegedly engineered scarcity by funding AI startups to buy its GPUs",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-14T02:52:59Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 1066
+    },
+    "updated_at": "2026-11-15T08:20:27.790917+00:00"
+  },
+  {
+    "url": "https://github.com/IRS-Public/direct-file",
+    "published_at": "2026-11-15T08:18:27.804856+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "US IRS free online tax filing open source repo (2025)",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-14T17:48:20Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 163
+    },
+    "updated_at": "2026-11-15T08:20:18.861720+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/runways-open-source-praxis-1-turns-video-ai-into-a-robot-controller/",
+    "published_at": "2026-11-15T08:18:27.808565+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Runway's open-source Praxis-1 turns video AI into a robot controller",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-14T09:45:45+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-15T08:20:08.348085+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/anthropic-enterprise-developer-competition/",
+    "published_at": "2026-11-15T08:18:27.814440+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Anthropic wants you to build on Claude. There’s a catch.",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-14T15:15:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-15T08:20:00.270479+00:00"
+  },
+  {
+    "url": "https://habr.com/ru/companies/lukit_ru/articles/1107522/?utm_campaign=1107522&utm_source=habrahabr&utm_medium=rss",
+    "published_at": "2026-11-15T08:18:27.818249+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Тестирую Figma AI на 19 задачах по дизайн-системе",
+      "source_name": "Habr Design",
+      "published_at": "2026-11-13T13:23:13+00:00",
+      "language": "ru",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-15T08:19:50.612985+00:00"
+  },
+  {
+    "url": "https://ppc.land/googles-dv360-api-v5-can-now-create-responsive-youtube-ads/",
+    "published_at": "2026-11-15T08:18:27.822045+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google's DV360 API v5 can now create responsive YouTube ads",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-14T20:03:32+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-15T08:19:34.585621+00:00"
   }
 ]
