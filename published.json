@@ -7189,5 +7189,83 @@
       "llm_score": 5.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/github-pull-requests-rebuild/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-16T15:03:57.601571+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "GitHub Rebuilds the Copilot App's Diff Surface to Open Million-Line Pull Requests Without Jank",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-16T10:32:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.wired.com/story/nvidia-was-already-in-trouble-before-the-jensen-huang-mess/",
+    "published_at": "2026-11-16T15:03:57.609061+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Nvidia Was Already in Trouble Before the Jensen Huang Mess",
+      "source_name": "Wired",
+      "published_at": "2026-11-16T11:00:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://blog.jetbrains.com/teamcity/2026/11/run-ai-agents-in-teamcity/",
+    "published_at": "2026-11-16T15:03:57.615840+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Run AI Agents in TeamCity",
+      "source_name": "JetBrains Blog",
+      "published_at": "2026-11-16T09:28:51+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+    "published_at": "2026-11-16T15:03:57.622730+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-11-14T17:30:00+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://ppc.land/googles-dv360-to-let-youtube-creators-link-videos-to-advertisers-by-code/",
+    "published_at": "2026-11-16T15:03:57.629485+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google's DV360 to let YouTube creators link videos to advertisers by code",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-14T19:40:37+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.heise.de/news/Rust-1-100-Never-Type-nach-zehn-Jahren-stabil-Cargo-haelt-neue-Versionen-zurueck-11525017.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "published_at": "2026-11-16T15:03:57.638071+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Rust 1.100: Never-Type nach zehn Jahren stabil, Cargo hält neue Versionen zurück",
+      "source_name": "Heise Online",
+      "published_at": "2026-11-16T13:55:00+00:00",
+      "language": "de",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
   }
 ]
