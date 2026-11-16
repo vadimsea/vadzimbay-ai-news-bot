@@ -7110,5 +7110,84 @@
       "llm_score": 6.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings",
+    "published_at": "2026-11-16T07:33:51.955930+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Understanding Positional Embeddings in Modern LLMs",
+      "source_name": "Ahead of AI",
+      "published_at": "2026-11-15T12:10:37+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 226
+    }
+  },
+  {
+    "url": "https://www.ykiko.me/en/articles/2105384023094834022/",
+    "published_at": "2026-11-16T07:33:51.964853+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "clice v1.0 Released: Welcome to Modern C++",
+      "source_name": "Lobsters",
+      "published_at": "2026-11-15T21:19:35+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 135
+    }
+  },
+  {
+    "url": "https://thenewstack.io/aws-emulator-verification-loops/",
+    "published_at": "2026-11-16T07:33:51.971425+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "AWS Emulator proves agents need a verification loop. Realism is the hard part.",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-14T17:30:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://the-decoder.com/anthropics-claude-fable-5-2-doesnt-generate-images-it-paints-them/",
+    "published_at": "2026-11-16T07:33:51.978004+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic's Claude Fable 5.2 doesn't generate images, it paints them",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-15T15:42:03+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://status.claude.com/incidents/nn11wk485zfn",
+    "published_at": "2026-11-16T07:37:13.809984+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-13T10:18:13Z",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 493
+    },
+    "updated_at": "2026-11-16T07:37:13.809984+00:00"
+  },
+  {
+    "url": "https://ppc.land/googles-new-parameter-shows-when-an-exact-click-was-really-ai-max/",
+    "published_at": "2026-11-16T07:33:51.991127+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google's new parameter shows when an 'exact' click was really AI Max",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-15T19:35:14+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    }
   }
 ]
