@@ -7430,5 +7430,15 @@
       "hn_points": 0
     },
     "updated_at": "2026-11-17T15:49:38.236930+00:00"
+  },
+  {
+    "url": "promo://aten_tue/2026-11-17",
+    "published_at": "2026-11-17T18:21:53.011854+00:00",
+    "status": "promo",
+    "metadata": {
+      "promo_key": "aten_tue",
+      "day": "2026-11-17",
+      "published_at_local": "2026-11-17T21:21:52.601058+03:00"
+    }
   }
 ]
