@@ -7267,5 +7267,84 @@
       "llm_score": 6.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://the-decoder.com/openais-gpt-6-astra-tackles-the-standard-models-toughest-math-problem-on-a-lattice/",
+    "published_at": "2026-11-17T06:48:43.211758+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI's GPT-6 Astra tackles the Standard Model's toughest math problem on a lattice",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-16T19:19:56+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.theverge.com/tech/1034110/google-ask-maps-ai-trip-planning",
+    "published_at": "2026-11-17T07:38:57.424188+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Google Maps can now create trip itineraries for you",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-16T14:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-17T07:38:57.424188+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/Uno-Platform-6-7-targets/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-17T06:48:43.222505+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Uno Platform 7.0 Adds WebGPU Backend, Apple TV and Reactor Support, and Retires Native Rendering",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-16T09:00:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.marketingaiinstitute.com/blog/ai-and-the-future-of-work-maicon-2026",
+    "published_at": "2026-11-17T06:48:43.227396+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "If AI Does the Entry-Level Work, Who Becomes the Next Generation of Leaders?",
+      "source_name": "Marketing AI Institute",
+      "published_at": "2026-11-16T13:30:01+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://blogs.nvidia.com/blog/mlperf-training-endpoints-vera-rubin/",
+    "published_at": "2026-11-17T06:48:43.232288+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "NVIDIA Sweeps MLPerf Training and Endpoints as Vera Rubin Debuts With Leading Performance",
+      "source_name": "NVIDIA Blog",
+      "published_at": "2026-11-16T16:00:25+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/aws-emulator-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-17T06:48:43.237152+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "AWS Open-Sources Emulator for Local Testing of 200+ Services by Coding Agents",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-16T10:40:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
   }
 ]
