@@ -7346,5 +7346,89 @@
       "llm_score": 6.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://jordankrueger.com/blog/better-open-source-not-more-apps/",
+    "published_at": "2026-11-17T15:48:29.374561+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "We don't need more apps. We need better open source",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-17T14:45:36Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 125
+    },
+    "updated_at": "2026-11-17T15:48:45.364409+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/qwen4-max-alibaba-open-weights/",
+    "published_at": "2026-11-17T15:49:07.789071+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "With Qwen4-Max, Alibaba puts the open source jacket back on the hanger",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-16T16:54:17+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-17T15:49:07.789071+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/anthropic-says-the-key-to-agent-memory-is-knowing-what-to-forget-not-how-much-to-store/",
+    "published_at": "2026-11-17T15:48:29.389517+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Anthropic says the key to agent memory is knowing what to forget, not how much to store",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-16T15:25:48+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-17T15:49:23.426997+00:00"
+  },
+  {
+    "url": "https://research.nvidia.com/labs/sil/projects/birddreams/",
+    "published_at": "2026-11-17T15:48:29.396367+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Bird Dreams",
+      "source_name": "Sidebar",
+      "published_at": "2026-11-17T09:56:20+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-17T15:49:29.689963+00:00"
+  },
+  {
+    "url": "https://www.heise.de/news/Anders-als-Pangram-Kann-man-erkennen-ob-eine-Idee-von-ChatGPT-stammt-11527621.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "published_at": "2026-11-17T15:48:29.403495+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Kann man erkennen, ob eine Idee von ChatGPT stammt?",
+      "source_name": "Heise Online",
+      "published_at": "2026-11-17T10:55:00+00:00",
+      "language": "de",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-17T15:49:44.590271+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/quik-2-streaming/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-17T15:48:29.410279+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Qwik 2.0 RC: Replaces HTML Comment Markers for Faster Reactivity and Out-of-Order Streaming",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-17T12:25:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-17T15:49:38.236930+00:00"
   }
 ]
