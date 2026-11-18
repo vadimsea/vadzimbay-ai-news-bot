@@ -7521,6 +7521,7 @@
     }
   },
   {
+<<<<<<< Updated upstream
     "url": "promo://remote_belarus_weekly/2026-11-18",
     "published_at": "2026-11-18T17:54:54.322841+00:00",
     "status": "promo",
@@ -7528,6 +7529,83 @@
       "promo_key": "remote_belarus_weekly",
       "day": "2026-11-18",
       "published_at_local": "2026-11-18T20:54:53.780206+03:00"
+=======
+    "url": "https://habr.com/ru/articles/1109452/?utm_campaign=1109452&utm_source=habrahabr&utm_medium=rss",
+    "published_at": "2026-11-18T17:04:14.987440+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Разбираем гигабайтные архивы 12 сервисов прямо в браузере на DuckDB-Wasm — без JSON.parse и бэкенда",
+      "source_name": "Habr Web Dev",
+      "published_at": "2026-11-18T13:17:42+00:00",
+      "language": "ru",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1036415/suno-visuals-ai-generated-video-images-feature",
+    "published_at": "2026-11-18T17:04:14.995400+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Suno now lets you make AI videos for your AI music",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-18T11:16:53+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://the-decoder.com/openai-opens-its-ai-systems-to-four-independent-on-site-auditors-for-the-first-time/",
+    "published_at": "2026-11-18T17:04:15.002584+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI opens its AI systems to four independent on-site auditors for the first time",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-18T14:36:42+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/11/17/instagrams-new-tool-for-creators-targets-unauthorized-reposts-and-ai-modified-videos/",
+    "published_at": "2026-11-18T17:04:15.009615+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Instagram’s new tool for creators targets unauthorized reposts and AI-modified videos",
+      "source_name": "TechCrunch Social",
+      "published_at": "2026-11-17T15:00:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://thenewstack.io/hugging-face-openrouter-inference/",
+    "published_at": "2026-11-18T17:04:15.016684+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "“Collaboration over competition”: Hugging Face hands model inference traffic to OpenRouter",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-18T13:39:13+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://blogs.nvidia.com/blog/ian-buck-sc26/",
+    "published_at": "2026-11-18T17:04:15.024345+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents",
+      "source_name": "NVIDIA Blog",
+      "published_at": "2026-11-17T14:00:10+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+>>>>>>> Stashed changes
     }
   }
 ]
