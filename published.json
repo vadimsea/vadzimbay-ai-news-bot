@@ -92,5 +92,83 @@
       "hn_points": 202
     },
     "updated_at": "2026-11-19T08:01:24.422454+00:00"
+  },
+  {
+    "url": "https://vercel.com/changelog/gpt-6-2-astra-and-sol-now-available-on-ai-gateway",
+    "published_at": "2026-11-19T15:34:18.285574+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "GPT-6.2 Astra and Sol now available on AI Gateway",
+      "source_name": "Vercel Blog",
+      "published_at": "2026-11-17T00:00:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation",
+    "published_at": "2026-11-19T15:34:18.286028+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "ChatGPT can transcribe as you speak now with Live Dictation",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-19T15:16:45+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://ppc.land/inmobi-lets-seven-ai-agents-run-small-firms-google-meta-and-chatgpt-ads/",
+    "published_at": "2026-11-19T15:34:18.286434+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "InMobi lets seven AI agents run small firms' Google, Meta and ChatGPT ads",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-19T09:15:53+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.wired.com/story/anthropics-record-breaking-ipo-highlights-the-ai-giants-worst-enemy-itself/",
+    "published_at": "2026-11-19T15:34:18.286819+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic’s Record-Breaking IPO Highlights the AI Giant’s Worst Enemy—Itself",
+      "source_name": "Wired",
+      "published_at": "2026-11-19T12:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/discord-rust-rewrite-gpui-zed/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-19T15:34:18.287190+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Discord Rewrites Desktop and Mobile Clients in Rust Using Zed's GPU-Accelerated Rendering Framework",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-19T03:12:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.heise.de/news/Microsoft-Ignite-26-Azure-wird-agentischer-und-Windows-rueckt-in-die-Cloud-11529788.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "published_at": "2026-11-19T15:34:18.287622+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Microsoft Ignite 26: Azure wird agentischer und Windows rückt in die Cloud",
+      "source_name": "Heise Online",
+      "published_at": "2026-11-18T15:54:00+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
   }
 ]
