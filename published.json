@@ -8,5 +8,89 @@
       "day": "2026-11-18",
       "published_at_local": "2026-11-18T23:10:47.818584+03:00"
     }
+  },
+  {
+    "url": "https://the-decoder.com/google-ships-gemini-4-neon-its-fourth-new-gemini-model-in-a-month/",
+    "published_at": "2026-11-19T07:48:34.028856+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google ships Gemini 4 Neon, its fourth new Gemini model in a month",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-18T21:03:23+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-19T08:01:01.335034+00:00"
+  },
+  {
+    "url": "https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review/",
+    "published_at": "2026-11-19T07:48:34.029294+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Harvard researchers find AI coding agents shifted the bottleneck to code review",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-17T21:16:12Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 320
+    },
+    "updated_at": "2026-11-19T08:01:08.097798+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/vercel-ui-sdk/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-19T07:48:34.030721+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Vercel Releases UI SDK for Agents to Compose UI from Reusable Behaviors",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-18T10:12:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-19T08:01:14.874080+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/gemini-neon-antigravity-harness/",
+    "published_at": "2026-11-19T07:48:34.031043+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google’s Gemini 4 Neon tripled its coding score without changing the model",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-19T00:45:11+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-19T08:01:16.254548+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/11/17/instagrams-new-tool-for-creators-targets-unauthorized-reposts-and-ai-modified-videos/",
+    "published_at": "2026-11-19T07:48:34.031346+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Instagram’s new tool for creators targets unauthorized reposts and AI-modified videos",
+      "source_name": "TechCrunch Social",
+      "published_at": "2026-11-17T15:00:00+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-19T08:01:23.008246+00:00"
+  },
+  {
+    "url": "https://exitpath-ruddy.vercel.app/",
+    "published_at": "2026-11-19T07:48:34.031650+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Show HN: ExitPath – Open-source ways out of Slack, Notion and Microsoft 365",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-18T16:04:43Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 202
+    },
+    "updated_at": "2026-11-19T08:01:24.422454+00:00"
   }
 ]
