@@ -342,5 +342,83 @@
       "day": "2026-11-20",
       "published_at_local": "2026-11-20T20:40:45.993038+03:00"
     }
+  },
+  {
+    "url": "https://latent.space/p/ainews-anthropic-successfully-completes-largest-ipo-in-history-valued-at-1-5t/",
+    "published_at": "2026-11-21T06:04:24.348340+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "[AINews] Anthropic successfully completes largest IPO in history, valued at $1.5T",
+      "source_name": "Latent Space",
+      "published_at": "2026-11-20T07:12:24+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+    "published_at": "2026-11-21T06:04:24.349558+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic mathematician claims to have solved prestigious Millennium Prize problem with Claude",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-20T16:34:13+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://the-decoder.com/apple-joins-the-race-for-ai-agents-that-control-your-device-while-raising-new-barriers-for-competitors/",
+    "published_at": "2026-11-21T06:04:24.350327+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Apple joins the race for AI agents that control your device while raising new barriers for competitors",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-20T15:03:25+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://habr.com/ru/companies/X5Tech/articles/1109652/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109652",
+    "published_at": "2026-11-21T06:04:24.351059+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Если самый популярный язык в мире — Python, почему фронтенд пишут на JavaScript?",
+      "source_name": "Habr Best",
+      "published_at": "2026-11-19T09:22:06+00:00",
+      "language": "ru",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://arstechnica.com/ai/2026/11/googles-latest-search-page-redesign-drops-the-search-button-adds-ai-sidebar/",
+    "published_at": "2026-11-21T06:04:24.351787+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google rolls out new search homepage with AI chat history and no search button",
+      "source_name": "Ars Technica AI",
+      "published_at": "2026-11-20T21:58:29+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.campaignlive.com/article/anthropics-historic-ipo-face-ai-doomsday-concerns-microsoft-united-airlines-outages/1975734",
+    "published_at": "2026-11-21T06:04:24.352470+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic’s historic IPO in the face of AI doomsday concerns, Microsoft and United Airlines outages",
+      "source_name": "Campaign",
+      "published_at": "2026-11-20T11:00:10+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    }
   }
 ]
