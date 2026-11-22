@@ -498,5 +498,83 @@
       "llm_score": 7.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/",
+    "published_at": "2026-11-22T17:18:40.750123+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "87% of the Anthropic power will come from gas and 11% from coal in 2028",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-22T08:57:34Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 493
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/postgresql-19-released/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-22T17:18:40.751031+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "PostgreSQL 19 Released with Online Table Repacking and Query Planning Controls",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-22T12:54:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct/",
+    "published_at": "2026-11-22T17:18:40.751750+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Lean and Mathlib community officially confirms Levent Alpöge's proof of the Riemann hypothesis is correct",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-22T11:08:31+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://t3n.de/news/google-gemini-notebook-website-1773890/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+    "published_at": "2026-11-22T17:18:40.752415+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Ein Satz reicht: Googles Gemini Notebook verwandelt deine losen Notizen ab sofort in interaktive Webseiten",
+      "source_name": "t3n",
+      "published_at": "2026-11-22T14:15:00+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://ppc.land/shallow-pages-draw-less-interest-in-ai-search-googles-liz-reid-says/",
+    "published_at": "2026-11-22T17:18:40.753090+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Shallow pages draw less interest in AI search, Google's Liz Reid says",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-20T19:43:04+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
+    "published_at": "2026-11-22T17:18:40.753787+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Researcher plants 2m canaries into the AI supply chain. A privacy disaster surfaced.",
+      "source_name": "Ars Technica AI",
+      "published_at": "2026-11-20T20:59:08+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 60
+    }
   }
 ]
