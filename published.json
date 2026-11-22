@@ -420,5 +420,83 @@
       "llm_score": 5.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://the-decoder.com/nvidia-researchers-argue-huge-ai-context-windows-are-a-dead-end/",
+    "published_at": "2026-11-22T06:19:01.608521+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Nvidia researchers argue huge AI context windows are a dead end",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-21T16:23:45+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.theverge.com/streaming/1039096/youtube-social-media-addiction-school-districts-settlement",
+    "published_at": "2026-11-22T06:19:01.609353+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "YouTube is reportedly preparing to settle social media addiction claims for $3 billion",
+      "source_name": "The Verge YouTube",
+      "published_at": "2026-11-20T20:43:52+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://thenewstack.io/nvidia-droid-harness-nemotron/",
+    "published_at": "2026-11-22T06:19:01.610199+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Nvidia used 20,000 training examples to fix its AI’s mistakes. Its coding score jumped.",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-21T15:30:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://the-decoder.com/bytedance-argues-most-ai-training-phases-are-unnecessary-and-backs-it-up-with-a-competitive-open-model/",
+    "published_at": "2026-11-22T06:19:01.611014+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Bytedance argues most AI training phases are unnecessary and backs it up with a competitive open model",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-21T09:17:24+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.postgresql.org/about/news/postgresql-19-released-3449/",
+    "published_at": "2026-11-22T06:19:01.611693+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "PostgreSQL 19 Released",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-19T14:11:37Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 142
+    }
+  },
+  {
+    "url": "https://the-decoder.com/new-open-model-inkling-2-mini-thinks-in-loops-to-solve-problems-with-fewer-words-and-still-runs-on-a-laptop/",
+    "published_at": "2026-11-22T06:19:01.612365+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "New open model Inkling 2 Mini thinks in loops to solve problems with fewer words and still runs on a laptop",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-21T10:33:02+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
   }
 ]
