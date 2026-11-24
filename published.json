@@ -812,5 +812,87 @@
       "llm_score": 7.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests",
+    "published_at": "2026-11-24T16:33:48.404805+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Claude AI can review pull requests and ship fixes on its own now",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-23T20:00:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-24T16:34:56.217702+00:00"
+  },
+  {
+    "url": "https://www.wired.com/story/ai-solved-maths-most-famous-problem/",
+    "published_at": "2026-11-24T16:33:48.407200+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "AI Solved Math’s Most Famous Problem. Now Humans Are Struggling to Understand It",
+      "source_name": "Wired",
+      "published_at": "2026-11-24T10:15:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://thenewstack.io/deepmind-lean-quantum-verification/",
+    "published_at": "2026-11-24T16:33:48.407935+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google’s AI agents cut quantum computing costs 290-fold — now you can check their work",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-23T20:08:34+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-24T16:34:16.552796+00:00"
+  },
+  {
+    "url": "https://www.heise.de/news/Mathe-Wettlauf-Anthropic-und-OpenAI-mit-fast-zeitgleichen-Beweisen-fuer-VP-VNP-11536640.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "published_at": "2026-11-24T16:33:48.408620+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Mathe-Wettlauf: Anthropic und OpenAI mit fast zeitgleichen Beweisen für VP ≠ VNP",
+      "source_name": "Heise Online",
+      "published_at": "2026-11-24T15:35:00+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://github.com/mikuta0407/win4wine",
+    "published_at": "2026-11-24T16:33:48.409290+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Win4wine – Run Windows Shell as the Linux Desktop on Wine",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-23T12:28:11Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 245
+    },
+    "updated_at": "2026-11-24T16:34:40.741091+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/openai-updates-chatgpt-to-handle-complex-everyday-questions-web-searches-and-images-more-reliably/",
+    "published_at": "2026-11-24T16:33:48.409967+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI updates ChatGPT to handle complex everyday questions, web searches, and images more reliably",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-23T20:39:18+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-24T16:34:39.208803+00:00"
   }
 ]
