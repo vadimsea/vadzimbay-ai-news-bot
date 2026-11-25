@@ -904,5 +904,88 @@
       "day": "2026-11-24",
       "published_at_local": "2026-11-24T23:03:34.604692+03:00"
     }
+  },
+  {
+    "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+    "published_at": "2026-11-25T07:48:46.074614+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "source_name": "OpenAI Blog",
+      "published_at": "2026-11-24T13:00:00+00:00",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 245
+    },
+    "updated_at": "2026-11-25T07:50:12.407529+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/dozens-of-insiders-say-openai-and-anthropics-unreleased-models-have-outgrown-their-safety-measures/",
+    "published_at": "2026-11-25T07:48:46.075886+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Dozens of insiders say OpenAI and Anthropic's unreleased models have outgrown their safety measures",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-24T14:02:31+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-25T07:50:06.252240+00:00"
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/rust-1-100-never-types/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-25T07:48:46.077024+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Rust 1.100 Ships the Never Type After Ten Years and Five Failed Attempts",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-25T07:29:00+00:00",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-25T07:50:18.572228+00:00"
+  },
+  {
+    "url": "https://www.figma.com/blog/introducing-figma-agent-in-figjam-and-slides/",
+    "published_at": "2026-11-25T07:48:46.078113+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "The Figma agent is now available in FigJam and Slides",
+      "source_name": "Figma Blog",
+      "published_at": "2026-11-23T20:54:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-25T07:50:24.726542+00:00"
+  },
+  {
+    "url": "https://thenewstack.io/confluent-kafka-rust-agents/",
+    "published_at": "2026-11-25T07:48:46.080047+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Confluent spent 3 months rewriting Kafka’s Java client in Rust with AI — and had to start over",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-24T19:26:18+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://ppc.land/google-documents-12-existing-bots-that-ignore-robots-txt/",
+    "published_at": "2026-11-25T07:48:46.081223+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google documents 12 existing bots that ignore robots.txt",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-23T20:13:51+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-25T07:50:30.949070+00:00"
   }
 ]
