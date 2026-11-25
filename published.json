@@ -987,5 +987,83 @@
       "hn_points": 0
     },
     "updated_at": "2026-11-25T07:50:30.949070+00:00"
+  },
+  {
+    "url": "https://greydanus.github.io/2026/11/12/pengpt/",
+    "published_at": "2026-11-25T15:03:52.821310+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "PenGPT: A Generative Transformer for Handwriting and Sketches",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-25T00:54:49Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 326
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/vercel-board-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-25T15:03:52.822278+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Vercel Launched Experimental Board to Coordinate Tasks Across Humans and Coding Agents",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-25T13:57:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/",
+    "published_at": "2026-11-25T15:03:52.823038+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Even the best AI agents struggle with everyday life",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-11-24T21:33:29+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://the-decoder.com/anthropic-turns-claude-artifacts-into-standalone-desktop-apps-for-macos-and-windows/",
+    "published_at": "2026-11-25T15:03:52.823805+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic turns Claude Artifacts into standalone desktop apps for macOS and Windows",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-24T20:42:29+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.wired.com/story/ai-agents-can-get-honeypotted-too-aw/",
+    "published_at": "2026-11-25T15:03:52.824611+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic Created a Honeypot to Lure AI Agents Into Misbehaving",
+      "source_name": "Wired",
+      "published_at": "2026-11-24T16:00:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://blog.jetbrains.com/youtrack/2026/11/youtrack-adds-more-ways-to-use-ai-on-your-terms/",
+    "published_at": "2026-11-25T15:03:52.825386+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "YouTrack Adds More Ways to Use AI on Your Terms",
+      "source_name": "JetBrains Blog",
+      "published_at": "2026-11-25T11:56:27+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
   }
 ]
