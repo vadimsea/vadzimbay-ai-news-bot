@@ -1065,5 +1065,83 @@
       "llm_score": 7.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
+    "published_at": "2026-11-26T07:34:00.512311+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-26T03:36:58Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 168
+    }
+  },
+  {
+    "url": "https://www.computerbase.de/news/gaming/games-without-ai-auf-steam-wird-der-ki-verzicht-zum-verkaufsargument.100528/",
+    "published_at": "2026-11-26T07:34:00.513684+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Games Without AI: Auf Steam wird der KI-Verzicht zum Verkaufsargument",
+      "source_name": "ComputerBase",
+      "published_at": "2026-11-26T06:00:00+00:00",
+      "language": "de",
+      "llm_score": 8.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.githubstatus.com/incidents/qn8mfv6q5hlx",
+    "published_at": "2026-11-26T07:34:00.514843+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Investigating degraded experiences across GitHub products",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-25T15:59:23Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 182
+    }
+  },
+  {
+    "url": "https://www.webflow.com/blog/claude-chat-webflow",
+    "published_at": "2026-11-26T07:34:00.515912+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "How do you add a Claude-powered chat to a Webflow site without exposing your API key?",
+      "source_name": "Webflow Blog",
+      "published_at": "2026-11-25T00:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/deepmind-gemini-robotics-2-5/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-26T07:34:00.517022+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "DeepMind's Gemini Robotics 2.5 Aims to Make Robots Safer, More Dexterous, and Faster Learners",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-25T17:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://habr.com/ru/companies/ozontech/articles/1111868/?utm_campaign=1111868&utm_source=habrahabr&utm_medium=rss",
+    "published_at": "2026-11-26T07:34:00.518130+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Как я делегировал ИИ-агенту рутину продуктового дизайнера",
+      "source_name": "Habr AI",
+      "published_at": "2026-11-26T07:00:21+00:00",
+      "language": "ru",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
   }
 ]
