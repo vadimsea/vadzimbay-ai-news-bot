@@ -1143,5 +1143,86 @@
       "llm_score": 7.0,
       "hn_points": 0
     }
+  },
+  {
+    "url": "https://github.com/lsernau/grh-lean",
+    "published_at": "2026-11-26T16:18:28.460398+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Much shorter version of GRH Lean verification from Anthropic",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-25T21:48:10Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 507
+    }
+  },
+  {
+    "url": "https://the-decoder.com/after-openai-and-anthropic-shut-the-door-on-their-data-a-chinese-ai-developer-is-turning-to-google-and-meta-instead/",
+    "published_at": "2026-11-26T16:18:28.461665+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "After OpenAI and Anthropic shut the door on their data, a Chinese AI developer is turning to Google and Meta instead",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-26T15:45:08+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://thenewstack.io/anthropic-siren-sandbox-escape/",
+    "published_at": "2026-11-26T16:18:28.462569+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic set more than 1,700 traps for Claude — what it found is both reassuring and unsettling",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-25T19:45:18+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://the-decoder.com/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at-their-data/",
+    "published_at": "2026-11-26T16:18:28.463475+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI wants companies to trust it with sensitive work by promising not to look at their data",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-25T18:22:02+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-26T16:32:36.693872+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/11/25/xs-latest-update-for-creators-focuses-on-vertical-video/",
+    "published_at": "2026-11-26T16:18:28.464347+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "X’s latest update for creators focuses on vertical video",
+      "source_name": "TechCrunch Social",
+      "published_at": "2026-11-25T17:28:29+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-26T16:32:21.502280+00:00"
+  },
+  {
+    "url": "https://opensec.in/blog/nfs2root-cve-2026-99362",
+    "published_at": "2026-11-26T16:18:28.465229+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Nfs2root: A 12-year-old pre-auth remote root in the Linux kernel's NFS server",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-25T20:35:50Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 189
+    },
+    "updated_at": "2026-11-26T16:32:14.983627+00:00"
   }
 ]
