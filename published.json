@@ -1308,5 +1308,83 @@
       "hn_points": 0
     },
     "updated_at": "2026-11-27T07:35:50.280757+00:00"
+  },
+  {
+    "url": "https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms/",
+    "published_at": "2026-11-27T16:33:57.603224+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Meta brings its Muse AI assistant directly into Instagram DMs",
+      "source_name": "TechCrunch AI",
+      "published_at": "2026-11-24T17:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://thenewstack.io/claude-ship-automated-approvals/",
+    "published_at": "2026-11-27T16:33:57.604961+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Anthropic’s Claude Ship tackles the pull request bottleneck created by AI coding agents",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-24T18:15:59+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://the-decoder.com/openai-is-building-athena-data-platform-to-cut-down-on-ai-agent-guesswork/",
+    "published_at": "2026-11-27T16:33:57.606470+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "OpenAI is building \"Athena\" data platform to cut down on AI agent guesswork",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-27T16:05:23+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://habr.com/ru/articles/1112948/?utm_campaign=1112948&utm_source=habrahabr&utm_medium=rss",
+    "published_at": "2026-11-27T16:33:57.607929+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "10 минут в CAD против 3 часов с GPT-6: эксперимент с 3D-моделированием проставки для вентилятора",
+      "source_name": "Habr AI",
+      "published_at": "2026-11-27T14:50:30+00:00",
+      "language": "ru",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.heise.de/news/Kritische-Luecke-in-Linux-NFS-Server-11540361.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "published_at": "2026-11-27T16:33:57.611215+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Kritische Lücke in Linux’ NFS-Server",
+      "source_name": "Heise Online",
+      "published_at": "2026-11-27T10:39:00+00:00",
+      "language": "de",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://ppc.land/google-preannounces-a-december-core-update-as-ai-overview-links-slide-down/",
+    "published_at": "2026-11-27T16:33:57.612691+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google preannounces a December core update as AI Overview links slide down",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-25T06:38:24+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
   }
 ]
