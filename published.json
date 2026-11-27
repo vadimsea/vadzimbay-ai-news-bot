@@ -1224,5 +1224,89 @@
       "hn_points": 189
     },
     "updated_at": "2026-11-26T16:32:14.983627+00:00"
+  },
+  {
+    "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+    "published_at": "2026-11-27T07:33:53.139426+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-26T09:44:23Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 317
+    },
+    "updated_at": "2026-11-27T07:34:20.220097+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/former-openai-researcher-says-the-riemann-proof-matters-less-than-the-fact-that-an-ai-system-can-produce-it/",
+    "published_at": "2026-11-27T07:33:53.141487+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Former OpenAI researcher says the Riemann proof matters less than the fact that an AI system can produce it",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-26T19:31:46+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-27T07:34:26.474628+00:00"
+  },
+  {
+    "url": "https://vercel.com/changelog/workflows-speculative-execution",
+    "published_at": "2026-11-27T07:33:53.142980+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Workflow is 10x faster, again",
+      "source_name": "Vercel Blog",
+      "published_at": "2026-11-25T00:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-27T07:34:32.883335+00:00"
+  },
+  {
+    "url": "https://micjm.com/blog/openai-is-in-cost-control-mode/",
+    "published_at": "2026-11-27T07:33:53.144496+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "OpenAI may be in cost control mode",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-26T07:33:12Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 322
+    },
+    "updated_at": "2026-11-27T07:34:40.864099+00:00"
+  },
+  {
+    "url": "https://martech.org/what-you-need-to-know-about-chatgpt-ads-vs-google-ads/",
+    "published_at": "2026-11-27T07:35:18.131911+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "What you need to know about ChatGPT ads vs. Google Ads",
+      "source_name": "MarTech",
+      "published_at": "2026-11-24T13:55:41+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-27T07:35:18.131911+00:00"
+  },
+  {
+    "url": "https://the-decoder.com/fcc-clears-spacex-to-deploy-up-to-1-million-starmind-satellites-for-orbital-ai-data-centers-by-2040/",
+    "published_at": "2026-11-27T07:35:50.280757+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "FCC clears SpaceX to deploy up to 1 million Starmind satellites for orbital AI data centers by 2040",
+      "source_name": "The Decoder",
+      "published_at": "2026-11-26T13:41:07+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-27T07:35:50.280757+00:00"
   }
 ]
