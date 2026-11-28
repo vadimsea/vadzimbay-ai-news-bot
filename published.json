@@ -1474,5 +1474,61 @@
       "llm_score": 8.0,
       "hn_points": 101
     }
+  },
+  {
+    "url": "https://xinyadu.github.io/blog/claude-code-sabotage.html",
+    "published_at": "2026-11-28T15:22:57.262208+00:00",
+    "status": "published",
+    "metadata": {
+      "title": "Claude Code sabotage: preliminary benchmarking",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-28T10:37:40Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 282
+    },
+    "updated_at": "2026-11-28T15:22:57.262208+00:00"
+  },
+  {
+    "url": "https://www.heise.de/news/iX-Workshop-Harness-Engineering-Arbeitsrahmen-fuer-KI-Coding-Agenten-gestalten-11533370.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+    "published_at": "2026-11-28T15:18:09.359625+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "heise-Angebot: iX-Workshop: Harness Engineering – Arbeitsrahmen für KI-Coding-Agenten gestalten",
+      "source_name": "Heise Online",
+      "published_at": "2026-11-28T12:00:00+00:00",
+      "language": "de",
+      "llm_score": 6.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-28T15:22:20.082019+00:00"
+  },
+  {
+    "url": "https://ppc.land/look-alike-pages-hit-hardest-in-googles-november-update-consultants-say/",
+    "published_at": "2026-11-28T15:18:09.361033+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Look-alike pages hit hardest in Google's November update, consultants say",
+      "source_name": "PPC Land",
+      "published_at": "2026-11-28T08:51:02+00:00",
+      "language": "en",
+      "llm_score": 5.0,
+      "hn_points": 0
+    },
+    "updated_at": "2026-11-28T15:22:11.305727+00:00"
+  },
+  {
+    "url": "https://github.com/eisenzopf/rvoip",
+    "published_at": "2026-11-28T15:18:09.362400+00:00",
+    "status": "rejected",
+    "metadata": {
+      "title": "Rvoip: VoIP stack in Rust",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-26T19:18:09Z",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 168
+    },
+    "updated_at": "2026-11-28T15:22:03.134776+00:00"
   }
 ]
