@@ -1396,5 +1396,83 @@
       "day": "2026-11-27",
       "published_at_local": "2026-11-27T21:47:35.468564+03:00"
     }
+  },
+  {
+    "url": "https://unkernel.dev",
+    "published_at": "2026-11-28T08:04:12.546331+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Unkernel: Real Linux kernel, compiled to WebAssembly",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-28T03:19:20Z",
+      "language": "en",
+      "llm_score": 9.0,
+      "hn_points": 198
+    }
+  },
+  {
+    "url": "https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/",
+    "published_at": "2026-11-28T08:04:12.547752+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "A New Breed of Chip Runs AI Models Using Waves of Light",
+      "source_name": "Wired",
+      "published_at": "2026-11-27T07:00:00+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent",
+    "published_at": "2026-11-28T08:04:12.548779+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Google’s patent for custom AI video feeds paints a bleak picture of entertainment’s future",
+      "source_name": "The Verge AI",
+      "published_at": "2026-11-25T21:51:26+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://thenewstack.io/cloudflare-agent-search-endpoint/",
+    "published_at": "2026-11-28T08:04:12.549802+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Cloudflare now lets websites add search for AI agents with a single toggle. Site owners foot the query bill.",
+      "source_name": "The New Stack",
+      "published_at": "2026-11-26T18:46:47+00:00",
+      "language": "en",
+      "llm_score": 7.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://www.infoq.com/news/2026/11/azure-ai-gateway-ga/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+    "published_at": "2026-11-28T08:04:12.550794+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Azure AI Gateway Reaches General Availability as a Standalone Service",
+      "source_name": "InfoQ",
+      "published_at": "2026-11-28T06:47:00+00:00",
+      "language": "en",
+      "llm_score": 6.0,
+      "hn_points": 0
+    }
+  },
+  {
+    "url": "https://tabernet.es/",
+    "published_at": "2026-11-28T08:04:12.551772+00:00",
+    "status": "offered",
+    "metadata": {
+      "title": "Tabernetes: A Kubernetes cluster whose nodes are browser tabs",
+      "source_name": "Hacker News",
+      "published_at": "2026-11-27T23:00:30Z",
+      "language": "en",
+      "llm_score": 8.0,
+      "hn_points": 101
+    }
   }
 ]
